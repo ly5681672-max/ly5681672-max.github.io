@@ -23,16 +23,16 @@ DFT可以帮助我们计算吸附物种、反应中间体和过渡态的能量�
 模型中的初态为：
 
 $$
-\mathrm{OOH^*+C_6H_{12}^*+*}
+\mathrm{OOH}^{*}+\mathrm{C}_{6}\mathrm{H}_{12}^{*}+*
 $$
 
 从CatMAP能量文件中提取：
 
-| 物种 | 形成能（eV） |
-| --- | ---: |
-| OOH* | -5.1042155 |
-| C6H12* | -26.1495385 |
-| OOH-C6H12过渡态 | -30.8089080 |
+| 物种           | 形成能（eV） |
+| --------------- | -----------: |
+| OOH*           |   -5.1042155 |
+| C6H12*         |  -26.1495385 |
+| OOH-C6H12过渡态 |  -30.8089080 |
 
 采用模型中一致的能量参考系，初态能量为：
 
@@ -45,12 +45,12 @@ $$
 前向自由能垒：
 
 $$
-\Delta G^\ddagger =
+\Delta G^{\ddagger} =
 G_{\mathrm{TS}} - G_{\mathrm{IS}}
 $$
 
 $$
-\Delta G^\ddagger =
+\Delta G^{\ddagger} =
 -30.8089080 - (-31.2537540)
 = 0.444846\ \mathrm{eV}
 $$
@@ -63,7 +63,7 @@ $$
 
 $$
 k = \frac{k_B T}{h}
-\exp\left(-\frac{\Delta G^\ddagger}{k_B T}\right)
+\exp\left(-\frac{\Delta G^{\ddagger}}{k_B T}\right)
 $$
 
 其中：
@@ -114,7 +114,7 @@ $$
 r_f =
 k_f\theta_{\mathrm{OOH}}
 \theta_{\mathrm{C_6H_{12}}}
-\theta_*
+\theta_{*}
 $$
 
 所以，能垒低并不意味着整体TOF一定高。
