@@ -1,65 +1,30 @@
 ---
 layout: page
-title: projects
+title: 科研项目
 permalink: /projects/
-description: A growing collection of your cool projects.
+description: 催化计算与微观动力学科研项目
 nav: true
 nav_order: 3
-display_categories: [work, fun]
-horizontal: false
 ---
 
-<!-- pages/projects.md -->
-<div class="projects">
-{% if site.enable_project_categories and page.display_categories %}
-  <!-- Display categorized projects -->
-  {% for category in page.display_categories %}
-  <a id="{{ category }}" href=".#{{ category }}">
-    <h2 class="category">{{ category }}</h2>
-  </a>
-  {% assign categorized_projects = site.projects | where: "category", category %}
-  {% assign sorted_projects = categorized_projects | sort: "importance" %}
-  <!-- Generate cards for each project -->
-  {% if page.horizontal %}
-  <div class="container">
-    <div class="row row-cols-1 row-cols-md-2">
-    {% for project in sorted_projects %}
-      {% include projects_horizontal.liquid %}
-    {% endfor %}
-    </div>
-  </div>
-  {% else %}
-  <div class="row row-cols-1 row-cols-md-3">
-    {% for project in sorted_projects %}
-      {% include projects.liquid %}
-    {% endfor %}
-  </div>
-  {% endif %}
-  {% endfor %}
+# 科研项目
 
-{% else %}
+本栏目记录科研项目的理论研究、计算方法、代码实践与结果分析。
 
-<!-- Display projects without categories -->
+## Ti–M异核催化剂上的1-己烯环氧化
 
-{% assign sorted_projects = site.projects | sort: "importance" %}
+**研究方向：** 异相催化、DFT、微观动力学、催化活性描述符。
 
-  <!-- Generate cards for each project -->
+研究内容包括：
 
-{% if page.horizontal %}
+- 反应路径与过渡态能垒计算
+- OOH*过氧中间体的形成与转化
+- CatMAP微观动力学模型建立
+- 表面覆盖度、反应通量与TOF计算
+- 催化活性描述符与反应机理分析
 
-  <div class="container">
-    <div class="row row-cols-1 row-cols-md-2">
-    {% for project in sorted_projects %}
-      {% include projects_horizontal.liquid %}
-    {% endfor %}
-    </div>
-  </div>
-  {% else %}
-  <div class="row row-cols-1 row-cols-md-3">
-    {% for project in sorted_projects %}
-      {% include projects.liquid %}
-    {% endfor %}
-  </div>
-  {% endif %}
-{% endif %}
-</div>
+**项目代码：**
+
+[查看CatMAP GitHub仓库](https://github.com/ly5681672-max/catmap)
+
+后续将持续补充项目的计算过程、方法验证和研究笔记。
