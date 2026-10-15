@@ -3,6 +3,7 @@ layout: post
 title: "catmap项目学习笔记"
 date: 2026-10-15 15:30:00 +0800
 ---
+
 https://chatgpt.com/s/t_6ad08beba18881919a632c77f4b3ad0f
 
 样本内BEP能够改变TOF排序，但LOOCV[^loocv]结果说明该BEP模型对Ti–Co缺乏稳定的外推预测能力
@@ -10,9 +11,9 @@ https://chatgpt.com/s/t_6ad08beba18881919a632c77f4b3ad0f
 [^loocv]: **LOOCV**：Leave-One-Out Cross-Validation，留一交叉验证
 ![alt text](image.png)
 
-另外25个复用了5×5阶段输入哈希**哈希**一致的已验证CatMAP结果
+另外25个复用了5×5阶段输入哈希[^hash]一致的已验证CatMAP结果
 
-[^哈希]哈希（Hash） 是一种将数据通过特定算法转换为固定长度标识值的技术，相当于给数据生成一个“数字指纹”。
+[^hash]: 哈希（Hash） 是一种将数据通过特定算法转换为固定长度标识值的技术，相当于给数据生成一个“数字指纹”。
 
 在计算催化领域，哈希主要用于识别、管理和验证科研数据，而不是描述催化剂的物理化学性质。
 
