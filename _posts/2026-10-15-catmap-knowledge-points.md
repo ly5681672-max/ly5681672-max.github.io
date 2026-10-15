@@ -10,7 +10,7 @@ https://chatgpt.com/s/t_6ad08beba18881919a632c77f4b3ad0f
 
 [^loocv]: **LOOCV**：Leave-One-Out Cross-Validation，留一交叉验证
 
-![alt text](image.png)
+![CatMAP 学习图片 1](/assets/img/catmap-knowledge-points/image.png)
 
 另外25个复用了5×5阶段输入哈希[^hash]一致的已验证CatMAP结果
 
@@ -29,5 +29,5 @@ https://chatgpt.com/s/t_6ad08beba18881919a632c77f4b3ad0f
 一句话总结：**哈希是科研数据的“数字指纹”，主要用于催化结构与计算数据的识别、去重和完整性验证，本身不是催化活性描述符。**
 
 这个单循环六步反应网络，稳态下各步净通量原则上应一致。?
-![alt text](image-1.png)
+![CatMAP 学习图片 2](/assets/img/catmap-knowledge-points/image-1.png)
 一个没有分支的闭合反应循环，在稳态下，每一步生成的中间体必须被下一步以相同速率消耗，否则中间体就会不断积累或减少，系统便不再处于稳态。
