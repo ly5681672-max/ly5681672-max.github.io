@@ -7,7 +7,7 @@
   "gitpaste.github.repository": "ly5681672-max/ly5681672-max.github.io",
   "gitpaste.github.branch": "main",
   "gitpaste.github.path": "assets/img/learning-notes",
-  "gitpaste.github.publicUrl": "https://ly5681672-max.github.io/${path}",
+  "gitpaste.github.publicUrl": "",
   "gitpaste.github.authenticationMethod": "github",
   "gitpaste.github.conflictStrategy": "rename",
   "gitpaste.fileNameFormat": "${document}-${yyyy}-${MM}-${dd}_${HH}-${mm}-${ss}-${random}${extName}",
