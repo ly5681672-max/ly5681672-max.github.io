@@ -8,7 +8,8 @@ tags: [CatMAP, DFT, TST]
 related_posts: false
 ---
 
-![2026-10-12-catmap-01-dft-to-rate.md-2026-10-15_19-04-34-8fbb4e85](https://raw.githubusercontent.com/ly5681672-max/ly5681672-max.github.io/main/assets/img/learning-notes/2026-10-12-catmap-01-dft-to-rate.md-2026-10-15_19-04-34-8fbb4e85.png)
+![2026-10-12-catmap-01-dft-to-rate.md-2026-10-15_19-19-36-81987a32](https://raw.githubusercontent.com/ly5681672-max/ly5681672-max.github.io/main/assets/img/learning-notes/2026-10-12-catmap-01-dft-to-rate.md-2026-10-15_19-19-36-81987a32.png)
+
 
 # 一、为什么需要学习微观动力学？
 
