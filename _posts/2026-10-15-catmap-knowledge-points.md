@@ -9,6 +9,7 @@ https://chatgpt.com/s/t_6ad08beba18881919a632c77f4b3ad0f
 样本内BEP能够改变TOF排序，但LOOCV[^loocv]结果说明该BEP模型对Ti–Co缺乏稳定的外推预测能力
 
 [^loocv]: **LOOCV**：Leave-One-Out Cross-Validation，留一交叉验证
+
 ![alt text](image.png)
 
 另外25个复用了5×5阶段输入哈希[^hash]一致的已验证CatMAP结果
