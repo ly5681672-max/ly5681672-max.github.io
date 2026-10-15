@@ -11,6 +11,6 @@
   "gitpaste.github.authenticationMethod": "github",
   "gitpaste.github.conflictStrategy": "rename",
   "gitpaste.fileNameFormat": "${document}-${yyyy}-${MM}-${dd}_${HH}-${mm}-${ss}-${random}${extName}",
-  "gitpaste.outputFormat": "\n![${uploadedName}](${url})\n",
+  "gitpaste.outputFormat": "![${uploadedName}](${url})",
   "gitpaste.uploadOnPaste": true
 }
