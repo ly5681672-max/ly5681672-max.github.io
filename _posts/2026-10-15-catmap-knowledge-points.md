@@ -4,17 +4,13 @@ title: "catmap项目学习笔记"
 date: 2026-10-15 15:30:00 +0800
 ---
 
-https://chatgpt.com/s/t_6ad08beba18881919a632c77f4b3ad0f
+[https://chatgpt.com/s/t_6ad08beba18881919a632c77f4b3ad0f](https://chatgpt.com/s/t_6ad08beba18881919a632c77f4b3ad0f)
 
 样本内BEP能够改变TOF排序，但LOOCV[^loocv]结果说明该BEP模型对Ti–Co缺乏稳定的外推预测能力
-
-[^loocv]: **LOOCV**：Leave-One-Out Cross-Validation，留一交叉验证
 
 ![CatMAP 学习图片 1](/assets/img/catmap-knowledge-points/image.png)
 
 另外25个复用了5×5阶段输入哈希[^hash]一致的已验证CatMAP结果
-
-[^hash]: 哈希（Hash） 是一种将数据通过特定算法转换为固定长度标识值的技术，相当于给数据生成一个“数字指纹”。
 
 在计算催化领域，哈希主要用于识别、管理和验证科研数据，而不是描述催化剂的物理化学性质。
 
@@ -29,5 +25,10 @@ https://chatgpt.com/s/t_6ad08beba18881919a632c77f4b3ad0f
 一句话总结：**哈希是科研数据的“数字指纹”，主要用于催化结构与计算数据的识别、去重和完整性验证，本身不是催化活性描述符。**
 
 这个单循环六步反应网络，稳态下各步净通量原则上应一致。?
+
 ![CatMAP 学习图片 2](/assets/img/catmap-knowledge-points/image-1.png)
+
 一个没有分支的闭合反应循环，在稳态下，每一步生成的中间体必须被下一步以相同速率消耗，否则中间体就会不断积累或减少，系统便不再处于稳态。
+
+[^loocv]: **LOOCV**：Leave-One-Out Cross-Validation，留一交叉验证
+[^hash]: 哈希（Hash） 是一种将数据通过特定算法转换为固定长度标识值的技术，相当于给数据生成一个“数字指纹”。
