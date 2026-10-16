@@ -49,6 +49,8 @@ class PublicationSyncTest(unittest.TestCase):
         self.assertTrue(pub.work_identity(work("A0000000000", affiliation=True))[0])
         w = work()
         w["authorships"][0]["author"]["id"] = None
+        self.assertTrue(pub.work_identity(w)[0])  # Explicit home institution still corroborates.
+        w["authorships"][0]["institutions"] = []
         self.assertFalse(pub.work_identity(w)[0])
 
     def test_publisher_metadata_and_coauthors(self):
