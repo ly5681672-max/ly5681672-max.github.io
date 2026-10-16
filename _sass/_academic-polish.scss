@@ -414,3 +414,53 @@ body {
     padding-bottom: 0.6rem;
   }
 }
+
+
+/* Home portrait: reference-like right alignment, genuinely circular photo crop. */
+.post > article > .profile {
+  width: 30%;
+  max-width: 260px;
+  margin: 0 0 1.35rem 1.5rem;
+  text-align: center;
+}
+
+.post > article > .profile figure {
+  margin: 0;
+}
+
+.post > article > .profile img.rounded-circle {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center 39%;
+  border-radius: 50% !important;
+  box-shadow: none;
+}
+
+.post > article > .profile .more-info {
+  margin-top: 0.55rem;
+  color: var(--global-text-color-light);
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+.post > article > .profile .more-info p {
+  margin: 0;
+}
+
+@media (max-width: 575.98px) {
+  .post > article > .profile,
+  .post > article > .profile.float-right,
+  .post > article > .profile.float-left {
+    float: none !important;
+    width: 148px;
+    max-width: 100%;
+    margin: 0 auto 1.25rem !important;
+  }
+
+  .post > article > .profile .more-info {
+    font-size: 0.82rem;
+    line-height: 1.45;
+  }
+}
