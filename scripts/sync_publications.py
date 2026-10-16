@@ -287,7 +287,7 @@ def write_verified_news(papers):
             f"date: {published.isoformat()}\n"
             "inline: false\n"
             "---\n\n"
-            f"论文《{title}》于 {published.isoformat()} 在 *{journal}* 在线发表。\n\n"
+            f"论文《{title}》于 {published.isoformat()} 在 _{journal}_ 在线发表。\n\n"
             f"[DOI：{paper['doi']}](https://doi.org/{paper['doi']})。\n"
         )
         path.write_text(content, encoding="utf-8")

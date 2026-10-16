@@ -6,8 +6,7 @@
 {% assign verified_roles = site.data.author_roles.roles %}
 {% if verified_roles.size > 0 %}
   <div class="publication-role-legend">
-    <span class="role-corresponding">红色下划线</span>：通讯作者；
-    <span class="role-cofirst">蓝色下划线</span>：共同第一作者（仅显示有证据的论文）。
+    <span class="role-corresponding">红色下划线</span>：通讯作者； <span class="role-cofirst">蓝色下划线</span>：共同第一作者（仅显示有证据的论文）。
   </div>
   <style>
     {% for role in verified_roles %}
