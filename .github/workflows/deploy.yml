@@ -99,6 +99,15 @@ jobs:
           pip3 install --upgrade nbconvert
           export JEKYLL_ENV=production
           bundle exec jekyll build
+      - name: Verify automatic blog links 🔗
+        run: |
+          bundle exec ruby -rjekyll -r./_plugins/research_auto_links <<'RUBY'
+          html = '<p>[https://example.org/note]</p><pre><code>[https://example.org/code]</code></pre>'
+          document = Struct.new(:content).new(html)
+          Jekyll::Hooks.trigger(:posts, :post_convert, document)
+          abort 'Auto-link conversion failed' unless document.content.include?('href="https://example.org/note"')
+          abort 'Code block was changed' unless document.content.include?('<code>[https://example.org/code]</code>')
+          RUBY
       - name: Purge unused CSS 🧹
         run: |
           npm install -g purgecss
