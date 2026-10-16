@@ -3,6 +3,7 @@ import importlib.util
 import pathlib
 import tempfile
 import unittest
+from unittest import mock
 
 SPEC = importlib.util.spec_from_file_location(
     "pubsync", pathlib.Path(__file__).resolve().parents[1] / "scripts" / "sync_publications.py"
@@ -82,6 +83,38 @@ class PublicationSyncTest(unittest.TestCase):
         fixture = "@article{old,\n  author = {Yan, Hao and Li, Yaqian and Feng, Xiang},\n  doi = {10.1234/example},\n}\n"
         self.assertEqual(pub.doi_existing(fixture), {"10.1234/example"})
         self.assertEqual(pub.names_existing(fixture), {"hao yan", "xiang feng"})
+
+
+    def test_apply_is_append_only_and_idempotent(self):
+        initial = ""
+        for i in range(23):
+            initial += (
+                f"@article{{existing{i},\n"
+                "  author = {Yan, Hao and Feng, Xiang and Li, Yaqian},\n"
+                f"  doi = {{10.1234/seed{i}}},\n"
+                "}\n\n"
+            )
+        with tempfile.TemporaryDirectory() as root:
+            folder = pathlib.Path(root)
+            bib = folder / "papers.bib"
+            stats = folder / "stats.yml"
+            report_path = folder / "report.json"
+            bib.write_text(initial, encoding="utf-8")
+            with (
+                mock.patch.object(pub, "BIB", bib),
+                mock.patch.object(pub, "STATS", stats),
+                mock.patch.object(pub, "REPORT", report_path),
+                mock.patch.object(pub, "openalex_works", return_value=[work()]),
+                mock.patch.object(pub, "crossref_recent", return_value={}),
+                mock.patch.object(pub, "get_json", return_value={"message": record()}),
+            ):
+                first = pub.sync(apply=True)
+                self.assertEqual(len(first["approved"]), 1)
+                self.assertTrue(bib.read_text(encoding="utf-8").startswith(initial))
+                self.assertIn("journal_count: 24", stats.read_text(encoding="utf-8"))
+                second = pub.sync(apply=True)
+                self.assertEqual(len(second["approved"]), 0)
+                self.assertEqual(bib.read_text(encoding="utf-8").count("doi = {10.1234/valid.paper}"), 1)
 
 
 if __name__ == "__main__":
