@@ -5,22 +5,21 @@ title: 论文成果
 description: 李亚倩参与发表的催化科学、微观动力学及机器学习研究论文
 nav: true
 nav_order: 5
+hide_missing_publication_previews: true
 ---
 
-# 论文成果
+2026 年 10 月核验 ResearchGate 时，收录记录包含 **23 篇独立期刊论文和 2 份对应的预印本版本**。以下按 DOI 去重展示期刊论文。
 
-2026 年 10 月 16 日人工核验时，ResearchGate 共有 **25 条历史成果记录**：23 篇独立期刊论文及对应的 2 份预印本。该数字不代表实时 ResearchGate 统计。
-
-本站现在收录 **{{ site.data.publication_stats.journal_count }} 篇独立期刊论文**，按 DOI 去重。新论文由 OpenAlex 作者标识发现，经 Crossref 出版商登记信息与合作作者核对后自动加入。年份以期刊卷期为准，可能与提前在线发表日期不同。
+本站现收录 **{{ site.data.publication_stats.journal_count }} 篇独立期刊论文**，新成果经 DOI、作者和出版信息核验后自动更新。
 
 **学术主页：** [ResearchGate — Yaqian Li](https://www.researchgate.net/profile/Yaqian-Li-10)。
 
-<!-- _pages/publications.md -->
+<div class="academic-publication-list">
+  {% include bib_search.liquid %}
 
-{% include bib_search.liquid %}
-
-<div class="publications">
-  {% bibliography %}
+  <div class="publications">
+    {% bibliography %}
+  </div>
 </div>
 
 ## 早期预印本版本（2 条，不重复计入期刊论文数）
