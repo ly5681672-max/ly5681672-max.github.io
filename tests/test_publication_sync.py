@@ -1,4 +1,5 @@
 """Offline guardrails for the scheduled publication synchronization."""
+import datetime as dt
 import importlib.util
 import pathlib
 import tempfile
@@ -79,6 +80,35 @@ class PublicationSyncTest(unittest.TestCase):
         self.assertFalse("selected = {true}" in entry)
         self.assertEqual(pub.doi_clean("HTTPS://DOI.ORG/10.1234/Valid.Paper"), "10.1234/valid.paper")
 
+    def test_news_requires_verified_full_recent_online_date(self):
+        recent = dt.date.today() - dt.timedelta(days=4)
+        meta = record()
+        meta["published-online"] = {"date-parts": [[recent.year, recent.month, recent.day]]}
+        self.assertEqual(pub.verified_news_date(meta), recent)
+        meta["published-online"] = {"date-parts": [[recent.year]]}
+        self.assertIsNone(pub.verified_news_date(meta))
+        meta["published-online"] = {"date-parts": [[2018, 1, 1]]}
+        self.assertIsNone(pub.verified_news_date(meta))
+        meta["published-online"] = {"date-parts": [[2032, 1, 1]]}
+        self.assertIsNone(pub.verified_news_date(meta))
+
+    def test_news_written_only_once_for_approved_paper(self):
+        today = dt.date.today()
+        paper = {
+            "key": "auto_new_doi", "doi": "10.1234/valid.paper",
+            "title": "Trusted catalyst research", "journal": "Catalysis Journal",
+            "news_date": today,
+        }
+        with tempfile.TemporaryDirectory() as root:
+            with mock.patch.object(pub, "NEWS_DIR", pathlib.Path(root)):
+                written = pub.write_verified_news([paper])
+                self.assertEqual(len(written), 1)
+                body = pathlib.Path(written[0]).read_text(encoding="utf-8")
+                self.assertIn("10.1234/valid.paper", body)
+                self.assertIn("date: " + today.isoformat(), body)
+                self.assertEqual(pub.write_verified_news([paper]), [])
+                self.assertEqual(pub.write_verified_news([{**paper, "news_date": None}]), [])
+
     def test_existing_bib_preserved(self):
         fixture = "@article{old,\n  author = {Yan, Hao and Li, Yaqian and Feng, Xiang},\n  doi = {10.1234/example},\n}\n"
         self.assertEqual(pub.doi_existing(fixture), {"10.1234/example"})
@@ -98,11 +128,13 @@ class PublicationSyncTest(unittest.TestCase):
             folder = pathlib.Path(root)
             bib = folder / "papers.bib"
             stats = folder / "stats.yml"
+            news = folder / "_news"
             report_path = folder / "report.json"
             bib.write_text(initial, encoding="utf-8")
             with (
                 mock.patch.object(pub, "BIB", bib),
                 mock.patch.object(pub, "STATS", stats),
+                mock.patch.object(pub, "NEWS_DIR", news),
                 mock.patch.object(pub, "REPORT", report_path),
                 mock.patch.object(pub, "openalex_works", return_value=[work()]),
                 mock.patch.object(pub, "crossref_recent", return_value={}),
