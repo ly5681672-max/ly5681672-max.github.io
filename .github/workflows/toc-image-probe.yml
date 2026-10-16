@@ -1,0 +1,50 @@
+name: Check official TOC artwork
+
+on:
+  push:
+    paths:
+      - ".github/workflows/toc-image-probe.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Retrieve publisher graphical abstracts
+        shell: bash
+        run: |
+          mkdir -p checked
+          cat > candidates.tsv <<'EOF'
+          li2025polyolreview S2468823124008885 10.1016/j.mcat.2024.114706
+          lu2025zsm5 S0016236124026358 10.1016/j.fuel.2024.133486
+          zhu2025ceo2 S0926337325000918 10.1016/j.apcatb.2025.125108
+          ma2026acetone S0016236125028856 10.1016/j.fuel.2025.137160
+          EOF
+          while read -r key pii doi; do
+            echo "--- $key $doi ---"
+            for suffix in ga1_lrg.jpg ga1.jpg fx1_lrg.jpg; do
+              url="https://ars.els-cdn.com/content/image/1-s2.0-${pii}-${suffix}"
+              out="checked/${key}-${suffix}"
+              http=$(curl --location --silent --max-time 30 --write-out '%{http_code}' \
+                --user-agent 'Mozilla/5.0 (compatible; ScholarlyTOCVerifier/1.0)' \
+                --output "$out" "$url" || true)
+              mime=$(file --brief --mime-type "$out" 2>/dev/null || true)
+              size=$(wc -c < "$out" 2>/dev/null || echo 0)
+              echo "${key} ${suffix} HTTP=${http} MIME=${mime} BYTES=${size}"
+              if [[ "$http" == 200 && "$mime" == image/jpeg && "$size" -gt 5000 ]]; then
+                echo "${doi}|${key}|${suffix}|${url}" >> checked/verified.tsv
+                break
+              fi
+              rm -f "$out"
+            done
+          done < candidates.tsv
+          cat checked/verified.tsv 2>/dev/null || true
+      - name: Save inspection artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: official-toc-candidates
+          path: checked/
+          if-no-files-found: warn
