@@ -110,7 +110,7 @@ nav_order: 6
     </div>
   </section>
 
-  {% if funding_items.size > 0 %}
+{% if funding_items.size > 0 %}
     <section class="experience-section experience-funding-section" aria-labelledby="experience-funding-title">
       <h2 class="experience-section-title" id="experience-funding-title">Research Funding</h2>
       <div class="experience-list">
@@ -134,5 +134,5 @@ nav_order: 6
         {% endfor %}
       </div>
     </section>
-  {% endif %}
+{% endif %}
 </div>
