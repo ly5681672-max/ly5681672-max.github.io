@@ -25,7 +25,7 @@ nav_order: 5
 
 以下两条分别是上面期刊论文的早期版本，ResearchGate 同时记录了预印本与期刊论文。
 
-1. **Rational Screening of Metal Single-Atom-Doped ZSM-5 to Promote Ring-Opening Cracking of Cycloalkanes to Light Olefins** — 2024 年 SSRN 预印本：[10.2139/ssrn.4924683](https://doi.org/10.2139/ssrn.4924683)；对应 2025 年 *Fuel* 期刊论文：[10.1016/j.fuel.2024.133486](https://doi.org/10.1016/j.fuel.2024.133486)。
-2. **Redox CeO2 substituted Na2WO4-Mn catalyst for high-throughput chemical looping oxidative coupling of methane** — 2024 年 SSRN 预印本：[10.2139/ssrn.5041418](https://doi.org/10.2139/ssrn.5041418)；对应 2025 年 *Applied Catalysis B: Environment and Energy* 期刊论文：[10.1016/j.apcatb.2025.125108](https://doi.org/10.1016/j.apcatb.2025.125108)。
+1. **Rational Screening of Metal Single-Atom-Doped ZSM-5 to Promote Ring-Opening Cracking of Cycloalkanes to Light Olefins** — 2024 年 SSRN 预印本：[10.2139/ssrn.4924683](https://doi.org/10.2139/ssrn.4924683)；对应 2025 年 _Fuel_ 期刊论文：[10.1016/j.fuel.2024.133486](https://doi.org/10.1016/j.fuel.2024.133486)。
+2. **Redox CeO2 substituted Na2WO4-Mn catalyst for high-throughput chemical looping oxidative coupling of methane** — 2024 年 SSRN 预印本：[10.2139/ssrn.5041418](https://doi.org/10.2139/ssrn.5041418)；对应 2025 年 _Applied Catalysis B: Environment and Energy_ 期刊论文：[10.1016/j.apcatb.2025.125108](https://doi.org/10.1016/j.apcatb.2025.125108)。
 
 **统计口径：** 25 条 ResearchGate 记录 = 23 篇不同的期刊论文 + 2 份历史预印本版本；不可按 25 篇独立期刊论文统计。
