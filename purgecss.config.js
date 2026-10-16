@@ -3,7 +3,8 @@ module.exports = {
   css: ["_site/assets/css/*.css"],
   output: "_site/assets/css/",
   skippedContentGlobs: ["_site/assets/**/*.html"],
-  safelist: [
+  safelist: {
+    standard: [
     "collapse",
     "collapsing",
     "show",
@@ -24,6 +25,8 @@ module.exports = {
     "medium-zoom-overlay",
     "medium-zoom-image--opened",
     // MathJax injects these elements only in the browser (after PurgeCSS runs).
-    "mjx-container",
-  ],
+    ],
+    // Match the entire generated MathJax selector, including runtime attributes.
+    greedy: [/mjx-container/],
+  },
 };
