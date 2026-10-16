@@ -3,7 +3,8 @@ layout: page
 title: 近期动态
 permalink: /news/
 description: 科研动态与学习笔记的公开更新记录
-nav: false
+nav: true
+nav_order: 7
 ---
 
 {% assign academic_updates = site.news | concat: site.posts | sort: "date" | reverse %}
