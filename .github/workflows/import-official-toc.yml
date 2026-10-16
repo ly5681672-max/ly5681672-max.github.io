@@ -1,0 +1,100 @@
+name: Import verified journal TOC images
+
+on:
+  push:
+    paths:
+      - ".github/workflows/import-official-toc.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  import-artwork:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Download exact verified publisher images
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p assets/img/publication_preview
+          cat > toc-manifest.tsv <<'EOF'
+          li2025polyolreview S2468823124008885 10.1016/j.mcat.2024.114706 8e01443383b371c74781fef51f08c0a9709e8c452452cb7ae757917ca6ad3b2f
+          lu2025zsm5 S0016236124026358 10.1016/j.fuel.2024.133486 529e04aafb1c7ffb10383c7419abb9815d1ae8b7d30bf467cf3629c7d77db99c
+          zhu2025ceo2 S0926337325000918 10.1016/j.apcatb.2025.125108 318df948e989c35f40bcce9dc8975667c4f4a7a8fc0052aa9f72906b90bec126
+          ma2026acetone S0016236125028856 10.1016/j.fuel.2025.137160 695d51b3de798a328d1ee621b209669382a9520bc383007e6e4776dd41613d83
+          EOF
+          while read -r key pii doi expected_sha; do
+            url="https://ars.els-cdn.com/content/image/1-s2.0-${pii}-ga1_lrg.jpg"
+            image="assets/img/publication_preview/${key}.jpg"
+            curl --fail --location --retry 3 --retry-delay 1 --silent --show-error --max-time 50 \
+              --user-agent 'Mozilla/5.0 (academic authors bibliography)' \
+              "$url" --output "$image"
+            actual_sha=$(sha256sum "$image" | cut -d' ' -f1)
+            mime=$(file --brief --mime-type "$image")
+            test "$mime" = image/jpeg
+            test "$actual_sha" = "$expected_sha"
+            echo "Verified $key $doi $actual_sha"
+          done < toc-manifest.tsv
+      - name: Attach exact files to matching BibTeX records
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import pathlib, re
+          bib_path = pathlib.Path('_bibliography/papers.bib')
+          text = bib_path.read_text(encoding='utf-8')
+          mappings = {
+            'li2025polyolreview': '10.1016/j.mcat.2024.114706',
+            'lu2025zsm5': '10.1016/j.fuel.2024.133486',
+            'zhu2025ceo2': '10.1016/j.apcatb.2025.125108',
+            'ma2026acetone': '10.1016/j.fuel.2025.137160',
+          }
+          for key, doi in mappings.items():
+            matches = list(re.finditer(r'(?m)^@article\{' + re.escape(key) + r',\n.*?^\}', text, re.S | re.M))
+            if len(matches) != 1:
+              raise SystemExit(f'Unexpected bibliography key: {key}')
+            entry = matches[0].group(0)
+            if f'doi = {{{doi}}}' not in entry:
+              raise SystemExit(f'DOI mismatch: {key}')
+            if 'preview = {' in entry:
+              if f'preview = {{{key}.jpg}}' not in entry:
+                raise SystemExit(f'Conflicting preview: {key}')
+              continue
+            marker = f'  url = {{https://doi.org/{doi}}},\n'
+            if entry.count(marker) != 1:
+              raise SystemExit(f'Expected URL anchor: {key}')
+            next_entry = entry.replace(marker, marker + f'  preview = {{{key}.jpg}},\n')
+            text = text[:matches[0].start()] + next_entry + text[matches[0].end():]
+          bib_path.write_text(text, encoding='utf-8')
+          PY
+          cat > assets/img/publication_preview/TOC_SOURCES.md <<'EOF'
+          # Original journal graphical abstracts (TOC previews)
+
+          The four JPGs in this directory are the original unmodified graphical abstracts
+          published with the corresponding journal articles. They are not generated illustrations.
+          Each image is attributed to its article authors and publisher; follow the DOI
+          for full credit, rights, and reuse terms. Do not use an image for a different article.
+
+          | File | Paper DOI | Publisher source |
+          | --- | --- | --- |
+          | li2025polyolreview.jpg | 10.1016/j.mcat.2024.114706 | https://ars.els-cdn.com/content/image/1-s2.0-S2468823124008885-ga1_lrg.jpg |
+          | lu2025zsm5.jpg | 10.1016/j.fuel.2024.133486 | https://ars.els-cdn.com/content/image/1-s2.0-S0016236124026358-ga1_lrg.jpg |
+          | zhu2025ceo2.jpg | 10.1016/j.apcatb.2025.125108 | https://ars.els-cdn.com/content/image/1-s2.0-S0926337325000918-ga1_lrg.jpg |
+          | ma2026acetone.jpg | 10.1016/j.fuel.2025.137160 | https://ars.els-cdn.com/content/image/1-s2.0-S0016236125028856-ga1_lrg.jpg |
+          EOF
+      - name: Commit verified artwork and bibliography
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add _bibliography/papers.bib assets/img/publication_preview/
+          if git diff --cached --quiet; then
+            echo 'No updates required'
+          else
+            git commit -m 'assets: add four publisher-verified graphical abstract thumbnails'
+            git push origin HEAD:main
+          fi
