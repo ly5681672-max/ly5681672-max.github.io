@@ -45,14 +45,18 @@ class PublicationSyncTest(unittest.TestCase):
     def test_identity_from_multiple_papers(self):
         self.assertEqual(pub.AUTHOR_ID, "A5100697597")
         self.assertTrue(pub.work_identity(work())[0])
-        self.assertFalse(pub.work_identity(work("A0000000000"))[0])
+        self.assertFalse(pub.work_identity(work("A0000000000", affiliation=False))[0])
+        self.assertTrue(pub.work_identity(work("A0000000000", affiliation=True))[0])
         w = work()
         w["authorships"][0]["author"]["id"] = None
+        self.assertTrue(pub.work_identity(w)[0])  # Explicit home institution still corroborates.
+        w["authorships"][0]["institutions"] = []
         self.assertFalse(pub.work_identity(w)[0])
 
     def test_publisher_metadata_and_coauthors(self):
         self.assertIsNone(pub.assess_candidate(work(), record(), self.known))
-        self.assertIsNotNone(pub.assess_candidate(work("A0000000000"), record(), self.known))
+        self.assertIsNotNone(pub.assess_candidate(work("A0000000000", affiliation=False), record(), self.known))
+        self.assertIsNone(pub.assess_candidate(work("A0000000000", affiliation=True), record(), self.known))
         bad = record()
         bad["author"][0] = {"given": "Someone", "family": "Else"}
         self.assertIn("Yaqian Li", pub.assess_candidate(work(), bad, self.known))
