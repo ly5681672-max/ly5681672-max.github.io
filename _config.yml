@@ -139,6 +139,7 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 blog_name: 学习笔记
 blog_description: CatMAP微观动力学 · 催化计算 · 人工智能
 permalink: /blog/:year/:title/
+future: true
 lsi: false # produce an index for related posts
 
 # Pagination
