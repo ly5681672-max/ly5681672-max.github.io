@@ -1,0 +1,4 @@
+# Only publicly verified patents belonging to this researcher.
+# Required: year, title, inventors, patent number, legal status, source URL.
+# The patents section remains hidden when this list is empty.
+patents: []

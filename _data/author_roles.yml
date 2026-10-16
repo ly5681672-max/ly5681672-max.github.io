@@ -1,0 +1,5 @@
+# Populate only after checking the publisher's formal author note.
+# Each entry must contain an existing BibTeX key, role (co_first/corresponding)
+# and a verifiable publisher/DOI source URL.
+# Position in the byline or CRediT participation alone is not enough.
+roles: []

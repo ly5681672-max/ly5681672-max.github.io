@@ -432,7 +432,7 @@ body {
 .post > article > .profile {
   width: 30%;
   max-width: none;
-  margin: 0 0 1.25rem 1rem;
+  margin: -1.2rem 0 1.25rem 1rem;
   text-align: center;
 }
 
@@ -446,7 +446,7 @@ body {
   height: auto;
   aspect-ratio: 1 / 1;
   object-fit: cover;
-  object-position: center 39%;
+  object-position: center 46%;
   border-radius: 50% !important;
 }
 
@@ -462,6 +462,91 @@ body {
   display: inline-block;
   margin: 0;
   color: var(--global-text-color-light);
+}
+
+/* Always identify the profile owner; color special roles only after verification. */
+.publications .author em {
+  font-style: normal;
+  font-weight: 650;
+  text-decoration: underline;
+  text-decoration-color: var(--global-divider-color);
+  text-underline-offset: 0.15em;
+}
+
+.publication-role-legend {
+  margin: 0 0 0.85rem;
+  color: var(--global-text-color-light);
+  font-size: 0.84rem;
+  line-height: 1.6;
+}
+
+.publication-role-legend .role-corresponding {
+  color: #c62828;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.publication-role-legend .role-cofirst {
+  color: #1565c0;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+/* Patent records are shown only when verified data is supplied. */
+.academic-patents-section {
+  margin-top: 2.6rem;
+}
+
+.academic-patents-section > h2 {
+  margin-bottom: 0.75rem;
+  font-size: 1.45rem;
+  font-weight: 650;
+}
+
+.academic-patents-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.academic-patent-entry {
+  display: grid;
+  grid-template-columns: 76px minmax(0, 1fr);
+  gap: 1.1rem;
+  padding: 1.2rem 0;
+  border-bottom: 1px solid var(--global-divider-color);
+}
+
+.academic-patent-date strong,
+.academic-patent-date span {
+  display: block;
+}
+
+.academic-patent-date strong {
+  color: var(--global-theme-color);
+}
+
+.academic-patent-date span,
+.academic-patent-main p {
+  color: var(--global-text-color-light);
+  font-size: 0.86rem;
+}
+
+.academic-patent-main h3 {
+  margin: 0 0 0.3rem;
+  font-size: 1.025rem;
+  font-weight: 650;
+}
+
+.academic-patent-main p {
+  margin: 0.2rem 0;
+}
+
+@media (max-width: 600px) {
+  .academic-patent-entry {
+    grid-template-columns: 55px minmax(0, 1fr);
+    gap: 0.7rem;
+  }
 }
 
 /* Only the homepage: don't narrow text while floating the portrait outside it. */

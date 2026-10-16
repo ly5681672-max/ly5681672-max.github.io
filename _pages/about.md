@@ -30,7 +30,7 @@ latest_posts:
 
 ## 近期动态
 
-{% assign home_updates = site.news | concat: site.posts | sort: "date" | reverse %}
+{% assign home_updates = site.news | sort: "date" | reverse %}
 <div class="academic-latest-posts">
 {% for item in home_updates limit:5 %}
   <div class="academic-latest-post">
@@ -38,7 +38,7 @@ latest_posts:
     <a href="{{ item.url | relative_url }}">{{ item.title | escape }}</a>
   </div>
 {% else %}
-  <p>暂无公开的科研动态。</p>
+  <p>暂无已核验的学术动态，科研学习笔记请见<a href="/blog/">学习笔记</a>。</p>
 {% endfor %}
 </div>
 
@@ -49,6 +49,7 @@ latest_posts:
 现收录 **{{ site.data.publication_stats.journal_count }} 篇独立期刊论文**，新成果经 DOI、作者和出版信息核验后自动更新。详见[全部论文成果](/publications/)。
 
 <div class="publications">
+{% include author_role_highlights.liquid %}
 {% bibliography --group_by none --query @*[selected=true]* %}
 </div>
 

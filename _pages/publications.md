@@ -15,12 +15,36 @@ hide_missing_publication_previews: true
 **学术主页：** [ORCID](https://orcid.org/0009-0004-7005-8512) · [Google Scholar](https://scholar.google.com/citations?user=ReMQrbIAAAAJ&hl=zh-CN) · [Web of Science ResearcherID](https://www.webofscience.com/wos/author/rid/GVT-4395-2022) · [ResearchGate](https://www.researchgate.net/profile/Yaqian-Li-10)。
 
 <div class="academic-publication-list">
+  {% include author_role_highlights.liquid %}
   {% include bib_search.liquid %}
 
   <div class="publications">
     {% bibliography %}
   </div>
 </div>
+
+{% assign patent_items = site.data.patents.patents %}
+{% if patent_items.size > 0 %}
+<section class="academic-patents-section" aria-labelledby="academic-patents-heading">
+  <h2 id="academic-patents-heading">专利成果 · Patents</h2>
+  <ol class="academic-patents-list">
+    {% for patent in patent_items %}
+      <li class="academic-patent-entry">
+        <div class="academic-patent-date">
+          <strong>{{ patent.year | escape }}</strong>
+          {% if patent.status %}<span>{{ patent.status | escape }}</span>{% endif %}
+        </div>
+        <div class="academic-patent-main">
+          <h3>{{ patent.title | escape }}</h3>
+          {% if patent.inventors %}<p>{{ patent.inventors | escape }}</p>{% endif %}
+          {% if patent.number %}<p>{{ patent.number | escape }}</p>{% endif %}
+          {% if patent.url %}<a href="{{ patent.url | escape }}" rel="noopener noreferrer" target="_blank">专利详情 ↗</a>{% endif %}
+        </div>
+      </li>
+    {% endfor %}
+  </ol>
+</section>
+{% endif %}
 
 ## 早期预印本版本（2 条，不重复计入期刊论文数）
 

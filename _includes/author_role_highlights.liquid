@@ -1,0 +1,29 @@
+{% comment %}
+  Roles are explicitly verified in _data/author_roles.yml.
+  The current official al_folio_core bibliography highlights self names with <em>.
+  Use DOI-keyed CSS without copying or forking the upstream bib layout.
+{% endcomment %}
+{% assign verified_roles = site.data.author_roles.roles %}
+{% if verified_roles.size > 0 %}
+  <div class="publication-role-legend">
+    <span class="role-corresponding">红色下划线</span>：通讯作者；
+    <span class="role-cofirst">蓝色下划线</span>：共同第一作者（仅显示有证据的论文）。
+  </div>
+  <style>
+    {% for role in verified_roles %}
+      {% if role.key and role.source %}
+        {% if role.role == "corresponding" %}
+          #{{ role.key }} .author em {
+            color: #c62828;
+            text-decoration-color: #c62828;
+          }
+        {% elsif role.role == "co_first" %}
+          #{{ role.key }} .author em {
+            color: #1565c0;
+            text-decoration-color: #1565c0;
+          }
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  </style>
+{% endif %}
