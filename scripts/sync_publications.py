@@ -256,6 +256,7 @@ def sync(apply=False):
     if len(existing) != len(keys) or len(keys) < 23:
         raise ValueError("Existing bibliography IDs/DOIs inconsistent; refusing to update")
     pending, approved = [], []
+    rejected_same_name = 0
     source_warnings = []
     seen = set()
     works = openalex_works()
@@ -284,7 +285,14 @@ def sync(apply=False):
             record = matched_record or get_json("https://api.crossref.org/works/" + urllib.parse.quote(doi, safe="/"))["message"]
             reason = assess_candidate(work, record, known_names)
             if reason:
-                pending.append({"doi": doi, "title": work.get("title"), "reason": reason})
+                if reason in (
+                    "Insufficient corroborating known coauthors/affiliation",
+                    "OpenAlex author ID/name not confirmed",
+                    "Not a journal article in publisher Crossref record",
+                ):
+                    rejected_same_name += 1
+                else:
+                    pending.append({"doi": doi, "title": work.get("title"), "reason": reason})
                 continue
             key, entry = render_bibtex(work, record, keys)
             keys.add(key)
@@ -300,6 +308,7 @@ def sync(apply=False):
         "found_by_openalex": len(works),
         "additional_crossref_candidates": crossref_dois,
         "source_warnings": source_warnings,
+        "excluded_ambiguous_or_unrelated_records": rejected_same_name,
         "existing_journal_dois": len(existing),
         "approved": [{k: v for k, v in paper.items() if k != "entry"} for paper in approved],
         "pending_review": pending,
@@ -316,6 +325,7 @@ def sync(apply=False):
             encoding="utf-8",
         )
     print(json.dumps({k: v for k, v in report.items() if k != "pending_review"}, ensure_ascii=False, indent=2))
+    print(f"EXCLUDED_UNRELATED_COUNT={rejected_same_name}")
     print(f"PENDING_REVIEW_COUNT={len(pending)}")
     print(f"APPROVED_NEW_COUNT={len(approved)}")
     return report
