@@ -1,11 +1,21 @@
 # Experiences displayed at /experiences/.
-# Only confirmed personal information belongs here. Newest records first.
-# No dates, supervisors, work positions, or grants have been assumed.
+# Education information from the user-supplied CHSI (学信网) screenshot.
+# Academic dates, thesis advisors, work posts, and grants are not supplied.
+# Student/enrollment records do not by themselves confirm an awarded PhD degree.
 work: []
 
 education:
   - institution: "中国石油大学（华东）"
-    role: "化学工程学院 · 博士研究生"
     logo: "https://www.upc.edu.cn/__local/C/F5/A5/5D4E68C8E5AC5EAC303B91B6AF3_8B597FCD_855B.png"
+    degrees:
+      - name: "博士研究生 · 化学工程与技术"
+        detail: "全日制"
+      - name: "硕士研究生 · 化学工程与技术"
+        detail: "全日制"
+
+  - institution: "河南科技大学"
+    degrees:
+      - name: "本科 · 化学工程与工艺"
+        detail: "普通全日制"
 
 funding: []
