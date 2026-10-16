@@ -26,6 +26,12 @@ nav_order: 5
 
 科研计算主要使用Python、CatMAP及相关开源软件。
 
+## 学术主页
+
+[ResearchGate：Yaqian Li](https://www.researchgate.net/profile/Yaqian-Li-10)
+
+[论文成果与 DOI 列表](/publications/)
+
 ## 代码仓库
 
 [GitHub个人主页](https://github.com/ly5681672-max)

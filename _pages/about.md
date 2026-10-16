@@ -15,11 +15,11 @@ latest_posts:
   enabled: false
 ---
 
-欢迎来到我的科研学习笔记！
+我是**李亚倩（Yaqian Li）**，中国石油大学（华东）化学工程学院博士研究生，研究兴趣包括**人工智能辅助催化剂筛选、第一性原理计算、异相催化反应机制及微观动力学**。
 
-这里记录我在催化科学、计算化学、微观动力学及人工智能领域的理论学习、代码实践和科研探索。
+本站记录催化科学、计算化学与机器学习的研究工作、论文成果和可复现的学习笔记，重点关注从电子结构、反应能量到催化性能的关联。
 
-我希望通过持续学习，将复杂的理论知识转化为能够理解、计算和独立复现的研究方法。
+[ResearchGate 学术主页](https://www.researchgate.net/profile/Yaqian-Li-10) · [论文成果](/publications/) · [CatMAP 科研代码](https://github.com/ly5681672-max/catmap)
 
 ## 最新学习笔记
 
@@ -52,6 +52,14 @@ latest_posts:
 ### 3. 人工智能辅助催化研究
 
 关注机器学习、图神经网络（GNN）、SISSO描述符发现，以及数据驱动的催化剂筛选和反应性能预测。
+
+## 代表性论文
+
+<div class="publications">
+{% bibliography --group_by none --query @*[selected=true]* %}
+</div>
+
+[查看全部论文成果](/publications/)
 
 ## CatMAP中文学习教程
 
