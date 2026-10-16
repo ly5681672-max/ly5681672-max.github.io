@@ -6,7 +6,7 @@ subtitle: 催化科学 · 第一性原理计算 · 微观动力学 · 人工智�
 
 profile: false
 selected_papers: false
-social: false
+social: true
 
 announcements:
   enabled: false
@@ -21,7 +21,7 @@ latest_posts:
 
 [ResearchGate 学术主页](https://www.researchgate.net/profile/Yaqian-Li-10) · [论文成果](/publications/) · [CatMAP 科研代码](https://github.com/ly5681672-max/catmap)
 
-## 最新学习笔记
+## 近期动态
 
 <div class="academic-latest-posts">
 {% for post in site.posts limit:5 %}
@@ -31,6 +31,18 @@ latest_posts:
   </div>
 {% endfor %}
 </div>
+
+[查看全部科研动态和学习笔记 →](/news/)
+
+## 代表性成果
+
+2026 年 10 月核验时，ResearchGate 收录 25 条成果记录（23 篇独立期刊论文和 2 份预印本）。本站现在收录 **{{ site.data.publication_stats.journal_count }} 篇独立期刊论文**，新成果经核对后自动更新。详见[全部论文成果](/publications/)。
+
+<div class="publications">
+{% bibliography --group_by none --query @*[selected=true]* %}
+</div>
+
+[查看全部论文成果](/publications/)
 
 ## 研究方向
 
@@ -52,16 +64,6 @@ latest_posts:
 ### 3. 人工智能辅助催化研究
 
 关注机器学习、图神经网络（GNN）、SISSO描述符发现，以及数据驱动的催化剂筛选和反应性能预测。
-
-## 代表性论文
-
-2026 年 10 月核验时，ResearchGate 收录 25 条成果记录（23 篇独立期刊论文和 2 份预印本）。本站现在收录 **{{ site.data.publication_stats.journal_count }} 篇独立期刊论文**，新成果经核对后自动更新。详见[全部论文成果](/publications/)。
-
-<div class="publications">
-{% bibliography --group_by none --query @*[selected=true]* %}
-</div>
-
-[查看全部论文成果](/publications/)
 
 ## CatMAP中文学习教程
 
