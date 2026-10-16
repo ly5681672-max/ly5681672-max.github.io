@@ -1,6 +1,6 @@
 # Experiences displayed at /experiences/.
 # Education information from the user-supplied CHSI (学信网) screenshot.
-# Academic dates, thesis advisors, work posts, and grants are not supplied.
+# Academic dates were confirmed by the user; thesis advisors, work posts, and grants are not supplied.
 # Student/enrollment records do not by themselves confirm an awarded PhD degree.
 work: []
 
@@ -9,13 +9,16 @@ education:
     logo: "https://www.upc.edu.cn/__local/C/F5/A5/5D4E68C8E5AC5EAC303B91B6AF3_8B597FCD_855B.png"
     degrees:
       - name: "博士研究生 · 化学工程与技术"
+        dates: "2025—至今（在读）"
         detail: "全日制"
       - name: "硕士研究生 · 化学工程与技术"
+        dates: "2022—2025"
         detail: "全日制"
 
   - institution: "河南科技大学"
     degrees:
       - name: "本科 · 化学工程与工艺"
+        dates: "2018—2022"
         detail: "普通全日制"
 
 funding: []
