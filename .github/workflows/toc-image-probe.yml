@@ -42,6 +42,29 @@ jobs:
             done
           done < candidates.tsv
           cat checked/verified.tsv 2>/dev/null || true
+      - name: Check publisher pages for remaining TOC art
+        shell: bash
+        run: |
+          mkdir -p checked/pages
+          cat > other-pages.tsv <<'EOF'
+          lu2026mlrobust https://pubs.acs.org/doi/10.1021/acs.iecr.5c05293
+          yan2025glycerol https://aiche.onlinelibrary.wiley.com/doi/10.1002/aic.18683
+          li2026co2hydrogen https://aiche.onlinelibrary.wiley.com/doi/10.1002/aic.70237
+          zheng2026ptfe https://chemistry-europe.onlinelibrary.wiley.com/doi/10.1002/cctc.71102
+          EOF
+          while read -r key url; do
+            page="checked/pages/${key}.html"
+            http=$(curl -L --silent --max-time 25 --write-out '%{http_code}' \
+              -A 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/132.0' \
+              -o "$page" "$url" || true)
+            bytes=$(wc -c < "$page" 2>/dev/null || echo 0)
+            echo "$key HTTP=$http SIZE=$bytes"
+            if [[ "$http" != 200 ]]; then
+              rm -f "$page"
+              continue
+            fi
+            grep -Eo '(https?:[^" <>]+(toc|abstract|visual|graphic|asset)[^" <>]+(jpg|png|gif|webp))' "$page" | head -20 || true
+          done < other-pages.tsv
       - name: Save inspection artifact
         uses: actions/upload-artifact@v4
         with:
