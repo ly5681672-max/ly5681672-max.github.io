@@ -9,7 +9,7 @@ profile:
   image: yaqian-li-portrait.jpg
   image_circular: true
   more_info: >
-    <p>中国石油大学（华东） · 化学工程学院博士研究生</p>
+    <p>博士研究生 · 中国石油大学（华东）</p>
 selected_papers: false
 social: true
 

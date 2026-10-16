@@ -174,16 +174,23 @@ body {
   font-family: "Roboto", "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
 }
 
-/* Preserve the complete original TOC artwork without cropping, on all screens. */
+/* Publication TOC previews: follow the reference site's native presentation. */
 .publications ol.bibliography li img.preview {
   display: block;
-  width: 100%;
-  max-height: 180px;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  max-height: 200px;
   object-fit: contain;
-  object-position: center;
-  background-color: #fff;
-  border: 1px solid var(--global-divider-color);
-  border-radius: 0.4rem;
+  object-position: left center;
+  border: 0;
+}
+
+/* The reference publications archive uses a tighter, full-column preview. */
+.academic-publication-list .publications ol.bibliography li img.preview {
+  width: 100%;
+  max-height: 158px;
+  border-radius: 7px !important;
 }
 
 /* Default fixed footer hides the end of long text on narrow screens. */
@@ -388,11 +395,16 @@ body {
     margin-bottom: 0.4rem;
   }
 
-  .publications ol.bibliography li img.preview {
+  .post > article > .clearfix > .publications ol.bibliography li img.preview {
     width: auto;
-    max-width: 100%;
-    max-height: 140px;
-    margin: 0.5rem auto 0.25rem;
+    max-width: 155px;
+    max-height: 108px;
+    margin: 0.5rem 0 0;
+    object-position: left center;
+  }
+
+  .academic-publication-list .publications ol.bibliography li img.preview {
+    max-height: 135px;
   }
 
   .academic-publication-list .publications h2.bibliography {
@@ -416,11 +428,12 @@ body {
 }
 
 
-/* Home portrait: reference-like right alignment, genuinely circular photo crop. */
+/* Match the reference homepage's natural 30%-width right-floated portrait.
+   Keep a square crop only because the supplied source is a vertical photograph. */
 .post > article > .profile {
   width: 30%;
-  max-width: 260px;
-  margin: 0 0 1.35rem 1.5rem;
+  max-width: none;
+  margin: 0 0 1.25rem 1rem;
   text-align: center;
 }
 
@@ -431,22 +444,31 @@ body {
 .post > article > .profile img.rounded-circle {
   display: block;
   width: 100%;
+  height: auto;
   aspect-ratio: 1 / 1;
   object-fit: cover;
   object-position: center 39%;
   border-radius: 50% !important;
-  box-shadow: none;
 }
 
 .post > article > .profile .more-info {
-  margin-top: 0.55rem;
+  margin: 0.5rem 0 0;
   color: var(--global-text-color-light);
+  font-family: inherit;
   font-size: 0.82rem;
-  line-height: 1.5;
+  line-height: 1.45;
 }
 
 .post > article > .profile .more-info p {
+  display: inline-block;
   margin: 0;
+  color: var(--global-text-color-light);
+}
+
+/* Only the homepage: don't narrow text while floating the portrait outside it. */
+.post > article > .profile + .clearfix {
+  max-width: none;
+  margin-inline: 0;
 }
 
 @media (max-width: 575.98px) {
@@ -457,10 +479,5 @@ body {
     width: 148px;
     max-width: 100%;
     margin: 0 auto 1.25rem !important;
-  }
-
-  .post > article > .profile .more-info {
-    font-size: 0.82rem;
-    line-height: 1.45;
   }
 }
