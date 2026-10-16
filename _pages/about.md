@@ -55,6 +55,8 @@ latest_posts:
 
 ## 代表性论文
 
+ResearchGate 共收录 **25 条成果记录**，去重后为 **23 篇期刊论文**，另有 **2 条对应已发表论文的预印本版本**。详见[全部论文成果](/publications/)。
+
 <div class="publications">
 {% bibliography --group_by none --query @*[selected=true]* %}
 </div>
