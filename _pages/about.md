@@ -5,7 +5,14 @@ permalink: /
 subtitle: 催化科学 · 第一性原理计算 · 微观动力学 · 人工智能
 
 # No verified personal portrait has been supplied; do not surface starter photos.
-profile: false
+profile:
+  align: right
+  image: prof_pic.jpg
+  image_circular: true
+  more_info: >
+    <p>李亚倩 / Yaqian Li</p>
+    <p>中国石油大学（华东）</p>
+    <p>催化科学 · 第一性原理计算 · 微观动力学 · 人工智能</p>
 selected_papers: false
 social: true
 
