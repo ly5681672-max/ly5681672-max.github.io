@@ -21,7 +21,7 @@ import urllib.error
 import urllib.parse
 import urllib.request
 
-AUTHOR_ID = "A5100697597"  # Verified via four existing journal article DOIs.
+AUTHOR_ID = "A5100697597"  # Four seed DOIs match; may include other same-name authors.
 SEED_DOIS = {
     "10.1038/s41467-025-62192-0",
     "10.1038/s41467-024-54822-w",
@@ -118,7 +118,7 @@ def work_identity(work):
     for authorship in work.get("authorships") or []:
         author = authorship.get("author") or {}
         aid = str(author.get("id") or "").rsplit("/", 1)[-1]
-        if aid == AUTHOR_ID and normalize(author.get("display_name") or "") in (
+        if normalize(author.get("display_name") or "") in (
             "yaqian li", "li yaqian", "ya qian li", "li ya qian"
         ):
             institutions = [
@@ -129,8 +129,44 @@ def work_identity(work):
                 "china university of petroleum" in name or "state key laboratory of heavy oil" in name
                 for name in institutions
             )
-            return True, affiliation
+            # OpenAlex sometimes merges homonyms or assigns a different ID.
+            # Require corroborating known collaborators before accepting either.
+            if aid == AUTHOR_ID or affiliation:
+                return True, affiliation
     return False, False
+
+
+
+def crossref_recent(known_names):
+    """Find recent publisher deposits beyond OpenAlex's ambiguous author cluster.
+
+    Crossref search may match unrelated names; require an exact Yaqian Li byline
+    and a known collaborator before even querying the OpenAlex DOI endpoint.
+    """
+    since = (dt.date.today() - dt.timedelta(days=180)).isoformat()
+    matched = {}
+    for offset in (0, 200):
+        qs = urllib.parse.urlencode(
+            {
+                "query.author": "Yaqian Li",
+                "filter": f"from-index-date:{since},type:journal-article",
+                "rows": 200,
+                "offset": offset,
+                "select": "DOI,type,title,author,container-title,published,published-print,published-online,issued",
+            }
+        )
+        batch = get_json("https://api.crossref.org/works?" + qs).get("message", {})
+        items = batch.get("items")
+        if not isinstance(items, list):
+            raise ValueError("Invalid Crossref search response")
+        for record in items:
+            doi = doi_clean(record.get("DOI"))
+            has_author, coauthors, _ = crossref_author_names(record)
+            if has_author and DOI_RE.match(doi) and (known_names & coauthors):
+                matched[doi] = record
+        if len(items) < 200:
+            break
+    return matched
 
 
 def crossref_author_names(record):
@@ -220,15 +256,32 @@ def sync(apply=False):
     if len(existing) != len(keys) or len(keys) < 23:
         raise ValueError("Existing bibliography IDs/DOIs inconsistent; refusing to update")
     pending, approved = [], []
+    source_warnings = []
     seen = set()
     works = openalex_works()
-    for work in works:
+    candidates = [(work, None) for work in works]
+    crossref_dois = 0
+    try:
+        crossref_matches = crossref_recent(known_names)
+        crossref_dois = len(crossref_matches)
+        openalex_dois = {doi_clean(w.get("doi")) for w in works}
+        for doi, matched_record in crossref_matches.items():
+            if doi in existing or doi in openalex_dois:
+                continue
+            try:
+                work = get_json("https://api.openalex.org/works/https://doi.org/" + doi)
+                candidates.append((work, matched_record))
+            except (Exception) as exc:
+                pending.append({"doi": doi, "reason": "OpenAlex DOI lookup unavailable: " + str(exc)[:130]})
+    except (Exception) as exc:
+        source_warnings.append("Crossref recent search unavailable: " + str(exc)[:130])
+    for work, matched_record in candidates:
         doi = doi_clean(work.get("doi"))
         if doi in seen or doi in existing or not DOI_RE.match(doi):
             continue
         seen.add(doi)
         try:
-            record = get_json("https://api.crossref.org/works/" + urllib.parse.quote(doi, safe="/"))["message"]
+            record = matched_record or get_json("https://api.crossref.org/works/" + urllib.parse.quote(doi, safe="/"))["message"]
             reason = assess_candidate(work, record, known_names)
             if reason:
                 pending.append({"doi": doi, "title": work.get("title"), "reason": reason})
@@ -245,6 +298,8 @@ def sync(apply=False):
         "checked_at": dt.datetime.now(dt.timezone.utc).isoformat(),
         "openalex_author_id": AUTHOR_ID,
         "found_by_openalex": len(works),
+        "additional_crossref_candidates": crossref_dois,
+        "source_warnings": source_warnings,
         "existing_journal_dois": len(existing),
         "approved": [{k: v for k, v in paper.items() if k != "entry"} for paper in approved],
         "pending_review": pending,
