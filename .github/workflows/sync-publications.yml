@@ -1,0 +1,79 @@
+name: Sync new publications
+
+on:
+  schedule:
+    # Monday at approximately 08:17 Beijing time (00:17 UTC).
+    - cron: "17 0 * * 1"
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "Report only, or append DOI-verified publications"
+        required: true
+        type: choice
+        options:
+          - dry-run
+          - apply
+        default: dry-run
+  push:
+    paths:
+      - "scripts/sync_publications.py"
+      - "tests/test_publication_sync.py"
+      - ".github/workflows/sync-publications.yml"
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: publication-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    if: github.repository == 'ly5681672-max/ly5681672-max.github.io'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out bibliography
+        uses: actions/checkout@v4
+      - name: Test DOI and authorship safeguards
+        run: python3 -m unittest discover -s tests -p test_publication_sync.py -v
+      - name: Discover and verify author publications
+        shell: bash
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          SELECTED_MODE: ${{ inputs.mode }}
+        run: |
+          if [[ "$EVENT_NAME" == "schedule" || ( "$EVENT_NAME" == "workflow_dispatch" && "$SELECTED_MODE" == "apply" ) ]]; then
+            python3 scripts/sync_publications.py --apply
+          else
+            python3 scripts/sync_publications.py --dry-run
+          fi
+      - name: Save evidence and pending items
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: publication-monitor-report
+          path: publication-sync-report.json
+          if-no-files-found: ignore
+          retention-days: 30
+      - name: Commit only newly verified journal DOIs
+        id: commit
+        if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.mode == 'apply')
+        shell: bash
+        run: |
+          set -euo pipefail
+          git add _bibliography/papers.bib _data/publication_stats.yml
+          if git diff --cached --quiet; then
+            echo "No new verified DOI; nothing to commit."
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m "publications: append verified new journal papers"
+          git push origin HEAD:main
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+      - name: Trigger Pages rebuild after action bot commit
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run deploy.yml --ref main
