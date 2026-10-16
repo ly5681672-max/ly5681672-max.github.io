@@ -231,3 +231,186 @@ body {
     padding: 1rem 0 1.3rem;
   }
 }
+
+/* Academic homepage: news before selected papers; compact reference-like list. */
+.post > article > .clearfix > .academic-latest-posts + p {
+  margin: 0.45rem 0 1.15rem;
+  font-size: 0.87rem;
+  text-align: right;
+}
+
+/* Publication columns: subtle separators, readable metadata and journal badges. */
+.academic-publication-list {
+  max-width: 860px;
+  margin-inline: auto;
+}
+
+.academic-publication-list .publications h2.bibliography {
+  margin: 1.9rem 0 0.3rem;
+  padding-top: 0.65rem;
+  border-top: 1px solid var(--global-divider-color);
+  color: var(--global-theme-color);
+  font-size: 1.42rem;
+  font-weight: 650;
+  text-align: left;
+  line-height: 1.4;
+}
+
+.academic-publication-list .publications ol.bibliography li,
+.post > article > .clearfix > .publications ol.bibliography li {
+  margin: 0;
+  padding: 1.05rem 0 1.15rem;
+  border-bottom: 1px solid var(--global-divider-color);
+}
+
+.academic-publication-list .publications ol.bibliography li .title,
+.post > article > .clearfix > .publications ol.bibliography li .title {
+  font-size: 1.035rem;
+  font-weight: 650;
+  line-height: 1.5;
+}
+
+.academic-publication-list .publications ol.bibliography li .author,
+.post > article > .clearfix > .publications ol.bibliography li .author {
+  margin-top: 0.25rem;
+  font-size: 0.91rem;
+  line-height: 1.55;
+}
+
+.academic-publication-list .publications ol.bibliography li .periodical,
+.post > article > .clearfix > .publications ol.bibliography li .periodical {
+  margin-top: 0.2rem;
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.publications ol.bibliography li .abbr abbr {
+  width: auto;
+  padding: 0.26rem 0.48rem;
+  border-radius: 5px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.publications ol.bibliography li .links {
+  margin-top: 0.42rem;
+}
+
+.publications ol.bibliography li .links a.btn {
+  margin: 0 0.35rem 0.35rem 0;
+  padding: 0.19rem 0.55rem;
+  border-radius: 5px;
+  font-size: 0.78rem;
+  line-height: 1.5;
+}
+
+/* Automatic academic news feed: dates on the left, content on the right. */
+.academic-news-list {
+  max-width: 860px;
+  margin-inline: auto;
+}
+
+.academic-news-entry {
+  display: grid;
+  grid-template-columns: 110px minmax(0, 1fr);
+  gap: 1rem;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid var(--global-divider-color);
+}
+
+.academic-news-entry > time {
+  padding-top: 0.1rem;
+  color: var(--global-text-color-light);
+  font-size: 0.84rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.academic-news-detail {
+  min-width: 0;
+  line-height: 1.65;
+}
+
+.academic-news-kind {
+  display: block;
+  margin-bottom: 0.12rem;
+  color: var(--global-text-color-light);
+  font-size: 0.78rem;
+}
+
+.academic-news-detail a {
+  color: var(--global-text-color);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.academic-news-detail a:hover {
+  color: var(--global-theme-color);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+/* Real verified academic social links, without template identities. */
+.post > article > .social {
+  margin-top: 1.6rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--global-divider-color);
+}
+
+.post > article > .social .contact-icons {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.post > article > .social .contact-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  min-height: 40px;
+}
+
+@media (max-width: 600px) {
+  .academic-publication-list .publications ol.bibliography li .row > .abbr,
+  .academic-publication-list .publications ol.bibliography li .row > .col-sm-8,
+  .academic-publication-list .publications ol.bibliography li .row > .col-sm-10,
+  .post > article > .clearfix > .publications ol.bibliography li .row > .abbr,
+  .post > article > .clearfix > .publications ol.bibliography li .row > .col-sm-8,
+  .post > article > .clearfix > .publications ol.bibliography li .row > .col-sm-10 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .publications ol.bibliography li .abbr {
+    margin-bottom: 0.4rem;
+  }
+
+  .publications ol.bibliography li img.preview {
+    width: auto;
+    max-width: 100%;
+    max-height: 140px;
+    margin: 0.5rem auto 0.25rem;
+  }
+
+  .academic-publication-list .publications h2.bibliography {
+    font-size: 1.31rem;
+  }
+
+  .academic-news-entry {
+    grid-template-columns: 1fr;
+    gap: 0.15rem;
+  }
+
+  .post > article > .social .contact-icons {
+    justify-content: center;
+  }
+
+  #navbarNav.show {
+    max-height: calc(100vh - 4.5rem);
+    overflow-y: auto;
+    padding-bottom: 0.6rem;
+  }
+}
