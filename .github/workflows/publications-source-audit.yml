@@ -1,0 +1,52 @@
+name: Verify publication author identity
+
+on:
+  push:
+    paths:
+      - ".github/workflows/publications-source-audit.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cross-check seed DOIs with OpenAlex
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import collections, json, time, urllib.request, urllib.error
+          seeds = [
+              "10.1038/s41467-025-62192-0",
+              "10.1038/s41467-024-54822-w",
+              "10.1002/aic.18683",
+              "10.1016/j.mcat.2024.114706",
+              "10.1016/j.fuel.2024.133486",
+              "10.1016/j.apcatb.2025.125108",
+              "10.1021/acs.iecr.5c05293",
+              "10.1016/j.fuel.2025.137160",
+              "10.1016/j.cej.2025.164661",
+          ]
+          count = collections.Counter()
+          for doi in seeds:
+              url = "https://api.openalex.org/works/https://doi.org/" + doi
+              try:
+                  req = urllib.request.Request(url, headers={"User-Agent":"YaqianLiSitePublicationAudit/1.0"})
+                  with urllib.request.urlopen(req, timeout=25) as resp:
+                      work = json.load(resp)
+              except Exception as exc:
+                  print(doi, "ERROR", type(exc).__name__, str(exc)[:140], flush=True)
+                  continue
+              matches = []
+              for authorship in work.get("authorships", []):
+                  author = authorship.get("author") or {}
+                  if author.get("display_name", "").casefold().strip() in {"yaqian li", "li yaqian", "li ya-qian", "ya-qian li"}:
+                      a_id = author.get("id", "").split("/")[-1]
+                      count[a_id] += 1
+                      matches.append((a_id, author.get("display_name"), [(i.get("display_name")) for i in authorship.get("institutions", [])]))
+              print(doi, json.dumps(matches, ensure_ascii=False), flush=True)
+              time.sleep(0.5)
+          print("AUTHOR_COUNTS", json.dumps(count.most_common()), flush=True)
+          PY
