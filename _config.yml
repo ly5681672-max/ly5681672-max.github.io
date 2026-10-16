@@ -2,10 +2,10 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: 李亚倩的催化计算笔记
+title: blank # Use the native al-folio name layout like the reference homepage.
 first_name: 李亚倩
 middle_name:
-last_name:
+last_name: " | Yaqian Li"
 contact_note: 学术论文与代码成果详见 ResearchGate 和 GitHub。
 description: >
   李亚倩（Yaqian Li）的学术主页，展示人工智能辅助催化剂筛选、第一性原理计算、微观动力学、学术论文与 CatMAP 学习笔记。
