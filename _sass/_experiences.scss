@@ -1,0 +1,186 @@
+/*
+ * Academic experiences, aligned with the visual structure of the reference
+ * yingjinghuang.github.io/experiences/. Retains the current al-folio runtime.
+ */
+.experience-page {
+  max-width: 860px;
+  margin-inline: auto;
+}
+
+.experience-section + .experience-section {
+  margin-top: 2.5rem;
+}
+
+.experience-section-title {
+  margin: 0 0 0.65rem;
+  font-size: 1.45rem;
+  font-weight: 650;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+}
+
+.experience-entry {
+  display: grid;
+  grid-template-columns: 54px minmax(0, 1fr);
+  align-items: start;
+  gap: 1.1rem;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--global-divider-color);
+}
+
+.experience-entry:last-child {
+  border-bottom: 0;
+}
+
+.experience-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 54px;
+  padding: 8px;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 12px;
+  background: var(--global-card-bg-color);
+  color: var(--global-theme-color);
+  font-size: 1.25rem;
+}
+
+.experience-logo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.experience-content {
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+
+.experience-header,
+.experience-degree-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.3rem 1.1rem;
+}
+
+.experience-header h3 {
+  margin: 0;
+  font-size: 1.11rem;
+  font-weight: 650;
+  line-height: 1.4;
+  letter-spacing: -0.012em;
+}
+
+.experience-date {
+  flex-shrink: 0;
+  color: var(--global-text-color-light);
+  font-size: 0.84rem;
+  white-space: nowrap;
+}
+
+.experience-role {
+  margin: 0.32rem 0 0.16rem;
+  font-size: 0.98rem;
+  font-weight: 550;
+  line-height: 1.5;
+}
+
+.experience-location,
+.experience-detail {
+  margin: 0.18rem 0 0;
+  color: var(--global-text-color-light);
+  font-size: 0.88rem;
+  line-height: 1.55;
+}
+
+.experience-detail a {
+  color: var(--global-theme-color);
+}
+
+.experience-detail a:hover {
+  text-decoration: underline;
+}
+
+.experience-degrees {
+  margin-top: 0.85rem;
+}
+
+.experience-degree + .experience-degree {
+  margin-top: 0.95rem;
+  padding-top: 0.85rem;
+  border-top: 1px dashed var(--global-divider-color);
+}
+
+.experience-degree h4 {
+  margin: 0;
+  font-size: 0.97rem;
+  font-weight: 550;
+  line-height: 1.5;
+}
+
+.experience-empty {
+  margin: 0.5rem 0 0;
+  padding: 0.65rem 0 1rem;
+  color: var(--global-text-color-light);
+  font-size: 0.88rem;
+}
+
+.experience-funding-entry {
+  padding: 1.1rem 0;
+  border-bottom: 1px solid var(--global-divider-color);
+}
+
+.experience-funding-entry .experience-header h3 {
+  font-size: 1.02rem;
+}
+
+.experience-funding-entry:last-child {
+  border-bottom: 0;
+}
+
+@media (max-width: 600px) {
+  .experience-section + .experience-section {
+    margin-top: 2rem;
+  }
+
+  .experience-section-title {
+    font-size: 1.34rem;
+  }
+
+  .experience-entry {
+    grid-template-columns: 44px minmax(0, 1fr);
+    gap: 0.8rem;
+    padding: 1.1rem 0;
+  }
+
+  .experience-logo {
+    width: 44px;
+    height: 44px;
+    padding: 6px;
+    border-radius: 10px;
+    font-size: 1.04rem;
+  }
+
+  .experience-header,
+  .experience-degree-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.1rem;
+  }
+
+  .experience-date {
+    font-size: 0.81rem;
+    white-space: normal;
+  }
+
+  .experience-role {
+    margin-top: 0.38rem;
+  }
+
+  .experience-degrees {
+    margin-top: 0.7rem;
+  }
+}

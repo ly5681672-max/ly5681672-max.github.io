@@ -1,0 +1,10 @@
+# Experiences displayed at /experiences/.
+# Only confirmed personal information belongs here. Newest records first.
+# No dates, supervisors, work positions, or grants have been assumed.
+work: []
+
+education:
+  - institution: "中国石油大学（华东）"
+    role: "化学工程学院 · 博士研究生"
+
+funding: []

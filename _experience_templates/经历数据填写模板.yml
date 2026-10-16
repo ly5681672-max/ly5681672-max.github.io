@@ -1,0 +1,44 @@
+# 经历数据填写模板（示例，不会自动发布）
+#
+# 每次新增真实经历，请打开网站仓库的 _data/experiences.yml，
+# 在 work、education 或 funding 对应数组下添加一条记录。
+# 下面的“示例”内容不得直接作为本人真实经历发布。
+#
+# work:
+#   - institution: "任职机构名称"
+#     role: "研究助理 / 博士后 / 访问学者等真实岗位"
+#     dates: "Sep. 2025 – Present"
+#     location: "城市，国家"
+#     logo: "/assets/img/experiences/institution-logo.png"
+#     detail: "合作导师："
+#     links:
+#       - label: "导师姓名"
+#         url: "https://example.org/supervisor"
+#
+# education:
+#   - institution: "大学名称"
+#     role: "博士 / 硕士 / 学士学位名称"
+#     dates: "Sep. 2021 – Jun. 2025"
+#     location: "城市，国家"
+#     logo: "/assets/img/experiences/university-logo.png"
+#     detail: "导师："
+#     links:
+#       - label: "导师姓名"
+#         url: "https://example.org/teacher"
+#
+# 如果同一所学校需要展示多个学位，请不填写 role，改用 degrees:
+#   - institution: "某大学"
+#     location: "城市，国家"
+#     degrees:
+#       - name: "M.S. in ..."
+#         dates: "Sep. 2018 – Jun. 2021"
+#         detail: "Advisor: ..."
+#       - name: "B.Sc. in ..."
+#         dates: "Sep. 2013 – Jun. 2017"
+#
+# funding:
+#   - title: "真实科研项目名称"
+#     dates: "2026"
+#     agency: "资助机构"
+#     agency_url: "https://example.org/grant"
+#     role: "负责人 / 参与人 / 经费（需真实）"
