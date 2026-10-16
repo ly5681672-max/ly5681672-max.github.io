@@ -3,13 +3,13 @@
  * Scoped to the al-folio post layout; no additional Markdown markup needed.
  */
 .post {
-  --note-accent: #29618c;
+  --note-accent: #00369f;
   --note-soft-bg: color-mix(in srgb, var(--note-accent) 6%, var(--global-bg-color));
   --note-outline: color-mix(in srgb, var(--note-accent) 20%, var(--global-divider-color));
 }
 
 html[data-theme="dark"] .post {
-  --note-accent: #91bde8;
+  --note-accent: #91c7e5;
   --note-soft-bg: color-mix(in srgb, var(--note-accent) 9%, var(--global-bg-color));
   --note-outline: color-mix(in srgb, var(--note-accent) 25%, var(--global-divider-color));
 }
@@ -24,8 +24,8 @@ html[data-theme="dark"] .post {
 .post > .post-header .post-title {
   margin-bottom: 0.9rem;
   color: var(--global-text-color);
-  font-size: clamp(1.65rem, 3.8vw, 2.4rem);
-  font-weight: 720;
+  font-size: clamp(1.65rem, 3.8vw, 2.2rem);
+  font-weight: 650;
   line-height: 1.35;
   letter-spacing: -0.015em;
 }
@@ -41,13 +41,13 @@ html[data-theme="dark"] .post {
   margin-inline: auto;
   color: var(--global-text-color);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
-  font-size: 1.04rem;
-  line-height: 1.95;
+  font-size: 1rem;
+  line-height: 1.8;
   overflow-wrap: anywhere;
 }
 
 .post .post-content #markdown-content > p {
-  margin: 0 0 1.15rem;
+  margin: 0 0 1rem;
 }
 
 .post .post-content #markdown-content :is(h1, h2, h3, h4) {
@@ -63,10 +63,10 @@ html[data-theme="dark"] .post {
 }
 
 .post .post-content #markdown-content h2 {
-  margin: 2.65rem 0 1.25rem;
+  margin: 2.35rem 0 1.1rem;
   padding: 0.1rem 0 0.1rem 0.9rem;
-  border-left: 3px solid var(--note-accent);
-  font-size: 1.43rem;
+  border-left: 2px solid var(--note-accent);
+  font-size: 1.34rem;
 }
 
 .post .post-content #markdown-content h3 {
@@ -212,7 +212,7 @@ html[data-theme="dark"] .post {
 
   .post .post-content #markdown-content h2 {
     margin-top: 2rem;
-    font-size: 1.27rem;
+    font-size: 1.22rem;
   }
 
   .post .post-content #markdown-content pre {

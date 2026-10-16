@@ -21,6 +21,17 @@ latest_posts:
 
 我希望通过持续学习，将复杂的理论知识转化为能够理解、计算和独立复现的研究方法。
 
+## 最新学习笔记
+
+<div class="academic-latest-posts">
+{% for post in site.posts limit:5 %}
+  <div class="academic-latest-post">
+    <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%Y.%m.%d' }}</time>
+    <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+  </div>
+{% endfor %}
+</div>
+
 ## 研究方向
 
 ### 1. 催化反应机理与第一性原理计算
