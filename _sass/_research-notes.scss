@@ -1,0 +1,221 @@
+/*
+ * Automatic research-note typography.
+ * Scoped to the al-folio post layout; no additional Markdown markup needed.
+ */
+.post {
+  --note-accent: #29618c;
+  --note-soft-bg: color-mix(in srgb, var(--note-accent) 6%, var(--global-bg-color));
+  --note-outline: color-mix(in srgb, var(--note-accent) 20%, var(--global-divider-color));
+}
+
+html[data-theme="dark"] .post {
+  --note-accent: #91bde8;
+  --note-soft-bg: color-mix(in srgb, var(--note-accent) 9%, var(--global-bg-color));
+  --note-outline: color-mix(in srgb, var(--note-accent) 25%, var(--global-divider-color));
+}
+
+.post > .post-header {
+  max-width: 800px;
+  margin: 0 auto 2.15rem;
+  padding-bottom: 1.3rem;
+  border-bottom: 1px solid var(--global-divider-color);
+}
+
+.post > .post-header .post-title {
+  margin-bottom: 0.9rem;
+  color: var(--global-text-color);
+  font-size: clamp(1.65rem, 3.8vw, 2.4rem);
+  font-weight: 720;
+  line-height: 1.35;
+  letter-spacing: -0.015em;
+}
+
+.post > .post-header .post-meta,
+.post > .post-header .post-tags {
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
+
+.post > .post-content > #markdown-content {
+  max-width: 800px;
+  margin-inline: auto;
+  color: var(--global-text-color);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+  font-size: 1.04rem;
+  line-height: 1.95;
+  overflow-wrap: anywhere;
+}
+
+.post .post-content #markdown-content > p {
+  margin: 0 0 1.15rem;
+}
+
+.post .post-content #markdown-content :is(h1, h2, h3, h4) {
+  color: var(--global-text-color);
+  font-weight: 700;
+  line-height: 1.5;
+  scroll-margin-top: 5rem;
+}
+
+.post .post-content #markdown-content h1 {
+  margin: 2.5rem 0 1.2rem;
+  font-size: 1.7rem;
+}
+
+.post .post-content #markdown-content h2 {
+  margin: 2.65rem 0 1.25rem;
+  padding: 0.1rem 0 0.1rem 0.9rem;
+  border-left: 3px solid var(--note-accent);
+  font-size: 1.43rem;
+}
+
+.post .post-content #markdown-content h3 {
+  margin: 2rem 0 0.9rem;
+  color: var(--note-accent);
+  font-size: 1.18rem;
+}
+
+.post .post-content #markdown-content h4 {
+  margin: 1.6rem 0 0.7rem;
+  font-size: 1.07rem;
+}
+
+.post .post-content #markdown-content :is(ul, ol) {
+  margin: 0.9rem 0 1.35rem;
+  padding-left: 1.65rem;
+}
+
+.post .post-content #markdown-content li {
+  margin-bottom: 0.38rem;
+  padding-left: 0.12rem;
+}
+
+.post .post-content #markdown-content li::marker {
+  color: var(--note-accent);
+}
+
+.post .post-content #markdown-content a {
+  color: var(--note-accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+.post .post-content #markdown-content > p:has(> strong:first-child) {
+  padding: 0.55rem 0.95rem;
+  border-left: 2px solid var(--note-accent);
+  border-radius: 0 0.35rem 0.35rem 0;
+  background: var(--note-soft-bg);
+  font-size: 0.97em;
+}
+
+.post .post-content #markdown-content :is(p > img, figure img, a > img) {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 1.6rem auto;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 0.55rem;
+}
+
+.post .post-content #markdown-content figcaption {
+  margin: -0.65rem auto 1.6rem;
+  color: var(--global-text-color-light);
+  font-size: 0.88rem;
+  text-align: center;
+}
+
+.post .post-content #markdown-content pre {
+  max-width: 100%;
+  margin: 1.25rem 0 1.6rem;
+  padding: 1rem 1.15rem;
+  overflow-x: auto;
+  border: 1px solid var(--note-outline);
+  border-radius: 0.55rem;
+  background: var(--global-code-bg-color);
+  font-size: 0.88rem;
+  line-height: 1.65;
+  tab-size: 4;
+}
+
+.post .post-content #markdown-content :not(pre) > code {
+  padding: 0.16em 0.36em;
+  border-radius: 0.25rem;
+  background: var(--note-soft-bg);
+  color: var(--note-accent);
+  font-size: 0.91em;
+}
+
+.post .post-content #markdown-content pre code {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font-size: inherit;
+}
+
+.post .post-content #markdown-content table {
+  display: block;
+  max-width: 100%;
+  margin: 1.4rem 0 1.8rem;
+  overflow-x: auto;
+  border-collapse: collapse;
+}
+
+.post .post-content #markdown-content table th,
+.post .post-content #markdown-content table td {
+  padding: 0.65rem 0.8rem;
+  border-bottom: 1px solid var(--global-divider-color);
+  font-size: 0.95rem;
+}
+
+.post .post-content #markdown-content table th {
+  background: var(--note-soft-bg);
+  font-weight: 650;
+  white-space: nowrap;
+}
+
+.post .post-content #markdown-content blockquote:not(.block-tip, .block-warning, .block-danger) {
+  margin: 1.4rem 0;
+  padding: 0.8rem 1.1rem;
+  border-left: 3px solid var(--note-accent);
+  border-radius: 0 0.4rem 0.4rem 0;
+  background: var(--note-soft-bg);
+  font-size: 0.98rem;
+  line-height: 1.85;
+}
+
+.post .post-content #markdown-content mjx-container[jax="CHTML"][display="true"] {
+  max-width: 100%;
+  margin: 1.55rem auto !important;
+  padding: 0.85rem 0.35rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  border-block: 1px solid var(--global-divider-color);
+}
+
+.post .post-content #markdown-content .footnotes {
+  margin-top: 2.6rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--global-divider-color);
+  color: var(--global-text-color-light);
+  font-size: 0.87rem;
+}
+
+@media (max-width: 640px) {
+  .post > .post-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .post > .post-content > #markdown-content {
+    font-size: 1rem;
+    line-height: 1.83;
+  }
+
+  .post .post-content #markdown-content h2 {
+    margin-top: 2rem;
+    font-size: 1.27rem;
+  }
+
+  .post .post-content #markdown-content pre {
+    padding: 0.8rem;
+  }
+}
