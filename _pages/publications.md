@@ -12,7 +12,7 @@ hide_missing_publication_previews: true
 
 本站现收录 **{{ site.data.publication_stats.journal_count }} 篇独立期刊论文**，新成果经 DOI、作者和出版信息核验后自动更新。
 
-**学术主页：** [ORCID](https://orcid.org/0009-0004-7005-8512) · [ResearchGate — Yaqian Li](https://www.researchgate.net/profile/Yaqian-Li-10)。
+**学术主页：** [ORCID](https://orcid.org/0009-0004-7005-8512) · [Google Scholar](https://scholar.google.com/citations?user=ReMQrbIAAAAJ&hl=zh-CN) · [Web of Science ResearcherID](https://www.webofscience.com/wos/author/rid/GVT-4395-2022) · [ResearchGate](https://www.researchgate.net/profile/Yaqian-Li-10)。
 
 <div class="academic-publication-list">
   {% include bib_search.liquid %}

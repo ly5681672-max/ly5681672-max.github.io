@@ -30,6 +30,10 @@ nav_order: 5
 
 [ORCID：0009-0004-7005-8512](https://orcid.org/0009-0004-7005-8512)
 
+[Google Scholar：Yaqian Li](https://scholar.google.com/citations?user=ReMQrbIAAAAJ&hl=zh-CN)
+
+[Web of Science ResearcherID：GVT-4395-2022](https://www.webofscience.com/wos/author/rid/GVT-4395-2022)
+
 [ResearchGate：Yaqian Li](https://www.researchgate.net/profile/Yaqian-Li-10)
 
 [论文成果与 DOI 列表](/publications/)
