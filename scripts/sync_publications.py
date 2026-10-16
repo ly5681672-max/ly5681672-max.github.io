@@ -30,6 +30,7 @@ SEED_DOIS = {
 }
 BIB = pathlib.Path("_bibliography/papers.bib")
 STATS = pathlib.Path("_data/publication_stats.yml")
+NEWS_DIR = pathlib.Path("_news")
 REPORT = pathlib.Path("publication-sync-report.json")
 DOI_RE = re.compile(r"^10\.\d{4,9}/[^\s{}<>]+$", re.I)
 ENTRY_RE = re.compile(r"(?m)^@article\{[^\n]+\{?", re.I)
@@ -248,6 +249,52 @@ def render_bibtex(work, record, existing_keys):
     return key, entry
 
 
+def verified_news_date(record, today=None):
+    """Publisher online date only: never guess month/day from a year-only entry."""
+    if today is None:
+        today = dt.date.today()
+    date_parts = (record.get("published-online") or {}).get("date-parts") or []
+    if not date_parts or len(date_parts[0]) < 3:
+        return None
+    try:
+        published = dt.date(*map(int, date_parts[0][:3]))
+    except (TypeError, ValueError):
+        return None
+    if not (dt.timedelta(0) <= today - published <= dt.timedelta(days=180)):
+        return None
+    return published
+
+
+def write_verified_news(papers):
+    """Append only newly DOI-verified, recently published academic news."""
+    written = []
+    for paper in papers:
+        published = paper.get("news_date")
+        if published is None:
+            continue
+        filename = f"{published.isoformat()}-paper-{paper['key']}.md"
+        path = NEWS_DIR / filename
+        if path.exists():
+            continue
+        NEWS_DIR.mkdir(parents=True, exist_ok=True)
+        title = clean_field(paper["title"])
+        journal = clean_field(paper["journal"])
+        headline = "论文发表：" + title
+        content = (
+            "---\n"
+            "layout: post\n"
+            f"title: {json.dumps(headline, ensure_ascii=False)}\n"
+            f"date: {published.isoformat()}\n"
+            "inline: false\n"
+            "---\n\n"
+            f"论文《{title}》于 {published.isoformat()} 在 *{journal}* 在线发表。\n\n"
+            f"[DOI：{paper['doi']}](https://doi.org/{paper['doi']})。\n"
+        )
+        path.write_text(content, encoding="utf-8")
+        written.append(str(path))
+    return written
+
+
 def sync(apply=False):
     original = BIB.read_text(encoding="utf-8")
     existing = doi_existing(original)
@@ -296,7 +343,14 @@ def sync(apply=False):
                 continue
             key, entry = render_bibtex(work, record, keys)
             keys.add(key)
-            approved.append({"doi": doi, "key": key, "title": record["title"][0], "entry": entry})
+            approved.append({
+                "doi": doi,
+                "key": key,
+                "title": record["title"][0],
+                "journal": record["container-title"][0],
+                "news_date": verified_news_date(record),
+                "entry": entry,
+            })
         except (Exception) as exc:
             pending.append({"doi": doi, "title": work.get("title"), "reason": str(exc)[:180]})
     approved.sort(key=lambda paper: paper["doi"])
@@ -310,12 +364,17 @@ def sync(apply=False):
         "source_warnings": source_warnings,
         "excluded_ambiguous_or_unrelated_records": rejected_same_name,
         "existing_journal_dois": len(existing),
-        "approved": [{k: v for k, v in paper.items() if k != "entry"} for paper in approved],
+        "approved": [
+            {k: (v.isoformat() if isinstance(v, dt.date) else v)
+             for k, v in paper.items() if k != "entry"}
+            for paper in approved
+        ],
         "pending_review": pending,
         "mode": "apply" if apply else "dry-run",
     }
     REPORT.write_text(json.dumps(report, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     if apply and approved:
+        report["news_created"] = write_verified_news(approved)
         BIB.write_text(original.rstrip() + "\n\n" + "\n".join(p["entry"].rstrip() for p in approved) + "\n", encoding="utf-8")
         STATS.write_text(
             "# Distinct journal-article DOIs; updated by scripts/sync_publications.py.\n"
