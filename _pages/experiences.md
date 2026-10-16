@@ -4,7 +4,7 @@ permalink: /experiences/
 title: 学术经历
 description: Work, education, and research funding.
 nav: true
-nav_order: 6
+nav_order: 3
 ---
 
 {% assign work_items = site.data.experiences.work %}
@@ -12,6 +12,7 @@ nav_order: 6
 {% assign funding_items = site.data.experiences.funding %}
 
 <div class="experience-page">
+  {% if work_items.size > 0 %}
   <section class="experience-section" aria-labelledby="experience-work-title">
     <h2 class="experience-section-title" id="experience-work-title">Work</h2>
     <div class="experience-list">
@@ -50,6 +51,7 @@ nav_order: 6
       {% endfor %}
     </div>
   </section>
+  {% endif %}
 
   <section class="experience-section" aria-labelledby="experience-education-title">
     <h2 class="experience-section-title" id="experience-education-title">Education</h2>

@@ -3,7 +3,7 @@ layout: page
 title: 关于本站
 permalink: /about-site/
 description: 关于李亚倩的催化计算笔记
-nav: true
+nav: false
 nav_order: 5
 ---
 

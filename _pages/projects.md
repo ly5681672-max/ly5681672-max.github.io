@@ -3,7 +3,7 @@ layout: page
 title: 科研项目
 permalink: /projects/
 description: 催化计算与微观动力学科研项目
-nav: true
+nav: false
 nav_order: 3
 ---
 

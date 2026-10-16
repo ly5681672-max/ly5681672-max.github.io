@@ -4,7 +4,7 @@ permalink: /talks/
 title: 学术报告
 description: Invited talks, conference presentations, and seminars.
 nav: true
-nav_order: 5
+nav_order: 4
 ---
 
 {% assign invited = site.talks | where: "category", "invited" | sort: "date" | reverse %}

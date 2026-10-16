@@ -4,7 +4,7 @@ permalink: /publications/
 title: 论文成果
 description: 李亚倩参与发表的催化科学、微观动力学及机器学习研究论文
 nav: true
-nav_order: 5
+nav_order: 2
 hide_missing_publication_previews: true
 ---
 

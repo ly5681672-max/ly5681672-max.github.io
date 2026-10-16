@@ -4,7 +4,7 @@ title: 近期动态
 permalink: /news/
 description: 科研动态与学习笔记的公开更新记录
 nav: true
-nav_order: 7
+nav_order: 5
 ---
 
 {% assign academic_updates = site.news | concat: site.posts | sort: "date" | reverse %}

@@ -3,7 +3,7 @@ layout: page
 title: 文献笔记
 permalink: /literature/
 description: 催化科学与人工智能文献阅读笔记
-nav: true
+nav: false
 nav_order: 4
 ---
 

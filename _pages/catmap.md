@@ -3,7 +3,7 @@ layout: page
 title: CatMAP教程
 permalink: /catmap/
 description: CatMAP微观动力学中文学习教程
-nav: true
+nav: false
 nav_order: 2
 ---
 
