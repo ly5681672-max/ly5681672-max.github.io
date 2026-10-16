@@ -28,6 +28,8 @@ nav_order: 5
 
 ## 学术主页
 
+[ORCID：0009-0004-7005-8512](https://orcid.org/0009-0004-7005-8512)
+
 [ResearchGate：Yaqian Li](https://www.researchgate.net/profile/Yaqian-Li-10)
 
 [论文成果与 DOI 列表](/publications/)

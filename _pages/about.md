@@ -20,7 +20,7 @@ latest_posts:
 
 研究重点是建立从催化活性位电子结构、反应能量到动力学性能的关联，并探索机器学习与机理计算相结合的催化剂设计方法。
 
-[ResearchGate 学术主页](https://www.researchgate.net/profile/Yaqian-Li-10) · [全部论文成果](/publications/) · [CatMAP 科研代码](https://github.com/ly5681672-max/catmap)
+[ORCID](https://orcid.org/0009-0004-7005-8512) · [ResearchGate 学术主页](https://www.researchgate.net/profile/Yaqian-Li-10) · [全部论文成果](/publications/) · [CatMAP 科研代码](https://github.com/ly5681672-max/catmap)
 
 ## 近期动态
 
