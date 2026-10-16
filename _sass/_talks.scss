@@ -1,0 +1,225 @@
+/*
+ * Talks archive: two-section timeline closely aligned to the reference
+ * yingjinghuang.github.io/talks/, adapted for local al-folio styles.
+ */
+.talks-page {
+  max-width: 860px;
+  margin-inline: auto;
+}
+
+.talks-section + .talks-section {
+  margin-top: 2.7rem;
+}
+
+.talks-section-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.talks-section-head h2 {
+  margin: 0;
+  color: var(--global-text-color);
+  font-size: 1.45rem;
+  font-weight: 650;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+}
+
+.talks-section-count {
+  color: var(--global-text-color-light);
+  font-size: 0.82rem;
+  white-space: nowrap;
+}
+
+.talks-invited-list {
+  margin-top: 0.45rem;
+}
+
+.talks-invited-entry {
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr);
+  align-items: start;
+  gap: 0.85rem;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--global-divider-color);
+}
+
+.talks-invited-entry:last-child {
+  border-bottom: 0;
+}
+
+.talks-invited-symbol {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 10px;
+  color: var(--global-theme-color);
+  background: var(--global-card-bg-color);
+  font-size: 1.05rem;
+}
+
+.talks-entry-body {
+  min-width: 0;
+}
+
+.talks-entry-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.35rem 1rem;
+}
+
+.talks-entry-head h3 {
+  min-width: 0;
+  margin: 0;
+  color: var(--global-text-color);
+  font-size: 1.02rem;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  overflow-wrap: break-word;
+}
+
+.talks-entry-date {
+  flex: 0 0 auto;
+  color: var(--global-text-color-light);
+  font-size: 0.84rem;
+  white-space: nowrap;
+}
+
+.talks-venue {
+  margin: 0.32rem 0 0;
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.talks-place {
+  margin: 0.15rem 0 0;
+  color: var(--global-text-color-light);
+  font-size: 0.84rem;
+  line-height: 1.5;
+}
+
+.talks-materials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 0.65rem 0 0;
+}
+
+.talks-material-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.38rem 0.65rem;
+  border: 1px solid var(--global-divider-color);
+  border-radius: 7px;
+  color: var(--global-theme-color);
+  background: var(--global-card-bg-color);
+  font-size: 0.84rem;
+  line-height: 1.4;
+  text-decoration: none;
+}
+
+.talks-material-link:hover {
+  border-color: var(--global-theme-color);
+  color: var(--global-theme-color);
+  text-decoration: none;
+}
+
+.talks-conference-list {
+  margin-top: 0.25rem;
+}
+
+.talks-conference {
+  display: grid;
+  grid-template-columns: 69px minmax(0, 1fr);
+  gap: 1.25rem;
+  padding: 1.25rem 0 1.3rem;
+  border-bottom: 1px solid var(--global-divider-color);
+}
+
+.talks-conference:last-child {
+  border-bottom: 0;
+}
+
+.talks-conf-date {
+  display: flex;
+  flex-direction: column;
+  padding-top: 0.15rem;
+  line-height: 1.25;
+}
+
+.talks-conf-month {
+  color: var(--global-theme-color);
+  font-size: 0.81rem;
+  font-weight: 650;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.talks-conf-year {
+  margin-top: 0.2rem;
+  color: var(--global-text-color-light);
+  font-size: 1rem;
+}
+
+.talks-type {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin: 0 0 0.45rem;
+  color: var(--global-text-color-light);
+  font-size: 0.75rem;
+  font-weight: 650;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.talks-type i {
+  color: var(--global-theme-color);
+}
+
+.talks-empty {
+  margin: 0.85rem 0 0;
+  padding: 1.2rem 0;
+  color: var(--global-text-color-light);
+  font-size: 0.9rem;
+}
+
+@media (max-width: 640px) {
+  .talks-section + .talks-section {
+    margin-top: 2.25rem;
+  }
+
+  .talks-section-head h2 {
+    font-size: 1.34rem;
+  }
+
+  .talks-entry-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.2rem;
+  }
+
+  .talks-invited-entry {
+    gap: 0.7rem;
+    padding: 1rem 0;
+  }
+
+  .talks-conference {
+    grid-template-columns: 52px minmax(0, 1fr);
+    gap: 0.75rem;
+    padding: 1.1rem 0;
+  }
+
+  .talks-conf-year {
+    font-size: 0.9rem;
+  }
+}

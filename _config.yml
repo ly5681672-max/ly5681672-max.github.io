@@ -200,6 +200,8 @@ collections:
     output: true
   teachings:
     output: true
+  talks:
+    output: false
 
 # -----------------------------------------------------------------------------
 # Jekyll settings
