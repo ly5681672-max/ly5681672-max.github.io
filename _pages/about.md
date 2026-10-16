@@ -7,7 +7,7 @@ subtitle: 催化科学 · 第一性原理计算 · 微观动力学 · 人工智�
 # No verified personal portrait has been supplied; do not surface starter photos.
 profile:
   align: right
-  image: prof_pic.jpg
+  image: 微信图片_20261016170358_90_28.jpg
   image_circular: true
   more_info: >
     <p>李亚倩 / Yaqian Li</p>
