@@ -6,13 +6,13 @@ date: 2026-10-16 10:00:00 +0800
 
 1. 当前BEP关系下
 
-```math
+$$
 \begin{gathered}
 u=\Delta G_{2}+2.0922766923,\qquad
 z=E_{\rm form}^{legacy}(\mathrm{OOH}^{*})+4.3098743846,\\
 \boxed{\widehat Y_{1}\simeq0.412123+0.370377u+0.200217z-0.309777z^2}.
 \end{gathered}
-```
+$$
 
 tico的TOF预测失效？
 
