@@ -30,7 +30,7 @@ module ResearchAutoLinks
         node.add_previous_sibling(Nokogiri::XML::Text.new(prefix, node.document)) unless prefix.empty?
 
         url = match[1] || match[0]
-        trailing = ""
+        trailing = String.new
         unless match[1]
           while !url.empty? &&
                 (url[-1].match?(TRAILING_PUNCTUATION) ||
