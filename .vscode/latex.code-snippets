@@ -1,0 +1,8 @@
+{
+  "Jekyll MathJax display formula": {
+    "scope": "markdown",
+    "prefix": "mathblock",
+    "body": ["$$", "$1", "$$"],
+    "description": "Insert a block equation compatible with Jekyll/Kramdown/MathJax",
+  },
+}
