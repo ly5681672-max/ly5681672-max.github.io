@@ -88,6 +88,8 @@ jobs:
           cache: "npm"
       - name: Install JS deps 📦
         run: npm ci
+      - name: Verify blog math normalization 🧮
+        run: bundle exec ruby test/research_math_guard_test.rb
       - name: Update _config.yml ⚙️
         uses: fjogeleit/yaml-update-action@dffe9a5223d84653c13374032382f6bb5de8e5ef # v0.17.0
         with:
