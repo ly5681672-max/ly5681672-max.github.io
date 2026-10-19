@@ -1,6 +1,11 @@
 # frozen_string_literal: true
 
 require "minitest/autorun"
+begin
+  require "jekyll"
+rescue LoadError
+  # Plain-Ruby local tests remain available; CI installs Jekyll.
+end
 require_relative "../_plugins/research_math_guard"
 
 class ResearchMathGuardTest < Minitest::Test
@@ -90,14 +95,11 @@ class ResearchMathGuardTest < Minitest::Test
 
   def test_jekyll_markdown_math_and_hook
     begin
-      require "jekyll"
       require "kramdown"
       require "kramdown-parser-gfm"
     rescue LoadError
       skip "Jekyll and Kramdown are verified in GitHub Actions (bundle exec)"
     end
-    # Ruby's require cache prevents re-registering the hook if Jekyll is loaded later.
-    load File.expand_path("../_plugins/research_math_guard.rb", __dir__)
     post = Struct.new(:content, :relative_path, :path).new("#{BOXED}\n", "_posts/demo.md", "_posts/demo.md")
     Jekyll::Hooks.trigger(:posts, :pre_render, post)
     html = Kramdown::Document.new(post.content, input: "GFM").to_html
