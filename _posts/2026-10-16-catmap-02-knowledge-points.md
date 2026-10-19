@@ -25,4 +25,3 @@ TS1的末态需要重算下，Ti–Co 的特殊反应能来自初态稳定与终
 
 3.到底按照依据DFT结果得到 TOF排序 还是按照catmap的BEP关系得到 TOF排序 作为真实的？
 https://chatgpt.com/s/t_6ad48a8c6874819188b7a9c96d5b0103
-
