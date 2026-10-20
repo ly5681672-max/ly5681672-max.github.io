@@ -153,7 +153,7 @@ module ResearchMathGuard
 
   DOLLAR_MATH = /(\$\$.*?\$\$|\$(?:\\.|[^$\n])+\$)/
 
-  # Kramdown uses $...$ for inline math inside a paragraph. Convert
+  # Kramdown uses $$...$$ for inline math inside a paragraph. Convert
   # MathJax-style \\(...\\) and unambiguous single-dollar math before parsing,
   # then recognize only unambiguous parenthesized LaTeX in prose.
   def normalize_inline_math(line)
