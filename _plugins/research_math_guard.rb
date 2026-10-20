@@ -11,7 +11,7 @@ module ResearchMathGuard
   BARE_COMMAND = /\A\\(?:boxed|frac|dfrac|tfrac)\s*\{/
   MATH_VARIABLE = /\A\\(?:theta|Delta|lambda|tau|sum|prod|alpha|beta|gamma|omega|mu|sigma|rho|partial|nabla|dot|mathrm|text)(?=[^A-Za-z]|$)/
   MATH_OPERATOR = /(?:=|\\(?:leq|geq|approx|simeq|propto|equiv|to|rightarrow)\b)/
-  ASSIGNMENT = /\A[A-Za-z][A-Za-z0-9_{}^* ]*\s*=\s*.*\\(?:frac|dfrac|tfrac|mathrm|theta|Delta|lambda|partial)\b/
+  ASSIGNMENT = /\A[A-Za-z][A-Za-z0-9_{}^*\\ ]*\s*=\s*.*\\(?:frac|dfrac|tfrac|mathrm|theta|Delta|lambda|partial|times)\b/
   ENV_START = /\A\\begin\{([A-Za-z]+\*?)\}/
   FENCE = /\A {0,3}([`~])\1{2,}/
   HTML_CODE_START = /<(pre|code|script|style)\b/i
@@ -113,9 +113,25 @@ module ResearchMathGuard
       end
 
       strong = stripped.match?(BARE_COMMAND)
+      if strong
+        if stripped.match?(/\p{Han}/)
+          raise FormulaError, "#{source}:#{index + 1}: ambiguous LaTeX mixed with prose; add explicit math delimiters"
+        end
+        last = balanced_block_end(lines, index, source)
+        block = lines[index..last]
+        if block.join.match?(/\p{Han}/)
+          raise FormulaError, "#{source}:#{index + 1}: ambiguous LaTeX mixed with prose; add explicit math delimiters"
+        end
+        validate_braces!(block.join, source, index + 1)
+        append_display(out, block, lines, last)
+        converted += 1
+        index = last + 1
+        next
+      end
+
       variable = stripped.match?(MATH_VARIABLE) && stripped.match?(MATH_OPERATOR)
       assignment = stripped.match?(ASSIGNMENT) && !stripped.match?(/\p{Han}/)
-      if strong || variable || assignment
+      if variable || assignment
         if stripped.match?(/\p{Han}/)
           raise FormulaError, "#{source}:#{index + 1}: ambiguous LaTeX mixed with prose; add explicit math delimiters"
         end
@@ -131,6 +147,33 @@ module ResearchMathGuard
     raise FormulaError, "#{source}: missing closing math delimiter #{math_delim}" if math_delim
 
     Result.new(text: out.join, wrapped_count: converted)
+  end
+
+  def balanced_block_end(lines, start, source)
+    depth = 0
+
+    (start...lines.length).each do |line_index|
+      escaped = false
+      lines[line_index].each_char do |char|
+        if escaped
+          escaped = false
+          next
+        end
+        if char == '\\'
+          escaped = true
+        elsif char == '%'
+          break
+        elsif char == '{'
+          depth += 1
+        elsif char == '}'
+          depth -= 1
+          raise FormulaError, "#{source}:#{start + 1}: unbalanced LaTeX braces; no automatic modification" if depth.negative?
+        end
+      end
+      return line_index if depth.zero?
+    end
+
+    raise FormulaError, "#{source}:#{start + 1}: unbalanced LaTeX braces; no automatic modification"
   end
 
   def validate_braces!(latex, source, line)
