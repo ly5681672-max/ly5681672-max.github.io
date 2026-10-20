@@ -11,7 +11,7 @@ module ResearchMathGuard
   BARE_COMMAND = /\A\\(?:boxed|frac|dfrac|tfrac)\s*\{/
   MATH_VARIABLE = /\A\\(?:theta|Delta|lambda|tau|sum|prod|alpha|beta|gamma|omega|mu|sigma|rho|partial|nabla|dot|mathrm|text)(?=[^A-Za-z]|$)/
   MATH_OPERATOR = /(?:=|\\(?:leq|geq|approx|simeq|propto|equiv|to|rightarrow)\b)/
-  ASSIGNMENT = /\A[A-Za-z][A-Za-z0-9_{}^* ]*\s*=\s*.*\\(?:frac|dfrac|tfrac|mathrm|theta|Delta|lambda|partial)\b/
+  ASSIGNMENT = /\A[A-Za-z][A-Za-z0-9_{}^*\\ ]*\s*=\s*.*\\(?:frac|dfrac|tfrac|mathrm|theta|Delta|lambda|partial|times)\b/
   ENV_START = /\A\\begin\{([A-Za-z]+\*?)\}/
   FENCE = /\A {0,3}([`~])\1{2,}/
   HTML_CODE_START = /<(pre|code|script|style)\b/i
