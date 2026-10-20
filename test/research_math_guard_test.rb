@@ -31,8 +31,8 @@ class ResearchMathGuardTest < Minitest::Test
     source = "需要注意：直接使用 \\(k_{\\mathrm B}T\\)，不需要直接代入普朗克常数 \\(h\\)。\n"
     result = ResearchMathGuard.normalize(source)
     assert_equal 2, result.wrapped_count
-    assert_includes result.text, "$k_{\\mathrm B}T$"
-    assert_includes result.text, "$h$"
+    assert_includes result.text, "$$k_{\\mathrm B}T$$"
+    assert_includes result.text, "$$h$$"
     assert_equal result.text, ResearchMathGuard.normalize(result.text).text
   end
 
@@ -40,8 +40,8 @@ class ResearchMathGuardTest < Minitest::Test
     source = "热活化因子 (k_{\\mathrm B}T)，普朗克常数 (h)。\n"
     result = ResearchMathGuard.normalize(source)
     assert_equal 2, result.wrapped_count
-    assert_includes result.text, "$(k_{\\mathrm B}T)$"
-    assert_includes result.text, "$(h)$"
+    assert_includes result.text, "$$(k_{\\mathrm B}T)$$"
+    assert_includes result.text, "$$(h)$$"
   end
 
   def test_normal_parentheses_and_markdown_link_destinations_are_preserved
@@ -106,7 +106,8 @@ class ResearchMathGuardTest < Minitest::Test
       `#{BOXED}`
       Here is $\\lambda$ and \\(\\theta\\).
     MD
-    assert_equal source, ResearchMathGuard.normalize(source).text
+    expected = source.sub("Here is $\\lambda$ and \\(\\theta\\).") { "Here is $$\\lambda$$ and $$\\theta$$." }
+    assert_equal expected, ResearchMathGuard.normalize(source).text
   end
 
   def test_preserve_indented_code_html_code_and_plain_text
