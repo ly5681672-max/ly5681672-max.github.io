@@ -153,14 +153,23 @@ module ResearchMathGuard
 
   DOLLAR_MATH = /(\$\$.*?\$\$|\$(?:\\.|[^$\n])+\$)/
 
-  # Kramdown's inline-math syntax is $...$. Convert MathJax-style \\(...\\)
-  # delimiters before Markdown parsing, then recognize only unambiguous
-  # parenthesized LaTeX in prose. Existing dollar math remains untouched.
+  # Kramdown uses $...$ for inline math inside a paragraph. Convert
+  # MathJax-style \\(...\\) and unambiguous single-dollar math before parsing,
+  # then recognize only unambiguous parenthesized LaTeX in prose.
   def normalize_inline_math(line)
     converted = 0
     parts = line.split(DOLLAR_MATH)
     normalized = parts.each_with_index.map do |part, index|
-      next part if index.odd?
+      if index.odd?
+        next part if part.start_with?("$")
+
+        content = part[1...-1]
+        if part.start_with?("$") && part.end_with?("$") && inline_math_content?(content)
+          converted += 1
+          next "$#{content}$"
+        end
+        next part
+      end
 
       inline = part.gsub(/\\\((.+?)\\\)/) do
         converted += 1
@@ -180,6 +189,13 @@ module ResearchMathGuard
     end.join
 
     [normalized, converted]
+  end
+
+  def inline_math_content?(content)
+    content.match?(/\\[A-Za-z]+/) ||
+      content.match?(/[A-Za-z][A-Za-z0-9]*[_^]/) ||
+      content.match?(/[=<>≤≥≈±×÷]/) ||
+      content.match?(/\A\s*[A-Za-z]\s*\z/)
   end
 
   def normalize_parenthetical_math(text)
