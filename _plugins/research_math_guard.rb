@@ -87,7 +87,7 @@ module ResearchMathGuard
         next
       end
 
-      # Indented Markdown code, inline math and prose are never rewritten.
+      # Indented Markdown code and lines containing inline code are left untouched.
       if line.match?(/\A(?: {4}|\t)/) || stripped.empty? ||
          stripped.start_with?('\\[', '`') ||
          stripped.include?('`')
