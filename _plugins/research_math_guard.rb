@@ -89,7 +89,7 @@ module ResearchMathGuard
 
       # Indented Markdown code, inline math and prose are never rewritten.
       if line.match?(/\A(?: {4}|\t)/) || stripped.empty? ||
-         stripped.start_with?('$', '\\(', '\\[', '`') ||
+         stripped.start_with?('\\[', '`') ||
          stripped.include?('`')
         out << line
         index += 1
@@ -139,7 +139,9 @@ module ResearchMathGuard
         append_display(out, [line], lines, index)
         converted += 1
       else
-        out << line
+        normalized_line, inline_count = normalize_inline_math(line)
+        out << normalized_line
+        converted += inline_count
       end
       index += 1
     end
@@ -147,6 +149,66 @@ module ResearchMathGuard
     raise FormulaError, "#{source}: missing closing math delimiter #{math_delim}" if math_delim
 
     Result.new(text: out.join, wrapped_count: converted)
+  end
+
+  DOLLAR_MATH = /(\$\$.*?\$\$|\$(?:\\.|[^$\n])+\$)/
+
+  # Kramdown's inline-math syntax is $...$. Convert MathJax-style \\(...\\)
+  # delimiters before Markdown parsing, then recognize only unambiguous
+  # parenthesized LaTeX in prose. Existing dollar math remains untouched.
+  def normalize_inline_math(line)
+    converted = 0
+    parts = line.split(DOLLAR_MATH)
+    normalized = parts.each_with_index.map do |part, index|
+      next part if index.odd?
+
+      inline = part.gsub(/\\\((.+?)\\\)/) do
+        converted += 1
+        "$#{Regexp.last_match(1)}$"
+      end
+
+      math_parts = inline.split(DOLLAR_MATH)
+      math_parts.each_with_index.map do |segment, segment_index|
+        if segment_index.odd?
+          segment
+        else
+          normalized_segment, count = normalize_parenthetical_math(segment)
+          converted += count
+          normalized_segment
+        end
+      end.join
+    end.join
+
+    [normalized, converted]
+  end
+
+  def normalize_parenthetical_math(text)
+    converted = 0
+    normalized = text.gsub(/(?<!\\)(\(([^()\n]{1,160})\)|（([^（）\n]{1,160})）)/) do |candidate|
+      match = Regexp.last_match
+      content = match[2] || match[3]
+      before = text[0...match.begin(0)]
+
+      if !before.rstrip.end_with?("]") && parenthetical_math?(content, before)
+        converted += 1
+        "$#{candidate}$"
+      else
+        candidate
+      end
+    end
+
+    [normalized, converted]
+  end
+
+  def parenthetical_math?(content, before)
+    return false if content.match?(/\A\s*(?:https?:\/\/|mailto:|www\.)/i) || content.include?("://")
+
+    return true if content.match?(/\\[A-Za-z]+/)
+    return true if content.match?(/[A-Za-z][A-Za-z0-9]*[_^](?:\{[A-Za-z0-9\\]|[A-Za-z0-9])/)
+    return true if content.match?(/[=<>≤≥≈±×÷]/)
+
+    content.match?(/\A\s*[A-Za-z]\s*\z/) &&
+      before.match?(/(?:常数|参数|变量|符号|能量|温度|时间|速率|频率|波长|长度|质量|压力|电荷|电势|化学势|覆盖度|自由能|活化因子)\s*\z/)
   end
 
   def balanced_block_end(lines, start, source)
