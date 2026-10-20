@@ -161,19 +161,19 @@ module ResearchMathGuard
     parts = line.split(DOLLAR_MATH)
     normalized = parts.each_with_index.map do |part, index|
       if index.odd?
-        next part if part.start_with?("$")
+        next part if part.start_with?("$$")
 
         content = part[1...-1]
         if part.start_with?("$") && part.end_with?("$") && inline_math_content?(content)
           converted += 1
-          next "$#{content}$"
+          next "$$#{content}$$"
         end
         next part
       end
 
       inline = part.gsub(/\\\((.+?)\\\)/) do
         converted += 1
-        "$#{Regexp.last_match(1)}$"
+        "$$#{Regexp.last_match(1)}$$"
       end
 
       math_parts = inline.split(DOLLAR_MATH)
@@ -207,7 +207,7 @@ module ResearchMathGuard
 
       if !before.rstrip.end_with?("]") && parenthetical_math?(content, before)
         converted += 1
-        "$#{candidate}$"
+        "$$#{candidate}$$"
       else
         candidate
       end
