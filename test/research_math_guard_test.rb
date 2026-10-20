@@ -63,6 +63,32 @@ class ResearchMathGuardTest < Minitest::Test
     assert_includes html, "\\(h\\)"
   end
 
+  def test_split_fraction_equation_is_kept_in_one_display_math_block
+    source = "公式推导\n\\frac{d\\ln(\\mathrm{TOF})}{d(\\mathrm{TOF})}\n=\\frac{1}{\\mathrm{TOF}}\n"
+    result = ResearchMathGuard.normalize(source, source: "_posts/catmap.md")
+    equation = "\\frac{d\\ln(\\mathrm{TOF})}{d(\\mathrm{TOF})}\n=\\frac{1}{\\mathrm{TOF}}\n"
+    assert_equal 1, result.wrapped_count
+    assert_includes result.text, "$$\n#{equation}$$\n"
+    assert_equal result.text, ResearchMathGuard.normalize(result.text).text
+
+    begin
+      require "kramdown"
+      require "kramdown-parser-gfm"
+    rescue LoadError
+      skip "Kramdown is verified in GitHub Actions (bundle exec)"
+    end
+    html = Kramdown::Document.new(result.text, input: "GFM").to_html
+    assert_match(/\\\[\\frac\{d\\ln\(\\mathrm\{TOF\}\)\}.*?=\\frac\{1\}\{\\mathrm\{TOF\}\}.*?\\\]/m, html)
+    refute_match(/<p>\s*=\\frac/, html)
+  end
+
+  def test_orphan_equation_continuation_fails_loudly
+    error = assert_raises(ResearchMathGuard::FormulaError) do
+      ResearchMathGuard.normalize("正文\n=\\frac{1}{\\mathrm{TOF}}\n", source: "demo.md")
+    end
+    assert_includes error.message, "demo.md:2"
+  end
+
   def test_bare_fraction_standalone
     source = "\\frac{d\\theta}{dt}\n"
     assert_equal "$$\n#{source}$$\n", ResearchMathGuard.normalize(source).text
