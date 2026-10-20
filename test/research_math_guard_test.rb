@@ -23,7 +23,7 @@ class ResearchMathGuardTest < Minitest::Test
     source = "\\boxed{\nX_i=-k_{\\mathrm B}T\n\\frac{\\partial\\ln(\\mathrm{TOF})}{\\partial G_i}\n}\n"
     result = ResearchMathGuard.normalize(source)
     assert_equal 1, result.wrapped_count
-    assert_equal "$\n#{source}$\n", result.text
+    assert_equal "$" + "$\n" + source + "$" + "$\n", result.text
     assert_equal result.text, ResearchMathGuard.normalize(result.text).text
   end
 
@@ -40,6 +40,13 @@ class ResearchMathGuardTest < Minitest::Test
   def test_variable_assignment_with_fraction
     source = "J=\\frac{d\\theta}{dt}\n"
     assert_equal "$$\n#{source}$$\n", ResearchMathGuard.normalize(source).text
+  end
+
+  def test_boltzmann_constant_assignment_with_latex_subscript
+    source = "k_{\\mathrm B}=8.617333262\\times10^{-5}\\ \\mathrm{eV/K}\n"
+    result = ResearchMathGuard.normalize(source)
+    assert_equal 1, result.wrapped_count
+    assert_equal "$" + "$\n" + source + "$" + "$\n", result.text
   end
 
   def test_aligned_environment_is_wrapped_as_a_whole
