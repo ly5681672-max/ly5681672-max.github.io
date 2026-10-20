@@ -9,6 +9,7 @@ module ResearchMathGuard
   Result = Struct.new(:text, :wrapped_count, keyword_init: true)
   MATH_ENVIRONMENTS = %w[aligned alignedat gathered cases split matrix pmatrix bmatrix Bmatrix vmatrix Vmatrix array].freeze
   BARE_COMMAND = /\A\\(?:boxed|frac|dfrac|tfrac)\s*\{/
+  MATH_CONTINUATION = /\A=\s*\\(?:frac|dfrac|tfrac|sqrt|mathrm|ln|log|partial|theta|Delta)\b/
   MATH_VARIABLE = /\A\\(?:theta|Delta|lambda|tau|sum|prod|alpha|beta|gamma|omega|mu|sigma|rho|partial|nabla|dot|mathrm|text)(?=[^A-Za-z]|$)/
   MATH_OPERATOR = /(?:=|\\(?:leq|geq|approx|simeq|propto|equiv|to|rightarrow)\b)/
   ASSIGNMENT = /\A[A-Za-z][A-Za-z0-9_{}^*\\ ]*\s*=\s*.*\\(?:frac|dfrac|tfrac|mathrm|theta|Delta|lambda|partial|times)\b/
@@ -117,7 +118,7 @@ module ResearchMathGuard
         if stripped.match?(/\p{Han}/)
           raise FormulaError, "#{source}:#{index + 1}: ambiguous LaTeX mixed with prose; add explicit math delimiters"
         end
-        last = balanced_block_end(lines, index, source)
+        last = equation_continuation_end(lines, balanced_block_end(lines, index, source), source)
         block = lines[index..last]
         if block.join.match?(/\p{Han}/)
           raise FormulaError, "#{source}:#{index + 1}: ambiguous LaTeX mixed with prose; add explicit math delimiters"
@@ -135,10 +136,17 @@ module ResearchMathGuard
         if stripped.match?(/\p{Han}/)
           raise FormulaError, "#{source}:#{index + 1}: ambiguous LaTeX mixed with prose; add explicit math delimiters"
         end
-        validate_braces!(stripped, source, index + 1)
-        append_display(out, [line], lines, index)
+        last = equation_continuation_end(lines, index, source)
+        block = lines[index..last]
+        validate_braces!(block.join, source, index + 1)
+        append_display(out, block, lines, last)
         converted += 1
+        index = last + 1
+        next
       else
+        if stripped.match?(MATH_CONTINUATION)
+          raise FormulaError, "#{source}:#{index + 1}: mathematical continuation without a preceding standalone equation"
+        end
         normalized_line, inline_count = normalize_inline_math(line)
         out << normalized_line
         converted += inline_count
@@ -225,6 +233,16 @@ module ResearchMathGuard
 
     content.match?(/\A\s*[A-Za-z]\s*\z/) &&
       before.match?(/(?:常数|参数|变量|符号|能量|温度|时间|速率|频率|波长|长度|质量|压力|电荷|电势|化学势|覆盖度|自由能|活化因子)\s*\z/)
+  end
+
+  # Keep an explicit RHS continuation with the equation immediately above it.
+  # Only unambiguous lines starting '=\\command' qualify; prose is unaffected.
+  def equation_continuation_end(lines, last, source)
+    while (following = lines[last + 1]) && following.strip.match?(MATH_CONTINUATION)
+      validate_braces!(following.strip, source, last + 2)
+      last += 1
+    end
+    last
   end
 
   def balanced_block_end(lines, start, source)
