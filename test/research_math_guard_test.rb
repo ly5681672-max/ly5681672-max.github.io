@@ -19,6 +19,14 @@ class ResearchMathGuardTest < Minitest::Test
     assert_equal result.text, ResearchMathGuard.normalize(result.text).text
   end
 
+  def test_multiline_boxed_formula_is_delimited_as_a_whole
+    source = "\\boxed{\nX_i=-k_{\\mathrm B}T\n\\frac{\\partial\\ln(\\mathrm{TOF})}{\\partial G_i}\n}\n"
+    result = ResearchMathGuard.normalize(source)
+    assert_equal 1, result.wrapped_count
+    assert_equal "$\n#{source}$\n", result.text
+    assert_equal result.text, ResearchMathGuard.normalize(result.text).text
+  end
+
   def test_bare_fraction_standalone
     source = "\\frac{d\\theta}{dt}\n"
     assert_equal "$$\n#{source}$$\n", ResearchMathGuard.normalize(source).text
