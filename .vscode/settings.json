@@ -13,5 +13,6 @@
   "gitpaste.fileNameFormat": "${document}-${yyyy}-${MM}-${dd}_${HH}-${mm}-${ss}-${random}${extName}",
   "gitpaste.fileNameStrategy": "timestamp",
   "gitpaste.outputFormat": "![${uploadedName}](${url})",
-  "gitpaste.uploadOnPaste": true
+  "gitpaste.uploadOnPaste": true,
+  "files.insertFinalNewline": true
 }
