@@ -27,6 +27,42 @@ class ResearchMathGuardTest < Minitest::Test
     assert_equal result.text, ResearchMathGuard.normalize(result.text).text
   end
 
+  def test_inline_math_delimiters_are_normalized_for_kramdown
+    source = "需要注意：直接使用 \\(k_{\\mathrm B}T\\)，不需要直接代入普朗克常数 \\(h\\)。\n"
+    result = ResearchMathGuard.normalize(source)
+    assert_equal 2, result.wrapped_count
+    assert_includes result.text, "$$k_{\\mathrm B}T$$"
+    assert_includes result.text, "$$h$$"
+    assert_equal result.text, ResearchMathGuard.normalize(result.text).text
+  end
+
+  def test_parenthesized_raw_latex_and_scientific_symbol_are_wrapped
+    source = "热活化因子 (k_{\\mathrm B}T)，普朗克常数 (h)。\n"
+    result = ResearchMathGuard.normalize(source)
+    assert_equal 2, result.wrapped_count
+    assert_includes result.text, "$$(k_{\\mathrm B}T)$$"
+    assert_includes result.text, "$$(h)$$"
+  end
+
+  def test_normal_parentheses_and_markdown_link_destinations_are_preserved
+    source = "普通说明（例如示例）和英文 (e.g. example)，链接 [文件](notes_v1.md)。\n"
+    assert_equal source, ResearchMathGuard.normalize(source).text
+  end
+
+  def test_inline_math_is_rendered_by_kramdown
+    begin
+      require "kramdown"
+      require "kramdown-parser-gfm"
+    rescue LoadError
+      skip "Kramdown is verified in GitHub Actions (bundle exec)"
+    end
+    source = "直接使用 \\(k_{\\mathrm B}T\\)，常数为 \\(h\\)。\n"
+    normalized = ResearchMathGuard.normalize(source).text
+    html = Kramdown::Document.new(normalized, input: "GFM").to_html
+    assert_includes html, "\\(k_{\\mathrm B}T\\)"
+    assert_includes html, "\\(h\\)"
+  end
+
   def test_bare_fraction_standalone
     source = "\\frac{d\\theta}{dt}\n"
     assert_equal "$$\n#{source}$$\n", ResearchMathGuard.normalize(source).text
@@ -70,7 +106,8 @@ class ResearchMathGuardTest < Minitest::Test
       `#{BOXED}`
       Here is $\\lambda$ and \\(\\theta\\).
     MD
-    assert_equal source, ResearchMathGuard.normalize(source).text
+    expected = source.sub("Here is $\\lambda$ and \\(\\theta\\).") { "Here is $$\\lambda$$ and $$\\theta$$." }
+    assert_equal expected, ResearchMathGuard.normalize(source).text
   end
 
   def test_preserve_indented_code_html_code_and_plain_text
