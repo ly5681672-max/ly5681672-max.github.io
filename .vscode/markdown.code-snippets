@@ -12,5 +12,5 @@
       "$0",
     ],
     "description": "为当前 Markdown 笔记自动生成 Jekyll front matter（标题默认使用文件名，日期使用当前时间）",
-  }
+  },
 }
