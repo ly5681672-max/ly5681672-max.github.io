@@ -1,0 +1,16 @@
+{
+  "Jekyll 博客文章表头": {
+    "scope": "markdown",
+    "prefix": "jekyll-post",
+    "body": [
+      "---",
+      "layout: post",
+      "title: \"${1:${TM_FILENAME_BASE}}\"",
+      "date: ${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE} ${CURRENT_HOUR}:${CURRENT_MINUTE}:00 +0800",
+      "---",
+      "",
+      "$0"
+    ],
+    "description": "为当前 Markdown 笔记自动生成 Jekyll front matter（标题默认使用文件名，日期使用当前时间）"
+  }
+}
