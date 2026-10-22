@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "2026-10-21-catmap-05-knowledge-points"
+title: "catmap-05-knowledge-points"
 date: 2026-10-21 10:00:00 +0800
 ---
 
