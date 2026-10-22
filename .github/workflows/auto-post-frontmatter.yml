@@ -10,7 +10,7 @@ on:
     inputs:
       post_path:
         description: "Optional path to an existing _posts/YYYY-MM-DD-name.md file"
-        required: false
+        required: true
         type: string
 
 permissions:
