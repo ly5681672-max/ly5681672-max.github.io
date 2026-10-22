@@ -35,7 +35,7 @@ def insert_frontmatter(path: Path, now: datetime | None = None) -> bool:
         (
             "---",
             "layout: post",
-            f'title: "{path.stem}"',
+            f'title: "{match.group(2)}"',
             f"date: {post_date.isoformat()} {time_part} +0800",
             "---",
             "",
