@@ -29,7 +29,7 @@ class PostFrontmatterTests(unittest.TestCase):
         self.assertTrue(insert_frontmatter(path, self.now))
         self.assertEqual(
             path.read_text(),
-            '---\nlayout: post\ntitle: "2026-10-22-catmap-06-knowledge-points"\n'
+            '---\nlayout: post\ntitle: "catmap-06-knowledge-points"\n'
             "date: 2026-10-22 10:41:00 +0800\n---\n",
         )
 
@@ -38,7 +38,7 @@ class PostFrontmatterTests(unittest.TestCase):
         path = self.new_post("2026-10-22-科研笔记.md", body)
         self.assertTrue(insert_frontmatter(path, self.now))
         self.assertTrue(path.read_bytes().endswith(body))
-        self.assertIn('title: "2026-10-22-科研笔记"', path.read_text(encoding="utf-8"))
+        self.assertIn('title: "科研笔记"', path.read_text(encoding="utf-8"))
 
     def test_existing_frontmatter_is_not_modified_or_duplicated(self):
         original = b'---\nlayout: post\ntitle: "Custom"\n---\n\nOriginal content\n'
@@ -56,6 +56,7 @@ class PostFrontmatterTests(unittest.TestCase):
     def test_old_dated_post_uses_its_filename_date(self):
         path = self.new_post("2026-10-18-notes.md")
         self.assertTrue(insert_frontmatter(path, self.now))
+        self.assertIn('title: "notes"', path.read_text())
         self.assertIn("date: 2026-10-18 10:00:00 +0800", path.read_text())
 
     def test_preserve_crlf_content(self):

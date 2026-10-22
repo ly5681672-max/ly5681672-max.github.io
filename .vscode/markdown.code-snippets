@@ -5,12 +5,12 @@
     "body": [
       "---",
       "layout: post",
-      "title: \"${1:${TM_FILENAME_BASE}}\"",
+      "title: \"${TM_FILENAME_BASE/^\\d{4}-\\d{2}-\\d{2}-(.+)$/$1/}\"",
       "date: ${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE} ${CURRENT_HOUR}:${CURRENT_MINUTE}:00 +0800",
       "---",
       "",
       "$0",
     ],
-    "description": "为当前 Markdown 笔记自动生成 Jekyll front matter（标题默认使用文件名，日期使用当前时间）",
+    "description": "为当前 Markdown 笔记自动生成 Jekyll front matter（标题自动去掉 YYYY-MM-DD- 日期前缀，日期使用当前时间）",
   },
 }
