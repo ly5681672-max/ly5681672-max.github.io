@@ -39,9 +39,12 @@ def insert_frontmatter(path: Path, now: datetime | None = None) -> bool:
             f"date: {post_date.isoformat()} {time_part} +0800",
             "---",
             "",
-            "",
         )
     )
+    # Prettier requires no extra blank line after an empty post's closing fence.
+    # An existing article body still needs a separating blank line.
+    if original:
+        header += newline
     path.write_bytes(header.encode("utf-8") + original)
     return True
 
