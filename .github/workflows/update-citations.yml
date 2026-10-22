@@ -6,6 +6,11 @@ on:
     - cron: "0 0 * * 3" # Wednesday
     - cron: "0 0 * * 5" # Friday
   workflow_dispatch:
+  pull_request:
+    paths:
+      - "requirements.txt"
+      - "bin/update_scholar_citations.py"
+      - ".github/workflows/update-citations.yml"
 
 jobs:
   update-citations:
@@ -29,8 +34,22 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Verify scholarly dependency compatibility
+        run: |
+          python - <<'PY'
+          from importlib.metadata import version as package_version
+          from bibtexparser.bibdatabase import BibDatabase
+          from scholarly import scholarly
+
+          resolved = package_version("bibtexparser")
+          if int(resolved.split(".", 1)[0]) >= 2:
+              raise SystemExit(f"Incompatible bibtexparser version: {resolved}")
+          print(f"scholarly import OK; bibtexparser {resolved}; BibDatabase import OK")
+          PY
+
       - name: Save current citations.yml hash
         id: before
+        if: github.event_name != 'pull_request'
         run: |
           echo "📦 Checking existing citations.yml hash..."
           if [ -f _data/citations.yml ]; then
@@ -44,6 +63,7 @@ jobs:
 
       - name: Run citation update script
         id: run_citation_update
+        if: github.event_name != 'pull_request'
         shell: bash
         run: |
           set +e
@@ -52,17 +72,19 @@ jobs:
           timeout 90 python bin/update_scholar_citations.py
           status=$?
           end_time=$(date)
-          if [ $status -eq 0 ]; then
+          set -e
+          if [ "$status" -eq 0 ]; then
             echo "✅ Citation update succeeded (started at $start_time, ended at $end_time)."
-            echo "✅ Citation update succeeded." >> $GITHUB_STEP_SUMMARY
+            echo "✅ Citation update succeeded." >> "$GITHUB_STEP_SUMMARY"
           else
             echo "❌ Citation update script failed with exit code $status (started at $start_time, ended at $end_time)."
-            echo "❌ Citation update script failed with exit code $status." >> $GITHUB_STEP_SUMMARY
+            echo "❌ Citation update script failed with exit code $status." >> "$GITHUB_STEP_SUMMARY"
+            exit "$status"
           fi
-          set -e
 
       - name: Save new citations.yml hash
         id: after
+        if: github.event_name != 'pull_request'
         run: |
           echo "🔍 Checking updated citations.yml hash..."
           if [ -f _data/citations.yml ]; then
@@ -75,23 +97,26 @@ jobs:
           fi
 
       - name: Report citations.yml change in summary
+        if: github.event_name != 'pull_request'
         run: |
           echo "📋 Comparing citation file hashes..."
           if [ "${{ steps.before.outputs.sha_before }}" != "${{ steps.after.outputs.sha_after }}" ]; then
             echo "✅ _data/citations.yml was updated."
-            echo "✅ _data/citations.yml was updated." >> $GITHUB_STEP_SUMMARY
+            echo "✅ _data/citations.yml was updated." >> "$GITHUB_STEP_SUMMARY"
           else
             echo "ℹ️ _data/citations.yml was not changed."
-            echo "ℹ️ _data/citations.yml was not changed." >> $GITHUB_STEP_SUMMARY
+            echo "ℹ️ _data/citations.yml was not changed." >> "$GITHUB_STEP_SUMMARY"
           fi
 
       - name: Configure Git
+        if: github.event_name != 'pull_request'
         run: |
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
           echo "🔧 Git configured."
 
       - name: Commit and push if changed
+        if: github.event_name != 'pull_request'
         run: |
           git add _data/citations.yml
           git diff --staged --quiet || (
