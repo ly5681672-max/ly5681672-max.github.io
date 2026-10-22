@@ -1,11 +1,8 @@
 name: Automatically create Jekyll post headers
 
+# Automatic post generation is handled by deploy.yml before Jekyll builds.
+# Keep this workflow as a manual recovery command to avoid competing writes.
 on:
-  push:
-    branches:
-      - main
-    paths:
-      - "_posts/*.md"
   workflow_dispatch:
     inputs:
       post_path:
