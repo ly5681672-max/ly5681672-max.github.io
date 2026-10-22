@@ -30,7 +30,7 @@ class PostFrontmatterTests(unittest.TestCase):
         self.assertEqual(
             path.read_text(),
             '---\nlayout: post\ntitle: "2026-10-22-catmap-06-knowledge-points"\n'
-            "date: 2026-10-22 10:41:00 +0800\n---\n\n",
+            "date: 2026-10-22 10:41:00 +0800\n---\n",
         )
 
     def test_existing_article_body_is_byte_for_byte_preserved(self):
