@@ -71,6 +71,8 @@ jobs:
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
       - name: Setup Ruby 💎
         uses: ruby/setup-ruby@v1
         with:
@@ -88,6 +90,20 @@ jobs:
           cache: "npm"
       - name: Verify automatic post headers 📝
         run: python -m unittest discover -s test -p test_post_frontmatter.py
+      - name: Generate missing GitHub post headers 📝
+        if: github.event_name == 'push'
+        env:
+          BEFORE_SHA: ${{ github.event.before }}
+          AFTER_SHA: ${{ github.sha }}
+        run: |
+          python scripts/ensure_post_frontmatter.py --before "$BEFORE_SHA" --after "$AFTER_SHA"
+          if ! git diff --quiet -- _posts; then
+            git add -- _posts
+            git -c user.name='github-actions[bot]' \
+                -c user.email='41898282+github-actions[bot]@users.noreply.github.com' \
+                commit -m "Add missing Jekyll post front matter"
+            git push origin "HEAD:${GITHUB_REF_NAME}"
+          fi
       - name: Install JS deps 📦
         run: npm ci
       - name: Verify blog math normalization 🧮
