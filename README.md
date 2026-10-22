@@ -1,5 +1,7 @@
 # al-folio
 
+> 📘 **中文使用手册：** [网站使用说明（学习笔记、学术报告/墙报、论文、图片上传及日常维护）](网站使用说明.md)
+
 <div align="center">
 
 [![Preview](readme_preview/al-folio-preview.png)](https://alshedivat.github.io/al-folio/)
