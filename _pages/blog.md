@@ -9,7 +9,7 @@ pagination:
   collection: posts
   permalink: /page/:num/
   per_page: 5
-  sort_field: date
+  sort_field: note_order
   sort_reverse: true
   trail:
     before: 1 # The number of links before the current page
