@@ -20,4 +20,5 @@ https://chatgpt.com/s/t_6adac97015d08191ba75914f6b7cd42d
 H:\catmap\catmap\lyq_alkene_epoxidation\2-creating_microkinetic_model\energies_dft_neb.txt
 H:\catmap\catmap\lyq_alkene_epoxidation\2-creating_microkinetic_model\alkene_epoxidation.mkm
 
+
 ![2026-10-21-catmap-05-knowledge-points.md-2026-10-23_10-52-36-617ee17c](https://raw.githubusercontent.com/ly5681672-max/ly5681672-max.github.io/main/assets/img/learning-notes/2026-10-21-catmap-05-knowledge-points.md-2026-10-23_10-52-36-617ee17c.png)
