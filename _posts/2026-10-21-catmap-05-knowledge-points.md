@@ -64,3 +64,15 @@ H:\catmap\catmap\lyq_alkene_epoxidation\2-creating_microkinetic_model\alkene_epo
 
 
 ![2026-10-21-catmap-05-knowledge-points.md-2026-10-23_10-52-36-617ee17c](https://raw.githubusercontent.com/ly5681672-max/ly5681672-max.github.io/main/assets/img/learning-notes/2026-10-21-catmap-05-knowledge-points.md-2026-10-23_10-52-36-617ee17c.png)
+
+3.Codex对于复现项目非常容易跑偏 需要 主线纠偏！
+
+第一阶段： 下载 CatMAP 官方 GitHub 源代码及完整 tutorials 教程，使用官方原始文件逐步复现，不修改示例反应网络、输入数据和参数。
+
+第二阶段： 依次完成官方教程中的输入文件生成、微观动力学模型求解、模型优化与绘图分析。
+
+第三阶段： 官方案例复现通过后，再使用你已经认可的 energies_dft_neb.txt，独立复现 1-己烯环氧化
+
+4.运行catmap 需要引用 
+
+Vijay, S., H. Heenen, H., Singh, A. R., Chan, K., & Voss, J. (2024). Number of sites‐based solver for determining coverages from steady‐state mean‐field micro‐kinetic models. Journal of Computational Chemistry, 45(9), 546-551.
