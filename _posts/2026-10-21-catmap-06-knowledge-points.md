@@ -30,3 +30,15 @@ $$
 $$
 
 https://chatgpt.com/s/t_6ae004391abc8191af4be2e93670bbde
+
+3.增加TOF DRC 相关的分析模块
+
+![2026-10-21-catmap-06-knowledge-points.md-2026-10-27_10-58-21-2902420f](https://raw.githubusercontent.com/ly5681672-max/ly5681672-max.github.io/main/assets/img/learning-notes/2026-10-21-catmap-06-knowledge-points.md-2026-10-27_10-58-21-2902420f.png)
+
+https://chatgpt.com/s/t_6ae0132142108191b204f47ab0f00278
+
+4.如果我想说明OOH物种是动力学筛选后的关键物种 我下一步电子机制中会重点分析OOH吸附能相关 的 **桥连 OOH 稳定化的电子调控机制** 这里是选择OOH 吸附能与 logTOF 高相关性还是 OOH 覆盖度与 logTOF\* 相关性 这种**逻辑过渡**有无权威文献支持？
+
+2016 年 Physical Chemistry Chemical Physics 的原位 Raman 研究，已经在 TS-1 丙烯环氧化中观察到：骨架 Ti 物种含量、Ti–OOH 活性中间体数量和丙烯转化率之间存在正相关关系。这篇文献与你希望通过覆盖度关联催化活性来识别关键中间体的思路非常接近
+
+https://chatgpt.com/s/t_6ae016130d048191b3b9328f22cc40ed
