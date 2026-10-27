@@ -45,6 +45,9 @@ https://chatgpt.com/s/t_6ae016130d048191b3b9328f22cc40ed
 
 5.对于小论文研究内容一，核心的逻辑 判断 OOH* 究竟是重要的反应前驱体、显著控制速率的中间体，还是主要表现为表面累积物种？
 
+具体操作输出了OOH相关动力学位点数据 https://chatgpt.com/s/t_6ae01a7468d08191b8c1efd11ba4bb1b 未成功 数据维度有误
+
+![2026-10-21-catmap-06-knowledge-points.md-2026-10-27_15-50-47-c300f19a](https://raw.githubusercontent.com/ly5681672-max/ly5681672-max.github.io/main/assets/img/learning-notes/2026-10-21-catmap-06-knowledge-points.md-2026-10-27_15-50-47-c300f19a.png)
 
 5.强化C6H12O火山关系 做出的绘图等相关调整
 
