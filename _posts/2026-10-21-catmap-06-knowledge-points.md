@@ -49,6 +49,12 @@ https://chatgpt.com/s/t_6ae016130d048191b3b9328f22cc40ed
 
 ![2026-10-21-catmap-06-knowledge-points.md-2026-10-27_15-50-47-c300f19a](https://raw.githubusercontent.com/ly5681672-max/ly5681672-max.github.io/main/assets/img/learning-notes/2026-10-21-catmap-06-knowledge-points.md-2026-10-27_15-50-47-c300f19a.png)
 
+调整绝对容差后没有解决数据维度的问题
+
+核验失败究竟来自求根过程、数值判据，还是稳态本身不满足要求？
+
+原因1：收敛精度与实际反应速率的数量级不匹配
+
 5.强化C6H12O火山关系 做出的绘图等相关调整
 
 
