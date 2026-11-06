@@ -89,3 +89,6 @@ model.run() 结束 → 所有 map 数据保存到 .pkl 文件
 下次运行 → load_data_file() 从 .pkl 加载 → 作为缓存使用
 
 改变参数记得删除dkl文件 影响结果
+
+7.TOF存在负值是因为？
+
