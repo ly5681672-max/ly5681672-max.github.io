@@ -57,8 +57,35 @@ https://chatgpt.com/s/t_6ae016130d048191b3b9328f22cc40ed
 https://chatgpt.com/s/t_6ae1660d52708191a9cd23346d418b97
 
 原因2：本身的原始数据点有问题 尤其是**吸附能部分** 导致得到的TOF太小
-
+根据官网进行了输入数据的调整
 
 5.强化C6H12O火山关系 做出的绘图等相关调整
 
 
+6.出现多次求解 同一套参数 但是TOF值是不一样的 ？
+
+model.run()
+  │
+  ▼
+mapper.get_coverage_map()
+  │
+  ├── 有缓存 (coverage_map ≠ None)?
+  │     │
+  │     ├── YES → 用缓存中每个点的覆盖度作为初始猜测 (c0)
+  │     │         → 逐点调用 solver.get_coverage(params, c0=cached_cvg)
+  │     │         → Newton 法求解稳态
+  │     │
+  │     └── NO  → 用 Boltzmann 覆盖度作为初始猜测
+  │               → get_initial_coverage() → boltzmann_coverages()
+  │               → 逐点求解
+  │
+  ▼
+求解成功后 → 覆盖度存入 _coverage_map
+  │
+  ▼
+model.run() 结束 → 所有 map 数据保存到 .pkl 文件
+  │
+  ▼
+下次运行 → load_data_file() 从 .pkl 加载 → 作为缓存使用
+
+改变参数记得删除dkl文件 影响结果
