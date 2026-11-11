@@ -91,4 +91,9 @@ model.run() 结束 → 所有 map 数据保存到 .pkl 文件
 改变参数记得删除dkl文件 影响结果
 
 7.TOF存在负值是因为？
+被消耗不是生成
+
+8.火山图多个峰？
+![2026-10-21-catmap-06-knowledge-points.md-2026-11-11_16-40-06-e9f80eda](https://raw.githubusercontent.com/ly5681672-max/ly5681672-max.github.io/main/assets/img/learning-notes/2026-10-21-catmap-06-knowledge-points.md-2026-11-11_16-40-06-e9f80eda.png)
+
 
