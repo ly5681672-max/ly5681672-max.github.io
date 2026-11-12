@@ -13,7 +13,7 @@ module ResearchNotesFullTextSearch
        .gsub(%r{https?://\S+}, " ")
        .gsub(/<[^>]+>/, " ")
        .gsub(/[\r\n\t]+/, " ")
-       .gsub(/[`*_~]/, "")
+       .gsub(/`/, "")
        .gsub(/\s+/, " ")
        .strip
   end
@@ -27,7 +27,12 @@ module ResearchNotesFullTextSearch
       blocks << { title: search_plaintext(heading), text: text } unless text.empty?
     end
 
-    post.content.to_s.each_line do |line|
+    # Jekyll may have already converted post.content to HTML at render time.
+    # Restore block boundaries so numbered learning-note items keep their titles.
+    source = post.content.to_s
+                 .gsub(/<(?:p|h[1-6]|li|br)\b[^>]*>/i, "\n")
+                 .gsub(%r{</(?:p|h[1-6]|li)>}i, "\n")
+    source.each_line do |line|
       stripped = line.strip
       section_heading = if stripped.match?(/^\#{1,6}\s+\S/)
                           stripped.sub(/^\#{1,6}\s+/, "")
