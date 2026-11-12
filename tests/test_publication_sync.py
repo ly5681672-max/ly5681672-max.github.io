@@ -176,8 +176,8 @@ class PublicationSyncTest(unittest.TestCase):
 
     def test_orcid_only_candidate_and_append_only(self):
         initial = "".join(
-            f"@article{{existing{i},\\n  author = {{Yan, Hao and Feng, Xiang and Li, Yaqian}},\\n"
-            f"  doi = {{10.1234/seed{i}}},\\n}}\\n\\n"
+            f"@article{{existing{i},\n  author = {{Yan, Hao and Feng, Xiang and Li, Yaqian}},\n"
+            f"  doi = {{10.1234/seed{i}}},\n}}\n\n"
             for i in range(23)
         )
         with tempfile.TemporaryDirectory() as root:
@@ -203,8 +203,8 @@ class PublicationSyncTest(unittest.TestCase):
 
     def test_uncertain_candidates_are_retained_not_published(self):
         initial = "".join(
-            f"@article{{existing{i},\\n  author = {{Yan, Hao and Feng, Xiang and Li, Yaqian}},\\n"
-            f"  doi = {{10.1234/seed{i}}},\\n}}\\n\\n"
+            f"@article{{existing{i},\n  author = {{Yan, Hao and Feng, Xiang and Li, Yaqian}},\n"
+            f"  doi = {{10.1234/seed{i}}},\n}}\n\n"
             for i in range(23)
         )
         with tempfile.TemporaryDirectory() as root:
