@@ -219,7 +219,7 @@ class PublicationSyncTest(unittest.TestCase):
                 mock.patch.object(pub, "openalex_works", return_value=[work(affiliation=False)]),
                 mock.patch.object(pub, "orcid_dois", return_value=set()),
                 mock.patch.object(pub, "crossref_recent", return_value={}),
-                mock.patch.object(pub, "get_json", return_value={"message": record()}),
+                mock.patch.object(pub, "get_json", return_value={"message": {**record(), "author": record()["author"][:2]}}),
             ):
                 report = pub.sync(apply=True)
                 self.assertEqual(len(report["approved"]), 0)
