@@ -111,6 +111,9 @@ https://chatgpt.com/s/t_6af57233f43c8191aeaafdd31d582a5b
 
 先用唯一的资料 建立总的知识框架 后续所有的查资料都是属于补充说明完善
 
+![2026-10-21-catmap-06-knowledge-points.md-2026-11-12_20-38-16-2c3f3f41](https://raw.githubusercontent.com/ly5681672-max/ly5681672-max.github.io/main/assets/img/learning-notes/2026-10-21-catmap-06-knowledge-points.md-2026-11-12_20-38-16-2c3f3f41.png)
+需要调整反应物的量 调整峰的位置 依据官网CO氧化CO2来看 不是按照理想比例 是按照实际的实验条件
+
 9.反应级数求导和分析问题
 
 https://mp.weixin.qq.com/s/VePuCbIvaqaM3VTTdZaBvQ
@@ -127,3 +130,4 @@ https://mp.weixin.qq.com/s/VePuCbIvaqaM3VTTdZaBvQ
 👉 所以**低频运动不能直接套用弹簧假设，得验证一下才行**。
 
 对比：高频振动（分子内部键伸缩）一般抖得幅度很小，弹簧假设通常够用。
+
