@@ -22,6 +22,7 @@ import urllib.parse
 import urllib.request
 
 AUTHOR_ID = "A5100697597"  # Four seed DOIs match; may include other same-name authors.
+ORCID_ID = "0009-0004-7005-8512"  # Verified public author profile; records still require DOI verification.
 SEED_DOIS = {
     "10.1038/s41467-025-62192-0",
     "10.1038/s41467-024-54822-w",
@@ -114,6 +115,33 @@ def openalex_works():
     return works
 
 
+def orcid_dois():
+    """Read public ORCID works; DOI is discovery evidence, not proof of authorship."""
+    endpoint = f"https://pub.orcid.org/v3.0/{ORCID_ID}/works"
+    payload = get_json(endpoint)
+    groups = payload.get("group")
+    if not isinstance(groups, list):
+        raise ValueError("ORCID works response invalid")
+    found = set()
+    for group in groups:
+        for external in group.get("external-ids", {}).get("external-id", []) or []:
+            if str(external.get("external-id-type", "")).lower() != "doi":
+                continue
+            doi = doi_clean(external.get("external-id-value"))
+            if DOI_RE.fullmatch(doi):
+                found.add(doi)
+        for summary in group.get("work-summary", []) or []:
+            doi = doi_clean((summary.get("external-ids") or {}).get("external-id-value"))
+            if DOI_RE.fullmatch(doi):
+                found.add(doi)
+    return found
+
+
+def openalex_by_doi(doi):
+    """DOI lookup also works when OpenAlex has not linked the work to our author ID."""
+    return get_json("https://api.openalex.org/works/https://doi.org/" + urllib.parse.quote(doi, safe="/"))
+
+
 def work_identity(work):
     """OpenAlex has occasionally missing author IDs; null is not affirmative."""
     for authorship in work.get("authorships") or []:
@@ -189,9 +217,11 @@ def crossref_author_names(record):
     return target, names, rendered
 
 
-def assess_candidate(work, record, known_names):
+def assess_candidate(work, record, known_names, orcid_verified=False):
     valid, institution = work_identity(work)
-    if not valid:
+    # ORCID is an independent discovery channel; the publisher's DOI, byline
+    # and title must still agree with OpenAlex before auto-publication.
+    if not valid and not orcid_verified:
         return "OpenAlex author ID/name not confirmed"
     if record.get("type") != "journal-article":
         return "Not a journal article in publisher Crossref record"
@@ -202,7 +232,7 @@ def assess_candidate(work, record, known_names):
     if not has_target:
         return "Crossref does not explicitly name Yaqian Li"
     coauthor_count = len(known_names & names)
-    if coauthor_count < 2 and not (institution and coauthor_count >= 1):
+    if not orcid_verified and coauthor_count < 2 and not (institution and coauthor_count >= 1):
         return "Insufficient corroborating known coauthors/affiliation"
     title = (record.get("title") or [""])[0]
     if not isinstance(title, str) or len(clean_field(title)) < 18:
@@ -307,8 +337,25 @@ def sync(apply=False):
     source_warnings = []
     seen = set()
     works = openalex_works()
-    candidates = [(work, None) for work in works]
+    # Each candidate: (OpenAlex work, optional publisher record, from ORCID).
+    candidates = [(work, None, False) for work in works]
     crossref_dois = 0
+    orcid_count = 0
+    try:
+        orcid_records = orcid_dois()
+        orcid_count = len(orcid_records)
+        known_openalex = {doi_clean(w.get("doi")) for w in works}
+        for doi in sorted(orcid_records - existing - known_openalex):
+            try:
+                candidates.append((openalex_by_doi(doi), None, True))
+            except Exception as exc:
+                pending.append({"doi": doi, "source": "ORCID", "reason": "OpenAlex DOI lookup unavailable: " + str(exc)[:130]})
+    except Exception as exc:
+        orcid_records = set()
+        source_warnings.append("ORCID works unavailable: " + str(exc)[:130])
+    # ORCID-confirmed DOI takes precedence even if OpenAlex author clustering is wrong.
+    candidates = [(work, record, doi_clean(work.get("doi")) in orcid_records or from_orcid)
+                  for work, record, from_orcid in candidates]
     try:
         crossref_matches = crossref_recent(known_names)
         crossref_dois = len(crossref_matches)
@@ -317,29 +364,32 @@ def sync(apply=False):
             if doi in existing or doi in openalex_dois:
                 continue
             try:
-                work = get_json("https://api.openalex.org/works/https://doi.org/" + doi)
-                candidates.append((work, matched_record))
+                work = openalex_by_doi(doi)
+                candidates.append((work, matched_record, doi in orcid_records))
             except (Exception) as exc:
                 pending.append({"doi": doi, "reason": "OpenAlex DOI lookup unavailable: " + str(exc)[:130]})
     except (Exception) as exc:
         source_warnings.append("Crossref recent search unavailable: " + str(exc)[:130])
-    for work, matched_record in candidates:
+    for work, matched_record, from_orcid in candidates:
         doi = doi_clean(work.get("doi"))
         if doi in seen or doi in existing or not DOI_RE.match(doi):
             continue
         seen.add(doi)
         try:
             record = matched_record or get_json("https://api.crossref.org/works/" + urllib.parse.quote(doi, safe="/"))["message"]
-            reason = assess_candidate(work, record, known_names)
+            reason = assess_candidate(work, record, known_names, orcid_verified=from_orcid)
             if reason:
+                # Preserve every rejected candidate with evidence for manual review.
+                # Do not silently discard potentially valid new-collaborator papers.
+                pending.append({"doi": doi, "title": work.get("title"),
+                                "source": "ORCID" if from_orcid else "OpenAlex/Crossref",
+                                "reason": reason})
                 if reason in (
                     "Insufficient corroborating known coauthors/affiliation",
                     "OpenAlex author ID/name not confirmed",
                     "Not a journal article in publisher Crossref record",
                 ):
                     rejected_same_name += 1
-                else:
-                    pending.append({"doi": doi, "title": work.get("title"), "reason": reason})
                 continue
             key, entry = render_bibtex(work, record, keys)
             keys.add(key)
@@ -360,6 +410,8 @@ def sync(apply=False):
         "checked_at": dt.datetime.now(dt.timezone.utc).isoformat(),
         "openalex_author_id": AUTHOR_ID,
         "found_by_openalex": len(works),
+        "orcid_id": ORCID_ID,
+        "found_by_orcid": orcid_count,
         "additional_crossref_candidates": crossref_dois,
         "source_warnings": source_warnings,
         "excluded_ambiguous_or_unrelated_records": rejected_same_name,

@@ -138,6 +138,7 @@ class PublicationSyncTest(unittest.TestCase):
                 mock.patch.object(pub, "REPORT", report_path),
                 mock.patch.object(pub, "openalex_works", return_value=[work()]),
                 mock.patch.object(pub, "crossref_recent", return_value={}),
+                mock.patch.object(pub, "orcid_dois", return_value=set()),
                 mock.patch.object(pub, "get_json", return_value={"message": record()}),
             ):
                 first = pub.sync(apply=True)
@@ -147,6 +148,84 @@ class PublicationSyncTest(unittest.TestCase):
                 second = pub.sync(apply=True)
                 self.assertEqual(len(second["approved"]), 0)
                 self.assertEqual(bib.read_text(encoding="utf-8").count("doi = {10.1234/valid.paper}"), 1)
+
+    def test_orcid_public_works_doi_extraction(self):
+        response = {"group": [
+            {"external-ids": {"external-id": [
+                {"external-id-type": "doi", "external-id-value": "https://doi.org/10.1234/valid.paper"},
+                {"external-id-type": "isbn", "external-id-value": "978-123"},
+            ]}},
+            {"external-ids": {"external-id": [
+                {"external-id-type": "DOI", "external-id-value": "10.1234/VALID.PAPER"},
+                {"external-id-type": "doi", "external-id-value": "invalid"},
+            ]}},
+        ]}
+        with mock.patch.object(pub, "get_json", return_value=response) as get:
+            self.assertEqual(pub.orcid_dois(), {"10.1234/valid.paper"})
+            self.assertIn(pub.ORCID_ID, get.call_args.args[0])
+
+    def test_orcid_independent_evidence_allows_new_collaborators(self):
+        unrelated = work("A0000000000", affiliation=False)
+        self.assertIsNotNone(pub.assess_candidate(unrelated, record(), set()))
+        self.assertIsNone(pub.assess_candidate(unrelated, record(), set(), orcid_verified=True))
+        bad = record()
+        bad["author"][0] = {"given": "Different", "family": "Person"}
+        self.assertIsNotNone(pub.assess_candidate(unrelated, bad, set(), orcid_verified=True))
+        bad = record("An unrelated article with a different title")
+        self.assertIsNotNone(pub.assess_candidate(unrelated, bad, set(), orcid_verified=True))
+
+    def test_orcid_only_candidate_and_append_only(self):
+        initial = "".join(
+            f"@article{{existing{i},\\n  author = {{Yan, Hao and Feng, Xiang and Li, Yaqian}},\\n"
+            f"  doi = {{10.1234/seed{i}}},\\n}}\\n\\n"
+            for i in range(23)
+        )
+        with tempfile.TemporaryDirectory() as root:
+            folder = pathlib.Path(root)
+            bib = folder / "papers.bib"
+            bib.write_text(initial, encoding="utf-8")
+            with (
+                mock.patch.object(pub, "BIB", bib),
+                mock.patch.object(pub, "STATS", folder / "stats.yml"),
+                mock.patch.object(pub, "NEWS_DIR", folder / "news"),
+                mock.patch.object(pub, "REPORT", folder / "report.json"),
+                mock.patch.object(pub, "openalex_works", return_value=[]),
+                mock.patch.object(pub, "orcid_dois", return_value={"10.1234/valid.paper"}),
+                mock.patch.object(pub, "openalex_by_doi", return_value=work("A0000000000", affiliation=False)),
+                mock.patch.object(pub, "crossref_recent", return_value={}),
+                mock.patch.object(pub, "get_json", return_value={"message": record()}),
+            ):
+                first = pub.sync(apply=True)
+                self.assertEqual(first["found_by_orcid"], 1)
+                self.assertEqual(len(first["approved"]), 1)
+                self.assertTrue(bib.read_text(encoding="utf-8").startswith(initial))
+                self.assertEqual(len(pub.sync(apply=True)["approved"]), 0)
+
+    def test_uncertain_candidates_are_retained_not_published(self):
+        initial = "".join(
+            f"@article{{existing{i},\\n  author = {{Yan, Hao and Feng, Xiang and Li, Yaqian}},\\n"
+            f"  doi = {{10.1234/seed{i}}},\\n}}\\n\\n"
+            for i in range(23)
+        )
+        with tempfile.TemporaryDirectory() as root:
+            folder = pathlib.Path(root)
+            bib = folder / "papers.bib"
+            bib.write_text(initial, encoding="utf-8")
+            with (
+                mock.patch.object(pub, "BIB", bib),
+                mock.patch.object(pub, "STATS", folder / "stats.yml"),
+                mock.patch.object(pub, "NEWS_DIR", folder / "news"),
+                mock.patch.object(pub, "REPORT", folder / "report.json"),
+                mock.patch.object(pub, "openalex_works", return_value=[work(affiliation=False)]),
+                mock.patch.object(pub, "orcid_dois", return_value=set()),
+                mock.patch.object(pub, "crossref_recent", return_value={}),
+                mock.patch.object(pub, "get_json", return_value={"message": record()}),
+            ):
+                report = pub.sync(apply=True)
+                self.assertEqual(len(report["approved"]), 0)
+                self.assertEqual(len(report["pending_review"]), 1)
+                self.assertIn("coauthors", report["pending_review"][0]["reason"])
+                self.assertEqual(bib.read_text(encoding="utf-8"), initial)
 
 
 if __name__ == "__main__":
