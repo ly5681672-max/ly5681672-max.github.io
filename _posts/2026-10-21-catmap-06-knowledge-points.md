@@ -96,4 +96,34 @@ model.run() 结束 → 所有 map 数据保存到 .pkl 文件
 8.火山图多个峰？
 ![2026-10-21-catmap-06-knowledge-points.md-2026-11-11_16-40-06-e9f80eda](https://raw.githubusercontent.com/ly5681672-max/ly5681672-max.github.io/main/assets/img/learning-notes/2026-10-21-catmap-06-knowledge-points.md-2026-11-11_16-40-06-e9f80eda.png)
 
+https://chatgpt.com/s/t_6af52eb11b788191ac73bd53082fa2bd
+https://chatgpt.com/s/t_6af534b4fb848191aa1bbeddbfbfc196
 
+参数设置问题 theshold vm.min margin 这些参数 导致一些TOF值被压缩为常数
+
+注意到gpt帮我分析问题时候 特别冗长 难以理解
+提示词：你的解释太过冗长 且不利于我以后独立发现问题 重新组织解释语言
+数据核查 告诉我如何快速找到值得观察的数据 你明白吗
+
+当前还有个问题 就是目前Jacobian 一些参数在整体框架中对应哪个部分 我非常容易看乱 导致没有理解 因此后续不知道如何调整
+
+https://chatgpt.com/s/t_6af57233f43c8191aeaafdd31d582a5b
+
+先用唯一的资料 建立总的知识框架 后续所有的查资料都是属于补充说明完善
+
+9.反应级数求导和分析问题
+
+https://mp.weixin.qq.com/s/VePuCbIvaqaM3VTTdZaBvQ
+![2026-10-21-catmap-06-knowledge-points.md-2026-11-12_16-55-54-df1ab0b1](https://raw.githubusercontent.com/ly5681672-max/ly5681672-max.github.io/main/assets/img/learning-notes/2026-10-21-catmap-06-knowledge-points.md-2026-11-12_16-55-54-df1ab0b1.png)
+
+**谐振近似** = 假设吸附物像弹簧一样来回晃，力道和位移成正比。
+
+吸附的低频运动：就是它在表面上慢慢挪、轻轻摆。
+这个动作有两个特点：
+1. 晃的幅度容易比较大
+2. 吸附的“束缚力”本身偏弱
+
+弹簧模型只适合小幅度晃动。晃大了就不再是弹簧规律（非谐）。
+👉 所以**低频运动不能直接套用弹簧假设，得验证一下才行**。
+
+对比：高频振动（分子内部键伸缩）一般抖得幅度很小，弹簧假设通常够用。
