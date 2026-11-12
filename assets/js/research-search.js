@@ -7,9 +7,15 @@
   const AFTER_PARAM = "search_after";
   const MAX_HITS_PER_POST = 12;
   const CONTEXT_CHARS = 45;
-  const normal = (value) => String(value || "").replace(/\s+/g, "").toLocaleLowerCase();
+  const normal = (value) =>
+    String(value || "")
+      .replace(/\s+/g, "")
+      .toLocaleLowerCase();
   // ninja-action renders titles as HTML; never pass untrusted Markdown markup to it.
-  const safeText = (value) => String(value || "").replace(/[<>&]/g, " ").replace(/[\r\t]/g, " ");
+  const safeText = (value) =>
+    String(value || "")
+      .replace(/[<>&]/g, " ")
+      .replace(/[\r\t]/g, " ");
 
   function findHits(entry, keyword) {
     const hits = [];
@@ -80,7 +86,9 @@
             title: `${safeText(entry.title)}\n${safeText(hit.section)} · ${hit.snippet}`,
             // Retain the upstream full-text ranking path for Ninja Keys.
             description: item.description,
-            handler: () => { window.location.href = buildTargetUrl(entry.url, keyword, hit); },
+            handler: () => {
+              window.location.href = buildTargetUrl(entry.url, keyword, hit);
+            },
           });
         }
         if (hits.length > MAX_HITS_PER_POST) {
@@ -90,7 +98,9 @@
             id: `${item.id}-more`,
             title: `${safeText(entry.title)}\n另有 ${hits.length - MAX_HITS_PER_POST} 处匹配，点击进入下一处`,
             description: item.description,
-            handler: () => { window.location.href = buildTargetUrl(entry.url, keyword, hit); },
+            handler: () => {
+              window.location.href = buildTargetUrl(entry.url, keyword, hit);
+            },
           });
         }
       }
@@ -192,7 +202,8 @@
     range.setStart(start.node, offset - start.from);
     range.setEnd(end.node, endOffset - end.from + 1);
     const style = document.createElement("style");
-    style.textContent = "::highlight(research-search-hit) { background: #ffdf5a; color: #171717; } mark.research-search-hit { background: #ffdf5a; color: #171717; }";
+    style.textContent =
+      "::highlight(research-search-hit) { background: #ffdf5a; color: #171717; } mark.research-search-hit { background: #ffdf5a; color: #171717; }";
     document.head.appendChild(style);
     if (window.CSS?.highlights && window.Highlight) {
       CSS.highlights.set("research-search-hit", new Highlight(range));
