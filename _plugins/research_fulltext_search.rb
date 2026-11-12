@@ -1,12 +1,50 @@
 # frozen_string_literal: true
 
-# Extend the existing al_search/ninja-keys index with Markdown body text.
-# No changes to posts, pagination, or the upstream gem are required.
+# Keep al_search/ninja-keys, but add searchable Markdown sections and location data.
+# The site-specific JavaScript provides excerpts and navigates to the exact match.
 require "json"
 require "cgi"
 
 module ResearchNotesFullTextSearch
-  MAX_BODY_CHARS = 20_000
+  def search_plaintext(source)
+    CGI.unescapeHTML(source.to_s)
+       .gsub(/!\[[^\]]*\]\([^)]*\)/, " ")
+       .gsub(/\[([^\]]+)\]\([^)]*\)/, '\\1')
+       .gsub(%r{https?://\S+}, " ")
+       .gsub(/<[^>]+>/, " ")
+       .gsub(/[\r\n\t]+/, " ")
+       .gsub(/[`*_~]/, "")
+       .gsub(/\s+/, " ")
+       .strip
+  end
+
+  def search_sections(post)
+    blocks = []
+    heading = "正文"
+    lines = []
+    flush = lambda do
+      text = search_plaintext(lines.join(" "))
+      blocks << { title: search_plaintext(heading), text: text } unless text.empty?
+    end
+
+    post.content.to_s.each_line do |line|
+      stripped = line.strip
+      section_heading = if stripped.match?(/^\#{1,6}\s+\S/)
+                          stripped.sub(/^\#{1,6}\s+/, "")
+                        elsif stripped.match?(/^\d{1,3}[.、]\s*\S/) && stripped.length <= 160
+                          stripped
+                        end
+      if section_heading
+        flush.call
+        heading = section_heading
+        lines = [stripped] # The heading itself remains searchable.
+      else
+        lines << stripped
+      end
+    end
+    flush.call
+    blocks
+  end
 
   def render(context)
     original = super
@@ -19,34 +57,38 @@ module ResearchNotesFullTextSearch
       next if title.empty?
 
       id = "post-#{Jekyll::Utils.slugify(CGI.escapeHTML(title))}"
-      # Markdown source is sufficient for keyword matching, including Chinese.
-      body = post.content.to_s
-                 .gsub(/!\[[^\]]*\]\([^)]*\)/, " ")
-                 .gsub(/\[([^\]]+)\]\([^)]*\)/, '\\1')
-                 .gsub(/<[^>]+>/, " ")
-                 .gsub(/[\r\n\t]+/, " ")
-                 .gsub(/\s+/, " ")
-                 .strip
-                 .slice(0, MAX_BODY_CHARS)
-      searchable[id] = body unless body.empty?
+      sections = search_sections(post)
+      next if sections.empty?
+
+      searchable[id] = {
+        title: title,
+        url: "#{site.config['baseurl'].to_s.sub(%r{/$}, '')}#{post.url}",
+        sections: sections,
+        body: sections.map { |section| section[:text] }.join(" ")
+      }
     end
 
     json = JSON.generate(searchable)
                .gsub("<", "\\u003c")
                .gsub(">", "\\u003e")
                .gsub("&", "\\u0026")
+               .gsub("\u2028", "\\u2028")
+               .gsub("\u2029", "\\u2029")
+    baseurl = site.config["baseurl"].to_s.sub(%r{/$}, "")
     original + <<~HTML
       <script>
         (() => {
           const ninja = document.querySelector("ninja-keys");
+          const index = #{json};
+          window.researchFullTextIndex = index;
           if (!ninja || !Array.isArray(ninja.data)) return;
-          const bodies = #{json};
           ninja.data = ninja.data.map((item) => {
-            const body = bodies[item.id];
-            return body ? { ...item, description: [item.description || "", body].join(" ").trim() } : item;
+            const post = index[item.id];
+            return post ? { ...item, description: [item.description || "", post.body].join(" ").trim() } : item;
           });
         })();
       </script>
+      <script defer src="#{baseurl}/assets/js/research-search.js"></script>
     HTML
   end
 end
