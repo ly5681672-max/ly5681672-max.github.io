@@ -37,7 +37,7 @@ nav_order: 5
 
 ## 每位专家的关键科研里程碑
 
-<p>本时间轴只展示<strong>具有可追溯文献依据、明确归属专家的代表性成果</strong>，不按发表时间机械收录全部新论文。里程碑需回答“提出了什么方法或发现、解决什么问题、学术意义是什么”。<strong>PROVISIONAL</strong> 表示仅完成书目关联与初步整理，CONFIRMED_ABSTRACT 表示出版商原始摘要与作者身份已核验，但并非全文独立复核；CONFIRMED_BIBLIOGRAPHY 仅表示书目信息已核验；PROVISIONAL 仍待核验。无合格节点的专家保留待核验状态，不使用普通新论文充数。</p>
+<p>本时间轴只展示<strong>具有可追溯文献依据、明确归属专家的代表性成果</strong>，不按发表时间机械收录全部新论文。里程碑需回答“提出了什么方法或发现、解决什么问题、学术意义是什么”。<strong>PROVISIONAL</strong> 表示仅完成书目关联与初步整理，CONFIRMED_FULLTEXT 表示已核对公开原文及对应结果（不等于实验复现）；CONFIRMED_ABSTRACT 表示出版商原始摘要与作者身份已核验，但并非全文独立复核；CONFIRMED_BIBLIOGRAPHY 仅表示书目信息已核验；PROVISIONAL 仍待核验。无合格节点的专家保留待核验状态，不使用普通新论文充数。</p>
 
 {% assign milestones = site.data.domain_expert_milestones %}
 {% for person in site.data.domain_experts %}
@@ -61,7 +61,7 @@ nav_order: 5
     {% endif %}
   {% endfor %}
   {% if milestone_count == 0 %}
-    <p class="domain-help domain-milestone-pending">尚未完成该专家历史代表性成果的原文核验，暂不将近期论文自动认定为里程碑。下方“最新论文”仍持续自动更新。</p>
+    <p class="domain-help domain-milestone-pending">该专家尚无通过当前证据门槛的正式里程碑。可在下方“历史代表性成果候选”查看真实论文线索；未完成原文核验前不自动认定为突破。</p>
   {% endif %}
 </section>
 {% endfor %}

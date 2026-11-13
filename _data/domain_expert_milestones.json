@@ -12,6 +12,51 @@
     "review_note": "仅书目及人工摘要线索；尚未完成论文原文逐项核验。"
   },
   {
+    "year": "2006",
+    "group": "epox",
+    "type": "环氧化工艺·领域综述",
+    "title": "The Production of Propene Oxide: Catalytic Processes and Recent Developments",
+    "authors": "T. Alexander Nijhuis, Michiel Makkee, Jacob A. Moulijn, Bert M. Weckhuysen",
+    "evidence": "系统比较氯醇法、氢过氧化物法及新兴环氧丙烷催化路线，讨论H₂O₂组合工艺、银基、熔盐及Au–TiO₂等催化体系的技术挑战。属于领域发展综述，不是作者独立发现的新催化机理。",
+    "url": "https://doi.org/10.1021/ie0513090",
+    "publisher_source": "https://pubs.acs.org/doi/10.1021/ie0513090",
+    "expert_ids": [
+      "weckhuysen"
+    ],
+    "review_status": "CONFIRMED_ABSTRACT",
+    "review_note": "已核验ACS出版页作者、DOI、摘要及综述属性；未完成全文复核。"
+  },
+  {
+    "year": "2009",
+    "group": "epox",
+    "type": "关键催化策略·研究论文",
+    "title": "Switching off hydrogen peroxide hydrogenation in the direct synthesis process",
+    "authors": "Jennifer K. Edwards, Benjamin Solsona, Edwin Ntainjua, Albert F. Carley, Andrew A. Herzing, Christopher J. Kiely, Graham J. Hutchings",
+    "evidence": "研究表明，酸预处理Au–Pd合金催化剂的碳载体可抑制已生成H₂O₂的分解/加氢副反应；作者报告H₂O₂直接合成中的氢选择性超过95%。这一成果为通过抑制副反应提高H₂O₂选择性提供了催化剂设计思路。",
+    "url": "https://doi.org/10.1126/science.1168980",
+    "publisher_source": "https://orca.cardiff.ac.uk/id/eprint/5925/",
+    "expert_ids": [
+      "hutchings"
+    ],
+    "review_status": "CONFIRMED_ABSTRACT",
+    "review_note": "已核验Cardiff大学机构库、NIST及PubMed原始摘要和作者身份；并非全文独立复核。"
+  },
+  {
+    "year": "2010",
+    "group": "epox",
+    "type": "分子筛催化·研究论文",
+    "title": "Tin-containing zeolites are highly active catalysts for the isomerization of glucose in water",
+    "authors": "Manuel Moliner, Yuriy Román-Leshkov, Mark E. Davis",
+    "evidence": "研究证明框架Sn位点的Sn-Beta分子筛能够在水相中高活性、高选择性地催化葡萄糖异构化为果糖，并可在酸性介质中工作；为分子筛Lewis酸位点催化生物质转化提供了实验依据。此成果不是烯烃环氧化研究。",
+    "url": "https://doi.org/10.1073/pnas.1002358107",
+    "publisher_source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2852018/",
+    "expert_ids": [
+      "davis"
+    ],
+    "review_status": "CONFIRMED_FULLTEXT",
+    "review_note": "已核验PNAS公开全文、作者贡献、摘要及关键实验结果；尚未完成独立实验复现。"
+  },
+  {
     "year": "2020",
     "group": "epox",
     "type": "关键机理·研究论文",

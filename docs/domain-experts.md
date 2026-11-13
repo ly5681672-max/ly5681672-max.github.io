@@ -58,3 +58,10 @@ bundle exec jekyll build
 - Chinese Journal of Chemical Engineering 2025 知识图谱综述：核验作者、期刊、DOI，标记 CONFIRMED_BIBLIOGRAPHY。
 - 三种证据等级严格区分：CONFIRMED_ABSTRACT=原始摘要核验，CONFIRMED_BIBLIOGRAPHY=书目核验，PROVISIONAL=待核验；均不等于已完成全文科学审稿。
 - 历史自动候选仍需在GitHub Actions手动选择 apply 或等待每周调度运行后才有真实数据；push只运行离线测试。
+
+## 2026-11-13 三位专家空白里程碑修复
+
+- Hutchings：2009 Science，10.1126/science.1168980；核对Cardiff机构库、NIST及PubMed摘要，标记CONFIRMED_ABSTRACT。
+- Weckhuysen：2006 Ind. Eng. Chem. Res.综述，10.1021/ie0513090；核对ACS出版页作者、摘要，标记CONFIRMED_ABSTRACT；明确不是原始机理发现。
+- Davis：2010 PNAS，10.1073/pnas.1002358107；核对PNAS公开全文与关键实验，标记CONFIRMED_FULLTEXT；明确是分子筛Lewis酸催化糖异构化，非环氧化。
+- 原有72篇候选与自动更新流程保持不变。其他专家未核验条目继续保留待核验状态，避免将高被引直接认定为科学突破。
