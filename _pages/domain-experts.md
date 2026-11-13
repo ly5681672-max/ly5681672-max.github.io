@@ -17,7 +17,7 @@ nav_order: 5
   <button data-domain-filter="epox" aria-pressed="false">烯烃环氧化</button>
 </div>
 
-<p class="domain-help">手机端可以左右滑动图谱。点击节点查看详情；实线代表经人工整理的“专家—研究兴趣”关联；启用论文同步后，虚线代表经过作者身份匹配的“专家—论文”关系，不代表两位专家共同发表论文。</p>
+<p class="domain-help">手机端可以左右滑动图谱。点击节点查看详情；实线代表人工整理的“专家—研究兴趣”关联；虚线同时表示基于真实论文关键词自动推导的“专家—主题”线索以及经过作者身份匹配的“专家—论文”关系，不代表两位专家共同发表论文。</p>
 <div class="domain-graph-scroll"><svg id="domain-experts-graph" viewBox="0 0 900 720" role="img" aria-label="领域专家—研究主题知识图谱" xmlns="http://www.w3.org/2000/svg"></svg></div>
 <div id="domain-expert-detail" class="domain-detail" aria-live="polite">点击图中的专家或下方姓名，查看官方介绍与研究关注点。</div>
 
@@ -139,5 +139,6 @@ nav_order: 5
 <p class="domain-help">数据规则：仅纳入具备 DOI、作者身份匹配且主题相关的文献；原始来源保留 DOI、OpenAlex 记录和发表日期。没有 ORCID 的专家暂不自动归属新论文，以免同名误判。页面不自动生成未核验的研究结论。</p>
 
 <script id="domain-experts-data" type="application/json">{{ site.data.domain_experts | jsonify | replace: '</', '<\/' }}</script>
+<script id="domain-expert-candidates-data" type="application/json">{{ site.data.domain_expert_milestone_candidates | jsonify | replace: '</', '<\\/' }}</script>
 <script id="domain-expert-papers-data" type="application/json">{{ site.data.domain_expert_updates | jsonify | replace: '</', '<\/' }}</script>
 <script src="{{ '/assets/js/domain-experts.js' | relative_url }}" defer></script>

@@ -8,18 +8,29 @@
   const NS='http://www.w3.org/2000/svg';
   const colors={ai:'#245a96',epox:'#a56a2c'};
   let works=[];try{works=JSON.parse(document.getElementById('domain-expert-papers-data').textContent).papers||[];}catch(_){}
+  let history=[];try{history=JSON.parse(document.getElementById('domain-expert-candidates-data').textContent).candidates||[];}catch(_){}
   let filter='all';
   const topicGroups={};
-  people.forEach(p=>p.topics.forEach(t=>{(topicGroups[t]??=new Set()).add(p.group);}));
+  const evidenceTopics={};
+  const allWorks=[...works.map(w=>({expertNames:w.author_names||[],tags:w.match_tags||[],group:w.group})),
+    ...history.map(w=>({expertNames:[w.expert_name],tags:w.relevance_tags||[],group:people.find(p=>p.id===w.expert_id)?.group}))];
+  allWorks.forEach(w=>w.expertNames.forEach(name=>{
+    const person=people.find(p=>p.name===name);if(!person)return;
+    (evidenceTopics[person.id]??=new Set());
+    w.tags.forEach(t=>evidenceTopics[person.id].add(t));
+  }));
+  people.forEach(p=>[...new Set([...p.topics,...(evidenceTopics[p.id]||[])])].forEach(t=>{
+    (topicGroups[t]??=new Set()).add(p.group);
+  }));
   function s(tag,attrs={}){const n=document.createElementNS(NS,tag);Object.entries(attrs).forEach(([k,v])=>n.setAttribute(k,String(v)));return n;}
   function clear(el){while(el.firstChild)el.removeChild(el.firstChild);}
   function txt(node,text){node.appendChild(document.createTextNode(text));return node;}
-  function detailPerson(p){clear(detail);const h=document.createElement('h3');h.textContent=p.name;detail.append(h);const a=document.createElement('p');a.textContent=p.institution+'｜'+p.intro;detail.append(a);const t=document.createElement('p');t.textContent='研究主题：'+p.topics.join('、');detail.append(t);const link=document.createElement('a');link.href=p.official_url;link.target='_blank';link.rel='noopener noreferrer';link.textContent='官方资料 ↗';detail.append(link);if(p.orcid){detail.append(document.createTextNode(' · '));const o=document.createElement('a');o.href='https://orcid.org/'+p.orcid;o.target='_blank';o.rel='noopener noreferrer';o.textContent='ORCID ↗';detail.append(o);}const subset=works.filter(w=>(w.author_names||[]).includes(p.name)).slice(0,5);if(subset.length){const h2=document.createElement('h4');h2.textContent='最近匹配论文';detail.append(h2);const ul=document.createElement('ul');subset.forEach(w=>{const li=document.createElement('li');const a=document.createElement('a');a.textContent=w.publication_date+' · '+w.title;a.href=w.doi_url;a.target='_blank';a.rel='noopener noreferrer';li.append(a);ul.append(li);});detail.append(ul);}detail.scrollIntoView({behavior:'smooth',block:'nearest'});}
-  function detailTopic(topic){clear(detail);const h=document.createElement('h3');h.textContent=topic;detail.append(h);const p=document.createElement('p');p.textContent='官方研究简介中与该主题相关的专家（人工整理的研究兴趣关联）：'+people.filter(x=>x.topics.includes(topic)&&(filter==='all'||x.group===filter)).map(x=>x.name).join('、');detail.append(p);}
+  function detailPerson(p){clear(detail);const h=document.createElement('h3');h.textContent=p.name;detail.append(h);const a=document.createElement('p');a.textContent=p.institution+'｜'+p.intro;detail.append(a);const t=document.createElement('p');t.textContent='研究主题（人工整理）：'+p.topics.join('、')+'；论文主题线索（自动）：'+[...(evidenceTopics[p.id]||[])].join('、');detail.append(t);const link=document.createElement('a');link.href=p.official_url;link.target='_blank';link.rel='noopener noreferrer';link.textContent='官方资料 ↗';detail.append(link);if(p.orcid){detail.append(document.createTextNode(' · '));const o=document.createElement('a');o.href='https://orcid.org/'+p.orcid;o.target='_blank';o.rel='noopener noreferrer';o.textContent='ORCID ↗';detail.append(o);}const subset=works.filter(w=>(w.author_names||[]).includes(p.name)).slice(0,5);if(subset.length){const h2=document.createElement('h4');h2.textContent='最近匹配论文';detail.append(h2);const ul=document.createElement('ul');subset.forEach(w=>{const li=document.createElement('li');const a=document.createElement('a');a.textContent=w.publication_date+' · '+w.title;a.href=w.doi_url;a.target='_blank';a.rel='noopener noreferrer';li.append(a);ul.append(li);});detail.append(ul);}detail.scrollIntoView({behavior:'smooth',block:'nearest'});}
+  function detailTopic(topic){clear(detail);const h=document.createElement('h3');h.textContent=topic;detail.append(h);const p=document.createElement('p');p.textContent='关联专家（实线为人工整理的研究兴趣；虚线为论文关键词自动匹配）：'+people.filter(x=>(x.topics.includes(topic)||(evidenceTopics[x.id]||new Set()).has(topic))&&(filter==='all'||x.group===filter)).map(x=>x.name).join('、');detail.append(p);}
   function render(){clear(svg);
     const active=people.filter(p=>filter==='all'||p.group===filter);
     const perGroup={ai:active.filter(p=>p.group==='ai'),epox:active.filter(p=>p.group==='epox')};
-    const topics=[...new Set(active.flatMap(p=>p.topics))];
+    const topics=[...new Set(active.flatMap(p=>[...p.topics,...(evidenceTopics[p.id]||[])]))];
     const pos={};
     const groupX={ai:270,epox:630};
     for(const g of ['ai','epox']){
@@ -31,8 +42,8 @@
       const y=90+rank*(g==='both'?68:62);pos['topic:'+t]={x,y};
     });
     const back=s('g'); svg.append(back);
-    active.forEach(p=>p.topics.forEach(t=>{const a=pos[p.id],b=pos['topic:'+t];if(!a||!b)return;
-      back.append(s('line',{x1:a.x,y1:a.y,x2:b.x,y2:b.y,stroke:p.group==='ai'?'#a4bdd6':'#d4b79d','stroke-width':1.6,opacity:.7}));}));
+    active.forEach(p=>[...new Set([...p.topics,...(evidenceTopics[p.id]||[])])].forEach(t=>{const a=pos[p.id],b=pos['topic:'+t];if(!a||!b)return;
+      back.append(s('line',{x1:a.x,y1:a.y,x2:b.x,y2:b.y,stroke:p.group==='ai'?'#a4bdd6':'#d4b79d','stroke-width':1.6,opacity:.7,'stroke-dasharray':p.topics.includes(t)?'':'3 4'}));}));
     svg.append(txt(s('text',{x:255,y:33,'text-anchor':'middle',fill:colors.ai,'font-size':17,'font-weight':600}), 'AI 结合知识学习'));
     svg.append(txt(s('text',{x:645,y:33,'text-anchor':'middle',fill:colors.epox,'font-size':17,'font-weight':600}),'烯烃环氧化'));
     topics.forEach(t=>{const p=pos['topic:'+t],g=s('g',{class:'domain-topic-node',tabindex:0,role:'button','aria-label':'研究主题：'+t});
