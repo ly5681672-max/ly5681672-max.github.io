@@ -188,5 +188,23 @@
     "verification_source": "Crossref publisher-deposited abstract",
     "verification_doi": "10.1073/pnas.1206708109",
     "verification_method": "automated_abstract_only"
+  },
+  {
+    "year": "2023",
+    "group": "ai",
+    "type": "研究成果·出版商摘要核验",
+    "title": "Accelerated discovery of multi-elemental reverse water-gas shift catalysts using extrapolative machine learning approach",
+    "authors": "Gang Wang, Shinya Mine, Duotian Chen, Yuan Jing, Kah Wei Ting, Taichi Yamaguchi, Motoshi Takao, Zen Maeno, Ichigaku Takigawa, Koichi Matsushita, Ken-ichi Shimizu, Takashi Toyao",
+    "evidence": "出版商登记摘要中的研究贡献原文片段（不等于全文核验）：“Herein, we demonstrate an extrapolative ML approach to develop new multi-elemental reverse water-gas shift catalysts.…”；具体结论请核对原文。",
+    "url": "https://doi.org/10.1038/s41467-023-41341-3",
+    "publisher_source": "https://doi.org/10.1038/s41467-023-41341-3",
+    "expert_ids": [
+      "takigawa_ichigaku"
+    ],
+    "review_status": "CONFIRMED_ABSTRACT",
+    "review_note": "自动核验Crossref出版商登记的DOI、题名、作者姓氏及摘要；只确认摘要原文存在，不代表全文审核或独立复现。",
+    "verification_source": "Crossref publisher-deposited abstract",
+    "verification_doi": "10.1038/s41467-023-41341-3",
+    "verification_method": "automated_abstract_only"
   }
 ]

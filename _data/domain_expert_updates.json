@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13T16:26:10+00:00",
+  "generated_at": "2026-11-13T16:37:02+00:00",
   "window_days": 180,
   "papers": [
     {
@@ -272,6 +272,44 @@
       ],
       "author_names": [
         "Graham J. Hutchings"
+      ]
+    },
+    {
+      "title": "Data-driven catalyst design for direct catalytic N2O decomposition",
+      "doi": "10.1038/s41467-026-75902-z",
+      "doi_url": "https://doi.org/10.1038/s41467-026-75902-z",
+      "source_url": "https://openalex.org/W4413874996",
+      "publication_date": "2026-07-28",
+      "journal": "Nature Communications",
+      "priority_journal": true,
+      "publication_type": "article",
+      "group": "ai",
+      "group_label": "AI 结合知识学习",
+      "relevance": "高",
+      "match_tags": [
+        "机器学习"
+      ],
+      "author_names": [
+        "Ichigaku Takigawa（瀧川一学）"
+      ]
+    },
+    {
+      "title": "Machine Learning-Assisted Development of High-Performance Ethanol Synthesis Catalysts via CO2 Hydrogenation",
+      "doi": "10.1021/jacs.6c06886",
+      "doi_url": "https://doi.org/10.1021/jacs.6c06886",
+      "source_url": "https://openalex.org/W7168295361",
+      "publication_date": "2026-07-14",
+      "journal": "Journal of the American Chemical Society",
+      "priority_journal": true,
+      "publication_type": "article",
+      "group": "ai",
+      "group_label": "AI 结合知识学习",
+      "relevance": "高",
+      "match_tags": [
+        "机器学习"
+      ],
+      "author_names": [
+        "Ichigaku Takigawa（瀧川一学）"
       ]
     },
     {

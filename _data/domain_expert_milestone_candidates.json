@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13T16:26:34+00:00",
+  "generated_at": "2026-11-13T16:37:26+00:00",
   "source": "OpenAlex",
   "selection": "历史高引用+主题规则初筛；非科学里程碑认证",
   "candidates": [
@@ -1367,6 +1367,142 @@
         "微观动力学"
       ],
       "abstract_excerpt": "MoS 2 electrocatalysts are introduced to construct a robust sandwich-type MoS 2 /S/rGO cathode with simultaneously improved reaction kinetics and capacity retention.",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "takigawa_ichigaku",
+      "expert_name": "Ichigaku Takigawa（瀧川一学）",
+      "year": 2025,
+      "title": "Data-driven de novo design of super-adhesive hydrogels",
+      "doi": "10.1038/s41586-025-09269-4",
+      "doi_url": "https://doi.org/10.1038/s41586-025-09269-4",
+      "source_url": "https://openalex.org/W4413020503",
+      "journal": "Nature",
+      "cited_by_count": 216,
+      "relevance_tags": [
+        "机器学习"
+      ],
+      "abstract_excerpt": "Data-driven methodologies have transformed the discovery and prediction of hard materials with well-defined atomic structures by leveraging standardized datasets, enabling accurate property predictions and facilitating efficient exploration of design spaces1–3. However, their application to soft materials remains challenging because of complex, multiscale structure–property relationships4–6. Here we present a data-driven approach that integrates data mining, experimentation and machine learning to design high-performance adhesive hydrogels from scratch, tailored for demanding underwater environments. By leveraging protein databases, we developed a descriptor strategy to statistically replicate protein sequence patterns in polymer strands by ideal random copolymerization, enabling targeted hydrogel design and dataset construction. Using machine learning, we optimized hydrogel formulations",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "takigawa_ichigaku",
+      "expert_name": "Ichigaku Takigawa（瀧川一学）",
+      "year": 2023,
+      "title": "Accelerated discovery of multi-elemental reverse water-gas shift catalysts using extrapolative machine learning approach",
+      "doi": "10.1038/s41467-023-41341-3",
+      "doi_url": "https://doi.org/10.1038/s41467-023-41341-3",
+      "source_url": "https://openalex.org/W4386932396",
+      "journal": "Nature Communications",
+      "cited_by_count": 74,
+      "relevance_tags": [
+        "机器学习"
+      ],
+      "abstract_excerpt": "Abstract Designing novel catalysts is key to solving many energy and environmental challenges. Despite the promise that data science approaches, including machine learning (ML), can accelerate the development of catalysts, truly novel catalysts have rarely been discovered through ML approaches because of one of its most common limitations and criticisms—the assumed inability to extrapolate and identify extraordinary materials. Herein, we demonstrate an extrapolative ML approach to develop new multi-elemental reverse water-gas shift catalysts. Using 45 catalysts as the initial data points and performing 44 cycles of the closed loop discovery system (ML prediction + experiment), we experimentally tested a total of 300 catalysts and identified more than 100 catalysts with superior activity compared to those of the previously reported high-performance catalysts. The composition of the optima",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "takigawa_ichigaku",
+      "expert_name": "Ichigaku Takigawa（瀧川一学）",
+      "year": 2021,
+      "title": "Analysis of Updated Literature Data up to 2019 on the Oxidative Coupling of Methane Using an Extrapolative Machine‐Learning Method to Identify Novel Catalysts",
+      "doi": "10.1002/cctc.202100495",
+      "doi_url": "https://doi.org/10.1002/cctc.202100495",
+      "source_url": "https://openalex.org/W3170629733",
+      "journal": "ChemCatChem",
+      "cited_by_count": 79,
+      "relevance_tags": [
+        "机器学习"
+      ],
+      "abstract_excerpt": "Abstract We have constructed and analyzed an updated dataset consisting of 4759 experimental datapoints for the oxidative coupling of methane (OCM) reaction based on literature data reported before 2020 (∼2019) using machine learning (ML) methods. Several ML methods, including random forest regression (RFR), extra trees regression (ETR), and gradient boosting regression with XGBoost (XGB), were used in conjunction with our proposed approach, in which elemental features are used as input representations rather than inputting the catalyst compositions directly. A recent research trend, namely, the extensive exploration of Mn/Na2WO4/SiO2 catalyst systems in recent years due to their high activity and durability, was clearly reflected in the dataset analysis. An ML model for the prediction of the reaction outcome (C2 yield) was successfully developed, and feature importance scores and SHaple",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "takigawa_ichigaku",
+      "expert_name": "Ichigaku Takigawa（瀧川一学）",
+      "year": 2019,
+      "title": "Machine Learning for Catalysis Informatics: Recent Applications and Prospects",
+      "doi": "10.1021/acscatal.9b04186",
+      "doi_url": "https://doi.org/10.1021/acscatal.9b04186",
+      "source_url": "https://openalex.org/W2996448308",
+      "journal": "ACS Catalysis",
+      "cited_by_count": 629,
+      "relevance_tags": [
+        "机器学习"
+      ],
+      "abstract_excerpt": "The discovery and development of catalysts and catalytic processes are essential components to maintaining an ecological balance in the future. Recent revolutions made in data science could have a great impact on traditional catalysis research in both industry and academia and could accelerate the development of catalysts. Machine learning (ML), a subfield of data science, can play a central role in this paradigm shift away from the use of traditional approaches. In this review, we present a user’s guide for ML that we believe will be helpful for scientists performing research in the field of catalysis and summarize recent progress that has been made in utilizing ML to create homogeneous and heterogeneous catalysts. The focus of the review is on the design, synthesis, and characterization of catalytic materials/compounds as well as their applications to catalyzed processes. The ML techni",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "takigawa_ichigaku",
+      "expert_name": "Ichigaku Takigawa（瀧川一学）",
+      "year": 2019,
+      "title": "Statistical Analysis and Discovery of Heterogeneous Catalysts Based on Machine Learning from Diverse Published Data",
+      "doi": "10.1002/cctc.201900971",
+      "doi_url": "https://doi.org/10.1002/cctc.201900971",
+      "source_url": "https://openalex.org/W2958695158",
+      "journal": "ChemCatChem",
+      "cited_by_count": 94,
+      "relevance_tags": [
+        "机器学习"
+      ],
+      "abstract_excerpt": "Abstract The literature provides insights for catalyst design and discovery. Effective analysis of reported data using machine learning (ML) methods offers the ability to gain valuable information. However, utilizing the literature in this way has obstacles such as lack of compositional overlaps, bias from prior published data, and low sample counts for many elements. The present study describes an ML approach that considers elemental features as input representations instead of inputting catalyst compositions directly. This ML method has the potential for catalyst discovery, including catalytic reactions with limited catalyst composition overlap in the available data. Oxidative coupling of methane (OCM), water gas shift (WGS), and CO oxidation reactions were chosen to confirm the effectiveness of the proposed method by analysis using several state‐of‐the‐art ML methods. Among the ML met",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "takigawa_ichigaku",
+      "expert_name": "Ichigaku Takigawa（瀧川一学）",
+      "year": 2018,
+      "title": "Density Functional Theory Calculations of Oxygen Vacancy Formation and Subsequent Molecular Adsorption on Oxide Surfaces",
+      "doi": "10.1021/acs.jpcc.8b11279",
+      "doi_url": "https://doi.org/10.1021/acs.jpcc.8b11279",
+      "source_url": "https://openalex.org/W2902127761",
+      "journal": "The Journal of Physical Chemistry C",
+      "cited_by_count": 222,
+      "relevance_tags": [
+        "催化描述符"
+      ],
+      "abstract_excerpt": "Abstract The surface oxygen vacancy formation energy (EOvac) is an important parameter in determining the catalytic activity of metal oxides. Estimating these energies can therefore lead to data-driven design of promising catalyst candidates. In the present study, we determine EOvac for various insulating and semiconducting oxides. Statistical investigations indicate that the band gap, bulk formation energy, and electron affinity are factors that strongly influence EOvac. Electrons enter defect states after O desorption, and these states can be in the valence band, mid-gap, or in the conduction band. Subsequent adsorption of O2, NO, CO, CO2, and H2 molecules on an O-deficient surface is also investigated. These molecules become preferentially adsorbed at the defect sites, and EOvac is identified as the dominant factor that determines the adsorption mode as well as a descriptor that shows",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "takigawa_ichigaku",
+      "expert_name": "Ichigaku Takigawa（瀧川一学）",
+      "year": 2018,
+      "title": "Toward Effective Utilization of Methane: Machine Learning Prediction of Adsorption Energies on Metal Alloys",
+      "doi": "10.1021/acs.jpcc.7b12670",
+      "doi_url": "https://doi.org/10.1021/acs.jpcc.7b12670",
+      "source_url": "https://openalex.org/W2789575256",
+      "journal": "The Journal of Physical Chemistry C",
+      "cited_by_count": 186,
+      "relevance_tags": [
+        "机器学习"
+      ],
+      "abstract_excerpt": "The process employed to discover new materials for specific applications typically utilizes screening of large compound libraries. In this approach, the performance of a compound is correlated to the properties of elements referred to as descriptors. In the effort described below, we developed a simple and efficient machine learning (ML) model for predicting adsorption energies of CH 4 related species, namely, CH 3, CH 2, CH, C, and H on the Cu-based alloys. The developed ML model predicted the DFT-calculated adsorption energies with 12 descriptors, which are readily available values for the selected elements. The predictive accuracy of four regression methods (ordinary linear regression by least-squares (OLR), random forest regression (RFR), gradient boosting regression (GBR), and extra tree regression (ETR)) with different numbers of descriptors and different test-set/training-set rati",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "takigawa_ichigaku",
+      "expert_name": "Ichigaku Takigawa（瀧川一学）",
+      "year": 2017,
+      "title": "Machine learning reveals orbital interaction in materials",
+      "doi": "10.1080/14686996.2017.1378060",
+      "doi_url": "https://doi.org/10.1080/14686996.2017.1378060",
+      "source_url": "https://openalex.org/W2766518642",
+      "journal": "Science and Technology of Advanced Materials",
+      "cited_by_count": 129,
+      "relevance_tags": [
+        "机器学习"
+      ],
+      "abstract_excerpt": "We propose a novel representation of materials named an 'orbital-field matrix (OFM)', which is based on the distribution of valence shell electrons. We demonstrate that this new representation can be highly useful in mining material data. Experimental investigation shows that the formation energies of crystalline materials, atomization energies of molecular materials, and local magnetic moments of the constituent atoms in bimetal alloys of lanthanide metal and transition-metal can be predicted with high accuracy using the OFM. Knowledge regarding the role of the coordination numbers of the transition-metal and lanthanide elements in determining the local magnetic moments of the transition-metal sites can be acquired directly from decision tree regression analyses using the OFM.",
       "review_status": "PROVISIONAL",
       "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
     }
