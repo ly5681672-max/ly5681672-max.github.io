@@ -6,3 +6,5 @@
 .domain-milestone-pending{border-left:2px solid #b6bec8;padding:.65rem .85rem;margin:.7rem 0 1.5rem;background:var(--global-card-bg-color,#fafafa)}.domain-timeline-content{min-width:0;overflow-wrap:anywhere}.domain-timeline-event h4 a{overflow-wrap:anywhere}
 
 .domain-pronounce-button{font:inherit;font-size:.78rem;font-weight:400;vertical-align:middle;padding:.12rem .4rem;margin-left:.35rem;border:1px solid var(--global-divider-color,#cbd3da);border-radius:3px;background:transparent;color:var(--global-text-color,#333);cursor:pointer;white-space:nowrap}.domain-pronounce-button:hover,.domain-pronounce-button:focus-visible{border-color:#4774a5;outline-offset:2px}.domain-person-timeline>h3 .domain-pronounce-button{font-size:.75rem}
+
+.domain-name-ipa{display:inline-block;font-family:'Noto Sans',Arial,sans-serif;font-size:.82rem;font-weight:400;color:var(--global-text-color-light,#666);margin-left:.45rem;line-height:1.5;overflow-wrap:anywhere}.domain-detail .domain-name-ipa{margin:.1rem 0 .6rem;display:block}

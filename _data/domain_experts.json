@@ -11,7 +11,9 @@
       "DFT与动力学"
     ],
     "official_url": "https://che.vt.edu/People/faculty/Xin.html",
-    "orcid": "0000-0001-9344-1697"
+    "orcid": "0000-0001-9344-1697",
+    "pronunciation_ipa": "/hʊŋˈljɑːŋ ʃɪn/",
+    "pronunciation_status": "PROVISIONAL"
   },
   {
     "id": "kitchin",
@@ -26,7 +28,9 @@
     ],
     "official_url": "https://kitchingroup.cheme.cmu.edu/",
     "orcid": "0000-0003-2625-9232",
-    "openalex_author_id": "A5003442464"
+    "openalex_author_id": "A5003442464",
+    "pronunciation_ipa": "/dʒɒn ɑːr ˈkɪtʃɪn/",
+    "pronunciation_status": "PROVISIONAL"
   },
   {
     "id": "lopez",
@@ -40,7 +44,9 @@
       "反应机理"
     ],
     "official_url": "https://iciq.org/research-group/prof-nuria-lopez/overview/",
-    "orcid": "0000-0001-9150-5941"
+    "orcid": "0000-0001-9150-5941",
+    "pronunciation_ipa": "/ˈnuɾiə ˈlopəs/",
+    "pronunciation_status": "PROVISIONAL"
   },
   {
     "id": "kulik",
@@ -54,7 +60,9 @@
       "催化剂设计"
     ],
     "official_url": "https://hjkgrp.mit.edu/",
-    "orcid": "0000-0001-9342-0191"
+    "orcid": "0000-0001-9342-0191",
+    "pronunciation_ipa": "/ˈhɛðər dʒeɪ ˈkuːlɪk/",
+    "pronunciation_status": "PROVISIONAL"
   },
   {
     "id": "ulissi",
@@ -68,7 +76,9 @@
       "催化剂设计"
     ],
     "official_url": "https://zulissi.github.io/",
-    "orcid": null
+    "orcid": null,
+    "pronunciation_ipa": "/ˈzækəri ˈjuːlɪsi/",
+    "pronunciation_status": "PROVISIONAL"
   },
   {
     "id": "corma",
@@ -82,7 +92,9 @@
       "催化剂设计"
     ],
     "official_url": "https://itq.upv-csic.es/en/empleado/corma-avelino",
-    "orcid": "0000-0002-2232-3527"
+    "orcid": "0000-0002-2232-3527",
+    "pronunciation_ipa": "/aβeˈlino ˈkoɾma/",
+    "pronunciation_status": "PROVISIONAL"
   },
   {
     "id": "coperet",
@@ -97,7 +109,9 @@
       "反应机理"
     ],
     "official_url": "https://coperetgroup.ethz.ch/the-group/people/prof-christophe-coperet.html",
-    "orcid": "0000-0001-9660-3890"
+    "orcid": "0000-0001-9660-3890",
+    "pronunciation_ipa": "/kʁistɔf kɔpeʁɛ/",
+    "pronunciation_status": "PROVISIONAL"
   },
   {
     "id": "hutchings",
@@ -112,7 +126,9 @@
     ],
     "official_url": "https://profiles.cardiff.ac.uk/staff/hutch",
     "orcid": "0000-0001-8885-1560",
-    "openalex_author_id": "A5020068159"
+    "openalex_author_id": "A5020068159",
+    "pronunciation_ipa": "/ˈɡreɪəm dʒeɪ ˈhʌtʃɪŋz/",
+    "pronunciation_status": "PROVISIONAL"
   },
   {
     "id": "weckhuysen",
@@ -126,7 +142,9 @@
       "反应机理"
     ],
     "official_url": "https://www.uu.nl/staff/BMWeckhuysen/Research",
-    "orcid": "0000-0001-5245-1426"
+    "orcid": "0000-0001-5245-1426",
+    "pronunciation_ipa": "/bɛrt ˈʋɛkɦœyzə(n)/",
+    "pronunciation_status": "PROVISIONAL"
   },
   {
     "id": "davis",
@@ -139,6 +157,8 @@
       "催化剂设计"
     ],
     "official_url": "https://cce.caltech.edu/faculty/mark-e-davis",
-    "orcid": "0000-0001-8294-1477"
+    "orcid": "0000-0001-8294-1477",
+    "pronunciation_ipa": "/mɑːrk iː ˈdeɪvɪs/",
+    "pronunciation_status": "PROVISIONAL"
   }
 ]

@@ -21,14 +21,14 @@ nav_order: 5
 <div class="domain-graph-scroll"><svg id="domain-experts-graph" viewBox="0 0 900 720" role="img" aria-label="领域专家—研究主题知识图谱" xmlns="http://www.w3.org/2000/svg"></svg></div>
 <div id="domain-expert-detail" class="domain-detail" aria-live="polite">点击图中的专家或下方姓名，查看官方介绍与研究关注点。</div>
 
-<p class="domain-help">点击姓名旁的 🔊 发音按钮可试听。语音由设备浏览器合成，不代表专家本人录音；多语种姓名可能存在口音差异。</p>
+<p class="domain-help">点击姓名旁的 🔊 发音按钮可试听。语音由设备浏览器合成，不代表专家本人录音；下方 IPA 为便于阅读的近似读音（PROVISIONAL），尚未逐一取得本人或权威词典核验；多语种姓名可能存在口音差异。</p>
 
 ## 专家与官方介绍
 
 <div class="domain-experts-list">
 {% for person in site.data.domain_experts %}
   <article class="domain-expert-card" data-person-group="{{ person.group }}">
-    <h3><button data-person-id="{{ person.id }}" class="domain-person-button">{{ person.name | escape }}</button> <button type="button" class="domain-pronounce-button" data-pronounce-id="{{ person.id }}" aria-label="播放 {{ person.name | escape }} 的姓名读音" title="播放姓名读音">🔊 <span>发音</span></button></h3>
+    <h3><button data-person-id="{{ person.id }}" class="domain-person-button">{{ person.name | escape }}</button> <button type="button" class="domain-pronounce-button" data-pronounce-id="{{ person.id }}" aria-label="播放 {{ person.name | escape }} 的姓名读音" title="播放姓名读音">🔊 <span>发音</span></button>{% if person.pronunciation_ipa %} <span class="domain-name-ipa" title="近似国际音标，尚未经本人核验">{{ person.pronunciation_ipa | escape }}</span>{% endif %}</h3>
     <p><small>{{ person.institution | escape }}</small></p>
     <p>{{ person.intro | escape }}</p>
     <p class="domain-tags">{% for topic in person.topics %}<span>{{ topic | escape }}</span>{% endfor %}</p>
@@ -44,7 +44,7 @@ nav_order: 5
 {% assign milestones = site.data.domain_expert_milestones %}
 {% for person in site.data.domain_experts %}
 <section class="domain-person-timeline" data-person-group="{{ person.group }}" id="timeline-{{ person.id }}">
-  <h3>{{ person.name | escape }} · 关键科研里程碑 <button type="button" class="domain-pronounce-button" data-pronounce-id="{{ person.id }}" aria-label="播放 {{ person.name | escape }} 的姓名读音" title="播放姓名读音">🔊 <span>发音</span></button></h3>
+  <h3>{{ person.name | escape }} · 关键科研里程碑 <button type="button" class="domain-pronounce-button" data-pronounce-id="{{ person.id }}" aria-label="播放 {{ person.name | escape }} 的姓名读音" title="播放姓名读音">🔊 <span>发音</span></button>{% if person.pronunciation_ipa %} <span class="domain-name-ipa" title="近似国际音标，尚未经本人核验">{{ person.pronunciation_ipa | escape }}</span>{% endif %}</h3>
   <p class="domain-help">{{ person.institution | escape }} · <a href="{{ person.official_url }}" target="_blank" rel="noopener noreferrer">研究组官网</a></p>
   {% assign milestone_count = 0 %}
   {% for item in milestones %}
