@@ -37,7 +37,7 @@ nav_order: 5
 
 ## 每位专家的关键科研里程碑
 
-<p>本时间轴只展示<strong>具有可追溯文献依据、明确归属专家的代表性成果</strong>，不按发表时间机械收录全部新论文。里程碑需回答“提出了什么方法或发现、解决什么问题、学术意义是什么”。<strong>PROVISIONAL</strong> 表示仅完成书目关联与初步整理，尚未核验论文全文；不得视为已确认的科学结论。无合格节点的专家保留待核验状态，不使用普通新论文充数。</p>
+<p>本时间轴只展示<strong>具有可追溯文献依据、明确归属专家的代表性成果</strong>，不按发表时间机械收录全部新论文。里程碑需回答“提出了什么方法或发现、解决什么问题、学术意义是什么”。<strong>PROVISIONAL</strong> 表示仅完成书目关联与初步整理，CONFIRMED_ABSTRACT 表示出版商原始摘要与作者身份已核验，但并非全文独立复核；CONFIRMED_BIBLIOGRAPHY 仅表示书目信息已核验；PROVISIONAL 仍待核验。无合格节点的专家保留待核验状态，不使用普通新论文充数。</p>
 
 {% assign milestones = site.data.domain_expert_milestones %}
 {% for person in site.data.domain_experts %}
@@ -55,7 +55,7 @@ nav_order: 5
           <h4><a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">{{ item.title | escape }}</a></h4>
           <p><strong>研究贡献线索：</strong>{{ item.evidence | escape }}</p>
           <p class="domain-help"><strong>作者：</strong>{{ item.authors | escape }}</p>
-          <p class="domain-help">{{ item.review_note | escape }} · <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">原始来源 ↗</a></p>
+          <p class="domain-help">{{ item.review_note | escape }}{% if item.publisher_source %} · <a href="{{ item.publisher_source }}" target="_blank" rel="noopener noreferrer">出版商证据</a>{% endif %} · <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">原始来源 ↗</a></p>
         </div>
       </article>
     {% endif %}

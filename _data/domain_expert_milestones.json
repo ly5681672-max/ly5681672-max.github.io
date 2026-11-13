@@ -17,13 +17,14 @@
     "type": "关键机理·研究论文",
     "title": "Efficient epoxidation over dinuclear sites in titanium silicalite-1",
     "authors": "Christopher P. Gordon, Christophe Copéret et al.",
-    "evidence": "直接研究 TS-1 双核位点与环氧化效率的关系；应阅读原文确认结构与反应条件。",
+    "evidence": "Nature原文摘要报告：17O固体核磁显示H2O2作用下与双核Ti桥联过氧物种一致的信号；DFT表明双Ti协同提供丙烯环氧化的低能路径。作者据此提出双核Ti位点可解释TS-1高环氧化效率；属于作者提出的机理解释，不代表所有TS-1位点均已被证明为双核。",
     "url": "https://doi.org/10.1038/s41586-020-2826-3",
     "expert_ids": [
       "coperet"
     ],
-    "review_status": "PROVISIONAL",
-    "review_note": "仅书目及人工摘要线索；尚未完成论文原文逐项核验。"
+    "review_status": "CONFIRMED_ABSTRACT",
+    "review_note": "已核对Nature出版页的作者、DOI和原始摘要；未完成全文及补充信息独立复核。",
+    "publisher_source": "https://www.nature.com/articles/s41586-020-2826-3"
   },
   {
     "year": "2025",
@@ -48,23 +49,27 @@
     "expert_ids": [
       "xin"
     ],
-    "review_status": "PROVISIONAL",
-    "review_note": "仅书目及人工摘要线索；尚未完成论文原文逐项核验。"
+    "review_status": "CONFIRMED_BIBLIOGRAPHY",
+    "review_note": "已核对期刊官网作者、DOI及发表日期；综述性质，具体观点仍需全文核验。",
+    "publisher_source": "https://cjche.cip.com.cn/EN/10.1016/j.cjche.2025.06.008"
   },
   {
     "year": "2026",
     "group": "ai",
-    "type": "未来路线·观点",
+    "type": "研究路线·观点文章",
     "title": "Roadmap for transforming heterogeneous catalysis with artificial intelligence",
     "authors": "Hongliang Xin, John R. Kitchin, Núria López et al.",
-    "evidence": "提出催化 AI-ready 数据生态、多模态基础模型与自主实验室路线；是前瞻性观点，不是新实验结果。",
+    "evidence": "Nature Catalysis观点文章提出AI-ready数据生态、多模态基础模型和自主实验室等未来研究方向，同时指出数据质量、泛化性、可解释性及计算与实验脱节等挑战；不属于新实验发现。",
     "url": "https://doi.org/10.1038/s41929-026-01479-x",
     "expert_ids": [
       "xin",
       "kitchin",
-      "lopez"
+      "lopez",
+      "kulik",
+      "ulissi"
     ],
-    "review_status": "PROVISIONAL",
-    "review_note": "仅书目及人工摘要线索；尚未完成论文原文逐项核验。"
+    "review_status": "CONFIRMED_ABSTRACT",
+    "review_note": "已核对Nature Catalysis出版页作者、DOI及原始摘要；这是多人共同撰写的前瞻性路线图，不可归为某一作者独立突破。",
+    "publisher_source": "https://www.nature.com/articles/s41929-026-01479-x"
   }
 ]

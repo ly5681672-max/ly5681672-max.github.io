@@ -50,3 +50,11 @@ bundle exec jekyll build
 ## 历史里程碑候选自动发现
 
 参考维护活跃的 PyAlex/OpenAlex 检索与学术计量思路，继续复用项目已有 OpenAlex REST 接口，不引入额外依赖。新增 `scripts/discover_domain_expert_milestones.py`：从每位专家全部历史论文中检索高被引作品，进行 ORCID/作者ID/DOI/主题匹配及逐年限额去重；输出 `_data/domain_expert_milestone_candidates.json`。这只是 PROVISIONAL 候选，不写入 `domain_expert_milestones.json`，不自动宣称关键发现或突破。原有定时工作流同步生成候选，失败时整体不提交，保护现有已发布数据。当前无 ORCID 的 Ulissi 保持跳过，待身份核验后再接入。
+
+## 出版商证据核验（阶段性）
+
+- Nature 2020 TS-1 双核Ti位点论文：核验出版商摘要、作者与 DOI；标记 CONFIRMED_ABSTRACT。机理是作者基于固体核磁与DFT提出的解释，不可推广为所有样品/反应条件的定论。
+- Nature Catalysis 2026 AI路线图：核验出版商摘要和完整作者表，补充 Heather J. Kulik 与 Zachary W. Ulissi 为共同作者；该文为 Perspective，非实验新发现。
+- Chinese Journal of Chemical Engineering 2025 知识图谱综述：核验作者、期刊、DOI，标记 CONFIRMED_BIBLIOGRAPHY。
+- 三种证据等级严格区分：CONFIRMED_ABSTRACT=原始摘要核验，CONFIRMED_BIBLIOGRAPHY=书目核验，PROVISIONAL=待核验；均不等于已完成全文科学审稿。
+- 历史自动候选仍需在GitHub Actions手动选择 apply 或等待每周调度运行后才有真实数据；push只运行离线测试。
