@@ -48,4 +48,5 @@ bundle exec jekyll build
 - 新增正式 CONFIRMED 节点前须检查论文作者身份、DOI、原文贡献、首次性与学术意义，保留证据来源并进行人工科学审核。
 
 ## 历史里程碑候选自动发现
+
 参考维护活跃的 PyAlex/OpenAlex 检索与学术计量思路，继续复用项目已有 OpenAlex REST 接口，不引入额外依赖。新增 `scripts/discover_domain_expert_milestones.py`：从每位专家全部历史论文中检索高被引作品，进行 ORCID/作者ID/DOI/主题匹配及逐年限额去重；输出 `_data/domain_expert_milestone_candidates.json`。这只是 PROVISIONAL 候选，不写入 `domain_expert_milestones.json`，不自动宣称关键发现或突破。原有定时工作流同步生成候选，失败时整体不提交，保护现有已发布数据。当前无 ORCID 的 Ulissi 保持跳过，待身份核验后再接入。
