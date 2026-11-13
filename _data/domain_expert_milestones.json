@@ -1,0 +1,47 @@
+[
+  {
+    "year": "1983",
+    "group": "epox",
+    "type": "技术起源·专利",
+    "title": "Preparation of porous crystalline synthetic material comprised of silicon and titanium oxides",
+    "authors": "Marco Taramasso, Giovanni Perego, Bruno Notari",
+    "evidence": "TS-1 的早期专利，建立钛硅分子筛材料及其制备基础。",
+    "url": "https://pubchem.ncbi.nlm.nih.gov/patent/US-4410501-A"
+  },
+  {
+    "year": "2020",
+    "group": "epox",
+    "type": "关键机理·研究论文",
+    "title": "Efficient epoxidation over dinuclear sites in titanium silicalite-1",
+    "authors": "Christopher P. Gordon, Christophe Copéret et al.",
+    "evidence": "直接研究 TS-1 双核位点与环氧化效率的关系；应阅读原文确认结构与反应条件。",
+    "url": "https://doi.org/10.1038/s41586-020-2826-3"
+  },
+  {
+    "year": "2025",
+    "group": "epox",
+    "type": "阶段总结·综述",
+    "title": "A Review on Understanding and Strengthening of Active Species in Titanium Silicalite-1 (TS-1) Catalysts",
+    "authors": "作者次序以期刊页面为准",
+    "evidence": "综述 Ti 活性物种结构、配位和 TS-1 催化氧化性能之间的研究进展。",
+    "url": "https://doi.org/10.1002/advs.202512531"
+  },
+  {
+    "year": "2025",
+    "group": "ai",
+    "type": "方法演进·综述",
+    "title": "Knowledge graphs in heterogeneous catalysis: Recent advances and future opportunities",
+    "authors": "Raúl Díaz, Hongliang Xin",
+    "evidence": "综述异相催化知识图谱的进展与应用机会，适合作为科研知识图谱的理论入口。",
+    "url": "https://doi.org/10.1016/j.cjche.2025.06.008"
+  },
+  {
+    "year": "2026",
+    "group": "ai",
+    "type": "未来路线·观点",
+    "title": "Roadmap for transforming heterogeneous catalysis with artificial intelligence",
+    "authors": "Hongliang Xin, John R. Kitchin, Núria López et al.",
+    "evidence": "提出催化 AI-ready 数据生态、多模态基础模型与自主实验室路线；是前瞻性观点，不是新实验结果。",
+    "url": "https://doi.org/10.1038/s41929-026-01479-x"
+  }
+]

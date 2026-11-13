@@ -1,0 +1,81 @@
+name: Sync domain-expert research (verified metadata)
+
+on:
+  schedule:
+    # Monday 08:23 China Standard Time (00:23 UTC).
+    - cron: "23 0 * * 1"
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "dry-run for review, apply to publish verified DOI metadata"
+        type: choice
+        options: [dry-run, apply]
+        default: dry-run
+        required: true
+  push:
+    paths:
+      - "scripts/sync_domain_experts.py"
+      - "tests/test_sync_domain_experts.py"
+      - "_data/domain_experts.json"
+      - ".github/workflows/domain-experts-monitor.yml"
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: domain-experts-monitor
+  cancel-in-progress: false
+
+jobs:
+  monitor:
+    if: github.repository == 'ly5681672-max/ly5681672-max.github.io'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Validate identity and relevance safeguards
+        run: python3 -m unittest discover -s tests -p test_sync_domain_experts.py -v
+      - name: Retrieve DOI-verified metadata from OpenAlex
+        shell: bash
+        env:
+          OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
+          EVENT_NAME: ${{ github.event_name }}
+          SELECTED_MODE: ${{ inputs.mode }}
+        run: |
+          if [[ "$EVENT_NAME" == "schedule" || ( "$EVENT_NAME" == "workflow_dispatch" && "$SELECTED_MODE" == "apply" ) ]]; then
+            python3 scripts/sync_domain_experts.py --apply
+          else
+            python3 scripts/sync_domain_experts.py --dry-run
+          fi
+      - name: Preserve evidence for inspection
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: domain-experts-weekly-evidence
+          path: |
+            domain-experts-report.json
+            _data/domain_expert_updates.json
+          if-no-files-found: ignore
+          retention-days: 30
+      - name: Commit only validated research metadata
+        id: commit
+        if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.mode == 'apply')
+        shell: bash
+        run: |
+          set -euo pipefail
+          git add -- _data/domain_expert_updates.json
+          if git diff --cached --quiet; then
+            echo "No changed bibliographic metadata."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "research: weekly sync verified domain-expert DOI metadata"
+          git push origin HEAD:main
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+      - name: Rebuild GitHub Pages after bot commit
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run deploy.yml --ref main
