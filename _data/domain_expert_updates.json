@@ -1,6 +1,475 @@
 {
-  "generated_at": null,
+  "generated_at": "2026-11-13T08:57:30+00:00",
   "window_days": 180,
-  "papers": [],
-  "status": "初始目录，尚未完成自动检索。网页不将示例文献冒充检索结果。"
+  "papers": [
+    {
+      "title": "From Atoms to Reactors: A Critical Review of a Decade of Machine Learning in Heterogeneous Catalysis (2017–2026)",
+      "doi": "10.1002/anie.4288841",
+      "doi_url": "https://doi.org/10.1002/anie.4288841",
+      "source_url": "https://openalex.org/W7223300893",
+      "publication_date": "2026-10-23",
+      "journal": "Angewandte Chemie International Edition",
+      "priority_journal": true,
+      "publication_type": "review",
+      "group": "epox",
+      "group_label": "烯烃环氧化",
+      "relevance": "中",
+      "match_tags": [
+        "分子筛"
+      ],
+      "author_names": [
+        "Avelino Corma"
+      ]
+    },
+    {
+      "title": "From Atoms to Reactors: A Critical Review of a Decade of Machine Learning in Heterogeneous Catalysis (2017–2026)",
+      "doi": "10.1002/ange.4288841",
+      "doi_url": "https://doi.org/10.1002/ange.4288841",
+      "source_url": "https://openalex.org/W7223369096",
+      "publication_date": "2026-10-23",
+      "journal": "Angewandte Chemie",
+      "priority_journal": false,
+      "publication_type": "article",
+      "group": "epox",
+      "group_label": "烯烃环氧化",
+      "relevance": "中",
+      "match_tags": [
+        "分子筛"
+      ],
+      "author_names": [
+        "Avelino Corma"
+      ]
+    },
+    {
+      "title": "Multiobjective Optimization of Synthetically Accessible Homogeneous Catalysts Reveals Tradeoffs for Methane-to-Methanol Conversion",
+      "doi": "10.1021/acscatal.6c03365",
+      "doi_url": "https://doi.org/10.1021/acscatal.6c03365",
+      "source_url": "https://openalex.org/W7156637977",
+      "publication_date": "2026-10-19",
+      "journal": "ACS Catalysis",
+      "priority_journal": true,
+      "publication_type": "article",
+      "group": "ai",
+      "group_label": "AI 结合知识学习",
+      "relevance": "高",
+      "match_tags": [
+        "机器学习"
+      ],
+      "author_names": [
+        "Heather J. Kulik"
+      ]
+    },
+    {
+      "title": "AI‐EXAFS: Physics‐Informed Prediction of EXAFS from Atomic Structure",
+      "doi": "10.1002/advs.78226",
+      "doi_url": "https://doi.org/10.1002/advs.78226",
+      "source_url": "https://openalex.org/W7222875915",
+      "publication_date": "2026-10-18",
+      "journal": "Advanced Science",
+      "priority_journal": true,
+      "publication_type": "article",
+      "group": "ai",
+      "group_label": "AI 结合知识学习",
+      "relevance": "中",
+      "match_tags": [
+        "机器学习"
+      ],
+      "author_names": [
+        "Núria López"
+      ]
+    },
+    {
+      "title": "Accelerated Zeolite Defect Healing Suppresses Oxygen-Containing Species Trapping for Tandem Propene Epoxidation",
+      "doi": "10.1021/jacs.6c17355",
+      "doi_url": "https://doi.org/10.1021/jacs.6c17355",
+      "source_url": "https://openalex.org/W7221837726",
+      "publication_date": "2026-10-16",
+      "journal": "Journal of the American Chemical Society",
+      "priority_journal": true,
+      "publication_type": "article",
+      "group": "epox",
+      "group_label": "烯烃环氧化",
+      "relevance": "高",
+      "match_tags": [
+        "烯烃环氧化",
+        "TS-1",
+        "H₂O₂/OOH",
+        "分子筛",
+        "选择性氧化"
+      ],
+      "author_names": [
+        "Graham J. Hutchings"
+      ]
+    },
+    {
+      "title": "Rh3+ stabilized in KRh@MFI catalyses regioselective hydroformylation",
+      "doi": "10.1038/s41586-026-11136-9",
+      "doi_url": "https://doi.org/10.1038/s41586-026-11136-9",
+      "source_url": "https://openalex.org/W7222321227",
+      "publication_date": "2026-10-14",
+      "journal": "Nature",
+      "priority_journal": false,
+      "publication_type": "article",
+      "group": "epox",
+      "group_label": "烯烃环氧化",
+      "relevance": "中",
+      "match_tags": [
+        "分子筛"
+      ],
+      "author_names": [
+        "Avelino Corma"
+      ]
+    },
+    {
+      "title": "Enerzyme: An Efficient Reactive Neural Network Potential Training Framework for Enzyme Cluster Models with Application to Methyltransferases",
+      "doi": "10.1021/acs.jctc.6c01330",
+      "doi_url": "https://doi.org/10.1021/acs.jctc.6c01330",
+      "source_url": "https://openalex.org/W7221568470",
+      "publication_date": "2026-10-12",
+      "journal": "Journal of Chemical Theory and Computation",
+      "priority_journal": false,
+      "publication_type": "article",
+      "group": "ai",
+      "group_label": "AI 结合知识学习",
+      "relevance": "中",
+      "match_tags": [
+        "机器学习"
+      ],
+      "author_names": [
+        "Heather J. Kulik"
+      ]
+    },
+    {
+      "title": "Tuning Pore Confinement and Chemistry of Fluorine-Free Membranes",
+      "doi": "10.1021/jacs.6c15621",
+      "doi_url": "https://doi.org/10.1021/jacs.6c15621",
+      "source_url": "https://openalex.org/W7221151626",
+      "publication_date": "2026-10-09",
+      "journal": "Journal of the American Chemical Society",
+      "priority_journal": true,
+      "publication_type": "article",
+      "group": "ai",
+      "group_label": "AI 结合知识学习",
+      "relevance": "中",
+      "match_tags": [
+        "机器学习"
+      ],
+      "author_names": [
+        "Núria López"
+      ]
+    },
+    {
+      "title": "ElemeNet: Multiscale Molecular Machine Learning with Uncertainty Quantification across the Periodic Table",
+      "doi": "10.1021/acs.jcim.6c02178",
+      "doi_url": "https://doi.org/10.1021/acs.jcim.6c02178",
+      "source_url": "https://openalex.org/W7215104273",
+      "publication_date": "2026-10-01",
+      "journal": "Journal of Chemical Information and Modeling",
+      "priority_journal": false,
+      "publication_type": "article",
+      "group": "ai",
+      "group_label": "AI 结合知识学习",
+      "relevance": "中",
+      "match_tags": [
+        "机器学习"
+      ],
+      "author_names": [
+        "Heather J. Kulik"
+      ]
+    },
+    {
+      "title": "Enhancing Aromatics Production in Zeolite-Catalyzed Lignin Pyrolysis by Establishing Structure-Acidity-Performance Relationships",
+      "doi": "10.26434/chemrxiv.15009058/v1",
+      "doi_url": "https://doi.org/10.26434/chemrxiv.15009058/v1",
+      "source_url": "https://openalex.org/W7213552230",
+      "publication_date": "2026-09-18",
+      "journal": "ChemRxiv",
+      "priority_journal": false,
+      "publication_type": "preprint",
+      "group": "epox",
+      "group_label": "烯烃环氧化",
+      "relevance": "中",
+      "match_tags": [
+        "分子筛"
+      ],
+      "author_names": [
+        "Bert M. Weckhuysen"
+      ]
+    },
+    {
+      "title": "Kinetically Balanced Relay Catalysis for Efficient Oxidation of Methane to Methanol with O2",
+      "doi": "10.1021/jacs.6c13231",
+      "doi_url": "https://doi.org/10.1021/jacs.6c13231",
+      "source_url": "https://openalex.org/W7213339079",
+      "publication_date": "2026-09-16",
+      "journal": "Journal of the American Chemical Society",
+      "priority_journal": true,
+      "publication_type": "article",
+      "group": "epox",
+      "group_label": "烯烃环氧化",
+      "relevance": "高",
+      "match_tags": [
+        "H₂O₂/OOH",
+        "选择性氧化"
+      ],
+      "author_names": [
+        "Christophe Copéret"
+      ]
+    },
+    {
+      "title": "Post‐Synthetic Zinc Modifications to Correct Speciation in Ti‐MWW Zeolites for Catalytic Oxidation",
+      "doi": "10.1002/ange.2516685",
+      "doi_url": "https://doi.org/10.1002/ange.2516685",
+      "source_url": "https://openalex.org/W7172518928",
+      "publication_date": "2026-08-23",
+      "journal": "Angewandte Chemie",
+      "priority_journal": false,
+      "publication_type": "article",
+      "group": "epox",
+      "group_label": "烯烃环氧化",
+      "relevance": "中",
+      "match_tags": [
+        "分子筛",
+        "选择性氧化"
+      ],
+      "author_names": [
+        "Christophe Copéret"
+      ]
+    },
+    {
+      "title": "BOS-TMC Data Set: DFT Properties of 159k Experimentally Characterized Transition Metal Complexes Spanning Multiple Charge and Spin States",
+      "doi": "10.1021/acs.jcim.6c01792",
+      "doi_url": "https://doi.org/10.1021/acs.jcim.6c01792",
+      "source_url": "https://openalex.org/W7203641398",
+      "publication_date": "2026-08-17",
+      "journal": "Journal of Chemical Information and Modeling",
+      "priority_journal": false,
+      "publication_type": "article",
+      "group": "ai",
+      "group_label": "AI 结合知识学习",
+      "relevance": "中",
+      "match_tags": [
+        "机器学习"
+      ],
+      "author_names": [
+        "Heather J. Kulik"
+      ]
+    },
+    {
+      "title": "Plastron-mediated direct H2O2 synthesis",
+      "doi": "10.1038/s41467-026-76198-9",
+      "doi_url": "https://doi.org/10.1038/s41467-026-76198-9",
+      "source_url": "https://openalex.org/W7172384798",
+      "publication_date": "2026-08-04",
+      "journal": "Nature Communications",
+      "priority_journal": true,
+      "publication_type": "article",
+      "group": "epox",
+      "group_label": "烯烃环氧化",
+      "relevance": "高",
+      "match_tags": [
+        "H₂O₂/OOH"
+      ],
+      "author_names": [
+        "Graham J. Hutchings"
+      ]
+    },
+    {
+      "title": "Fine-tuning universal machine learning potentials for transition state search in surface catalysis",
+      "doi": "10.1038/s41524-026-02228-1",
+      "doi_url": "https://doi.org/10.1038/s41524-026-02228-1",
+      "source_url": "https://openalex.org/W7167823797",
+      "publication_date": "2026-07-09",
+      "journal": "npj Computational Materials",
+      "priority_journal": false,
+      "publication_type": "article",
+      "group": "ai",
+      "group_label": "AI 结合知识学习",
+      "relevance": "高",
+      "match_tags": [
+        "机器学习"
+      ],
+      "author_names": [
+        "John R. Kitchin"
+      ]
+    },
+    {
+      "title": "Enerzyme: A Framework for Efficient Training of Reactive Neural Network Potentials for Enzyme Catalysis with Application to Methyltransferases",
+      "doi": "10.48550/arxiv.2607.01362",
+      "doi_url": "https://doi.org/10.48550/arxiv.2607.01362",
+      "source_url": "https://openalex.org/W7167205911",
+      "publication_date": "2026-07-01",
+      "journal": "PubMed Central",
+      "priority_journal": false,
+      "publication_type": "preprint",
+      "group": "ai",
+      "group_label": "AI 结合知识学习",
+      "relevance": "高",
+      "match_tags": [
+        "机器学习"
+      ],
+      "author_names": [
+        "Heather J. Kulik"
+      ]
+    },
+    {
+      "title": "ElemeNet: Multiscale Molecular Machine Learning with Uncertainty Quantification Across the Periodic Table",
+      "doi": "10.5281/zenodo.20653095",
+      "doi_url": "https://doi.org/10.5281/zenodo.20653095",
+      "source_url": "https://openalex.org/W7166585961",
+      "publication_date": "2026-06-29",
+      "journal": "Zenodo (CERN European Organization for Nuclear Research)",
+      "priority_journal": false,
+      "publication_type": "article",
+      "group": "ai",
+      "group_label": "AI 结合知识学习",
+      "relevance": "中",
+      "match_tags": [
+        "机器学习"
+      ],
+      "author_names": [
+        "Heather J. Kulik"
+      ]
+    },
+    {
+      "title": "Gate-Tailoring with Protons and Metal Cations in a Flexible Zeolite for High-Efficiency Ethylene/Ethane Separation",
+      "doi": "10.1021/jacs.6c06425",
+      "doi_url": "https://doi.org/10.1021/jacs.6c06425",
+      "source_url": "https://openalex.org/W4407344895",
+      "publication_date": "2026-06-27",
+      "journal": "Journal of the American Chemical Society",
+      "priority_journal": true,
+      "publication_type": "article",
+      "group": "epox",
+      "group_label": "烯烃环氧化",
+      "relevance": "中",
+      "match_tags": [
+        "分子筛"
+      ],
+      "author_names": [
+        "Avelino Corma"
+      ]
+    },
+    {
+      "title": "Transparent reporting for agentic catalysis enabled by artificial intelligence: Community guidelines and a publication checklist",
+      "doi": "10.1016/j.checat.2026.101755",
+      "doi_url": "https://doi.org/10.1016/j.checat.2026.101755",
+      "source_url": "https://openalex.org/W7165414862",
+      "publication_date": "2026-06-19",
+      "journal": "Chem Catalysis",
+      "priority_journal": false,
+      "publication_type": "article",
+      "group": "ai",
+      "group_label": "AI 结合知识学习",
+      "relevance": "高",
+      "match_tags": [
+        "RAG/LLM",
+        "机器学习"
+      ],
+      "author_names": [
+        "Hongliang Xin",
+        "John R. Kitchin",
+        "Núria López",
+        "Heather J. Kulik"
+      ]
+    },
+    {
+      "title": "High-Throughput Discovery of Conformation-Switching Mechanophores with Enhanced Reactivity and Stability",
+      "doi": "10.1021/acs.inorgchem.6c01947",
+      "doi_url": "https://doi.org/10.1021/acs.inorgchem.6c01947",
+      "source_url": "https://openalex.org/W7163751072",
+      "publication_date": "2026-06-06",
+      "journal": "Inorganic Chemistry",
+      "priority_journal": false,
+      "publication_type": "article",
+      "group": "ai",
+      "group_label": "AI 结合知识学习",
+      "relevance": "中",
+      "match_tags": [
+        "机器学习"
+      ],
+      "author_names": [
+        "Heather J. Kulik"
+      ]
+    },
+    {
+      "title": "Balancing Diversity and Efficiency in Training Datasets for Robust Machine Learning Interatomic Potentials",
+      "doi": "10.26434/chemrxiv.15003942/v2",
+      "doi_url": "https://doi.org/10.26434/chemrxiv.15003942/v2",
+      "source_url": "https://openalex.org/W7163640865",
+      "publication_date": "2026-06-05",
+      "journal": "ChemRxiv",
+      "priority_journal": false,
+      "publication_type": "preprint",
+      "group": "ai",
+      "group_label": "AI 结合知识学习",
+      "relevance": "中",
+      "match_tags": [
+        "机器学习"
+      ],
+      "author_names": [
+        "Núria López"
+      ]
+    },
+    {
+      "title": "Trace Sulfur‐Doping Boosts NiCo Heterostructured Catalyst for Selective Glycerol‐to‐Formic Acid Electroreforming",
+      "doi": "10.1002/adfm.76286",
+      "doi_url": "https://doi.org/10.1002/adfm.76286",
+      "source_url": "https://openalex.org/W7163184350",
+      "publication_date": "2026-06-01",
+      "journal": "Advanced Functional Materials",
+      "priority_journal": false,
+      "publication_type": "article",
+      "group": "epox",
+      "group_label": "烯烃环氧化",
+      "relevance": "中",
+      "match_tags": [
+        "选择性氧化"
+      ],
+      "author_names": [
+        "Graham J. Hutchings"
+      ]
+    },
+    {
+      "title": "Balancing Diversity and Efficiency in Training Datasets for Robust Machine Learning Potentials",
+      "doi": "10.26434/chemrxiv.15003942/v1",
+      "doi_url": "https://doi.org/10.26434/chemrxiv.15003942/v1",
+      "source_url": "https://openalex.org/W7162509517",
+      "publication_date": "2026-05-26",
+      "journal": "ChemRxiv",
+      "priority_journal": false,
+      "publication_type": "preprint",
+      "group": "ai",
+      "group_label": "AI 结合知识学习",
+      "relevance": "中",
+      "match_tags": [
+        "RAG/LLM",
+        "机器学习"
+      ],
+      "author_names": [
+        "Núria López"
+      ]
+    },
+    {
+      "title": "Synthesis of Tetrahydrofuran Derivatives from 5-Hydroxymethylfurfural: Selective Ring Hydrogenation of HMF and Cascade Transformations over Pd Supported on Amino-Modified ITQ-2 Zeolite",
+      "doi": "10.1021/acscatal.6c01466",
+      "doi_url": "https://doi.org/10.1021/acscatal.6c01466",
+      "source_url": "https://openalex.org/W7162013239",
+      "publication_date": "2026-05-21",
+      "journal": "ACS Catalysis",
+      "priority_journal": true,
+      "publication_type": "article",
+      "group": "epox",
+      "group_label": "烯烃环氧化",
+      "relevance": "中",
+      "match_tags": [
+        "分子筛"
+      ],
+      "author_names": [
+        "Avelino Corma"
+      ]
+    }
+  ],
+  "journal_policy": "优先期刊为人工维护的期刊名单，非SCI/JCR自动认证",
+  "status": "基于书目和摘要的规则相关性；关键发现尚未完成原文核验。"
 }
