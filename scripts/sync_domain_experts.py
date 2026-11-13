@@ -117,7 +117,7 @@ def get_author_id(expert: dict) -> str | None:
                        row.get('display_name'), row.get('works_count'))
                       for row in matches]
         raise ValueError(f'Author identity not unique for {expert["id"]}: {candidates}')
-    surname = fold_name(expert['name'].split()[-1])
+    surname = fold_name(re.split(r'[（(]', expert['name'], maxsplit=1)[0].strip().split()[-1])
     if surname not in fold_name(str(matches[0].get('display_name', ''))):
         raise ValueError(f'Author display name mismatch for {expert["id"]}')
     return str(matches[0]['id']).rsplit('/', 1)[-1]
