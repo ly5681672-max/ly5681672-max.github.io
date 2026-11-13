@@ -36,7 +36,18 @@ jobs:
         uses: actions/checkout@v4
       - name: Validate identity and relevance safeguards
         run: python3 -m unittest discover -s tests -p test_sync_domain_experts.py -v
+      - name: Check private OpenAlex API key prerequisite
+        if: github.event_name != 'push'
+        env:
+          OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
+        shell: bash
+        run: |
+          if [[ -z "$OPENALEX_API_KEY" ]]; then
+            echo "::error title=OpenAlex access required::Set OPENALEX_API_KEY in Settings > Secrets and variables > Actions. Shared GitHub runner public API quota is exhausted."
+            exit 1
+          fi
       - name: Retrieve DOI-verified metadata from OpenAlex
+        if: github.event_name != 'push'
         shell: bash
         env:
           OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}

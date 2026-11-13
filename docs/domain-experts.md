@@ -14,7 +14,7 @@
 3. 文献要求 DOI、合理日期、作者身份匹配、题名/摘要领域关键词；按 DOI 去重。标题和摘要筛选只是规则相关性，不能代表论文结论已核验。
 4. 未设 ORCID 的作者仅显示专家资料，不按名字自动关联论文。首次同步前显示“尚未建立可验证的在线检索结果”，不捏造论文。
 5. 每次同步保存运行 JSON 报告为 Actions artifact，API 身份错误则非零退出，禁止覆盖旧有数据。
-6. OpenAlex 可以小规模免密访问；如出现频次或访问配额问题，在仓库 Actions Secrets 配置 `OPENALEX_API_KEY`，不要把 Key 放入前端或提交仓库。
+6. GitHub Actions 共享出口 IP 的免密 OpenAlex 每日预算已耗尽（HTTP 429，2026-11-13 实测）；为保证定时更新，必须在仓库 Actions Secrets 配置个人免费 `OPENALEX_API_KEY`。未配置时仅运行离线测试；定时发布会明确报错并保留旧数据。不要把密钥放入网页或提交仓库。
 
 ## 最小执行和验证
 
@@ -26,7 +26,7 @@ bundle exec jekyll build
 ```
 
 - 前两条为离线测试；第三条需要连接 OpenAlex；第四条需要已有网站 Gem 依赖。
-- 只读检查：Actions -> Sync domain-expert research -> Run workflow -> `dry-run`。
+- 只读检查：Actions -> Sync domain-expert research -> Run workflow -> `dry-run`。需要提前在 GitHub Actions Secrets 配置 `OPENALEX_API_KEY`。
 - 应用：Actions -> Run workflow -> `apply`，只提交验证过的 `_data/domain_expert_updates.json`；定时运行会自动应用。
 - 查看 GitHub Actions 运行日志，确认 author ID 解析、报告、DOI 数、成功提交和 Pages 构建；失败时不得声称已经自动更新。
 - 手机端实际打开 `/domain-experts/` 测试横向滑动、节点点击、研究分类切换、官方链接和深色模式。
