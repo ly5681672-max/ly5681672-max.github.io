@@ -8,6 +8,9 @@ on:
     paths:
       - "assets/**"
       - "_data/domain_experts.json"
+      - "_data/domain_expert_updates.json"
+      - "_data/domain_expert_milestones.json"
+      - "_data/domain_expert_milestone_candidates.json"
       - "_plugins/**"
       - "**.bib"
       - "**.html"
@@ -38,6 +41,9 @@ on:
     paths:
       - "assets/**"
       - "_data/domain_experts.json"
+      - "_data/domain_expert_updates.json"
+      - "_data/domain_expert_milestones.json"
+      - "_data/domain_expert_milestone_candidates.json"
       - "_plugins/**"
       - "**.bib"
       - "**.html"
@@ -123,6 +129,8 @@ jobs:
           pip3 install --upgrade nbconvert
           export JEKYLL_ENV=production
           bundle exec jekyll build
+      - name: Verify built expert timelines and candidate papers
+        run: python3 scripts/check_domain_expert_site.py --site _site
       - name: Verify automatic blog links 🔗
         run: bundle exec ruby test/research_auto_links_test.rb
       - name: Purge unused CSS 🧹

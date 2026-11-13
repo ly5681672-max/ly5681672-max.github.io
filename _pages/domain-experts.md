@@ -63,6 +63,7 @@ nav_order: 5
     {% endif %}
   {% endfor %}
   {% if milestone_count == 0 %}
+    <p class="domain-help">当前尚无满足正式里程碑证据准入标准的成果；下列为已检索到的历史论文候选，并非已核实的关键科学发现。</p>
     {% assign shown = 0 %}
     {% for candidate in site.data.domain_expert_milestone_candidates.candidates %}
       {% if candidate.expert_id == person.id and shown < 3 %}
@@ -86,7 +87,7 @@ nav_order: 5
 
 ## 历史代表性成果候选数据库（自动筛选，待科学审核）
 
-<p>该列表用于辅助补全每位专家的科研里程碑：按作者身份、历史引用表现及研究主题生成候选，<strong>不代表已经核实“首次发现”或科学突破</strong>。只有人工核验论文原文后，才能进入上方正式里程碑时间轴。</p>
+<p>该列表用于辅助补全每位专家的科研里程碑：按作者身份、历史引用表现及研究主题生成候选，<strong>不代表已经核实“首次发现”或科学突破</strong>。符合出版商登记摘要证据准入条件的论文可自动进入上方正式里程碑时间轴，标记为 CONFIRMED_ABSTRACT；其余仍为 PROVISIONAL 候选，全文核验须另行完成。</p>
 {% assign candidate_data = site.data.domain_expert_milestone_candidates %}
 {% if candidate_data.generated_at %}
 <p class="domain-help">候选数据更新时间（UTC）：{{ candidate_data.generated_at | escape }}；来源：OpenAlex。引用次数为动态书目指标，不作为独立的科学贡献结论。</p>
