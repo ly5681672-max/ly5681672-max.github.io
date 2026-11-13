@@ -13,7 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / "_data/domain_experts.json"
 API = "https://www.wikidata.org/w/api.php"
 IPA = re.compile(r"^[/\[].+[/\]]$")
-ORCID = re.compile(r"^\\d{4}-\\d{4}-\\d{4}-[\\dX]{4}$")
+ORCID = re.compile(r"^\d{4}-\d{4}-\d{4}-[\dX]{4}$")
 
 def get_json(params):
     url = API + "?" + urlencode(params)
@@ -25,7 +25,7 @@ def matched_ipa(orcid):
         return None
     found = get_json({"action":"query","list":"search","srsearch":'haswbstatement:P496='+orcid,"srnamespace":0,"srlimit":10,"format":"json"})
     # Wikidata full-text search is not an identity guarantee. Verify entity claims.
-    candidates = [row["title"] for row in found.get("query",{}).get("search",[]) if re.fullmatch(r"Q\\d+",row.get("title",""))]
+    candidates = [row["title"] for row in found.get("query",{}).get("search",[]) if re.fullmatch(r"Q\d+",row.get("title",""))]
     if not candidates:
         return None
     data = get_json({"action":"wbgetentities","ids":"|".join(candidates),"props":"claims","format":"json"})
@@ -65,7 +65,7 @@ def main():
         p["pronunciation_source"]="https://www.wikidata.org/wiki/"+qid
         changed+=1
     if args.apply and changed:
-        DATA.write_text(json.dumps(experts,ensure_ascii=False,indent=2)+"\\n",encoding="utf-8")
+        DATA.write_text(json.dumps(experts,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
     print("verified IPA candidates: "+str(changed)+("; applied" if args.apply else "; dry-run"))
 
 if __name__=="__main__":
