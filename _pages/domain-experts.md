@@ -11,6 +11,27 @@ nav_order: 5
 
 <p>将领域专家、研究方法、论文证据连接起来，重点关注 <strong>AI 结合知识学习</strong> 和 <strong>烯烃环氧化</strong>。图中专家—主题关联是依据官方简介<strong>人工整理</strong>的研究兴趣，不代表合作关系或已证明的因果关系。点选专家可查看简介、来源、对应主题与近期论文。</p>
 
+{% assign feng_updates = site.data.domain_expert_updates %}
+<section class="domain-focus-updates" id="feng-xiang-latest" aria-label="冯翔教授最新论文通知">
+  <h2>重点关注 · 冯翔教授最新论文</h2>
+  <p class="domain-help">中国石油大学（华东） · ORCID 0000-0001-7299-5690。每日自动检查已公开且符合 DOI、作者身份及主题核验条件的论文；页面随有效数据同步更新。这里是站内公告，不是浏览器实时推送。</p>
+  {% assign feng_count = 0 %}
+  {% for paper in feng_updates.papers %}
+    {% if paper.author_names contains 'Xiang Feng' %}
+      {% assign feng_count = feng_count | plus: 1 %}
+      <article class="domain-paper" data-paper-group="epox">
+        <div class="domain-paper-meta">新论文 · {{ paper.publication_date | escape }} · {{ paper.journal | escape }}</div>
+        <h3><a href="{{ paper.doi_url }}" target="_blank" rel="noopener noreferrer">{{ paper.title | escape }}</a></h3>
+        <p class="domain-help">DOI：{{ paper.doi | escape }} · <a href="{{ paper.source_url }}" target="_blank" rel="noopener noreferrer">OpenAlex 作者匹配记录</a></p>
+      </article>
+    {% endif %}
+  {% endfor %}
+  {% if feng_count == 0 %}
+    <p class="domain-help">当前检索窗口内暂无符合自动核验条件的冯翔教授新论文；不代表其没有历史论文或尚未收录的最新成果。</p>
+  {% endif %}
+  {% if feng_updates.generated_at %}<p class="domain-help">最近有效检索（UTC）：{{ feng_updates.generated_at | escape }}；当前窗口：{{ feng_updates.window_days }}天。仅显示数据库已确认的作者关联，不以同名推断归属。</p>{% endif %}
+</section>
+
 <div class="domain-controls" aria-label="筛选研究方向">
   <button class="domain-active" data-domain-filter="all" aria-pressed="true">全部</button>
   <button data-domain-filter="ai" aria-pressed="false">AI 结合知识学习</button>
