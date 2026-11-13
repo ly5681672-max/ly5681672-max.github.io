@@ -114,6 +114,8 @@ https://chatgpt.com/s/t_6af57233f43c8191aeaafdd31d582a5b
 ![2026-10-21-catmap-06-knowledge-points.md-2026-11-12_20-38-16-2c3f3f41](https://raw.githubusercontent.com/ly5681672-max/ly5681672-max.github.io/main/assets/img/learning-notes/2026-10-21-catmap-06-knowledge-points.md-2026-11-12_20-38-16-2c3f3f41.png)
 需要调整反应物的量 调整峰的位置 依据官网CO氧化CO2来看 不是按照理想比例 是按照实际的实验条件
 
+还存在可能是区分Ha Hb导致的 
+
 9.反应级数求导和分析问题
 
 https://mp.weixin.qq.com/s/VePuCbIvaqaM3VTTdZaBvQ
