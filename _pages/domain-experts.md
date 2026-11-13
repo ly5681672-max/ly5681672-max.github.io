@@ -35,9 +35,9 @@ nav_order: 5
 {% endfor %}
 </div>
 
-## 每位专家的关键科研里程碑
+## 每位专家的关键科研里程碑与代表性成果
 
-<p>本时间轴只展示<strong>具有可追溯文献依据、明确归属专家的代表性成果</strong>，不按发表时间机械收录全部新论文。里程碑需回答“提出了什么方法或发现、解决什么问题、学术意义是什么”。<strong>PROVISIONAL</strong> 表示仅完成书目关联与初步整理，CONFIRMED_FULLTEXT 表示已核对公开原文及对应结果（不等于实验复现）；CONFIRMED_ABSTRACT 表示出版商原始摘要与作者身份已核验，但并非全文独立复核；CONFIRMED_BIBLIOGRAPHY 仅表示书目信息已核验；PROVISIONAL 仍待核验。无合格节点的专家保留待核验状态，不使用普通新论文充数。</p>
+<p>本时间轴只展示<strong>具有可追溯文献依据、明确归属专家的代表性成果</strong>，不按发表时间机械收录全部新论文。里程碑需回答“提出了什么方法或发现、解决什么问题、学术意义是什么”。<strong>PROVISIONAL</strong> 表示仅完成书目关联与初步整理，CONFIRMED_FULLTEXT 表示已核对公开原文及对应结果（不等于实验复现）；CONFIRMED_ABSTRACT 表示出版商原始摘要与作者身份已核验，但并非全文独立复核；CONFIRMED_BIBLIOGRAPHY 仅表示书目信息已核验；PROVISIONAL 仍待核验。尚无正式里程碑的专家在同一时间轴展示最多3篇标记为 PROVISIONAL 的历史候选论文，明确区分候选与已核验成果，避免大面积空白。</p>
 
 {% assign milestones = site.data.domain_expert_milestones %}
 {% for person in site.data.domain_experts %}
@@ -61,12 +61,28 @@ nav_order: 5
     {% endif %}
   {% endfor %}
   {% if milestone_count == 0 %}
-    <p class="domain-help domain-milestone-pending">该专家尚无通过当前证据门槛的正式里程碑。可在下方“历史代表性成果候选”查看真实论文线索；未完成原文核验前不自动认定为突破。</p>
+    {% assign shown = 0 %}
+    {% for candidate in site.data.domain_expert_milestone_candidates.candidates %}
+      {% if candidate.expert_id == person.id and shown < 3 %}
+        {% assign shown = shown | plus: 1 %}
+        <article class="domain-timeline-event domain-candidate-event">
+          <time datetime="{{ candidate.year | escape }}">{{ candidate.year | escape }}</time>
+          <div class="domain-timeline-content">
+            <div class="domain-paper-meta">代表性成果候选 · PROVISIONAL · {{ candidate.journal | escape }}</div>
+            <h4><a href="{{ candidate.doi_url }}" target="_blank" rel="noopener noreferrer">{{ candidate.title | escape }}</a></h4>
+            <p class="domain-help">引用记录 {{ candidate.cited_by_count | escape }} · 尚未核验关键科学发现，暂不作为正式里程碑。</p>
+          </div>
+        </article>
+      {% endif %}
+    {% endfor %}
+    {% if shown == 0 %}
+      <p class="domain-help">历史代表性成果尚待核验，暂无可展示的候选记录。</p>
+    {% endif %}
   {% endif %}
 </section>
 {% endfor %}
 
-## 历史代表性成果候选（自动筛选，待科学审核）
+## 历史代表性成果候选数据库（自动筛选，待科学审核）
 
 <p>该列表用于辅助补全每位专家的科研里程碑：按作者身份、历史引用表现及研究主题生成候选，<strong>不代表已经核实“首次发现”或科学突破</strong>。只有人工核验论文原文后，才能进入上方正式里程碑时间轴。</p>
 {% assign candidate_data = site.data.domain_expert_milestone_candidates %}
