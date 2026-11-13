@@ -11,6 +11,17 @@ spec.loader.exec_module(module)
 
 
 class SyncTests(unittest.TestCase):
+    def test_bilingual_expert_name_identity(self):
+        expert = {'id': 'cao_yueqiang', 'name': 'Yueqiang Cao（曹约强）',
+                  'orcid': '0000-0002-1036-4049', 'openalex_author_id': 'A5084047416'}
+        rows = {'results': [{'id': 'https://openalex.org/A5084047416',
+                            'display_name': 'Yueqiang Cao',
+                            'orcid': 'https://orcid.org/0000-0002-1036-4049',
+                            'observed_orcids': []}]}
+        from unittest.mock import patch
+        with patch.object(module, 'fetch_json', return_value=rows):
+            self.assertEqual(module.get_author_id(expert), 'A5084047416')
+
     def test_priority_journal_shortlist(self):
         self.assertIn('nature catalysis', module.PRIORITY_JOURNALS)
         self.assertNotIn('arxiv', module.PRIORITY_JOURNALS)
