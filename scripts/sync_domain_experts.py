@@ -37,6 +37,17 @@ EPOX_TERMS = {
     '分子筛': ('zeolite', 'mfi', 'microporous'),
     '选择性氧化': ('selective oxidation', 'oxidation catalyst', 'oxidation reaction'),
 }
+# Editorial shortlist, not a claim of current JCR quartile or SCI indexing.
+# Journal names must be checked against publisher/Clarivate sources before calling them SCI.
+PRIORITY_JOURNALS = {
+    'nature catalysis', 'nature chemistry', 'nature chemical engineering',
+    'nature communications', 'science', 'science advances',
+    'journal of the american chemical society', 'angewandte chemie international edition',
+    'acs catalysis', 'chemical science', 'chem', 'chemical engineering journal',
+    'applied catalysis b: environment and energy', 'applied catalysis b: environmental',
+    'journal of catalysis', 'energy & environmental science',
+    'advanced materials', 'advanced science', 'chemistry of materials',
+}
 DOI_PATTERN = re.compile(r'^10\.\d{4,9}/\S+$', re.I)
 
 
@@ -150,7 +161,7 @@ def gather(experts: list, days: int, date_now: datetime):
             aid = get_author_id(person)
             params = {'filter': f'authorships.author.id:{aid},from_publication_date:{since}',
                       'per_page': 100, 'sort': 'publication_date:desc',
-                      'select': 'id,title,publication_date,doi,authorships,abstract_inverted_index,type'}
+                      'select': 'id,title,publication_date,doi,authorships,abstract_inverted_index,type,primary_location'}
             result = fetch_json('works', params)
             count = 0
             for row in result.get('results', []):
@@ -169,9 +180,17 @@ def gather(experts: list, days: int, date_now: datetime):
                 date = row.get('publication_date') or ''
                 if not re.fullmatch(r'\d{4}-\d{2}-\d{2}', date):
                     continue
+                source = (row.get('primary_location') or {}).get('source') or {}
+                journal = (source.get('display_name') or '').strip()
+                priority = journal.casefold() in PRIORITY_JOURNALS
+                # Preprints are tracked separately, never labelled as top-journal SCI.
+                if row.get('type') == 'preprint':
+                    priority = False
                 paper = all_papers.setdefault(doi, {
                     'title': title, 'doi': doi, 'doi_url': 'https://doi.org/' + doi,
                     'source_url': row.get('id'), 'publication_date': date,
+                    'journal': journal or '期刊待核验', 'priority_journal': priority,
+                    'publication_type': row.get('type'),
                     'group': person['group'],
                     'group_label': 'AI 结合知识学习' if person['group'] == 'ai' else '烯烃环氧化',
                     'relevance': found['relevance'], 'match_tags': [], 'author_names': []
@@ -195,7 +214,9 @@ def gather(experts: list, days: int, date_now: datetime):
                                      'detail': safe_detail})
     papers = sorted(all_papers.values(), key=lambda p: (p['publication_date'], p['doi']), reverse=True)
     payload = {'generated_at': date_now.isoformat(timespec='seconds'), 'window_days': days,
-               'papers': papers[:100], 'status': '基于书目和摘要的规则相关性；机理结论尚未验证。'}
+               'papers': papers[:250],
+               'journal_policy': '优先期刊为人工维护的期刊名单，非SCI/JCR自动认证',
+               'status': '基于书目和摘要的规则相关性；关键发现尚未完成原文核验。'}
     return payload, report
 
 
