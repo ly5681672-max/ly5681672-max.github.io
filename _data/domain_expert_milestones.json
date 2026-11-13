@@ -116,5 +116,77 @@
     "review_status": "CONFIRMED_ABSTRACT",
     "review_note": "已核对Nature Catalysis出版页作者、DOI及原始摘要；这是多人共同撰写的前瞻性路线图，不可归为某一作者独立突破。",
     "publisher_source": "https://www.nature.com/articles/s41929-026-01479-x"
+  },
+  {
+    "year": "2023",
+    "group": "ai",
+    "type": "研究成果·出版商摘要核验",
+    "title": "Fast evaluation of the adsorption energy of organic molecules on metals via graph neural networks",
+    "authors": "Sergio Pablo-García, Santiago Morandi, Rodrigo A. Vargas-Hernández, Kjell Jorner, Žarko Ivković, Núria López, Alán Aspuru-Guzik",
+    "evidence": "出版商登记摘要中的研究贡献原文片段（不等于全文核验）：“Here we present GAME-Net, a graph neural network to quickly evaluate the adsorption energy.…”；具体结论请核对原文。",
+    "url": "https://doi.org/10.1038/s43588-023-00437-y",
+    "publisher_source": "https://doi.org/10.1038/s43588-023-00437-y",
+    "expert_ids": [
+      "lopez"
+    ],
+    "review_status": "CONFIRMED_ABSTRACT",
+    "review_note": "自动核验Crossref出版商登记的DOI、题名、作者姓氏及摘要；只确认摘要原文存在，不代表全文审核或独立复现。",
+    "verification_source": "Crossref publisher-deposited abstract",
+    "verification_doi": "10.1038/s43588-023-00437-y",
+    "verification_method": "automated_abstract_only"
+  },
+  {
+    "year": "2018",
+    "group": "ai",
+    "type": "研究成果·出版商摘要核验",
+    "title": "Microkinetics of alcohol reforming for H2 production from a FAIR density functional theory database",
+    "authors": "Qiang Li, Rodrigo García-Muelas, Núria López",
+    "evidence": "出版商登记摘要中的研究贡献原文片段（不等于全文核验）：“Here we present a multiscale study of the available reforming technologies based on a density functional theory open…”；具体结论请核对原文。",
+    "url": "https://doi.org/10.1038/s41467-018-02884-y",
+    "publisher_source": "https://doi.org/10.1038/s41467-018-02884-y",
+    "expert_ids": [
+      "lopez"
+    ],
+    "review_status": "CONFIRMED_ABSTRACT",
+    "review_note": "自动核验Crossref出版商登记的DOI、题名、作者姓氏及摘要；只确认摘要原文存在，不代表全文审核或独立复现。",
+    "verification_source": "Crossref publisher-deposited abstract",
+    "verification_doi": "10.1038/s41467-018-02884-y",
+    "verification_method": "automated_abstract_only"
+  },
+  {
+    "year": "2020",
+    "group": "ai",
+    "type": "研究成果·出版商摘要核验",
+    "title": "Accurate Multiobjective Design in a Space of Millions of Transition Metal Complexes with Neural-Network-Driven Efficient Global Optimization",
+    "authors": "Jon Paul Janet, Sahasrajit Ramesh, Chenru Duan, Heather J. Kulik",
+    "evidence": "出版商登记摘要中的研究贡献原文片段（不等于全文核验）：“We demonstrate this approach for the simultaneous optimization of redox potential and solubility in candidate M­(II)/M­(III) redox couples…”；具体结论请核对原文。",
+    "url": "https://doi.org/10.1021/acscentsci.0c00026",
+    "publisher_source": "https://doi.org/10.1021/acscentsci.0c00026",
+    "expert_ids": [
+      "kulik"
+    ],
+    "review_status": "CONFIRMED_ABSTRACT",
+    "review_note": "自动核验Crossref出版商登记的DOI、题名、作者姓氏及摘要；只确认摘要原文存在，不代表全文审核或独立复现。",
+    "verification_source": "Crossref publisher-deposited abstract",
+    "verification_doi": "10.1021/acscentsci.0c00026",
+    "verification_method": "automated_abstract_only"
+  },
+  {
+    "year": "2012",
+    "group": "epox",
+    "type": "研究成果·出版商摘要核验",
+    "title": "Metalloenzyme-like catalyzed isomerizations of sugars by Lewis acid zeolites",
+    "authors": "Ricardo Bermejo-Deval, Rajeev S. Assary, Eranda Nikolla, Manuel Moliner, Yuriy Román-Leshkov, Son-Jong Hwang, Arna Palsdottir, Dorothy Silverman, Raul F. Lobo, Larry A. Curtiss, Mark E. Davis",
+    "evidence": "出版商登记摘要中的研究贡献原文片段（不等于全文核验）：“Here, we show that hydrophobic zeolite beta with framework tin or titanium Lewis acid centers isomerizes sugars, e.g.,…”；具体结论请核对原文。",
+    "url": "https://doi.org/10.1073/pnas.1206708109",
+    "publisher_source": "https://doi.org/10.1073/pnas.1206708109",
+    "expert_ids": [
+      "davis"
+    ],
+    "review_status": "CONFIRMED_ABSTRACT",
+    "review_note": "自动核验Crossref出版商登记的DOI、题名、作者姓氏及摘要；只确认摘要原文存在，不代表全文审核或独立复现。",
+    "verification_source": "Crossref publisher-deposited abstract",
+    "verification_doi": "10.1073/pnas.1206708109",
+    "verification_method": "automated_abstract_only"
   }
 ]
