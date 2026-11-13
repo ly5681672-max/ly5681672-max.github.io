@@ -14,6 +14,7 @@ on:
         required: true
   push:
     paths:
+      - "scripts/sync_domain_expert_pronunciations.py"
       - "scripts/sync_domain_experts.py"
       - "scripts/discover_domain_expert_milestones.py"
       - "tests/test_sync_domain_experts.py"
@@ -38,6 +39,9 @@ jobs:
         uses: actions/checkout@v4
       - name: Validate identity and relevance safeguards
         run: python3 -m unittest discover -s tests -p "test_*domain_expert*.py" -v
+      - name: Enrich missing IPA only from ORCID-matched Wikidata evidence
+        if: github.event_name != 'push'
+        run: python3 scripts/sync_domain_expert_pronunciations.py --apply
       - name: Check private OpenAlex API key prerequisite
         if: github.event_name != 'push'
         env:
@@ -91,7 +95,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          git add -- _data/domain_expert_updates.json _data/domain_expert_milestone_candidates.json
+          git add -- _data/domain_expert_updates.json _data/domain_expert_milestone_candidates.json _data/domain_experts.json
           if git diff --cached --quiet; then
             echo "No changed bibliographic metadata."
             exit 0
