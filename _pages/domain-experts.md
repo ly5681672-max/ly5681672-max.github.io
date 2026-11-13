@@ -35,53 +35,56 @@ nav_order: 5
 {% endfor %}
 </div>
 
-## 每位专家的最新研究与个人时间轴
+## 每位专家的关键科研里程碑
 
-<p>优先显示化工、催化与材料领域精选期刊论文。<strong>“优先期刊”仅表示本站人工维护的期刊名单，并不等于自动核实 SCI 收录、JCR 分区或论文科学结论。</strong>每条节点按实际发表日期排列，保留期刊、DOI、作者关联及研究主题；关键发现须阅读全文并人工核验后才可标注。</p>
+<p>本时间轴只展示<strong>具有可追溯文献依据、明确归属专家的代表性成果</strong>，不按发表时间机械收录全部新论文。里程碑需回答“提出了什么方法或发现、解决什么问题、学术意义是什么”。<strong>PROVISIONAL</strong> 表示仅完成书目关联与初步整理，尚未核验论文全文；不得视为已确认的科学结论。无合格节点的专家保留待核验状态，不使用普通新论文充数。</p>
 
-{% assign update = site.data.domain_expert_updates %}
+{% assign milestones = site.data.domain_expert_milestones %}
 {% for person in site.data.domain_experts %}
 <section class="domain-person-timeline" data-person-group="{{ person.group }}" id="timeline-{{ person.id }}">
-  <h3>{{ person.name | escape }} · 研究时间轴</h3>
+  <h3>{{ person.name | escape }} · 关键科研里程碑</h3>
   <p class="domain-help">{{ person.institution | escape }} · <a href="{{ person.official_url }}" target="_blank" rel="noopener noreferrer">研究组官网</a></p>
-  {% assign found_count = 0 %}
-  {% for paper in update.papers %}
-    {% if paper.author_names contains person.name %}
-      {% assign found_count = found_count | plus: 1 %}
+  {% assign milestone_count = 0 %}
+  {% for item in milestones %}
+    {% if item.expert_ids contains person.id %}
+      {% assign milestone_count = milestone_count | plus: 1 %}
       <article class="domain-timeline-event">
-        <time>{{ paper.publication_date | escape }}</time>
+        <time datetime="{{ item.year | escape }}">{{ item.year | escape }}</time>
         <div class="domain-timeline-content">
-          <div class="domain-paper-meta">{% if paper.priority_journal %}<strong>优先期刊</strong> · {% endif %}{{ paper.journal | escape }} · {{ paper.publication_type | escape }}</div>
-          <h4><a href="{{ paper.doi_url }}" target="_blank" rel="noopener noreferrer">{{ paper.title | escape }}</a></h4>
-          <p><strong>研究线索（非已证实发现）：</strong>{{ paper.match_tags | join: '、' | escape }}</p>
-          <p class="domain-help">关键发现：待核验论文正文。<a href="{{ paper.source_url }}" target="_blank" rel="noopener noreferrer">书目证据</a> · <a href="{{ paper.doi_url }}" target="_blank" rel="noopener noreferrer">DOI</a></p>
+          <div class="domain-paper-meta">{{ item.type | escape }} · {{ item.review_status | escape }}</div>
+          <h4><a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">{{ item.title | escape }}</a></h4>
+          <p><strong>研究贡献线索：</strong>{{ item.evidence | escape }}</p>
+          <p class="domain-help"><strong>作者：</strong>{{ item.authors | escape }}</p>
+          <p class="domain-help">{{ item.review_note | escape }} · <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">原始来源 ↗</a></p>
         </div>
       </article>
     {% endif %}
   {% endfor %}
-  {% if found_count == 0 %}
-    <p class="domain-help">当前检索窗口暂无已核验身份且符合主题条件的论文；不代表该专家未发表论文。{% unless update.generated_at %}自动检索尚未成功执行。{% endunless %}</p>
+  {% if milestone_count == 0 %}
+    <p class="domain-help domain-milestone-pending">尚未完成该专家历史代表性成果的原文核验，暂不将近期论文自动认定为里程碑。下方“最新论文”仍持续自动更新。</p>
   {% endif %}
 </section>
 {% endfor %}
 
-## 研究方向演进：关键证据时间轴
+## 研究领域背景与历史节点
 
-<p>下列为<strong>人工精选且有原始来源的代表性节点</strong>，不代表完整文献计量结论，也不能据此推定作者之间存在师承或合作关系。</p>
+<p>以下是研究领域背景材料，<strong>不自动归属于某位专家</strong>；其历史意义仍需结合原始文献进一步核验。</p>
 <div class="domain-milestones">
-{% for item in site.data.domain_expert_milestones %}
-  <article class="domain-milestone" data-milestone-group="{{ item.group }}">
-    <div><b>{{ item.year | escape }}</b> · {{ item.type | escape }}</div>
-    <h3><a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">{{ item.title | escape }}</a></h3>
-    <p>{{ item.evidence | escape }}</p><p><small>{{ item.authors | escape }}</small></p>
-  </article>
+{% for item in milestones %}
+  {% if item.expert_ids.size == 0 %}
+    <article class="domain-milestone" data-milestone-group="{{ item.group }}">
+      <div><b>{{ item.year | escape }}</b> · {{ item.type | escape }} · {{ item.review_status | escape }}</div>
+      <h3><a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">{{ item.title | escape }}</a></h3>
+      <p>{{ item.evidence | escape }}</p>
+    </article>
+  {% endif %}
 {% endfor %}
 </div>
 
-## 与研究方向相关的最新论文
+## 最新SCI相关论文（自动检索，非里程碑）
 
 {% assign update = site.data.domain_expert_updates %}
-{% if update.generated_at %}<p>上次有效检索（UTC）：<time>{{ update.generated_at }}</time>；检索窗口 {{ update.window_days }} 天。按发表日期排序；入选表示<strong>规则相关性</strong>，不代表已完成全文核验。</p>{% else %}<p><strong>尚未建立可验证的在线检索结果。</strong>本页面初始仅包含人工整理的专家资料；首次有效同步后展示带 DOI 的真实文献。</p>{% endif %}
+{% if update.generated_at %}<p>上次有效检索（UTC）：<time>{{ update.generated_at }}</time>；检索窗口 {{ update.window_days }} 天。按发表日期排序；“SCI相关”仅表示学科相关，未自动核验Web of Science收录；入选表示<strong>规则相关性</strong>，不代表已完成全文核验。</p>{% else %}<p><strong>尚未建立可验证的在线检索结果。</strong>本页面初始仅包含人工整理的专家资料；首次有效同步后展示带 DOI 的真实文献。</p>{% endif %}
 {% if update.papers and update.papers.size > 0 %}
 <div class="domain-papers">
 {% for paper in update.papers limit:60 %}

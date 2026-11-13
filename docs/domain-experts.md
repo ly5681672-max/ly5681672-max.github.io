@@ -38,3 +38,11 @@ bundle exec jekyll build
 ## 专家个人时间轴与期刊筛选
 
 每位专家均有独立时间轴。有效检索后，按发表日期显示论文、期刊、DOI、相关主题及优先期刊标识。优先期刊名单定义在 `scripts/sync_domain_experts.py` 的 `PRIORITY_JOURNALS`，不等于 Clarivate SCI/JCR 官方核验。网页上的“研究线索”来自标题/摘要关键词匹配，不是论文的已证实关键发现。关键发现必须阅读正文后由研究者核验，再维护独立的人工证据数据，禁止根据关键词自动编造。若 API key 未配置或调用失败，保留旧数据并显示状态。
+
+## 关键科研里程碑与最新论文分离（2026-11）
+
+- 每位专家的时间轴仅从 `_data/domain_expert_milestones.json` 中按 `expert_ids` 精确归属，不从自动抓取的最近论文自动填充。
+- 原有历史资料补充 `expert_ids` 和 `review_status`，暂统一标记 PROVISIONAL，表示尚未完成原文核验，不等于正式确认的科学发现。
+- 与10位专家无明确关联的领域背景节点另列，不误归属。缺少里程碑的专家显示待核验状态，绝不自动伪造。
+- `_data/domain_expert_updates.json` 仍由原有每周 OpenAlex 工作流自动更新，仅用于下方最新论文列表；原有 API、调度、机理和研究数据均未修改。
+- 新增正式 CONFIRMED 节点前须检查论文作者身份、DOI、原文贡献、首次性与学术意义，保留证据来源并进行人工科学审核。
