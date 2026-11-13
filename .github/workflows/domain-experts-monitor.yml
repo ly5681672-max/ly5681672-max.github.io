@@ -40,10 +40,8 @@ jobs:
       - name: Validate identity and relevance safeguards
         run: python3 -m unittest discover -s tests -p "test_*domain_expert*.py" -v
       - name: Enrich missing IPA only from ORCID-matched Wikidata evidence
-        if: github.event_name != 'push'
         run: python3 scripts/sync_domain_expert_pronunciations.py --apply
       - name: Check private OpenAlex API key prerequisite
-        if: github.event_name != 'push'
         env:
           OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
         shell: bash
@@ -53,26 +51,24 @@ jobs:
             exit 1
           fi
       - name: Retrieve DOI-verified metadata from OpenAlex
-        if: github.event_name != 'push'
         shell: bash
         env:
           OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
           EVENT_NAME: ${{ github.event_name }}
           SELECTED_MODE: ${{ inputs.mode }}
         run: |
-          if [[ "$EVENT_NAME" == "schedule" || ( "$EVENT_NAME" == "workflow_dispatch" && "$SELECTED_MODE" == "apply" ) ]]; then
+          if [[ "$EVENT_NAME" == "schedule" || "$EVENT_NAME" == "push" || ( "$EVENT_NAME" == "workflow_dispatch" && "$SELECTED_MODE" == "apply" ) ]]; then
             python3 scripts/sync_domain_experts.py --apply
           else
             python3 scripts/sync_domain_experts.py --dry-run
           fi
       - name: Discover historical milestone candidates (not verified findings)
-        if: github.event_name != 'push'
         env:
           OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
           EVENT_NAME: ${{ github.event_name }}
           SELECTED_MODE: ${{ inputs.mode }}
         run: |
-          if [[ "$EVENT_NAME" == "schedule" || "$SELECTED_MODE" == "apply" ]]; then
+          if [[ "$EVENT_NAME" == "schedule" || "$EVENT_NAME" == "push" || "$SELECTED_MODE" == "apply" ]]; then
             python3 scripts/discover_domain_expert_milestones.py --apply
           else
             python3 scripts/discover_domain_expert_milestones.py --dry-run
@@ -91,7 +87,7 @@ jobs:
           retention-days: 30
       - name: Commit only validated research metadata
         id: commit
-        if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && inputs.mode == 'apply')
+        if: github.event_name == 'schedule' || github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && inputs.mode == 'apply')
         shell: bash
         run: |
           set -euo pipefail
@@ -103,6 +99,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git commit -m "research: weekly sync verified domain-expert DOI metadata"
+          git pull --rebase origin main
           git push origin HEAD:main
           echo "changed=true" >> "$GITHUB_OUTPUT"
       - name: Rebuild GitHub Pages after bot commit
