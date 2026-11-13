@@ -74,19 +74,19 @@ nav_order: 5
 <p class="domain-help">候选数据更新时间（UTC）：{{ candidate_data.generated_at | escape }}；来源：OpenAlex。引用次数为动态书目指标，不作为独立的科学贡献结论。</p>
 {% endif %}
 {% for person in site.data.domain_experts %}
-  {% assign candidate_count = 0 %}
-  {% for item in candidate_data.candidates %}
-    {% if item.expert_id == person.id %}
-      {% assign candidate_count = candidate_count | plus: 1 %}
-      {% if candidate_count == 1 %}<h3 data-person-group="{{ person.group }}">{{ person.name | escape }} · 候选研究</h3>{% endif %}
-      <article class="domain-paper" data-paper-group="{{ person.group }}">
-        <p class="domain-paper-meta">{{ item.year | escape }} · {{ item.journal | escape }} · 引用记录 {{ item.cited_by_count | escape }} · PROVISIONAL</p>
-        <h4><a href="{{ item.doi_url }}" target="_blank" rel="noopener noreferrer">{{ item.title | escape }}</a></h4>
-        <p>主题线索：{{ item.relevance_tags | join: '、' | escape }}</p>
-        <p class="domain-help">科学发现尚未核验 · <a href="{{ item.source_url }}" target="_blank" rel="noopener noreferrer">OpenAlex 书目</a> · <a href="{{ item.doi_url }}" target="_blank" rel="noopener noreferrer">DOI</a></p>
-      </article>
-    {% endif %}
-  {% endfor %}
+{% assign candidate_count = 0 %}
+{% for item in candidate_data.candidates %}
+{% if item.expert_id == person.id %}
+{% assign candidate_count = candidate_count | plus: 1 %}
+{% if candidate_count == 1 %}<h3 data-person-group="{{ person.group }}">{{ person.name | escape }} · 候选研究</h3>{% endif %}
+<article class="domain-paper" data-paper-group="{{ person.group }}">
+<p class="domain-paper-meta">{{ item.year | escape }} · {{ item.journal | escape }} · 引用记录 {{ item.cited_by_count | escape }} · PROVISIONAL</p>
+<h4><a href="{{ item.doi_url }}" target="_blank" rel="noopener noreferrer">{{ item.title | escape }}</a></h4>
+<p>主题线索：{{ item.relevance_tags | join: '、' | escape }}</p>
+<p class="domain-help">科学发现尚未核验 · <a href="{{ item.source_url }}" target="_blank" rel="noopener noreferrer">OpenAlex 书目</a> · <a href="{{ item.doi_url }}" target="_blank" rel="noopener noreferrer">DOI</a></p>
+</article>
+{% endif %}
+{% endfor %}
 {% endfor %}
 
 ## 研究领域背景与历史节点
