@@ -1,5 +1,1238 @@
 {
-  "generated_at": null,
-  "candidates": [],
-  "selection": "未执行真实历史文献检索"
+  "generated_at": "2026-11-13T09:17:40+00:00",
+  "source": "OpenAlex",
+  "selection": "历史高引用+主题规则初筛；非科学里程碑认证",
+  "candidates": [
+    {
+      "expert_id": "xin",
+      "expert_name": "Hongliang Xin",
+      "year": 2023,
+      "title": "Bridging the complexity gap in computational heterogeneous catalysis with machine learning",
+      "doi": "10.1038/s41929-023-00911-w",
+      "doi_url": "https://doi.org/10.1038/s41929-023-00911-w",
+      "source_url": "https://openalex.org/W4322492989",
+      "journal": "Nature Catalysis",
+      "cited_by_count": 316,
+      "relevance_tags": [
+        "机器学习"
+      ],
+      "abstract_excerpt": "",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "xin",
+      "expert_name": "Hongliang Xin",
+      "year": 2023,
+      "title": "Interpretable design of Ir-free trimetallic electrocatalysts for ammonia oxidation with graph neural networks",
+      "doi": "10.1038/s41467-023-36322-5",
+      "doi_url": "https://doi.org/10.1038/s41467-023-36322-5",
+      "source_url": "https://openalex.org/W4320033952",
+      "journal": "Nature Communications",
+      "cited_by_count": 165,
+      "relevance_tags": [
+        "机器学习"
+      ],
+      "abstract_excerpt": "Abstract The electrochemical ammonia oxidation to dinitrogen as a means for energy and environmental applications is a key technology toward the realization of a sustainable nitrogen cycle. The state-of-the-art metal catalysts including Pt and its bimetallics with Ir show promising activity, albeit suffering from high overpotentials for appreciable current densities and the soaring price of precious metals. Herein, the immense design space of ternary Pt alloy nanostructures is explored by graph neural networks trained on ab initio data for concurrently predicting site reactivity, surface stability, and catalyst synthesizability descriptors. Among a few Ir-free candidates that emerge from the active learning workflow, Pt 3 Ru-M (M: Fe, Co, or Ni) alloys were successfully synthesized and experimentally verified to be more active toward ammonia oxidation than Pt, Pt 3 Ir, and Pt 3 Ru. More ",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "xin",
+      "expert_name": "Hongliang Xin",
+      "year": 2022,
+      "title": "Breaking adsorption-energy scaling limitations of electrocatalytic nitrate reduction on intermetallic CuPd nanocubes by machine-learned insights",
+      "doi": "10.1038/s41467-022-29926-w",
+      "doi_url": "https://doi.org/10.1038/s41467-022-29926-w",
+      "source_url": "https://openalex.org/W4225114738",
+      "journal": "Nature Communications",
+      "cited_by_count": 465,
+      "relevance_tags": [
+        "机器学习"
+      ],
+      "abstract_excerpt": "Abstract The electrochemical nitrate reduction reaction (NO 3 RR) to ammonia is an essential step toward restoring the globally disrupted nitrogen cycle. In search of highly efficient electrocatalysts, tailoring catalytic sites with ligand and strain effects in random alloys is a common approach but remains limited due to the ubiquitous energy-scaling relations. With interpretable machine learning, we unravel a mechanism of breaking adsorption-energy scaling relations through the site-specific Pauli repulsion interactions of the metal d -states with adsorbate frontier orbitals. The non-scaling behavior can be realized on (100)-type sites of ordered B2 intermetallics, in which the orbital overlap between the hollow *N and subsurface metal atoms is significant while the bridge-bidentate *NO 3 is not directly affected. Among those intermetallics predicted, we synthesize monodisperse ordered",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "xin",
+      "expert_name": "Hongliang Xin",
+      "year": 2020,
+      "title": "An Adaptive Machine Learning Strategy for Accelerating Discovery of Perovskite Electrocatalysts",
+      "doi": "10.1021/acscatal.9b05248",
+      "doi_url": "https://doi.org/10.1021/acscatal.9b05248",
+      "source_url": "https://openalex.org/W3012271055",
+      "journal": "ACS Catalysis",
+      "cited_by_count": 141,
+      "relevance_tags": [
+        "机器学习"
+      ],
+      "abstract_excerpt": "We develop an adaptive machine learning strategy in search of high-performance ABO 3 -type cubic perovskites for catalyzing the oxygen evolution reaction (OER). The strategy has two essential components: a set of multifidelity features (e.g., composition and electronic structure) and probabilistic models with Gaussian processes trained with ab initio data for predicting activity descriptors (i.e., *O and *OH adsorption energies). By iteratively validating/refining the candidates which have theoretical overpotentials <0.5 V, albeit with large uncertainties, we attain machine learning models (RMSE < 0.5 eV) that can rapidly navigate through a chemical subspace of ∼4000 double perovskites (AA′B 2 O 6 ) and single out stable structures with promising OER activity. Our approach successfully identified several known perovskites with improved catalytic performance over the benchmark LaCoO 3 alo",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "xin",
+      "expert_name": "Hongliang Xin",
+      "year": 2017,
+      "title": "Ag–Sn Bimetallic Catalyst with a Core–Shell Structure for CO 2 Reduction",
+      "doi": "10.1021/jacs.6b10435",
+      "doi_url": "https://doi.org/10.1021/jacs.6b10435",
+      "source_url": "https://openalex.org/W2578967457",
+      "journal": "Journal of the American Chemical Society",
+      "cited_by_count": 559,
+      "relevance_tags": [
+        "催化描述符"
+      ],
+      "abstract_excerpt": "Converting greenhouse gas carbon dioxide (CO 2 ) to value-added chemicals is an appealing approach to tackle CO 2 emission challenges. The chemical transformation of CO 2 requires suitable catalysts that can lower the activation energy barrier, thus minimizing the energy penalty associated with the CO 2 reduction reaction. First-row transition metals are potential candidates as catalysts for electrochemical CO 2 reduction; however, their high oxygen affinity makes them easy to be oxidized, which could, in turn, strongly affect the catalytic properties of metal-based catalysts. In this work, we propose a strategy to synthesize Ag–Sn electrocatalysts with a core–shell nanostructure that contains a bimetallic core responsible for high electronic conductivity and an ultrathin partially oxidized shell for catalytic CO 2 conversion. This concept was demonstrated by a series of Ag–Sn bimetallic",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "xin",
+      "expert_name": "Hongliang Xin",
+      "year": 2017,
+      "title": "High-throughput screening of bimetallic catalysts enabled by machine learning",
+      "doi": "10.1039/c7ta01812f",
+      "doi_url": "https://doi.org/10.1039/c7ta01812f",
+      "source_url": "https://openalex.org/W2760744264",
+      "journal": "Journal of Materials Chemistry A",
+      "cited_by_count": 368,
+      "relevance_tags": [
+        "机器学习"
+      ],
+      "abstract_excerpt": "We present a holistic machine-learning framework for rapid screening of bimetallic catalysts with the aid of the descriptor-based kinetic analysis.",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "xin",
+      "expert_name": "Hongliang Xin",
+      "year": 2015,
+      "title": "Machine-Learning-Augmented Chemisorption Model for CO2 Electroreduction Catalyst Screening",
+      "doi": "10.1021/acs.jpclett.5b01660",
+      "doi_url": "https://doi.org/10.1021/acs.jpclett.5b01660",
+      "source_url": "https://openalex.org/W2462003543",
+      "journal": "The Journal of Physical Chemistry Letters",
+      "cited_by_count": 430,
+      "relevance_tags": [
+        "机器学习"
+      ],
+      "abstract_excerpt": "We present a machine-learning-augmented chemisorption model that enables fast and accurate prediction of the surface reactivity of metal alloys within a broad chemical space. Specifically, we show that artificial neural networks, a family of biologically inspired learning algorithms, trained with a set of ab initio adsorption energies and electronic fingerprints of idealized bimetallic surfaces, can capture complex, nonlinear interactions of adsorbates (e.g., *CO) on multimetallics with ∼0.1 eV error, outperforming the two-level interaction model in prediction. By leveraging scaling relations between adsorption energies of similar adsorbates, we illustrate that this integrated approach greatly facilitates high-throughput catalyst screening and, as a specific case, suggests promising {100}-terminated multimetallic alloys with improved efficiency and selectivity for CO2 electrochemical red",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "xin",
+      "expert_name": "Hongliang Xin",
+      "year": 2011,
+      "title": "Predictive Structure–Reactivity Models for Rapid Screening of Pt-Based Multimetallic Electrocatalysts for the Oxygen Reduction Reaction",
+      "doi": "10.1021/cs200462f",
+      "doi_url": "https://doi.org/10.1021/cs200462f",
+      "source_url": "https://openalex.org/W2333192667",
+      "journal": "ACS Catalysis",
+      "cited_by_count": 152,
+      "relevance_tags": [
+        "催化描述符"
+      ],
+      "abstract_excerpt": "Due to the immense phase space of potential alloy catalysts, any rigorous screening for optimal alloys requires simple and accurate predictive structure–reactivity relationships. Herein, we have developed a model that allows us to accurately predict variations in adsorption energy on alloy surfaces based on easily accessible physical characteristics of the metal elements that form the alloy—mainly their electronegativity, atomic radius, and the spatial extent of valence orbitals. We have developed a scheme relating the geometric structure and local chemical environment of active Pt sites to the local chemical reactivity of the sites in the electrochemical oxygen reduction reaction (ORR). The accuracy of the model was verified with density functional theory (DFT) calculations. The model allows us to screen through large libraries of Pt alloys and identify many potentially promising ORR al",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "kitchin",
+      "expert_name": "John R. Kitchin",
+      "year": 2024,
+      "title": "Pourbaix Machine Learning Framework Identifies Acidic Water Oxidation Catalysts Exhibiting Suppressed Ruthenium Dissolution",
+      "doi": "10.1021/jacs.4c01353",
+      "doi_url": "https://doi.org/10.1021/jacs.4c01353",
+      "source_url": "https://openalex.org/W4399305702",
+      "journal": "Journal of the American Chemical Society",
+      "cited_by_count": 105,
+      "relevance_tags": [
+        "机器学习"
+      ],
+      "abstract_excerpt": "The demand for green hydrogen has raised concerns over the availability of iridium used in oxygen evolution reaction catalysts. We identify catalysts with the aid of a machine learning-aided computational pipeline trained on more than 36,000 mixed metal oxides. The pipeline accurately predicts Pourbaix decomposition energy ( G pbx ) from unrelaxed structures with a mean absolute error of 77 meV per atom, enabling us to screen 2070 new metallic oxides with respect to their prospective stability under acidic conditions. The search identifies Ru 0.6 Cr 0.2 Ti 0.2 O 2 as a candidate having the promise of increased durability: experimentally, we find that it provides an overpotential of 267 mV at 100 mA cm –2 and that it operates at this current density for over 200 h and exhibits a rate of overpotential increase of 25 μV h –1 . Surface density functional theory calculations reveal that Ti in",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "kitchin",
+      "expert_name": "John R. Kitchin",
+      "year": 2018,
+      "title": "Machine learning in catalysis",
+      "doi": "10.1038/s41929-018-0056-y",
+      "doi_url": "https://doi.org/10.1038/s41929-018-0056-y",
+      "source_url": "https://openalex.org/W2797402103",
+      "journal": "Nature Catalysis",
+      "cited_by_count": 494,
+      "relevance_tags": [
+        "机器学习"
+      ],
+      "abstract_excerpt": "",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "kitchin",
+      "expert_name": "John R. Kitchin",
+      "year": 2017,
+      "title": "Modeling Segregation on AuPd(111) Surfaces with Density Functional Theory and Monte Carlo Simulations",
+      "doi": "10.1021/acs.jpcc.6b12752",
+      "doi_url": "https://doi.org/10.1021/acs.jpcc.6b12752",
+      "source_url": "https://openalex.org/W2582607092",
+      "journal": "The Journal of Physical Chemistry C",
+      "cited_by_count": 71,
+      "relevance_tags": [
+        "机器学习"
+      ],
+      "abstract_excerpt": "The simulation of segregation in multicomponent alloy surfaces is challenging with atomistic approaches because of the need to model a very large number of possible configurations with a high degree of accuracy. Density functional theory (DFT) is too expensive to use directly, and atomistic potentials are often a compromise between accuracy and computational speed. In this work we develop a neural network (NN) atomistic potential capable of predicting accurate energies for any configuration of a AuPd(111) slab. The fully trained neural network spanning all configurations and lattice constants of a AuPd binary alloy is trained from only 3914 DFT calculations. Using this NN, segregation profiles are created spanning bulk compositions between 10 and 90% Au, and at temperatures ranging from 700 to 1000 K using Monte Carlo simulations. These profiles are then fit to the Langmuir–McLean formul",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "kitchin",
+      "expert_name": "John R. Kitchin",
+      "year": 2016,
+      "title": "Quantifying Uncertainty in Activity Volcano Relationships for Oxygen Reduction Reaction",
+      "doi": "10.1021/acscatal.6b00509",
+      "doi_url": "https://doi.org/10.1021/acscatal.6b00509",
+      "source_url": "https://openalex.org/W2461328805",
+      "journal": "ACS Catalysis",
+      "cited_by_count": 87,
+      "relevance_tags": [
+        "催化描述符"
+      ],
+      "abstract_excerpt": "The oxygen reduction reaction (ORR) is an important electrochemical reaction and a major bottleneck for fuel cells. Due to the existence of a scaling relation between the adsorption energies of two key intermediates involved in ORR, OOH*, and OH*, the electrocatalytic activity for the ORR, to a first approximation, is determined by a single descriptor. This descriptor-based approach has been used to screen for electrocatalyst materials that have an optimal binding energy of oxygen intermediates. However, given that this descriptor-based search relies on several approximations, it is crucial to determine the overall predictability of the descriptor-based model to determine the activity of a catalyst. In this work, we develop a formalism for estimating uncertainty for the activity of a catalyst in an electrocatalytic reaction scheme and apply this framework to determine errors involved in ",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "kitchin",
+      "expert_name": "John R. Kitchin",
+      "year": 2016,
+      "title": "Neural network and ReaxFF comparison for Au properties",
+      "doi": "10.1002/qua.25115",
+      "doi_url": "https://doi.org/10.1002/qua.25115",
+      "source_url": "https://openalex.org/W2291925970",
+      "journal": "International Journal of Quantum Chemistry",
+      "cited_by_count": 86,
+      "relevance_tags": [
+        "机器学习"
+      ],
+      "abstract_excerpt": "We have studied how ReaxFF and Behler–Parrinello neural network (BPNN) atomistic potentials should be trained to be accurate and tractable across multiple structural regimes of Au as a representative example of a single-component material. We trained these potentials using subsets of 9,972 Kohn-Sham density functional theory calculations and then validated their predictions against the untrained data. Our best ReaxFF potential was trained from 848 data points and could reliably predict surface and bulk data; however, it was substantially less accurate for molecular clusters of 126 atoms or fewer. Training the ReaxFF potential to more data also resulted in overfitting and lower accuracy. In contrast, BPNN could be fit to 9,734 calculations, and this potential performed comparably or better than ReaxFF across all regimes. However, the BPNN potential in this implementation brings significan",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "kitchin",
+      "expert_name": "John R. Kitchin",
+      "year": 2012,
+      "title": "Effects of strain, d -band filling, and oxidation state on the surface electronic structure and reactivity of 3 d perovskite surfaces",
+      "doi": "10.1063/1.4746117",
+      "doi_url": "https://doi.org/10.1063/1.4746117",
+      "source_url": "https://openalex.org/W1985477584",
+      "journal": "The Journal of Chemical Physics",
+      "cited_by_count": 83,
+      "relevance_tags": [
+        "催化描述符"
+      ],
+      "abstract_excerpt": "Trends in the dissociative oxygen adsorption energy and oxygen vacancy formation energy on cubic LaBO(3) and SrBO(3) perovskite (001) surfaces (where B = Sc, Ti, V, Cr, Mn, Fe, Co, Ni, and Cu) and their dependence on strain, d-band filling, and oxidation state were examined using density functional theory in the generalized gradient approximation. The effects of strain were found to be small compared to the effects of d-band filling and oxidations state. Electronic structure descriptors such as the d-band center of the B-atom were identified for trends in the dissociative oxygen adsorption energy and for the oxygen vacancy formation energy. A chemical correlation between these two reaction energies was also identified showing the trends in these reaction energies are not independent of each other.",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "kitchin",
+      "expert_name": "John R. Kitchin",
+      "year": 2009,
+      "title": "Correlations in coverage-dependent atomic adsorption energies on Pd(111)",
+      "doi": "10.1103/physrevb.79.205412",
+      "doi_url": "https://doi.org/10.1103/physrevb.79.205412",
+      "source_url": "https://openalex.org/W2050461974",
+      "journal": "Physical Review B",
+      "cited_by_count": 104,
+      "relevance_tags": [
+        "催化描述符"
+      ],
+      "abstract_excerpt": "The adsorption energy of an adsorbate can depend strongly on its coverage. We present density-functional calculations of the adsorption energy of C, N, and O on the fcc sites of Pd(111) at coverages from 0.2 to 1 ML. The adsorption energy generally increases (gets weaker) with coverage in a near linear fashion for the most stable configurations. We observed a practically constant $d$-band filling at all coverages and interpret the coverage dependence in terms of a simple $d$-band model where the $d$ band is broadened and lowered in energy by the interaction with the adsorbates. We find the Pd(111) $d$-band center is approximately linearly correlated with the coverage of each adsorbate. A consequence of this electronic structure-coverage correlation for each adsorbate is that the adsorption energies of each adsorbate configuration are strongly correlated with each other. All of the except",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "kitchin",
+      "expert_name": "John R. Kitchin",
+      "year": 2004,
+      "title": "Modification of the surface electronic and chemical properties of Pt(111) by subsurface 3d transition metals",
+      "doi": "10.1063/1.1737365",
+      "doi_url": "https://doi.org/10.1063/1.1737365",
+      "source_url": "https://openalex.org/W2069988560",
+      "journal": "The Journal of Chemical Physics",
+      "cited_by_count": 1374,
+      "relevance_tags": [
+        "催化描述符"
+      ],
+      "abstract_excerpt": "The modification of the electronic and chemical properties of Pt(111) surfaces by subsurface 3d transition metals was studied using density-functional theory. In each case investigated, the Pt surface d-band was broadened and lowered in energy by interactions with the subsurface 3d metals, resulting in weaker dissociative adsorption energies of hydrogen and oxygen on these surfaces. The magnitude of the decrease in adsorption energy was largest for the early 3d transition metals and smallest for the late 3d transition metals. In some cases, dissociative adsorption was calculated to be endothermic. The surfaces investigated in this study had no lateral strain in them, demonstrating that strain is not a necessary factor in the modification of bimetallic surface properties. The implications of these findings are discussed in the context of catalyst design, particularly for fuel cell electro",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "lopez",
+      "expert_name": "Núria López",
+      "year": 2024,
+      "title": "Stability and lifetime of diffusion-trapped oxygen in oxide-derived copper CO2 reduction electrocatalysts",
+      "doi": "10.1038/s41929-024-01132-5",
+      "doi_url": "https://doi.org/10.1038/s41929-024-01132-5",
+      "source_url": "https://openalex.org/W4393379673",
+      "journal": "Nature Catalysis",
+      "cited_by_count": 157,
+      "relevance_tags": [
+        "机器学习"
+      ],
+      "abstract_excerpt": "Abstract Oxide-derived Cu has an excellent ability to promote C–C coupling in the electrochemical carbon dioxide reduction reaction. However, these materials largely rearrange under reaction conditions; therefore, the nature of the active site remains controversial. Here we study the reduction process of oxide-derived Cu via large-scale molecular dynamics with a precise neural network potential trained on first-principles data and introducing experimental conditions. The oxygen concentration in the most stable oxide-derived Cu increases with an increase of the pH, potential or specific surface area. In long electrochemical experiments, the catalyst would be fully reduced to Cu, but removing all the trapped oxygen takes a considerable amount of time. Although the highly reconstructed Cu surface provides various sites to adsorb oxygen more strongly, the surface oxygen atoms are not stable ",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "lopez",
+      "expert_name": "Núria López",
+      "year": 2023,
+      "title": "Fast evaluation of the adsorption energy of organic molecules on metals via graph neural networks",
+      "doi": "10.1038/s43588-023-00437-y",
+      "doi_url": "https://doi.org/10.1038/s43588-023-00437-y",
+      "source_url": "https://openalex.org/W4367626474",
+      "journal": "Nature Computational Science",
+      "cited_by_count": 130,
+      "relevance_tags": [
+        "机器学习",
+        "催化描述符"
+      ],
+      "abstract_excerpt": "Abstract Modeling in heterogeneous catalysis requires the extensive evaluation of the energy of molecules adsorbed on surfaces. This is done via density functional theory but for large organic molecules it requires enormous computational time, compromising the viability of the approach. Here we present GAME-Net, a graph neural network to quickly evaluate the adsorption energy. GAME-Net is trained on a well-balanced chemically diverse dataset with C 1–4 molecules with functional groups including N, O, S and C 6–10 aromatic rings. The model yields a mean absolute error of 0.18 eV on the test set and is 6 orders of magnitude faster than density functional theory. Applied to biomass and plastics (up to 30 heteroatoms), adsorption energies are predicted with a mean absolute error of 0.016 eV per atom. The framework represents a tool for the fast screening of catalytic materials, particularly ",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "lopez",
+      "expert_name": "Núria López",
+      "year": 2023,
+      "title": "Design of Flame‐Made ZnZrO x Catalysts for Sustainable Methanol Synthesis from CO 2",
+      "doi": "10.1002/aenm.202204122",
+      "doi_url": "https://doi.org/10.1002/aenm.202204122",
+      "source_url": "https://openalex.org/W4321099455",
+      "journal": "Advanced Energy Materials",
+      "cited_by_count": 81,
+      "relevance_tags": [
+        "微观动力学"
+      ],
+      "abstract_excerpt": "Abstract Mixed zinc‐zirconium oxides, ZnZrO x , are highly selective and stable catalysts for CO 2 hydrogenation to methanol, a pivotal energy vector. However, their activity remains moderate, and descriptors to design improved systems are lacking. This work applies flame spray pyrolysis (FSP), a one‐step and scalable method, to synthesize a series of ZnZrO x catalysts, and systematically compares them to coprecipitated (CP) analogs to establish deeper synthesis–structure–performance relationships. FSP systems (up to 5 mol%) generally display a threefold higher methanol productivity compared to their CP counterparts. In‐depth characterization and theoretical simulations show that, unlike CP, FSP maximizes the surface area and formation of atomically dispersed Zn 2+ sites incorporated in lattice positions within the ZrO 2 surface, which is key to improving performance. Analysis by in situ",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "lopez",
+      "expert_name": "Núria López",
+      "year": 2022,
+      "title": "Modeling Operando Electrochemical CO 2 Reduction",
+      "doi": "10.1021/acs.chemrev.1c00690",
+      "doi_url": "https://doi.org/10.1021/acs.chemrev.1c00690",
+      "source_url": "https://openalex.org/W4225108171",
+      "journal": "Chemical Reviews",
+      "cited_by_count": 162,
+      "relevance_tags": [
+        "机器学习",
+        "微观动力学"
+      ],
+      "abstract_excerpt": "Since the seminal works on the application of density functional theory and the computational hydrogen electrode to electrochemical CO 2 reduction (eCO 2 R) and hydrogen evolution (HER), the modeling of both reactions has quickly evolved for the last two decades. Formulation of thermodynamic and kinetic linear scaling relationships for key intermediates on crystalline materials have led to the definition of activity volcano plots, overpotential diagrams, and full exploitation of these theoretical outcomes at laboratory scale. However, recent studies hint at the role of morphological changes and short-lived intermediates in ruling the catalytic performance under operating conditions, further raising the bar for the modeling of electrocatalytic systems. Here, we highlight some novel methodological approaches employed to address eCO 2 R and HER reactions. Moving from the atomic scale to the",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "lopez",
+      "expert_name": "Núria López",
+      "year": 2022,
+      "title": "Automated Image Analysis for Single-Atom Detection in Catalytic Materials by Transmission Electron Microscopy",
+      "doi": "10.1021/jacs.1c12466",
+      "doi_url": "https://doi.org/10.1021/jacs.1c12466",
+      "source_url": "https://openalex.org/W4220727105",
+      "journal": "Journal of the American Chemical Society",
+      "cited_by_count": 96,
+      "relevance_tags": [
+        "机器学习"
+      ],
+      "abstract_excerpt": "Single-atom catalytic sites may have existed in all supported transition metal catalysts since their first application. Yet, interest in the design of single-atom heterogeneous catalysts (SACs) only really grew when advances in transmission electron microscopy (TEM) permitted direct confirmation of metal site isolation. While atomic-resolution imaging remains a central characterization tool, poor statistical significance, reproducibility, and interoperability limit its scope for deriving robust characteristics about these frontier catalytic materials. Here, we introduce a customized deep-learning method for automated atom detection in image analysis, a rate-limiting step toward high-throughput TEM. Platinum atoms stabilized on a functionalized carbon support with a challenging irregular three-dimensional morphology serve as a practically relevant test system with promising scope in therm",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "lopez",
+      "expert_name": "Núria López",
+      "year": 2018,
+      "title": "Microkinetics of alcohol reforming for H2 production from a FAIR density functional theory database",
+      "doi": "10.1038/s41467-018-02884-y",
+      "doi_url": "https://doi.org/10.1038/s41467-018-02884-y",
+      "source_url": "https://openalex.org/W2806306018",
+      "journal": "Nature Communications",
+      "cited_by_count": 68,
+      "relevance_tags": [
+        "微观动力学"
+      ],
+      "abstract_excerpt": "Abstract The large-scale production of hydrogen from biomass under industrial conditions is fundamental for a sustainable future. Here we present a multiscale study of the available reforming technologies based on a density functional theory open database that allows the formulation of linear scaling relationships and microkinetics. The database fulfills the FAIR criteria: findability, accessibility, interoperability and reusability. Moreover, it contains more than 1000 transition states for the decomposition of C2 alcohols on close-packed Cu, Ru, Pd, and Pt surfaces. The microkinetic results for activity, selectivity toward H2, and stability can be directly mapped to experiments, and the catalytic performance is controlled by various types of poisoning. Linear scaling relationships provide valid quantitative results that allow the extrapolation to larger compounds like glycerol. Our dat",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "lopez",
+      "expert_name": "Núria López",
+      "year": 2013,
+      "title": "Silver Nanoparticles for Olefin Production: New Insights into the Mechanistic Description of Propyne Hydrogenation",
+      "doi": "10.1002/cctc.201300569",
+      "doi_url": "https://doi.org/10.1002/cctc.201300569",
+      "source_url": "https://openalex.org/W2101092460",
+      "journal": "ChemCatChem",
+      "cited_by_count": 107,
+      "relevance_tags": [
+        "微观动力学"
+      ],
+      "abstract_excerpt": "Abstract The gas‐phase partial hydrogenation of propyne was investigated over supported Ag nanoparticles (2–20 nm in diameter) prepared by using different deposition methods, activation conditions, loadings, and carriers. The excellent selectivities to propene attained over the catalysts, exceeding 90 %, are independent of the particle size but the activity is maximal over approximately 4.5 nm Ag particles. Certain kinetic fingerprints of Ag, such as the positive dependence on the alkyne pressure, the relatively low reaction order in H2, and the low apparent activation energy, deviate from those of conventional hydrogenation metals such as Pd and Ni, questioning the applicability of the classical Horiuti–Polanyi scheme. Periodic dispersion‐corrected density functional theory (DFT‐D) calculations and microkinetic analysis demonstrate the occurrence of an associative mechanism, which featu",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "lopez",
+      "expert_name": "Núria López",
+      "year": 2011,
+      "title": "An integrated approach to Deacon chemistry on RuO2-based catalysts",
+      "doi": "10.1016/j.jcat.2011.09.039",
+      "doi_url": "https://doi.org/10.1016/j.jcat.2011.09.039",
+      "source_url": "https://openalex.org/W1986996579",
+      "journal": "Journal of Catalysis",
+      "cited_by_count": 128,
+      "relevance_tags": [
+        "微观动力学"
+      ],
+      "abstract_excerpt": "Rationally designed RuO2-based Deacon catalysts can contribute to massive energy saving compared to the current electrolysis process in chemically recycling HCl to produce molecular chlorine. Here, we report on our integrated approach between state-of-the-art experiments and calculations. The aim is to understand industrial Deacon catalyst in its realistic surface state and to derive mechanistic insights into this sustainable reaction. We show that the practically relevant RuO2/SnO2 consists of two major RuO2 morphologies, namely 2–4 nm-sized particles and 1–3-ML-thick epitaxial RuO2 films attached to the SnO2 support particles. A large fraction of the small nanoparticles expose {1 1 0} and {1 0 1} facets, whereas the film grows with the same orientations, due to the preferential surface orientation of the rutile-type support. Steady-state Deacon kinetics indicate a medium-to-strong posi",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "kulik",
+      "expert_name": "Heather J. Kulik",
+      "year": 2022,
+      "title": "Roadmap on Machine learning in electronic structure",
+      "doi": "10.1088/2516-1075/ac572f",
+      "doi_url": "https://doi.org/10.1088/2516-1075/ac572f",
+      "source_url": "https://openalex.org/W4213283694",
+      "journal": "Electronic Structure",
+      "cited_by_count": 200,
+      "relevance_tags": [
+        "机器学习"
+      ],
+      "abstract_excerpt": "Abstract In recent years, we have been witnessing a paradigm shift in computational materials science. In fact, traditional methods, mostly developed in the second half of the XXth century, are being complemented, extended, and sometimes even completely replaced by faster, simpler, and often more accurate approaches. The new approaches, that we collectively label by machine learning, have their origins in the fields of informatics and artificial intelligence, but are making rapid inroads in all other branches of science. With this in mind, this Roadmap article, consisting of multiple contributions from experts across the field, discusses the use of machine learning in materials science, and share perspectives on current and future challenges in problems as diverse as the prediction of materials properties, the construction of force-fields, the development of exchange correlation function",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "kulik",
+      "expert_name": "Heather J. Kulik",
+      "year": 2021,
+      "title": "Computational Discovery of Transition-metal Complexes: From High-throughput Screening to Machine Learning",
+      "doi": "10.1021/acs.chemrev.1c00347",
+      "doi_url": "https://doi.org/10.1021/acs.chemrev.1c00347",
+      "source_url": "https://openalex.org/W3181257149",
+      "journal": "Chemical Reviews",
+      "cited_by_count": 374,
+      "relevance_tags": [
+        "机器学习"
+      ],
+      "abstract_excerpt": "Transition-metal complexes are attractive targets for the design of catalysts and functional materials. The behavior of the metal-organic bond, while very tunable for achieving target properties, is challenging to predict and necessitates searching a wide and complex space to identify needles in haystacks for target applications. This review will focus on the techniques that make high-throughput search of transition-metal chemical space feasible for the discovery of complexes with desirable properties. The review will cover the development, promise, and limitations of \"traditional\" computational chemistry (i.e., force field, semiempirical, and density functional theory methods) as it pertains to data generation for inorganic molecular discovery. The review will also discuss the opportunities and limitations in leveraging experimental data sources. We will focus on how advances in statist",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "kulik",
+      "expert_name": "Heather J. Kulik",
+      "year": 2021,
+      "title": "Using Machine Learning and Data Mining to Leverage Community Knowledge for the Engineering of Stable Metal–Organic Frameworks",
+      "doi": "10.1021/jacs.1c07217",
+      "doi_url": "https://doi.org/10.1021/jacs.1c07217",
+      "source_url": "https://openalex.org/W3175436502",
+      "journal": "Journal of the American Chemical Society",
+      "cited_by_count": 208,
+      "relevance_tags": [
+        "机器学习"
+      ],
+      "abstract_excerpt": "Although the tailored metal active sites and porous architectures of MOFs hold great promise for engineering challenges ranging from gas separations to catalysis, a lack of understanding of how to improve their stability limits their use in practice. To overcome this limitation, we extract thousands of published reports of the key aspects of MOF stability necessary for their practical application: the ability to withstand high temperatures without degrading and the capacity to be activated by removal of solvent molecules. From nearly 4000 manuscripts, we use natural language processing and image analysis to obtain over 2000 solvent-removal stability measures and 3000 thermal degradation temperatures. We analyze the relationships between stability properties and the chemical and geometric structures in this set to identify limits of prior heuristics derived from smaller sets of MOFs. By t",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "kulik",
+      "expert_name": "Heather J. Kulik",
+      "year": 2020,
+      "title": "Accurate Multiobjective Design in a Space of Millions of Transition Metal Complexes with Neural-Network-Driven Efficient Global Optimization",
+      "doi": "10.1021/acscentsci.0c00026",
+      "doi_url": "https://doi.org/10.1021/acscentsci.0c00026",
+      "source_url": "https://openalex.org/W3012320417",
+      "journal": "ACS Central Science",
+      "cited_by_count": 198,
+      "relevance_tags": [
+        "机器学习"
+      ],
+      "abstract_excerpt": "The accelerated discovery of materials for real world applications requires the achievement of multiple design objectives. The multidimensional nature of the search necessitates exploration of multimillion compound libraries over which even density functional theory (DFT) screening is intractable. Machine learning (e.g., artificial neural network, ANN, or Gaussian process, GP) models for this task are limited by training data availability and predictive uncertainty quantification (UQ). We overcome such limitations by using efficient global optimization (EGO) with the multidimensional expected improvement (EI) criterion. EGO balances exploitation of a trained model with acquisition of new DFT data at the Pareto front, the region of chemical space that contains the optimal trade-off between multiple design criteria. We demonstrate this approach for the simultaneous optimization of redox po",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "kulik",
+      "expert_name": "Heather J. Kulik",
+      "year": 2019,
+      "title": "A quantitative uncertainty metric controls error in neural network-driven chemical discovery",
+      "doi": "10.1039/c9sc02298h",
+      "doi_url": "https://doi.org/10.1039/c9sc02298h",
+      "source_url": "https://openalex.org/W2959623824",
+      "journal": "Chemical Science",
+      "cited_by_count": 256,
+      "relevance_tags": [
+        "机器学习"
+      ],
+      "abstract_excerpt": "A predictive approach for driving down machine learning model errors is introduced and demonstrated across discovery for inorganic and organic chemistry.",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "kulik",
+      "expert_name": "Heather J. Kulik",
+      "year": 2018,
+      "title": "Accelerating Chemical Discovery with Machine Learning: Simulated Evolution of Spin Crossover Complexes with an Artificial Neural Network",
+      "doi": "10.1021/acs.jpclett.8b00170",
+      "doi_url": "https://doi.org/10.1021/acs.jpclett.8b00170",
+      "source_url": "https://openalex.org/W2786308452",
+      "journal": "The Journal of Physical Chemistry Letters",
+      "cited_by_count": 204,
+      "relevance_tags": [
+        "机器学习"
+      ],
+      "abstract_excerpt": "Machine learning (ML) has emerged as a powerful complement to simulation for materials discovery by reducing time for evaluation of energies and properties at accuracy competitive with first-principles methods. We use genetic algorithm (GA) optimization to discover unconventional spin-crossover complexes in combination with efficient scoring from an artificial neural network (ANN) that predicts spin-state splitting of inorganic complexes. We explore a compound space of over 5600 candidate materials derived from eight metal/oxidation state combinations and a 32-ligand pool. We introduce a strategy for error-aware ML-driven discovery by limiting how far the GA travels away from the nearest ANN training points while maximizing property (i.e., spin-splitting) fitness, leading to discovery of 80% of the leads from full chemical space enumeration. Over a 51-complex subset, average unsigned err",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "kulik",
+      "expert_name": "Heather J. Kulik",
+      "year": 2017,
+      "title": "Resolving Transition Metal Chemical Space: Feature Selection for Machine Learning and Structure–Property Relationships",
+      "doi": "10.1021/acs.jpca.7b08750",
+      "doi_url": "https://doi.org/10.1021/acs.jpca.7b08750",
+      "source_url": "https://openalex.org/W2749580687",
+      "journal": "The Journal of Physical Chemistry A",
+      "cited_by_count": 295,
+      "relevance_tags": [
+        "机器学习"
+      ],
+      "abstract_excerpt": "Machine learning (ML) of quantum mechanical properties shows promise for accelerating chemical discovery. For transition metal chemistry where accurate calculations are computationally costly and available training data sets are small, the molecular representation becomes a critical ingredient in ML model predictive accuracy. We introduce a series of revised autocorrelation functions (RACs) that encode relationships of the heuristic atomic properties (e.g., size, connectivity, and electronegativity) on a molecular graph. We alter the starting point, scope, and nature of the quantities evaluated in standard ACs to make these RACs amenable to inorganic chemistry. On an organic molecule set, we first demonstrate superior standard AC performance to other presently available topological descriptors for ML model training, with mean unsigned errors (MUEs) for atomization energies on set-aside t",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "kulik",
+      "expert_name": "Heather J. Kulik",
+      "year": 2017,
+      "title": "Predicting electronic structure properties of transition metal complexes with neural networks",
+      "doi": "10.1039/c7sc01247k",
+      "doi_url": "https://doi.org/10.1039/c7sc01247k",
+      "source_url": "https://openalex.org/W2598115655",
+      "journal": "Chemical Science",
+      "cited_by_count": 226,
+      "relevance_tags": [
+        "机器学习"
+      ],
+      "abstract_excerpt": "Our neural network predicts spin-state ordering of transition metal complexes to near-chemical accuracy with respect to DFT reference.",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "corma",
+      "expert_name": "Avelino Corma",
+      "year": 2018,
+      "title": "Metal Catalysts for Heterogeneous Catalysis: From Single Atoms to Nanoclusters and Nanoparticles",
+      "doi": "10.1021/acs.chemrev.7b00776",
+      "doi_url": "https://doi.org/10.1021/acs.chemrev.7b00776",
+      "source_url": "https://openalex.org/W2802791016",
+      "journal": "Chemical Reviews",
+      "cited_by_count": 4883,
+      "relevance_tags": [
+        "选择性氧化"
+      ],
+      "abstract_excerpt": "Metal species with different size (single atoms, nanoclusters, and nanoparticles) show different catalytic behavior for various heterogeneous catalytic reactions. It has been shown in the literature that many factors including the particle size, shape, chemical composition, metal-support interaction, and metal-reactant/solvent interaction can have significant influences on the catalytic properties of metal catalysts. The recent developments of well-controlled synthesis methodologies and advanced characterization tools allow one to correlate the relationships at the molecular level. In this Review, the electronic and geometric structures of single atoms, nanoclusters, and nanoparticles will be discussed. Furthermore, we will summarize the catalytic applications of single atoms, nanoclusters, and nanoparticles for different types of reactions, including CO oxidation, selective oxidation, s",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "corma",
+      "expert_name": "Avelino Corma",
+      "year": 2005,
+      "title": "A Collaborative Effect between Gold and a Support Induces the Selective Oxidation of Alcohols",
+      "doi": "10.1002/anie.200500382",
+      "doi_url": "https://doi.org/10.1002/anie.200500382",
+      "source_url": "https://openalex.org/W2158814908",
+      "journal": "Angewandte Chemie International Edition",
+      "cited_by_count": 1091,
+      "relevance_tags": [
+        "选择性氧化"
+      ],
+      "abstract_excerpt": "Ceria nanoparticles as a support stabilize positive gold species and provide oxygen vacancies. The resulting solid exhibits an exceedingly high efficiency for the solventless aerobic oxidation of primary and secondary alcohols to carbonyl compounds (see picture).",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "corma",
+      "expert_name": "Avelino Corma",
+      "year": 2004,
+      "title": "Nanocrystalline CeO2 Increases the Activity of Au for CO Oxidation by Two Orders of Magnitude",
+      "doi": "10.1002/anie.200353570",
+      "doi_url": "https://doi.org/10.1002/anie.200353570",
+      "source_url": "https://openalex.org/W2158482571",
+      "journal": "Angewandte Chemie International Edition",
+      "cited_by_count": 869,
+      "relevance_tags": [
+        "选择性氧化"
+      ],
+      "abstract_excerpt": "The smaller the better: Depositing gold on nanocrystalline particles of cerium oxide, instead of a regular cerium oxide support, increases the activity of the resulting catalyst by two orders of magnitude for the selective oxidation of CO to CO2, even in the presence of H2 (shown schematically).",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "corma",
+      "expert_name": "Avelino Corma",
+      "year": 2003,
+      "title": "State of the art and future challenges of zeolites as catalysts",
+      "doi": "10.1016/s0021-9517(02)00132-x",
+      "doi_url": "https://doi.org/10.1016/s0021-9517(02)00132-x",
+      "source_url": "https://openalex.org/W2128405848",
+      "journal": "Journal of Catalysis",
+      "cited_by_count": 1265,
+      "relevance_tags": [
+        "分子筛"
+      ],
+      "abstract_excerpt": "",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "corma",
+      "expert_name": "Avelino Corma",
+      "year": 2001,
+      "title": "Sn-zeolite beta as a heterogeneous chemoselective catalyst for Baeyer–Villiger oxidations",
+      "doi": "10.1038/35086546",
+      "doi_url": "https://doi.org/10.1038/35086546",
+      "source_url": "https://openalex.org/W1986092589",
+      "journal": "Nature",
+      "cited_by_count": 1028,
+      "relevance_tags": [
+        "分子筛"
+      ],
+      "abstract_excerpt": "",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "corma",
+      "expert_name": "Avelino Corma",
+      "year": 1998,
+      "title": "Delaminated zeolite precursors as selective acidic catalysts",
+      "doi": "10.1038/24592",
+      "doi_url": "https://doi.org/10.1038/24592",
+      "source_url": "https://openalex.org/W1501468991",
+      "journal": "Nature",
+      "cited_by_count": 923,
+      "relevance_tags": [
+        "分子筛"
+      ],
+      "abstract_excerpt": "",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "corma",
+      "expert_name": "Avelino Corma",
+      "year": 1997,
+      "title": "From Microporous to Mesoporous Molecular Sieve Materials and Their Use in Catalysis",
+      "doi": "10.1021/cr960406n",
+      "doi_url": "https://doi.org/10.1021/cr960406n",
+      "source_url": "https://openalex.org/W2054111649",
+      "journal": "Chemical Reviews",
+      "cited_by_count": 5864,
+      "relevance_tags": [
+        "分子筛"
+      ],
+      "abstract_excerpt": "ADVERTISEMENT RETURN TO ISSUEPREVArticleNEXTFrom Microporous to Mesoporous Molecular Sieve Materials and Their Use in CatalysisAvelino CormaView Author Information Instituto de Tecnología Química, UPV-CSIC, Universidad Politécnica de Valencia, Avda. de los Naranjos s/n, 46022 Valencia, SpainCite this: Chem. Rev. 1997, 97, 6, 2373–2420Publication Date (Web):October 1, 1997Publication History Received7 April 1997Revised16 June 1997Published online1 October 1997Published inissue 1 October 1997https://pubs.acs.org/doi/10.1021/cr960406nhttps://doi.org/10.1021/cr960406nresearch-articleACS PublicationsCopyright © 1997 American Chemical SocietyRequest reuse permissionsArticle Views29508Altmetric-Citations5085LEARN ABOUT THESE METRICSArticle Views are the COUNTER-compliant sum of full text article downloads since November 2008 (both PDF and HTML) across all institutions and individuals. These met",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "corma",
+      "expert_name": "Avelino Corma",
+      "year": 1994,
+      "title": "Synthesis of an ultralarge pore titanium silicate isomorphous to MCM-41 and its application as a catalyst for selective oxidation of hydrocarbons",
+      "doi": "10.1039/c39940000147",
+      "doi_url": "https://doi.org/10.1039/c39940000147",
+      "source_url": "https://openalex.org/W2108753031",
+      "journal": "Journal of the Chemical Society Chemical Communications",
+      "cited_by_count": 770,
+      "relevance_tags": [
+        "选择性氧化"
+      ],
+      "abstract_excerpt": "An ultralarge pore titanium silicate with MCM-41 structure has been prepared by direct hydrothermal synthesis; this material gives rise to useful catalysts for the selective oxidation of small and large organic compounds.",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "coperet",
+      "expert_name": "Christophe Copéret",
+      "year": 2020,
+      "title": "Efficient epoxidation over dinuclear sites in titanium silicalite-1",
+      "doi": "10.1038/s41586-020-2826-3",
+      "doi_url": "https://doi.org/10.1038/s41586-020-2826-3",
+      "source_url": "https://openalex.org/W3097071595",
+      "journal": "Nature",
+      "cited_by_count": 331,
+      "relevance_tags": [
+        "烯烃环氧化",
+        "TS-1"
+      ],
+      "abstract_excerpt": "",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "coperet",
+      "expert_name": "Christophe Copéret",
+      "year": 2019,
+      "title": "Single-Sites and Nanoparticles at Tailored Interfaces Prepared via Surface Organometallic Chemistry from Thermolytic Molecular Precursors",
+      "doi": "10.1021/acs.accounts.9b00138",
+      "doi_url": "https://doi.org/10.1021/acs.accounts.9b00138",
+      "source_url": "https://openalex.org/W2946950936",
+      "journal": "Accounts of Chemical Research",
+      "cited_by_count": 152,
+      "relevance_tags": [
+        "烯烃环氧化"
+      ],
+      "abstract_excerpt": "Conspectus Heterogeneous catalysts are complex by nature, making particularly difficult to assess the structure of their active sites. Such complexity is inherited in part from their mode of preparation, which typically involves coprecipitation or impregnation of metal salts in aqueous solution, and the associated complex surface chemistries. In this context, surface organometallic chemistry (SOMC) has emerged as a powerful approach to generate well-defined surface species, where the metal sites are introduced by grafting tailored molecular precursors. When combined with thermolytic molecular precursors (TMPs) that can lose their organic moieties quite readily upon thermal treatment, SOMC provides access to supported isolated metal sites with defined oxidation state and nuclearity inherited from the precursor. The resulting surface species bear unusual coordination imposed by the surface",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "coperet",
+      "expert_name": "Christophe Copéret",
+      "year": 2016,
+      "title": "Isolated Surface Hydrides: Formation, Structure, and Reactivity",
+      "doi": "10.1021/acs.chemrev.6b00082",
+      "doi_url": "https://doi.org/10.1021/acs.chemrev.6b00082",
+      "source_url": "https://openalex.org/W2465777275",
+      "journal": "Chemical Reviews",
+      "cited_by_count": 222,
+      "relevance_tags": [
+        "分子筛"
+      ],
+      "abstract_excerpt": "Surface hydrides are ubiquitous in catalysis. However, their structures and properties are not as well-understood as those of their molecular counterparts, which have been extensively studied for the past 70 years. Hydrides isolated on surfaces have been characterized as stable entities on oxide surfaces or in zeolites. They have also been proposed as reaction intermediates in numerous catalytic processes (hydrogenation, hydrogenolysis, etc.). They have also been prepared via surface organometallic chemistry. In this review, we describe their key structural features and spectroscopic signatures. We discuss their reactivity and stability and also point out unexplored areas.",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "coperet",
+      "expert_name": "Christophe Copéret",
+      "year": 2016,
+      "title": "Correlating Synthetic Methods, Morphology, Atomic-Level Structure, and Catalytic Activity of Sn-β Catalysts",
+      "doi": "10.1021/acscatal.6b00114",
+      "doi_url": "https://doi.org/10.1021/acscatal.6b00114",
+      "source_url": "https://openalex.org/W2393949105",
+      "journal": "ACS Catalysis",
+      "cited_by_count": 129,
+      "relevance_tags": [
+        "分子筛"
+      ],
+      "abstract_excerpt": "Sn-β zeolites prepared using different recipes feature very different catalytic activities for aqueous phase glucose isomerization, suggesting the presence of different active sites. A systematic study of the morphology and atomic-level structure of the materials using DNP NMR spectroscopy in combination with first-principles calculations allows for the discrimination between potential sites and leads to a proposal of specific structural features that are important for high activity. The results indicate that the materials showing the highest activity possess a highly hydrophobic, defect-free zeolite framework. Those materials show so-called closed and associated partially hydrolyzed Sn(IV) sites in the T6 and T5/T7 lattice positions. On the other hand, postsynthetically synthesized Sn-β samples prepared in two steps via dealumination and subsequent solid-state ion exchange from Al-β sho",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "coperet",
+      "expert_name": "Christophe Copéret",
+      "year": 2015,
+      "title": "Cooperativity between Al Sites Promotes Hydrogen Transfer and Carbon–Carbon Bond Formation upon Dimethyl Ether Activation on Alumina",
+      "doi": "10.1021/acscentsci.5b00226",
+      "doi_url": "https://doi.org/10.1021/acscentsci.5b00226",
+      "source_url": "https://openalex.org/W2370205474",
+      "journal": "ACS Central Science",
+      "cited_by_count": 117,
+      "relevance_tags": [
+        "分子筛"
+      ],
+      "abstract_excerpt": "The methanol-to-olefin (MTO) process allows the conversion of methanol/dimethyl ether into olefins on acidic zeolites via the so-called hydrocarbon pool mechanism. However, the site and mechanism of formation of the first carbon-carbon bond are still a matter of debate. Here, we show that the Lewis acidic Al sites on the 110 facet of γ-Al2O3 can readily activate dimethyl ether to yield CH4, alkenes, and surface formate species according to spectroscopic studies combined with a computational approach. The carbon-carbon forming step as well as the formation of methane and surface formate involves a transient oxonium ion intermediate, generated by a hydrogen transfer between surface methoxy species and coordinated methanol on adjacent Al sites. These results indicate that extra framework Al centers in acidic zeolites, which are associated with alumina, can play a key role in the formation o",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "coperet",
+      "expert_name": "Christophe Copéret",
+      "year": 2014,
+      "title": "NMR Signatures of the Active Sites in Sn‐β Zeolite",
+      "doi": "10.1002/anie.201403905",
+      "doi_url": "https://doi.org/10.1002/anie.201403905",
+      "source_url": "https://openalex.org/W2159417697",
+      "journal": "Angewandte Chemie International Edition",
+      "cited_by_count": 176,
+      "relevance_tags": [
+        "分子筛"
+      ],
+      "abstract_excerpt": "Dynamic nuclear polarization surface enhanced NMR (DNP-SENS), Mössbauer spectroscopy, and computational chemistry were combined to obtain structural information on the active-site speciation in Sn-β zeolite. This approach unambiguously shows the presence of framework Sn(IV)-active sites in an octahedral environment, which probably correspond to so-called open and closed sites, respectively (namely, tin bound to three or four siloxy groups of the zeolite framework).",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "coperet",
+      "expert_name": "Christophe Copéret",
+      "year": 2009,
+      "title": "Gold Nanoparticles Supported on Passivated Silica: Access to an Efficient Aerobic Epoxidation Catalyst and the Intrinsic Oxidation Activity of Gold",
+      "doi": "10.1021/ja903730q",
+      "doi_url": "https://doi.org/10.1021/ja903730q",
+      "source_url": "https://openalex.org/W2078221181",
+      "journal": "Journal of the American Chemical Society",
+      "cited_by_count": 128,
+      "relevance_tags": [
+        "烯烃环氧化",
+        "选择性氧化"
+      ],
+      "abstract_excerpt": "Well-defined and perfectly dispersed [( identical withSiO)Au(I)] surface species supported on silica have been obtained via surface organometallic chemistry and transformed upon mild reduction (H(2), 300 degrees C) into small (1.8 +/- 0.6 nm) Au particles supported on silica passivated with SiMe(3) functionalities. Improved performance in liquid-phase aerobic epoxidation has been achieved, and the intrinsic activity of gold in oxidation is revealed.",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "coperet",
+      "expert_name": "Christophe Copéret",
+      "year": 1997,
+      "title": "A simple and efficient method for epoxidation of terminal alkenes",
+      "doi": "10.1039/a703542j",
+      "doi_url": "https://doi.org/10.1039/a703542j",
+      "source_url": "https://openalex.org/W2001167436",
+      "journal": "Chemical Communications",
+      "cited_by_count": 198,
+      "relevance_tags": [
+        "烯烃环氧化",
+        "H₂O₂/OOH"
+      ],
+      "abstract_excerpt": "The use of a catalytic amount of 3-cyanopyridine in the methyltrioxorhenium catalysed epoxidation of terminal alkenes with aqueous hydrogen peroxide speeds turnover, which results in the formation of many functionalized epoxides in high yields.",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "hutchings",
+      "expert_name": "Graham J. Hutchings",
+      "year": 2017,
+      "title": "Aqueous Au-Pd colloids catalyze selective CH 4 oxidation to CH 3 OH with O 2 under mild conditions",
+      "doi": "10.1126/science.aan6515",
+      "doi_url": "https://doi.org/10.1126/science.aan6515",
+      "source_url": "https://openalex.org/W2753076645",
+      "journal": "Science",
+      "cited_by_count": 711,
+      "relevance_tags": [
+        "H₂O₂/OOH"
+      ],
+      "abstract_excerpt": "A radical route from methane to methanol The conversion of methane into chemicals usually proceeds through high-temperature routes that first form more reactive carbon monoxide and hydrogen. Agarwal et al. report a low-temperature (50°C) route in aqueous hydrogen peroxide (H 2 O 2 ) for oxidizing methane to methanol in high yield (92%). They used colloidal gold-palladium nanoparticles as a catalyst. The primary oxidant was O 2 ; isotopic labeling showed that H 2 O 2 activated methane to methyl radicals, which subsequently incorporated O 2 . Science , this issue p. 223",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "hutchings",
+      "expert_name": "Graham J. Hutchings",
+      "year": 2016,
+      "title": "Palladium-tin catalysts for the direct synthesis of H 2 O 2 with high selectivity",
+      "doi": "10.1126/science.aad5705",
+      "doi_url": "https://doi.org/10.1126/science.aad5705",
+      "source_url": "https://openalex.org/W2302671968",
+      "journal": "Science",
+      "cited_by_count": 668,
+      "relevance_tags": [
+        "H₂O₂/OOH"
+      ],
+      "abstract_excerpt": "The direct synthesis of hydrogen peroxide (H2O2) from H2 and O2 represents a potentially atom-efficient alternative to the current industrial indirect process. We show that the addition of tin to palladium catalysts coupled with an appropriate heat treatment cycle switches off the sequential hydrogenation and decomposition reactions, enabling selectivities of >95% toward H2O2. This effect arises from a tin oxide surface layer that encapsulates small Pd-rich particles while leaving larger Pd-Sn alloy particles exposed. We show that this effect is a general feature for oxide-supported Pd catalysts containing an appropriate second metal oxide component, and we set out the design principles for producing high-selectivity Pd-based catalysts for direct H2O2 production that do not contain gold.",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "hutchings",
+      "expert_name": "Graham J. Hutchings",
+      "year": 2012,
+      "title": "Designing bimetallic catalysts for a green and sustainable future",
+      "doi": "10.1039/c2cs35296f",
+      "doi_url": "https://doi.org/10.1039/c2cs35296f",
+      "source_url": "https://openalex.org/W1980701169",
+      "journal": "Chemical Society Reviews",
+      "cited_by_count": 1187,
+      "relevance_tags": [
+        "选择性氧化"
+      ],
+      "abstract_excerpt": "This Critical Review provides an overview of the recent developments in the synthesis and characterization of bimetallic nanoparticles. Initially the review follows a materials science perspective on preparing bimetallic nanoparticles with designer morphologies, after which the emphasis shifts towards recent developments in using these bimetallic particles for catalysing either oxidation or reduction. In the final part of this review we present an overview of the utilization of bimetallic catalyst systems for the transformation of bio-renewable substrates and reactions related to the realization of a bio-refinery. Because of the sheer number of examples of transformations in this area, a few key examples, namely selective oxidation, hydrogenation/hydrogenolysis and reforming of biomass derived molecules, have been chosen for this review. Reports of bimetallic catalysts being used for the",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "hutchings",
+      "expert_name": "Graham J. Hutchings",
+      "year": 2012,
+      "title": "Direct Catalytic Conversion of Methane to Methanol in an Aqueous Medium by using Copper‐Promoted Fe‐ZSM‐5",
+      "doi": "10.1002/anie.201108706",
+      "doi_url": "https://doi.org/10.1002/anie.201108706",
+      "source_url": "https://openalex.org/W2147654039",
+      "journal": "Angewandte Chemie International Edition",
+      "cited_by_count": 648,
+      "relevance_tags": [
+        "H₂O₂/OOH",
+        "分子筛",
+        "选择性氧化"
+      ],
+      "abstract_excerpt": "Iron copper zeolite (Fe-Cu-ZSM-5) with aqueous hydrogen peroxide is active for the selective oxidation of methane to methanol. Iron is involved in the activation of the carbon–hydrogen bond, while copper allows methanol to form as the major product. The catalyst is stable, re-usable and activates methane giving >90 % methanol selectivity and 10 % conversion in a closed catalytic cycle (see scheme).",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "hutchings",
+      "expert_name": "Graham J. Hutchings",
+      "year": 2011,
+      "title": "Solvent-Free Oxidation of Primary Carbon-Hydrogen Bonds in Toluene Using Au-Pd Alloy Nanoparticles",
+      "doi": "10.1126/science.1198458",
+      "doi_url": "https://doi.org/10.1126/science.1198458",
+      "source_url": "https://openalex.org/W2065744294",
+      "journal": "Science",
+      "cited_by_count": 826,
+      "relevance_tags": [
+        "选择性氧化"
+      ],
+      "abstract_excerpt": "Selective oxidation of primary carbon-hydrogen bonds with oxygen is of crucial importance for the sustainable exploitation of available feedstocks. To date, heterogeneous catalysts have either shown low activity and/or selectivity or have required activated oxygen donors. We report here that supported gold-palladium (Au-Pd) nanoparticles on carbon or TiO(2) are active for the oxidation of the primary carbon-hydrogen bonds in toluene and related molecules, giving high selectivities to benzyl benzoate under mild solvent-free conditions. Differences between the catalytic activity of the Au-Pd nanoparticles on carbon and TiO(2) supports are rationalized in terms of the particle/support wetting behavior and the availability of exposed corner/edge sites.",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "hutchings",
+      "expert_name": "Graham J. Hutchings",
+      "year": 2009,
+      "title": "Switching Off Hydrogen Peroxide Hydrogenation in the Direct Synthesis Process",
+      "doi": "10.1126/science.1168980",
+      "doi_url": "https://doi.org/10.1126/science.1168980",
+      "source_url": "https://openalex.org/W1972243282",
+      "journal": "Science",
+      "cited_by_count": 946,
+      "relevance_tags": [
+        "H₂O₂/OOH"
+      ],
+      "abstract_excerpt": "Hydrogen peroxide (H2O2) is an important disinfectant and bleach and is currently manufactured from an indirect process involving sequential hydrogenation/oxidation of anthaquinones. However, a direct process in which H2 and O2 are reacted would be preferable. Unfortunately, catalysts for the direct synthesis of H2O2 are also effective for its subsequent decomposition, and this has limited their development. We show that acid pretreatment of a carbon support for gold-palladium alloy catalysts switches off the decomposition of H2O2. This treatment decreases the size of the alloy nanoparticles, and these smaller nanoparticles presumably decorate and inhibit the sites for the decomposition reaction. Hence, when used in the direct synthesis of H2O2, the acid-pretreated catalysts give high yields of H2O2 with hydrogen selectivities greater than 95%.",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "hutchings",
+      "expert_name": "Graham J. Hutchings",
+      "year": 2005,
+      "title": "Direct synthesis of hydrogen peroxide from H2 and O2 using TiO2-supported Au–Pd catalysts",
+      "doi": "10.1016/j.jcat.2005.09.015",
+      "doi_url": "https://doi.org/10.1016/j.jcat.2005.09.015",
+      "source_url": "https://openalex.org/W2988019223",
+      "journal": "Journal of Catalysis",
+      "cited_by_count": 528,
+      "relevance_tags": [
+        "H₂O₂/OOH"
+      ],
+      "abstract_excerpt": "",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "hutchings",
+      "expert_name": "Graham J. Hutchings",
+      "year": 2002,
+      "title": "Selective oxidation of glycerol to glyceric acid using a gold catalyst in aqueous sodium hydroxide",
+      "doi": "10.1039/b201112n",
+      "doi_url": "https://doi.org/10.1039/b201112n",
+      "source_url": "https://openalex.org/W2024355474",
+      "journal": "Chemical Communications",
+      "cited_by_count": 572,
+      "relevance_tags": [
+        "选择性氧化"
+      ],
+      "abstract_excerpt": "Glycerol is oxidised to glyceric acid with 100% selectivity using either 1% Au/charcoal or 1% Au/graphite catalyst under mild reaction conditions (60 degrees C, 3 h, water as solvent).",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "weckhuysen",
+      "expert_name": "Bert M. Weckhuysen",
+      "year": 2015,
+      "title": "Fluid catalytic cracking: recent developments on the grand old lady of zeolite catalysis",
+      "doi": "10.1039/c5cs00376h",
+      "doi_url": "https://doi.org/10.1039/c5cs00376h",
+      "source_url": "https://openalex.org/W2159775165",
+      "journal": "Chemical Society Reviews",
+      "cited_by_count": 1103,
+      "relevance_tags": [
+        "分子筛"
+      ],
+      "abstract_excerpt": "Fluid catalytic cracking (FCC) is one of the major conversion technologies in the oil refinery industry. FCC currently produces the majority of the world's gasoline, as well as an important fraction of propylene for the polymer industry. In this critical review, we give an overview of the latest trends in this field of research. These trends include ways to make it possible to process either very heavy or very light crude oil fractions as well as to co-process biomass-based oxygenates with regular crude oil fractions, and convert these more complex feedstocks in an increasing amount of propylene and diesel-range fuels. After providing some general background of the FCC process, including a short history as well as details on the process, reactor design, chemical reactions involved and catalyst material, we will discuss several trends in FCC catalysis research by focusing on ways to impro",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "weckhuysen",
+      "expert_name": "Bert M. Weckhuysen",
+      "year": 2013,
+      "title": "Local Environment and Nature of Cu Active Sites in Zeolite-Based Catalysts for the Selective Catalytic Reduction of NOx",
+      "doi": "10.1021/cs300794s",
+      "doi_url": "https://doi.org/10.1021/cs300794s",
+      "source_url": "https://openalex.org/W2084076310",
+      "journal": "ACS Catalysis",
+      "cited_by_count": 363,
+      "relevance_tags": [
+        "分子筛"
+      ],
+      "abstract_excerpt": "Cu-exchanged zeolites have demonstrated widespread use as catalyst materials in the abatement of NO x, especially from mobile sources. Recent studies focusing on Cu-exchanged zeolites with the CHA structure have demonstrated them to be excellent catalysts in the ammonia-assisted selective catalytic reduction (NH 3 -SCR) of NO x . Thorough characterization of these materials using state-of-the-art techniques has led to a significant improvement in the understanding of active sites present, which contributes toward a fundamental understanding of the catalytic processes and the rational design of new materials; however, the availability of multiple techniques at our disposal has led to various observations and conclusions on the nature of the active sites. This article begins with a brief introduction to exhaust emission control in the mobile sector, followed by an overview of hydrocarbon-S",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "weckhuysen",
+      "expert_name": "Bert M. Weckhuysen",
+      "year": 2012,
+      "title": "Confirmation of Isolated Cu 2+ Ions in SSZ-13 Zeolite as Active Sites in NH 3 -Selective Catalytic Reduction",
+      "doi": "10.1021/jp212450d",
+      "doi_url": "https://doi.org/10.1021/jp212450d",
+      "source_url": "https://openalex.org/W2010869192",
+      "journal": "The Journal of Physical Chemistry C",
+      "cited_by_count": 351,
+      "relevance_tags": [
+        "分子筛"
+      ],
+      "abstract_excerpt": "NH 3 -Selective Catalytic Reduction (NH 3 -SCR) is a widely used technology for NO x reduction in the emission control systems of heavy duty diesel vehicles. Copper-based ion exchanged zeolites and in particular Cu-SSZ-13 (CHA framework) catalysts show both exceptional activity and hydrothermal stability for this reaction. In this work, we have studied the origin of the SCR activity of Cu-SSZ-13 as evidenced from a combination of synchrotron-based and laboratory techniques. Synchrotron-based in situ XAFS/XRD measurements were used to provide complementary information on the local copper environment under realistic NH 3 -SCR conditions. Crucial then to the catalytic activity of Cu-SSZ-13 is the local environment of the copper species, particularly in the zeolite. Cu-SSZ-13 contains mononuclear Cu 2+ species, located in the face of the double-6-ring subunit of the zeolite after calcination",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "weckhuysen",
+      "expert_name": "Bert M. Weckhuysen",
+      "year": 2011,
+      "title": "Coke Formation during the Methanol‐to‐Olefin Conversion: In Situ Microspectroscopy on Individual H‐ZSM‐5 Crystals with Different Brønsted Acidity",
+      "doi": "10.1002/chem.201002624",
+      "doi_url": "https://doi.org/10.1002/chem.201002624",
+      "source_url": "https://openalex.org/W2101801262",
+      "journal": "Chemistry - A European Journal",
+      "cited_by_count": 297,
+      "relevance_tags": [
+        "分子筛"
+      ],
+      "abstract_excerpt": "Coke formation during the methanol-to-olefin (MTO) conversion has been studied at the single-particle level with in situ UV/Vis and confocal fluorescence microscopy. For this purpose, large H-ZSM-5 crystals differing in their Si/Al molar ratio have been investigated. During MTO, performed at 623 and 773 K, three major UV/Vis bands assigned to different carbonaceous deposits and their precursors are observed. The absorption at 420 nm, assigned to methyl-substituted aromatic compounds, initiates the buildup of the optically active coke species. With time-on-stream, these carbonaceous compounds expand in size, resulting in the gradual development of a second absorption band at around 500 nm. An additional broad absorption band in the 600 nm region indicates the enhanced formation of extended carbonaceous compounds that form as the reaction temperature is raised. Overall, the rate of coke fo",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "weckhuysen",
+      "expert_name": "Bert M. Weckhuysen",
+      "year": 2009,
+      "title": "Morphology-dependent zeolite intergrowth structures leading to distinct internal and outer-surface molecular diffusion barriers",
+      "doi": "10.1038/nmat2530",
+      "doi_url": "https://doi.org/10.1038/nmat2530",
+      "source_url": "https://openalex.org/W2075045251",
+      "journal": "Nature Materials",
+      "cited_by_count": 295,
+      "relevance_tags": [
+        "分子筛"
+      ],
+      "abstract_excerpt": "",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "weckhuysen",
+      "expert_name": "Bert M. Weckhuysen",
+      "year": 2008,
+      "title": "Space‐ and Time‐Resolved In‐situ Spectroscopy on the Coke Formation in Molecular Sieves: Methanol‐to‐Olefin Conversion over H‐ZSM‐5 and H‐SAPO‐34",
+      "doi": "10.1002/chem.200801293",
+      "doi_url": "https://doi.org/10.1002/chem.200801293",
+      "source_url": "https://openalex.org/W2017193073",
+      "journal": "Chemistry - A European Journal",
+      "cited_by_count": 348,
+      "relevance_tags": [
+        "分子筛"
+      ],
+      "abstract_excerpt": "Formation of coke in large H-ZSM-5 and H-SAPO-34 crystals during the methanol-to-olefin (MTO) reaction has been studied in a space- and time-resolved manner. This has been made possible by applying a high-temperature in-situ cell in combination with micro-spectroscopic techniques. The buildup of optically active carbonaceous species allows detection with UV/Vis microscopy, while a confocal fluorescence microscope in an upright configuration visualises the formation of coke molecules and their precursors inside the catalyst grains. In H-ZSM-5, coke is initially formed at the triangular crystal edges, in which straight channel openings reach directly the external crystal surface. At reaction temperatures ranging from 530 to 745 K, two absorption bands at around 415 and 550 nm were detected due to coke or its precursors. Confocal fluorescence microscopy reveals fluorescent carbonaceous spec",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "weckhuysen",
+      "expert_name": "Bert M. Weckhuysen",
+      "year": 2006,
+      "title": "The Production of Propene Oxide: Catalytic Processes and Recent Developments",
+      "doi": "10.1021/ie0513090",
+      "doi_url": "https://doi.org/10.1021/ie0513090",
+      "source_url": "https://openalex.org/W1983230556",
+      "journal": "Industrial & Engineering Chemistry Research",
+      "cited_by_count": 556,
+      "relevance_tags": [
+        "H₂O₂/OOH"
+      ],
+      "abstract_excerpt": "Propene oxide, which is one of the major commodity chemicals used in chemical industry, desperately requires a new process for its production, because of the disadvantages that are encountered with the currently available processes. This paper discusses the existing processes used for the production of propene oxide the chlorohydrin and hydroperoxide processes and their advantages and disadvantages. Furthermore, the new processes and catalysts under development for the propene oxide production are discussed, as well as the challenges that are still limiting the applications of some of those prospects. The most important new developments for the production of propene oxide discussed in this paper are: the hydrogen peroxide combination process, the ethene oxide alike silver catalysts, the molten salt systems, and the gold−titania catalyst systems.",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "weckhuysen",
+      "expert_name": "Bert M. Weckhuysen",
+      "year": 2002,
+      "title": "A New Templated Ordered Structure with Combined Micro- and Mesopores and Internal Silica Nanocapsules",
+      "doi": "10.1021/jp025642i",
+      "doi_url": "https://doi.org/10.1021/jp025642i",
+      "source_url": "https://openalex.org/W2117331440",
+      "journal": "The Journal of Physical Chemistry B",
+      "cited_by_count": 305,
+      "relevance_tags": [
+        "分子筛"
+      ],
+      "abstract_excerpt": "The increasing awareness of the need to create green and sustainable production processes in all fields of chemistry has stimulated materials scientists to search for innovative catalysts supports. These new catalytic supports should allow the heterogenization of most catalytic processes, increasing the efficiency and selectivity of the synthesis and reducing waste and byproducts. Following the development of several micellar templated structures, such as M41S 1, FSM-16, 2,3 HMS, 4,5 MSU-x, 6 and SBA-x, 7,8 it is a crucial next step to create support materials, consisting of a composite matrix with combined micro- and mesoporosities and a sufficient stability to withstand most industrial treatments. We describe in this paper the very first development of a hexagonal material with large pore diameters and thick walls (4 nm), containing internal microporous silica nanocapsules. These plugg",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "davis",
+      "expert_name": "Mark E. Davis",
+      "year": 2018,
+      "title": "Small-Pore Zeolites: Synthesis and Catalysis",
+      "doi": "10.1021/acs.chemrev.7b00738",
+      "doi_url": "https://doi.org/10.1021/acs.chemrev.7b00738",
+      "source_url": "https://openalex.org/W2802665194",
+      "journal": "Chemical Reviews",
+      "cited_by_count": 856,
+      "relevance_tags": [
+        "分子筛"
+      ],
+      "abstract_excerpt": "In the past decade or so, small-pore zeolites have received greater attention than large- and medium-pore molecular sieves that have historically dominated the literature. This is primarily due to the commercialization of two major catalytic processes, NOx exhaust removal and methanol conversion to light olefins, that take advantage of the properties of these materials with smaller apertures. Small-pore zeolites possess pores that are constructed of eight tetrahedral atoms (Si 4+ and Al 3+ ), each time linked by a shared oxygen These eight-member ring pores (8MR) provide small molecules access to the intracrystalline void space, e.g., to NOx during car exhaust cleaning (NOx removal) or to methanol en route to its conversion into light olefins, while restricting larger molecule entrance and departure that is critical to overall catalyst performance. In total, there are forty-four structur",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "davis",
+      "expert_name": "Mark E. Davis",
+      "year": 2012,
+      "title": "Metalloenzyme-like catalyzed isomerizations of sugars by Lewis acid zeolites",
+      "doi": "10.1073/pnas.1206708109",
+      "doi_url": "https://doi.org/10.1073/pnas.1206708109",
+      "source_url": "https://openalex.org/W2109715305",
+      "journal": "Proceedings of the National Academy of Sciences",
+      "cited_by_count": 434,
+      "relevance_tags": [
+        "分子筛"
+      ],
+      "abstract_excerpt": "Isomerization of sugars is used in a variety of industrially relevant processes and in glycolysis. Here, we show that hydrophobic zeolite beta with framework tin or titanium Lewis acid centers isomerizes sugars, e.g., glucose, via reaction pathways that are analogous to those of metalloenzymes. Specifically, experimental and theoretical investigations reveal that glucose partitions into the zeolite in the pyranose form, ring opens to the acyclic form in the presence of the Lewis acid center, isomerizes into the acyclic form of fructose, and finally ring closes to yield the furanose product. The zeolite catalysts provide processing advantages over metalloenzymes such as an ability to work at higher temperatures and in acidic conditions that allow for the isomerization reaction to be coupled with other important conversions.",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "davis",
+      "expert_name": "Mark E. Davis",
+      "year": 2011,
+      "title": "“One-Pot” Synthesis of 5-(Hydroxymethyl)furfural from Carbohydrates using Tin-Beta Zeolite",
+      "doi": "10.1021/cs2000544",
+      "doi_url": "https://doi.org/10.1021/cs2000544",
+      "source_url": "https://openalex.org/W2048704620",
+      "journal": "ACS Catalysis",
+      "cited_by_count": 683,
+      "relevance_tags": [
+        "分子筛"
+      ],
+      "abstract_excerpt": "Conversion of carbohydrates to 5-(hydroxymethyl)furfural (HMF) may provide a step forward toward achieving a renewable biomass-based chemicals and fuels platform. Recently, we reported that a tin-containing, high-silica molecular sieve with the zeolite beta topology (Sn-Beta) can efficiently catalyze the isomerization of glucose to fructose in aqueous media at low pH. Herein, we describe the combination of Sn-Beta with acid catalysts in a one vessel, biphasic reactor system to synthesize HMF from carbohydrates such as glucose, cellobiose, and starch with high efficiency. HMF selectivities over 70% were obtained using this “one-pot” biphasic water/tetrahydrofuran (THF) reactor system. The key to successfully achieving the conversions/selectivities reported is that Sn-Beta is able to convert glucose to fructose at pH near 1 and in saturated aqueous salt solutions.",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "davis",
+      "expert_name": "Mark E. Davis",
+      "year": 2010,
+      "title": "Tin-containing zeolites are highly active catalysts for the isomerization of glucose in water",
+      "doi": "10.1073/pnas.1002358107",
+      "doi_url": "https://doi.org/10.1073/pnas.1002358107",
+      "source_url": "https://openalex.org/W2068654934",
+      "journal": "Proceedings of the National Academy of Sciences",
+      "cited_by_count": 1019,
+      "relevance_tags": [
+        "分子筛"
+      ],
+      "abstract_excerpt": "The isomerization of glucose into fructose is a large-scale reaction for the production of high-fructose corn syrup (HFCS; reaction performed by enzyme catalysts) and recently is being considered as an intermediate step in the possible route of biomass to fuels and chemicals. Here, it is shown that a large-pore zeolite that contains tin (Sn-Beta) is able to isomerize glucose to fructose in aqueous media with high activity and selectivity. Specifically, a 10% (wt/wt) glucose solution containing a catalytic amount of Sn-Beta (150 Sn:glucose molar ratio) gives product yields of approximately 46% (wt/wt) glucose, 31% (wt/wt) fructose, and 9% (wt/wt) mannose after 30 min and 12 min of reaction at 383 K and 413 K, respectively. This reactivity is achieved also when a 45 wt% glucose solution is used. The properties of the large-pore zeolite greatly influence the reaction behavior because the re",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "davis",
+      "expert_name": "Mark E. Davis",
+      "year": 2010,
+      "title": "Mechanism of Glucose Isomerization Using a Solid Lewis Acid Catalyst in Water",
+      "doi": "10.1002/anie.201004689",
+      "doi_url": "https://doi.org/10.1002/anie.201004689",
+      "source_url": "https://openalex.org/W2096605011",
+      "journal": "Angewandte Chemie International Edition",
+      "cited_by_count": 738,
+      "relevance_tags": [
+        "分子筛"
+      ],
+      "abstract_excerpt": "Other way round: 1H and 13C NMR spectroscopy on isotopically labeled glucose reveals that in the presence of tin-containing zeolite Sn-Beta, the isomerization reaction of glucose in water proceeds by way of an intramolecular hydride shift (see scheme) rather than proton transfer. This is the first mechanistic demonstration of Sn-Beta acting as a Lewis acid in a purely aqueous environment.",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "davis",
+      "expert_name": "Mark E. Davis",
+      "year": 2000,
+      "title": "Molecular imprinting of bulk, microporous silica",
+      "doi": "10.1038/35002032",
+      "doi_url": "https://doi.org/10.1038/35002032",
+      "source_url": "https://openalex.org/W1602275601",
+      "journal": "Nature",
+      "cited_by_count": 528,
+      "relevance_tags": [
+        "分子筛"
+      ],
+      "abstract_excerpt": "",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "davis",
+      "expert_name": "Mark E. Davis",
+      "year": 1993,
+      "title": "New vistas in zeolite and molecular sieve catalysis",
+      "doi": "10.1021/ar00027a006",
+      "doi_url": "https://doi.org/10.1021/ar00027a006",
+      "source_url": "https://openalex.org/W2042302296",
+      "journal": "Accounts of Chemical Research",
+      "cited_by_count": 422,
+      "relevance_tags": [
+        "分子筛"
+      ],
+      "abstract_excerpt": "Zeolites and zeolite-like molecular sieves are able to \\nrecognize, discriminate, and organize molecules with \\nprecisions that can be less than 1 Å. Because these structures (Figure 1) contain uniformly sized pores in the range of 4-13 Å, they have been exploited by the petrochemical industries to perform many large-scale, \\nshape-selective hydrocarbon reactions. Further information \\non the materials listed in Figure 1 is provided in Table I. The pore sizes listed are the crystallographic free diameters from each structure. Additionally, the dimensionality of the pore systems is provided. (A simple way to think about the dimensionality of the pore system is to place an organic molecule into the void space and observe in how many different directions it can move. For example, an n-hexane molecule can move in one direction in the channels of VPI-5 whereas it can travel in all three direc",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "davis",
+      "expert_name": "Mark E. Davis",
+      "year": 1992,
+      "title": "Zeolite and molecular sieve synthesis",
+      "doi": "10.1021/cm00022a005",
+      "doi_url": "https://doi.org/10.1021/cm00022a005",
+      "source_url": "https://openalex.org/W1975299796",
+      "journal": "Chemistry of Materials",
+      "cited_by_count": 1448,
+      "relevance_tags": [
+        "分子筛"
+      ],
+      "abstract_excerpt": "Zeolite and molecular sieve syntheses are reviewed. The synthesis of aluminum-rich zeolites, high-silica \\nzeolites, and phosphate-based molecular sieves are evaluated. Unresolved mechanistic issues are outlined \\nand areas for exploration suggested. The ability to plan zeolite and molecular sieve syntheses is discussed \\nand a strategy for synthesizing a chiral zeolite is used to demonstrate the current limitations in \"designing\" \\nnew molecular sieves.",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    }
+  ]
 }
