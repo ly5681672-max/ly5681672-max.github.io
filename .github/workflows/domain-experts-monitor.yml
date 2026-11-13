@@ -17,6 +17,8 @@ on:
       - "scripts/sync_domain_expert_pronunciations.py"
       - "scripts/sync_domain_experts.py"
       - "scripts/discover_domain_expert_milestones.py"
+      - "scripts/verify_domain_expert_milestones.py"
+      - "tests/test_domain_expert_milestones.py"
       - "tests/test_sync_domain_experts.py"
       - "tests/test_discover_domain_expert_milestones.py"
       - "_data/domain_experts.json"
@@ -73,6 +75,16 @@ jobs:
           else
             python3 scripts/discover_domain_expert_milestones.py --dry-run
           fi
+      - name: Verify publisher-deposited abstracts for formal milestones
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          SELECTED_MODE: ${{ inputs.mode }}
+        run: |
+          if [[ "$EVENT_NAME" == "schedule" || "$EVENT_NAME" == "push" || "$SELECTED_MODE" == "apply" ]]; then
+            python3 scripts/verify_domain_expert_milestones.py --apply
+          else
+            python3 scripts/verify_domain_expert_milestones.py
+          fi
       - name: Preserve evidence for inspection
         if: always()
         uses: actions/upload-artifact@v4
@@ -91,7 +103,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          git add -- _data/domain_expert_updates.json _data/domain_expert_milestone_candidates.json _data/domain_experts.json
+          git add -- _data/domain_expert_updates.json _data/domain_expert_milestone_candidates.json _data/domain_experts.json _data/domain_expert_milestones.json
           if git diff --cached --quiet; then
             echo "No changed bibliographic metadata."
             exit 0
