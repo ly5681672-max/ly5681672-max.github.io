@@ -15,7 +15,9 @@ on:
   push:
     paths:
       - "scripts/sync_domain_experts.py"
+      - "scripts/discover_domain_expert_milestones.py"
       - "tests/test_sync_domain_experts.py"
+      - "tests/test_discover_domain_expert_milestones.py"
       - "_data/domain_experts.json"
       - ".github/workflows/domain-experts-monitor.yml"
 
@@ -35,7 +37,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Validate identity and relevance safeguards
-        run: python3 -m unittest discover -s tests -p test_sync_domain_experts.py -v
+        run: python3 -m unittest discover -s tests -p "test_*domain_expert*.py" -v
       - name: Check private OpenAlex API key prerequisite
         if: github.event_name != 'push'
         env:
@@ -59,6 +61,18 @@ jobs:
           else
             python3 scripts/sync_domain_experts.py --dry-run
           fi
+      - name: Discover historical milestone candidates (not verified findings)
+        if: github.event_name != 'push'
+        env:
+          OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
+          EVENT_NAME: ${{ github.event_name }}
+          SELECTED_MODE: ${{ inputs.mode }}
+        run: |
+          if [[ "$EVENT_NAME" == "schedule" || "$SELECTED_MODE" == "apply" ]]; then
+            python3 scripts/discover_domain_expert_milestones.py --apply
+          else
+            python3 scripts/discover_domain_expert_milestones.py --dry-run
+          fi
       - name: Preserve evidence for inspection
         if: always()
         uses: actions/upload-artifact@v4
@@ -66,6 +80,8 @@ jobs:
           name: domain-experts-weekly-evidence
           path: |
             domain-experts-report.json
+            domain-expert-milestone-candidates-report.json
+            _data/domain_expert_milestone_candidates.json
             _data/domain_expert_updates.json
           if-no-files-found: ignore
           retention-days: 30
@@ -75,7 +91,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          git add -- _data/domain_expert_updates.json
+          git add -- _data/domain_expert_updates.json _data/domain_expert_milestone_candidates.json
           if git diff --cached --quiet; then
             echo "No changed bibliographic metadata."
             exit 0
