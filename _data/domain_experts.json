@@ -160,5 +160,24 @@
     "orcid": "0000-0001-8294-1477",
     "pronunciation_ipa": "/mɑːrk iː ˈdeɪvɪs/",
     "pronunciation_status": "PROVISIONAL"
+  },
+  {
+    "id": "cao_yueqiang",
+    "name": "Yueqiang Cao（曹约强）",
+    "group": "ai",
+    "institution": "华东理工大学 · 化工学院",
+    "intro": "以催化反应工程与选择性加氢为研究对象，结合DFT、微观动力学、原位表征、机器学习及主动学习，开展反应机理与数据驱动的催化剂设计；与本网站的描述符构建、活性位调控和构效关系研究在方法上相关，研究反应体系并非烯烃环氧化。",
+    "topics": [
+      "DFT与动力学",
+      "机器学习",
+      "催化剂设计",
+      "反应机理",
+      "主动学习"
+    ],
+    "official_url": "https://cre.ecust.edu.cn/2024/1023/c15200a171646/page.htm",
+    "orcid": "0000-0002-1036-4049",
+    "openalex_author_id": "A5084047416",
+    "pronunciation_ipa": null,
+    "pronunciation_status": "UNVERIFIED"
   }
 ]
