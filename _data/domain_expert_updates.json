@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13T16:37:02+00:00",
+  "generated_at": "2026-11-13T16:53:14+00:00",
   "window_days": 180,
   "papers": [
     {
@@ -98,7 +98,8 @@
         "选择性氧化"
       ],
       "author_names": [
-        "Graham J. Hutchings"
+        "Graham J. Hutchings",
+        "Xiang Feng（冯翔）"
       ]
     },
     {
@@ -118,6 +119,25 @@
       ],
       "author_names": [
         "Avelino Corma"
+      ]
+    },
+    {
+      "title": "Epitaxial-strain engineering of supported tensile noble metallene oxides for enhanced oxidation catalysis",
+      "doi": "10.1038/s41467-026-78119-2",
+      "doi_url": "https://doi.org/10.1038/s41467-026-78119-2",
+      "source_url": "https://openalex.org/W7221673081",
+      "publication_date": "2026-10-13",
+      "journal": "Nature Communications",
+      "priority_journal": true,
+      "publication_type": "article",
+      "group": "epox",
+      "group_label": "烯烃环氧化",
+      "relevance": "中",
+      "match_tags": [
+        "选择性氧化"
+      ],
+      "author_names": [
+        "Xiang Feng（冯翔）"
       ]
     },
     {
@@ -175,6 +195,25 @@
       ],
       "author_names": [
         "Heather J. Kulik"
+      ]
+    },
+    {
+      "title": "Understanding the Regulatory Mechanism of Different Pt/Fe Ratio Binary Finite‐Segregation Alloys on the CO Preferential Oxidation Reaction Through DFT and Microkinetic Simulations: Geometric and Electronic Effects",
+      "doi": "10.1002/cctc.71102",
+      "doi_url": "https://doi.org/10.1002/cctc.71102",
+      "source_url": "https://openalex.org/W7220838275",
+      "publication_date": "2026-10-01",
+      "journal": "ChemCatChem",
+      "priority_journal": false,
+      "publication_type": "article",
+      "group": "epox",
+      "group_label": "烯烃环氧化",
+      "relevance": "中",
+      "match_tags": [
+        "选择性氧化"
+      ],
+      "author_names": [
+        "Xiang Feng（冯翔）"
       ]
     },
     {
@@ -256,6 +295,25 @@
       ]
     },
     {
+      "title": "Structural regulation of intergrown twin ZSM-5 zeolites for shape-selective toluene-methanol co-conversion to produce p-xylene and light olefins",
+      "doi": "10.1016/j.cej.2026.180719",
+      "doi_url": "https://doi.org/10.1016/j.cej.2026.180719",
+      "source_url": "https://openalex.org/W7203528110",
+      "publication_date": "2026-08-15",
+      "journal": "Chemical Engineering Journal",
+      "priority_journal": true,
+      "publication_type": "article",
+      "group": "epox",
+      "group_label": "烯烃环氧化",
+      "relevance": "中",
+      "match_tags": [
+        "分子筛"
+      ],
+      "author_names": [
+        "Xiang Feng（冯翔）"
+      ]
+    },
+    {
       "title": "Plastron-mediated direct H2O2 synthesis",
       "doi": "10.1038/s41467-026-76198-9",
       "doi_url": "https://doi.org/10.1038/s41467-026-76198-9",
@@ -291,6 +349,44 @@
       ],
       "author_names": [
         "Ichigaku Takigawa（瀧川一学）"
+      ]
+    },
+    {
+      "title": "Work‐Function‐Modulated Ag Single‐Atom Catalysts for Amino Alcohol Oxidation",
+      "doi": "10.1002/anie.5510018",
+      "doi_url": "https://doi.org/10.1002/anie.5510018",
+      "source_url": "https://openalex.org/W7169622783",
+      "publication_date": "2026-07-17",
+      "journal": "Angewandte Chemie International Edition",
+      "priority_journal": true,
+      "publication_type": "article",
+      "group": "epox",
+      "group_label": "烯烃环氧化",
+      "relevance": "中",
+      "match_tags": [
+        "选择性氧化"
+      ],
+      "author_names": [
+        "Xiang Feng（冯翔）"
+      ]
+    },
+    {
+      "title": "Work‐Function‐Modulated Ag Single‐Atom Catalysts for Amino Alcohol Oxidation",
+      "doi": "10.1002/ange.5510018",
+      "doi_url": "https://doi.org/10.1002/ange.5510018",
+      "source_url": "https://openalex.org/W7169520418",
+      "publication_date": "2026-07-17",
+      "journal": "Angewandte Chemie",
+      "priority_journal": false,
+      "publication_type": "article",
+      "group": "epox",
+      "group_label": "烯烃环氧化",
+      "relevance": "中",
+      "match_tags": [
+        "选择性氧化"
+      ],
+      "author_names": [
+        "Xiang Feng（冯翔）"
       ]
     },
     {
@@ -348,6 +444,44 @@
       ],
       "author_names": [
         "Heather J. Kulik"
+      ]
+    },
+    {
+      "title": "Hydrophobic Promoter‐Enhanced Tandem Catalysis for Alkene Epoxidation With H 2 and O 2",
+      "doi": "10.1002/anie.2551607",
+      "doi_url": "https://doi.org/10.1002/anie.2551607",
+      "source_url": "https://openalex.org/W7166799081",
+      "publication_date": "2026-07-01",
+      "journal": "Angewandte Chemie International Edition",
+      "priority_journal": true,
+      "publication_type": "article",
+      "group": "epox",
+      "group_label": "烯烃环氧化",
+      "relevance": "高",
+      "match_tags": [
+        "烯烃环氧化"
+      ],
+      "author_names": [
+        "Xiang Feng（冯翔）"
+      ]
+    },
+    {
+      "title": "Hydrophobic Promoter‐Enhanced Tandem Catalysis for Alkene Epoxidation With H 2 and O 2",
+      "doi": "10.1002/ange.2551607",
+      "doi_url": "https://doi.org/10.1002/ange.2551607",
+      "source_url": "https://openalex.org/W7166885006",
+      "publication_date": "2026-07-01",
+      "journal": "Angewandte Chemie",
+      "priority_journal": false,
+      "publication_type": "article",
+      "group": "epox",
+      "group_label": "烯烃环氧化",
+      "relevance": "高",
+      "match_tags": [
+        "烯烃环氧化"
+      ],
+      "author_names": [
+        "Xiang Feng（冯翔）"
       ]
     },
     {
@@ -505,6 +639,25 @@
       ],
       "author_names": [
         "Avelino Corma"
+      ]
+    },
+    {
+      "title": "Microkinetic guided discovery of efficient metal catalysts for the selective oxidation of amino alcohol to amino acid",
+      "doi": "10.1016/j.ces.2026.124293",
+      "doi_url": "https://doi.org/10.1016/j.ces.2026.124293",
+      "source_url": "https://openalex.org/W7161790689",
+      "publication_date": "2026-05-20",
+      "journal": "Chemical Engineering Science",
+      "priority_journal": false,
+      "publication_type": "article",
+      "group": "epox",
+      "group_label": "烯烃环氧化",
+      "relevance": "中",
+      "match_tags": [
+        "选择性氧化"
+      ],
+      "author_names": [
+        "Xiang Feng（冯翔）"
       ]
     }
   ],

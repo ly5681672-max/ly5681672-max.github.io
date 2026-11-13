@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13T16:37:26+00:00",
+  "generated_at": "2026-11-13T16:53:41+00:00",
   "source": "OpenAlex",
   "selection": "历史高引用+主题规则初筛；非科学里程碑认证",
   "candidates": [
@@ -1503,6 +1503,147 @@
         "机器学习"
       ],
       "abstract_excerpt": "We propose a novel representation of materials named an 'orbital-field matrix (OFM)', which is based on the distribution of valence shell electrons. We demonstrate that this new representation can be highly useful in mining material data. Experimental investigation shows that the formation energies of crystalline materials, atomization energies of molecular materials, and local magnetic moments of the constituent atoms in bimetal alloys of lanthanide metal and transition-metal can be predicted with high accuracy using the OFM. Knowledge regarding the role of the coordination numbers of the transition-metal and lanthanide elements in determining the local magnetic moments of the transition-metal sites can be acquired directly from decision tree regression analyses using the OFM.",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "feng_xiang",
+      "expert_name": "Xiang Feng（冯翔）",
+      "year": 2022,
+      "title": "Dual Role of Pyridinic-N Doping in Carbon-Coated Ni Nanoparticles for Highly Efficient Electrochemical CO2 Reduction to CO over a Wide Potential Range",
+      "doi": "10.1021/acscatal.1c04825",
+      "doi_url": "https://doi.org/10.1021/acscatal.1c04825",
+      "source_url": "https://openalex.org/W4206017437",
+      "journal": "ACS Catalysis",
+      "cited_by_count": 161,
+      "relevance_tags": [
+        "H₂O₂/OOH"
+      ],
+      "abstract_excerpt": "Developing efficient and stable electrocatalysts within a wide potential range is vital for the mature applications of the electrocatalytic CO 2 reduction reaction (CO 2 RR) into value-added chemical products. Herein, we engineered a NC@Ni/C nano-composite featuring a core–shell structure of a pyridinic-N-rich carbon layer encapsulating Ni nanoparticles (NPs) as a highly effective electrocatalyst for CO 2 RR to CO over a wide potential range. The catalyst demonstrates a high CO Faradaic efficiency (FE CO ) of >90% in a wide potential range from −0.65 to −1.45 V [vs reversible hydrogen electrode (RHE)] with the maximum FE CO of 97% at −1.05 V (vs RHE). Strikingly, it exhibits an excellent stability with a constant current density and a FE CO > 95% for 92 h at −1.05 V (vs RHE). Structural studies and DFT calculations further reveal that pyridinic-N doping in the carbon shell of Ni NPs play",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "feng_xiang",
+      "expert_name": "Xiang Feng（冯翔）",
+      "year": 2021,
+      "title": "Tailoring Facets of α-Mn 2 O 3 Microcrystalline Catalysts for Enhanced Selective Oxidation of Glycerol to Glycolic Acid",
+      "doi": "10.1021/acscatal.1c01566",
+      "doi_url": "https://doi.org/10.1021/acscatal.1c01566",
+      "source_url": "https://openalex.org/W3160236734",
+      "journal": "ACS Catalysis",
+      "cited_by_count": 126,
+      "relevance_tags": [
+        "选择性氧化"
+      ],
+      "abstract_excerpt": "Understanding and tuning the crystal-facet-dependent catalytic properties of catalysts are of great importance for the selective oxidation of polyols. Herein, a series of α-Mn 2 O 3 catalysts with various morphologies (octahedron, truncated octahedron, and cube) are successfully synthesized for the enhanced selective oxidation of glycerol to glycolic acid. Our results show that the different catalytic performances of Mn 2 O 3 catalysts with various morphologies originated from the chemical nature of the (001) and (111) facets. Multicharacterizations and density functional theory calculations revealed that the surface oxygen vacancies on the (001) facets are well correlated with the catalytic activity, and the C–H bond in oxygen-containing intermediates could be easily activated on the surface oxygen vacancies of the (001) facets, thus improving the catalytic activity. Moreover, the main ",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "feng_xiang",
+      "expert_name": "Xiang Feng（冯翔）",
+      "year": 2020,
+      "title": "Engineering Pt-Mn2O3 interface to boost selective oxidation of ethylene glycol to glycolic acid",
+      "doi": "10.1016/j.apcatb.2020.119803",
+      "doi_url": "https://doi.org/10.1016/j.apcatb.2020.119803",
+      "source_url": "https://openalex.org/W3112989245",
+      "journal": "Applied Catalysis B: Environmental",
+      "cited_by_count": 108,
+      "relevance_tags": [
+        "选择性氧化"
+      ],
+      "abstract_excerpt": "",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "feng_xiang",
+      "expert_name": "Xiang Feng（冯翔）",
+      "year": 2020,
+      "title": "Reversing Titanium Oligomer Formation towards High‐Efficiency and Green Synthesis of Titanium‐Containing Molecular Sieves",
+      "doi": "10.1002/anie.202011821",
+      "doi_url": "https://doi.org/10.1002/anie.202011821",
+      "source_url": "https://openalex.org/W3096132430",
+      "journal": "Angewandte Chemie International Edition",
+      "cited_by_count": 107,
+      "relevance_tags": [
+        "烯烃环氧化",
+        "分子筛"
+      ],
+      "abstract_excerpt": "Abstract Green and efficient synthesis of titanium‐containing molecular sieves is limited by the quantity of environmentally unfriendly additives and complicated synthesis procedures required. Oligomerization of Ti monomers into anatase TiO2 is the typical outcome of such procedures because of a mismatch between hydrolysis rates of Si and Ti precursors. We report a simple and generic additive‐free route for the synthesis of Ti‐containing molecular sieves (MFI, MEL, and BEA). This approach successfully reverses the formation of Ti oligomers to match hydrolysis rates of Ti and Si species with the assistance of hydroxyl free radicals generated in situ from ultraviolet irradiation. Moreover, fantastic catalytic performance for propene epoxidation with H2 and O2 was observed. Compared with the conventional hydrothermal method, this approach opens up new opportunities for high‐efficiency, envi",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "feng_xiang",
+      "expert_name": "Xiang Feng（冯翔）",
+      "year": 2018,
+      "title": "Enhanced Catalytic Performance for Propene Epoxidation with H 2 and O 2 over Bimetallic Au–Ag/Uncalcined Titanium Silicate-1 Catalysts",
+      "doi": "10.1021/acscatal.8b01324",
+      "doi_url": "https://doi.org/10.1021/acscatal.8b01324",
+      "source_url": "https://openalex.org/W2883947213",
+      "journal": "ACS Catalysis",
+      "cited_by_count": 131,
+      "relevance_tags": [
+        "烯烃环氧化",
+        "TS-1"
+      ],
+      "abstract_excerpt": "Gradually emerging environmental concerns have triggered the development of highly efficient catalysts for propene epoxidation with H 2 and O 2 . Unfortunately, intensifying the activity and stability is still a challenging task. Herein, Au–Ag bimetallic catalysts were deposited on titanium silicate-1 with blocked pores (TS-1-B). Via density functional theory calculations together with multiple types of characterization (e.g., high-angle annular dark-field scanning transmission electron microscopy, ultraviolet–visible, and X-ray photoelectron spectrometry), we found that the synergy between Au and Ag significantly improved the catalytic performance via not only the decrease in the Au nanoparticle size but also the enhanced oxygen adsorption and electron transfer ability from Au to O 2 . Furthermore, a volcano-shaped relationship between the Au/Ag ratio and catalytic performance was also ",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "feng_xiang",
+      "expert_name": "Xiang Feng（冯翔）",
+      "year": 2017,
+      "title": "Simultaneously Enhanced Stability and Selectivity for Propene Epoxidation with H 2 and O 2 on Au Catalysts Supported on Nano-Crystalline Mesoporous TS-1",
+      "doi": "10.1021/acscatal.6b03498",
+      "doi_url": "https://doi.org/10.1021/acscatal.6b03498",
+      "source_url": "https://openalex.org/W2594659962",
+      "journal": "ACS Catalysis",
+      "cited_by_count": 163,
+      "relevance_tags": [
+        "烯烃环氧化",
+        "TS-1"
+      ],
+      "abstract_excerpt": "It is a challenging task to design efficient Au/Ti-containing catalysts for propene epoxidation with H 2 and O 2 that simultaneously achieve high catalytic stability and selectivity to propylene oxide (PO). This contribution first describes the synthesis of a nanocrystalline mesoporous titanium silicalite-1 (MTS-1) by dry-gel conversion that employs cheap triblock copolymers as template. Compared with TS-1, MTS-1 has a shortened reactant/product diffusion length as a result of smaller crystal size (<100 nm) and the presence of mesopores (ca. 3 nm). Surprisingly, this designed catalyst shows simultaneously improved PO selectivity over 95% as well as stability over 40 h, much better than the traditional Au/TS-1 catalyst. Moreover, the intrinsic reason for the enhanced performance is elucidated. The better mass transfer ability together with higher hydrophobicity of Au/MTS-1 results in lowe",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "feng_xiang",
+      "expert_name": "Xiang Feng（冯翔）",
+      "year": 2014,
+      "title": "Au nanoparticles deposited on the external surfaces of TS-1: Enhanced stability and activity for direct propylene epoxidation with H2 and O2",
+      "doi": "10.1016/j.apcatb.2013.12.041",
+      "doi_url": "https://doi.org/10.1016/j.apcatb.2013.12.041",
+      "source_url": "https://openalex.org/W2053929102",
+      "journal": "Applied Catalysis B: Environmental",
+      "cited_by_count": 120,
+      "relevance_tags": [
+        "烯烃环氧化",
+        "TS-1"
+      ],
+      "abstract_excerpt": "",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "feng_xiang",
+      "expert_name": "Xiang Feng（冯翔）",
+      "year": 2014,
+      "title": "Insights into size-dependent activity and active sites of Au nanoparticles supported on TS-1 for propene epoxidation with H2 and O2",
+      "doi": "10.1016/j.jcat.2014.05.006",
+      "doi_url": "https://doi.org/10.1016/j.jcat.2014.05.006",
+      "source_url": "https://openalex.org/W1970842170",
+      "journal": "Journal of Catalysis",
+      "cited_by_count": 103,
+      "relevance_tags": [
+        "烯烃环氧化",
+        "TS-1"
+      ],
+      "abstract_excerpt": "",
       "review_status": "PROVISIONAL",
       "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
     }
