@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-13T09:17:40+00:00",
+  "generated_at": "2026-11-13T16:18:58+00:00",
   "source": "OpenAlex",
   "selection": "历史高引用+主题规则初筛；非科学里程碑认证",
   "candidates": [
@@ -12,7 +12,7 @@
       "doi_url": "https://doi.org/10.1038/s41929-023-00911-w",
       "source_url": "https://openalex.org/W4322492989",
       "journal": "Nature Catalysis",
-      "cited_by_count": 316,
+      "cited_by_count": 317,
       "relevance_tags": [
         "机器学习"
       ],
@@ -267,7 +267,7 @@
       "doi_url": "https://doi.org/10.1063/1.1737365",
       "source_url": "https://openalex.org/W2069988560",
       "journal": "The Journal of Chemical Physics",
-      "cited_by_count": 1374,
+      "cited_by_count": 1375,
       "relevance_tags": [
         "催化描述符"
       ],
@@ -301,7 +301,7 @@
       "doi_url": "https://doi.org/10.1038/s43588-023-00437-y",
       "source_url": "https://openalex.org/W4367626474",
       "journal": "Nature Computational Science",
-      "cited_by_count": 130,
+      "cited_by_count": 131,
       "relevance_tags": [
         "机器学习",
         "催化描述符"
@@ -422,7 +422,7 @@
       "doi_url": "https://doi.org/10.1088/2516-1075/ac572f",
       "source_url": "https://openalex.org/W4213283694",
       "journal": "Electronic Structure",
-      "cited_by_count": 200,
+      "cited_by_count": 201,
       "relevance_tags": [
         "机器学习"
       ],
@@ -541,7 +541,7 @@
       "doi_url": "https://doi.org/10.1039/c7sc01247k",
       "source_url": "https://openalex.org/W2598115655",
       "journal": "Chemical Science",
-      "cited_by_count": 226,
+      "cited_by_count": 227,
       "relevance_tags": [
         "机器学习"
       ],
@@ -558,7 +558,7 @@
       "doi_url": "https://doi.org/10.1021/acs.chemrev.7b00776",
       "source_url": "https://openalex.org/W2802791016",
       "journal": "Chemical Reviews",
-      "cited_by_count": 4883,
+      "cited_by_count": 4886,
       "relevance_tags": [
         "选择性氧化"
       ],
@@ -626,7 +626,7 @@
       "doi_url": "https://doi.org/10.1038/35086546",
       "source_url": "https://openalex.org/W1986092589",
       "journal": "Nature",
-      "cited_by_count": 1028,
+      "cited_by_count": 1029,
       "relevance_tags": [
         "分子筛"
       ],
@@ -660,11 +660,11 @@
       "doi_url": "https://doi.org/10.1021/cr960406n",
       "source_url": "https://openalex.org/W2054111649",
       "journal": "Chemical Reviews",
-      "cited_by_count": 5864,
+      "cited_by_count": 5865,
       "relevance_tags": [
         "分子筛"
       ],
-      "abstract_excerpt": "ADVERTISEMENT RETURN TO ISSUEPREVArticleNEXTFrom Microporous to Mesoporous Molecular Sieve Materials and Their Use in CatalysisAvelino CormaView Author Information Instituto de Tecnología Química, UPV-CSIC, Universidad Politécnica de Valencia, Avda. de los Naranjos s/n, 46022 Valencia, SpainCite this: Chem. Rev. 1997, 97, 6, 2373–2420Publication Date (Web):October 1, 1997Publication History Received7 April 1997Revised16 June 1997Published online1 October 1997Published inissue 1 October 1997https://pubs.acs.org/doi/10.1021/cr960406nhttps://doi.org/10.1021/cr960406nresearch-articleACS PublicationsCopyright © 1997 American Chemical SocietyRequest reuse permissionsArticle Views29508Altmetric-Citations5085LEARN ABOUT THESE METRICSArticle Views are the COUNTER-compliant sum of full text article downloads since November 2008 (both PDF and HTML) across all institutions and individuals. These met",
+      "abstract_excerpt": "",
       "review_status": "PROVISIONAL",
       "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
     },
@@ -971,7 +971,7 @@
       "doi_url": "https://doi.org/10.1039/c5cs00376h",
       "source_url": "https://openalex.org/W2159775165",
       "journal": "Chemical Society Reviews",
-      "cited_by_count": 1103,
+      "cited_by_count": 1105,
       "relevance_tags": [
         "分子筛"
       ],
@@ -1107,7 +1107,7 @@
       "doi_url": "https://doi.org/10.1021/acs.chemrev.7b00738",
       "source_url": "https://openalex.org/W2802665194",
       "journal": "Chemical Reviews",
-      "cited_by_count": 856,
+      "cited_by_count": 858,
       "relevance_tags": [
         "分子筛"
       ],
@@ -1231,6 +1231,142 @@
         "分子筛"
       ],
       "abstract_excerpt": "Zeolite and molecular sieve syntheses are reviewed. The synthesis of aluminum-rich zeolites, high-silica \\nzeolites, and phosphate-based molecular sieves are evaluated. Unresolved mechanistic issues are outlined \\nand areas for exploration suggested. The ability to plan zeolite and molecular sieve syntheses is discussed \\nand a strategy for synthesizing a chiral zeolite is used to demonstrate the current limitations in \"designing\" \\nnew molecular sieves.",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "cao_yueqiang",
+      "expert_name": "Yueqiang Cao（曹约强）",
+      "year": 2024,
+      "title": "Atomic Design of Alkyne Semihydrogenation Catalysts via Active Learning",
+      "doi": "10.1021/jacs.3c14495",
+      "doi_url": "https://doi.org/10.1021/jacs.3c14495",
+      "source_url": "https://openalex.org/W4391684514",
+      "journal": "Journal of the American Chemical Society",
+      "cited_by_count": 74,
+      "relevance_tags": [
+        "机器学习"
+      ],
+      "abstract_excerpt": "Alkyne hydrogenation on palladium-based catalysts modified with silver is currently used in industry to eliminate trace amounts of alkynes in alkenes produced from steam cracking and alkane dehydrogenation processes. Intensive efforts have been devoted to designing an alternative catalyst for improvement, especially in terms of selectivity and catalyst cost, which is still far away from that as expected. Here, we describe an atomic design of a high-performance Ni-based intermetallic catalyst aided by active machine learning combined with density functional theory calculations. The engineered NiIn catalyst exhibits >97% selectivity to ethylene and propylene at the full conversion of acetylene and propyne at mild temperature, outperforming the reported Ni-based catalysts and even noble Pd-based ones. Detailed mechanistic studies using theoretical calculations and advanced characterizations",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "cao_yueqiang",
+      "expert_name": "Yueqiang Cao（曹约强）",
+      "year": 2022,
+      "title": "Mechanistic and Atomic-Level Insights into Semihydrogenation Catalysis to Light Olefins",
+      "doi": "10.1021/acscatal.2c03750",
+      "doi_url": "https://doi.org/10.1021/acscatal.2c03750",
+      "source_url": "https://openalex.org/W4296700855",
+      "journal": "ACS Catalysis",
+      "cited_by_count": 46,
+      "relevance_tags": [
+        "微观动力学"
+      ],
+      "abstract_excerpt": "Semihydrogenations of alkynes and alkadienes to light olefins catalyzed by a heterogeneous catalyst are widely applied in the chemical industry, but it remains challenging to design high-performance catalysts for these processes. The well-developed synthesis methodologies, characterization techniques for catalyst structures, and theoretical calculations in recent decades render opportunities for understanding mechanisms and elaborating the structures of active sites at the atomic level. This Review summarizes recent advances in the mechanistic and atomic-level insights into semihydrogenation catalysis for alkynes and alkadienes to light olefins. The structure-sensitivity, information on active sites, and reaction kinetics are initially discussed to demonstrate the knowledge on the mechanistic and kinetics details of the hydrogenations of alkynes and alkadienes. We then introduce the regu",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "cao_yueqiang",
+      "expert_name": "Yueqiang Cao（曹约强）",
+      "year": 2022,
+      "title": "Al2O3 microrods supported Pd catalysts for semi-hydrogenation of acetylene: Acidic properties tuned reaction kinetics behaviors",
+      "doi": "10.1016/j.cej.2022.136681",
+      "doi_url": "https://doi.org/10.1016/j.cej.2022.136681",
+      "source_url": "https://openalex.org/W4225128872",
+      "journal": "Chemical Engineering Journal",
+      "cited_by_count": 26,
+      "relevance_tags": [
+        "微观动力学"
+      ],
+      "abstract_excerpt": "",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "cao_yueqiang",
+      "expert_name": "Yueqiang Cao（曹约强）",
+      "year": 2020,
+      "title": "Kinetic Study of the Hydrogenation of Unsaturated Aldehydes Promoted by CuPtx/SBA-15 Single-Atom Alloy (SAA) Catalysts",
+      "doi": "10.1021/acscatal.9b05407",
+      "doi_url": "https://doi.org/10.1021/acscatal.9b05407",
+      "source_url": "https://openalex.org/W3008199853",
+      "journal": "ACS Catalysis",
+      "cited_by_count": 72,
+      "relevance_tags": [
+        "微观动力学"
+      ],
+      "abstract_excerpt": "A comprehensive study of the kinetics of the catalytic hydrogenation of unsaturated aldehydes, in particular of cinnamaldehyde, promoted by CuPt x /SBA-15 single-atom alloy catalysts was carried out in order to identify trends as a function of the composition of the bimetallic nanoparticles, that is, of the value of x . The optimum performance reported by us recently [ ACS Catal . 2019, 9, 9150−9157] in terms of selectivity toward the formation of cinnamyl alcohol, the desired product, by the catalyst with x = 0.005 was corroborated. A rapid decrease was seen in catalytic activity in batch reactors with all catalysts, in particular with pure Cu/SBA-15. This was ascribed, based on DFT calculations and microkinetic simulations, to the relative weak adsorption of the reactant compared to that of the products, which leads to the blocking of catalytic sites by the latter early on in the catal",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "cao_yueqiang",
+      "expert_name": "Yueqiang Cao（曹约强）",
+      "year": 2020,
+      "title": "Identification of Synergistic Actions between Cu0 and Cu+ Sites in Hydrogenation of Dimethyl Oxalate from Microkinetic Analysis",
+      "doi": "10.1021/acs.iecr.0c04525",
+      "doi_url": "https://doi.org/10.1021/acs.iecr.0c04525",
+      "source_url": "https://openalex.org/W3112162574",
+      "journal": "Industrial & Engineering Chemistry Research",
+      "cited_by_count": 31,
+      "relevance_tags": [
+        "微观动力学"
+      ],
+      "abstract_excerpt": "The kinetics of dimethyl oxalate (DMO) hydrogenation over Cu(111) and Cu 2 O(111) has been studied to understand the role of Cu 0 and Cu + sites in ethyl glycol (EG) production over Cu-based catalysts by the combination of density functional theory calculations and microkinetic analysis. The calculated results suggest that the presence of the Cu + sites would strengthen the binding of the reactants, products, and reaction intermediates to the substrate and thus promote the dissociation of DMO and H 2 . The Cu 0 sites are found to be beneficial to the hydrogenation of the acyl species whereas the Cu + sites are primarily responsible for the CH 3 OH formation. Microkinetic analysis indicates that the existence of the Cu + sites would increase the turnover frequency for the EG formation on Cu(111) by a factor of 20, under typical operating conditions. Hence, the excellent catalytic performa",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "cao_yueqiang",
+      "expert_name": "Yueqiang Cao（曹约强）",
+      "year": 2019,
+      "title": "Tailoring electronic properties and kinetics behaviors of Pd/N‐CNTs catalysts for selective hydrogenation of acetylene",
+      "doi": "10.1002/aic.16857",
+      "doi_url": "https://doi.org/10.1002/aic.16857",
+      "source_url": "https://openalex.org/W2985225971",
+      "journal": "AIChE Journal",
+      "cited_by_count": 42,
+      "relevance_tags": [
+        "微观动力学"
+      ],
+      "abstract_excerpt": "Abstract Pd catalyzed selective hydrogenation of acetylene shows remarkable electronic effects. In this work, a strategy is proposed to tailor the electronic properties of Pd nanoparticles by nitrogen doping of carbon nanotubes (CNT) support toward the improved reaction kinetics. While excluding the Pd size effects, the intrinsic promotional effects of the nitrogen doping are demonstrated, which are mainly due to the increased Pd electron density resultant from the presence of more graphitic nitrogen species based on X‐ray photoelectron spectroscopy measurements and density functional theory (DFT) calculations. Kinetics analysis and C2H2/C2H4‐temperature‐programmed desorption (TPD) measurements reveal that the electron‐rich Pd catalyst with the moderately weakened adsorption strength can give rise to the decreased activation energy and thus the simultaneously enhanced activity, selectivi",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "cao_yueqiang",
+      "expert_name": "Yueqiang Cao（曹约强）",
+      "year": 2019,
+      "title": "Toward rational catalyst design for partial hydrogenation of dimethyl oxalate to methyl glycolate: a descriptor-based microkinetic analysis",
+      "doi": "10.1039/c9cy01198f",
+      "doi_url": "https://doi.org/10.1039/c9cy01198f",
+      "source_url": "https://openalex.org/W2972903333",
+      "journal": "Catalysis Science & Technology",
+      "cited_by_count": 35,
+      "relevance_tags": [
+        "微观动力学"
+      ],
+      "abstract_excerpt": "A descriptor-based microkinetic analysis has been performed to provide a basis for the catalyst screening for DMO hydrogenation to MG.",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "cao_yueqiang",
+      "expert_name": "Yueqiang Cao（曹约强）",
+      "year": 2018,
+      "title": "Sulfur film sandwiched between few-layered MoS 2 electrocatalysts and conductive reduced graphene oxide as a robust cathode for advanced lithium–sulfur batteries",
+      "doi": "10.1039/c8ta00222c",
+      "doi_url": "https://doi.org/10.1039/c8ta00222c",
+      "source_url": "https://openalex.org/W2790739922",
+      "journal": "Journal of Materials Chemistry A",
+      "cited_by_count": 116,
+      "relevance_tags": [
+        "微观动力学"
+      ],
+      "abstract_excerpt": "MoS 2 electrocatalysts are introduced to construct a robust sandwich-type MoS 2 /S/rGO cathode with simultaneously improved reaction kinetics and capacity retention.",
       "review_status": "PROVISIONAL",
       "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
     }
