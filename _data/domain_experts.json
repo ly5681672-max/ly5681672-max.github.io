@@ -179,5 +179,23 @@
     "openalex_author_id": "A5084047416",
     "pronunciation_ipa": null,
     "pronunciation_status": "UNVERIFIED"
+  },
+  {
+    "id": "takigawa_ichigaku",
+    "name": "Ichigaku Takigawa（瀧川一学）",
+    "group": "ai",
+    "institution": "北海道大学 · 化学反应创成研究拠点（WPI-ICReDD）；东京大学 · 大学院新领域创成科学研究科",
+    "intro": "研究机器学习、化学反应网络建模与数据驱动预测，重点发展适用于分子结构、反应及其他离散结构的学习方法，并用于催化材料性质预测与科学发现；其方法研究与催化描述符及AI for Science相关，不等同于专门研究烯烃环氧化。",
+    "topics": [
+      "AI for Science",
+      "机器学习",
+      "反应网络建模",
+      "催化描述符",
+      "材料信息学"
+    ],
+    "official_url": "https://www.icredd.hokudai.ac.jp/takigawa-ichigaku",
+    "orcid": "0000-0001-5633-995X",
+    "pronunciation_ipa": null,
+    "pronunciation_status": "UNVERIFIED"
   }
 ]
