@@ -87,7 +87,7 @@ def get_author_id(expert: dict) -> str | None:
     if not expert.get('orcid'):
         return None
     orcid = expert['orcid']
-    res = fetch_json('authors', {'filter': f'orcid:{orcid}', 'per_page': 5, 'select': 'id,display_name,orcid,observed_orcids'})
+    res = fetch_json('authors', {'filter': f'orcid:{orcid}', 'per_page': 5, 'select': 'id,display_name,orcid,observed_orcids,works_count'})
     matches = [row for row in res.get('results', [])
                if any(str(o).rstrip('/').endswith(orcid)
                       for o in ([row.get('orcid')] + (row.get('observed_orcids') or [])) if o)]
@@ -95,7 +95,10 @@ def get_author_id(expert: dict) -> str | None:
     if len(primary) == 1:
         matches = primary
     if len(matches) != 1:
-        raise ValueError(f'Author identity not unique for {expert["id"]}: {len(matches)} candidates')
+        candidates = [(row.get('id', '').rsplit('/', 1)[-1],
+                       row.get('display_name'), row.get('works_count'))
+                      for row in matches]
+        raise ValueError(f'Author identity not unique for {expert["id"]}: {candidates}')
     surname = fold_name(expert['name'].split()[-1])
     if surname not in fold_name(str(matches[0].get('display_name', ''))):
         raise ValueError(f'Author display name mismatch for {expert["id"]}')
