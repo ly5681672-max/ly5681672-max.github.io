@@ -162,7 +162,13 @@ def gather(experts: list, days: int, date_now: datetime):
                 count += 1
             report['processed'].append({'expert': person['name'], 'matched_papers': count, 'author_id': aid})
         except Exception as exc:
-            report['errors'].append({'expert': person['name'], 'error': type(exc).__name__})
+            root_error = exc.__cause__ if exc.__cause__ is not None else exc
+            safe_detail = (f'HTTP {root_error.code}' if hasattr(root_error, 'code')
+                           else str(exc) if isinstance(exc, ValueError)
+                           else type(root_error).__name__)
+            report['errors'].append({'expert': person['name'],
+                                     'error': type(exc).__name__,
+                                     'detail': safe_detail})
     papers = sorted(all_papers.values(), key=lambda p: (p['publication_date'], p['doi']), reverse=True)
     payload = {'generated_at': date_now.isoformat(timespec='seconds'), 'window_days': days,
                'papers': papers[:100], 'status': '基于书目和摘要的规则相关性；机理结论尚未验证。'}
