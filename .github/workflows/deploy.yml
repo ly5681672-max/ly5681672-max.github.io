@@ -7,6 +7,7 @@ on:
       - main
     paths:
       - "assets/**"
+      - "_data/domain_experts.json"
       - "_plugins/**"
       - "**.bib"
       - "**.html"
@@ -36,6 +37,7 @@ on:
       - main
     paths:
       - "assets/**"
+      - "_data/domain_experts.json"
       - "_plugins/**"
       - "**.bib"
       - "**.html"
