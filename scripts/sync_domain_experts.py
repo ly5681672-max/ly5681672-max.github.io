@@ -16,6 +16,7 @@ import re
 import sys
 import time
 import unicodedata
+from urllib.error import HTTPError
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 
@@ -58,6 +59,15 @@ def fetch_json(path: str, params: dict, timeout: int = 20) -> dict:
             last = exc
             if attempt < 2:
                 time.sleep(2 ** attempt)
+    if isinstance(last, HTTPError):
+        # Preserve the HTTP cause without exposing the optional API key or full URL.
+        try:
+            detail = last.read().decode('utf-8', errors='replace')[:280]
+        except Exception:
+            detail = ''
+        if key:
+            detail = detail.replace(key, '[REDACTED]')
+        raise RuntimeError(f'OpenAlex query failed for {path}: HTTP {last.code}; {detail}') from last
     raise RuntimeError(f'OpenAlex query failed for {path}: {type(last).__name__}') from last
 
 
@@ -77,11 +87,25 @@ def get_author_id(expert: dict) -> str | None:
     if not expert.get('orcid'):
         return None
     orcid = expert['orcid']
-    res = fetch_json('authors', {'filter': f'orcid:{orcid}', 'per_page': 5, 'select': 'id,display_name,orcid'})
+    res = fetch_json('authors', {'filter': f'orcid:{orcid}', 'per_page': 5, 'select': 'id,display_name,orcid,observed_orcids,works_count'})
     matches = [row for row in res.get('results', [])
-               if str(row.get('orcid', '')).rstrip('/').endswith(orcid)]
+               if any(str(o).rstrip('/').endswith(orcid)
+                      for o in ([row.get('orcid')] + (row.get('observed_orcids') or [])) if o)]
+    preferred = expert.get('openalex_author_id')
+    if preferred:
+        # Explicitly curated after reviewing duplicate ORCID candidates.
+        # Still require the ORCID to match; an arbitrary ID cannot bypass identity validation.
+        matches = [row for row in matches
+                   if str(row.get('id', '')).rsplit('/', 1)[-1] == preferred]
+    else:
+        primary = [row for row in matches if str(row.get('orcid', '')).rstrip('/').endswith(orcid)]
+        if len(primary) == 1:
+            matches = primary
     if len(matches) != 1:
-        raise ValueError(f'Author identity not unique for {expert["id"]}')
+        candidates = [(row.get('id', '').rsplit('/', 1)[-1],
+                       row.get('display_name'), row.get('works_count'))
+                      for row in matches]
+        raise ValueError(f'Author identity not unique for {expert["id"]}: {candidates}')
     surname = fold_name(expert['name'].split()[-1])
     if surname not in fold_name(str(matches[0].get('display_name', ''))):
         raise ValueError(f'Author display name mismatch for {expert["id"]}')
@@ -124,8 +148,8 @@ def gather(experts: list, days: int, date_now: datetime):
             continue
         try:
             aid = get_author_id(person)
-            params = {'filter': f'author.id:{aid},from_publication_date:{since}',
-                      'per_page': 100, 'sort': '-publication_date',
+            params = {'filter': f'authorships.author.id:{aid},from_publication_date:{since}',
+                      'per_page': 100, 'sort': 'publication_date:desc',
                       'select': 'id,title,publication_date,doi,authorships,abstract_inverted_index,type'}
             result = fetch_json('works', params)
             count = 0
@@ -162,7 +186,13 @@ def gather(experts: list, days: int, date_now: datetime):
                 count += 1
             report['processed'].append({'expert': person['name'], 'matched_papers': count, 'author_id': aid})
         except Exception as exc:
-            report['errors'].append({'expert': person['name'], 'error': type(exc).__name__})
+            root_error = exc.__cause__ if exc.__cause__ is not None else exc
+            safe_detail = (str(exc)[:350] if hasattr(root_error, 'code')
+                           else str(exc) if isinstance(exc, ValueError)
+                           else type(root_error).__name__)
+            report['errors'].append({'expert': person['name'],
+                                     'error': type(exc).__name__,
+                                     'detail': safe_detail})
     papers = sorted(all_papers.values(), key=lambda p: (p['publication_date'], p['doi']), reverse=True)
     payload = {'generated_at': date_now.isoformat(timespec='seconds'), 'window_days': days,
                'papers': papers[:100], 'status': '基于书目和摘要的规则相关性；机理结论尚未验证。'}
