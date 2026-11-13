@@ -197,5 +197,23 @@
     "orcid": "0000-0001-5633-995X",
     "pronunciation_ipa": null,
     "pronunciation_status": "UNVERIFIED"
+  },
+  {
+    "id": "feng_xiang",
+    "name": "Xiang Feng（冯翔）",
+    "group": "epox",
+    "institution": "中国石油大学（华东）· 化学化工学院",
+    "intro": "从事工业催化剂多尺度结构调控与催化反应工程研究，重点关注钛硅分子筛活性位点调控、烯烃环氧化、选择性氧化及反应强化，结合实验表征、理论计算和动力学分析研究催化剂构效关系。",
+    "topics": [
+      "烯烃环氧化",
+      "TS-1",
+      "催化剂结构调控",
+      "反应动力学",
+      "DFT与催化机理"
+    ],
+    "official_url": "https://cce.upc.edu.cn/_s34/2022/0323/c19254a365304/page.psp",
+    "orcid": "0000-0001-7299-5690",
+    "pronunciation_ipa": null,
+    "pronunciation_status": "UNVERIFIED"
   }
 ]
