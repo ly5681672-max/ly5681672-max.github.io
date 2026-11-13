@@ -91,9 +91,16 @@ def get_author_id(expert: dict) -> str | None:
     matches = [row for row in res.get('results', [])
                if any(str(o).rstrip('/').endswith(orcid)
                       for o in ([row.get('orcid')] + (row.get('observed_orcids') or [])) if o)]
-    primary = [row for row in matches if str(row.get('orcid', '')).rstrip('/').endswith(orcid)]
-    if len(primary) == 1:
-        matches = primary
+    preferred = expert.get('openalex_author_id')
+    if preferred:
+        # Explicitly curated after reviewing duplicate ORCID candidates.
+        # Still require the ORCID to match; an arbitrary ID cannot bypass identity validation.
+        matches = [row for row in matches
+                   if str(row.get('id', '')).rsplit('/', 1)[-1] == preferred]
+    else:
+        primary = [row for row in matches if str(row.get('orcid', '')).rstrip('/').endswith(orcid)]
+        if len(primary) == 1:
+            matches = primary
     if len(matches) != 1:
         candidates = [(row.get('id', '').rsplit('/', 1)[-1],
                        row.get('display_name'), row.get('works_count'))
