@@ -35,6 +35,36 @@ nav_order: 5
 {% endfor %}
 </div>
 
+## 每位专家的最新研究与个人时间轴
+
+<p>优先显示化工、催化与材料领域精选期刊论文。<strong>“优先期刊”仅表示本站人工维护的期刊名单，并不等于自动核实 SCI 收录、JCR 分区或论文科学结论。</strong>每条节点按实际发表日期排列，保留期刊、DOI、作者关联及研究主题；关键发现须阅读全文并人工核验后才可标注。</p>
+
+{% assign update = site.data.domain_expert_updates %}
+{% for person in site.data.domain_experts %}
+<section class="domain-person-timeline" data-person-group="{{ person.group }}" id="timeline-{{ person.id }}">
+  <h3>{{ person.name | escape }} · 研究时间轴</h3>
+  <p class="domain-help">{{ person.institution | escape }} · <a href="{{ person.official_url }}" target="_blank" rel="noopener noreferrer">研究组官网</a></p>
+  {% assign found_count = 0 %}
+  {% for paper in update.papers %}
+    {% if paper.author_names contains person.name %}
+      {% assign found_count = found_count | plus: 1 %}
+      <article class="domain-timeline-event">
+        <time>{{ paper.publication_date | escape }}</time>
+        <div class="domain-timeline-content">
+          <div class="domain-paper-meta">{% if paper.priority_journal %}<strong>优先期刊</strong> · {% endif %}{{ paper.journal | escape }} · {{ paper.publication_type | escape }}</div>
+          <h4><a href="{{ paper.doi_url }}" target="_blank" rel="noopener noreferrer">{{ paper.title | escape }}</a></h4>
+          <p><strong>研究线索（非已证实发现）：</strong>{{ paper.match_tags | join: '、' | escape }}</p>
+          <p class="domain-help">关键发现：待核验论文正文。<a href="{{ paper.source_url }}" target="_blank" rel="noopener noreferrer">书目证据</a> · <a href="{{ paper.doi_url }}" target="_blank" rel="noopener noreferrer">DOI</a></p>
+        </div>
+      </article>
+    {% endif %}
+  {% endfor %}
+  {% if found_count == 0 %}
+    <p class="domain-help">当前检索窗口暂无已核验身份且符合主题条件的论文；不代表该专家未发表论文。{% unless update.generated_at %}自动检索尚未成功执行。{% endunless %}</p>
+  {% endif %}
+</section>
+{% endfor %}
+
 ## 研究方向演进：关键证据时间轴
 
 <p>下列为<strong>人工精选且有原始来源的代表性节点</strong>，不代表完整文献计量结论，也不能据此推定作者之间存在师承或合作关系。</p>
@@ -56,7 +86,7 @@ nav_order: 5
 <div class="domain-papers">
 {% for paper in update.papers limit:60 %}
   <article class="domain-paper" data-paper-group="{{ paper.group }}">
-    <div class="domain-paper-meta">{{ paper.publication_date | escape }} · {{ paper.relevance | escape }}相关 · {{ paper.group_label | escape }}</div>
+    <div class="domain-paper-meta">{{ paper.publication_date | escape }} · {{ paper.journal | escape }} · {% if paper.priority_journal %}优先期刊 · {% endif %}{{ paper.relevance | escape }}相关 · {{ paper.group_label | escape }}</div>
     <h3><a href="{{ paper.doi_url }}" target="_blank" rel="noopener noreferrer">{{ paper.title | escape }}</a></h3>
     <p>已匹配专家：{{ paper.author_names | join: ', ' | escape }}</p>
     <p>匹配主题：{{ paper.match_tags | join: '、' | escape }} · <a href="{{ paper.source_url }}" target="_blank" rel="noopener noreferrer">OpenAlex 原始记录</a></p>

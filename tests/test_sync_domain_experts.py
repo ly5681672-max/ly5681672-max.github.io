@@ -11,6 +11,10 @@ spec.loader.exec_module(module)
 
 
 class SyncTests(unittest.TestCase):
+    def test_priority_journal_shortlist(self):
+        self.assertIn('nature catalysis', module.PRIORITY_JOURNALS)
+        self.assertNotIn('arxiv', module.PRIORITY_JOURNALS)
+
     def test_doi_validation(self):
         self.assertEqual(
             module.normalize_doi('https://doi.org/10.1038/S41929-026-01479-X'),
