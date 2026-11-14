@@ -63,6 +63,9 @@ def main():
     experts=json.loads((a.root/'_data/domain_experts.json').read_text(encoding='utf-8'))
     candidates=json.loads((a.root/'_data/domain_expert_milestone_candidates.json').read_text(encoding='utf-8'))['candidates']
     milestones=json.loads((a.root/'_data/domain_expert_milestones.json').read_text(encoding='utf-8'))
+    from check_domain_expert_pronunciation import validate
+    speech_errors=validate(experts)
+    if speech_errors: raise SystemExit('FAIL pronunciation configuration: '+'; '.join(speech_errors))
     for n in range(1,a.attempts+1):
         try:
             url=a.url+('&' if '?' in a.url else '?')+f'acceptance={int(time.time())}'
