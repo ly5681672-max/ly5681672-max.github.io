@@ -42,6 +42,9 @@ def verify(page,experts,candidates,milestones):
         pid=person['id']; section=norm(' '.join(doc.text.get(pid,[])))
         if not section:
             errors.append(f'{pid}: missing or empty timeline'); continue
+        for field in ('institution_zh','research_summary','latest_research_note','career_history_note'):
+            if norm(person.get(field,'')) not in all_text:
+                errors.append(f'{pid}: public page missing {field}')
         if person.get('preferred_address'):
             label=person['preferred_address']['label']
             if norm(label) not in section: errors.append(f'{pid}: missing recommended address on public timeline')
@@ -76,6 +79,9 @@ def main():
     candidates=json.loads((a.root/'_data/domain_expert_milestone_candidates.json').read_text(encoding='utf-8'))['candidates']
     milestones=json.loads((a.root/'_data/domain_expert_milestones.json').read_text(encoding='utf-8'))
     from check_domain_expert_pronunciation import validate
+    from check_domain_expert_affiliations import validate as validate_affiliations
+    affiliation_errors=validate_affiliations(experts)
+    if affiliation_errors: raise SystemExit('FAIL affiliations: '+'; '.join(affiliation_errors))
     from check_domain_expert_introductions import validate as validate_intros
     intro_errors=validate_intros(experts)
     if intro_errors: raise SystemExit('FAIL expert introductions: '+'; '.join(intro_errors))
