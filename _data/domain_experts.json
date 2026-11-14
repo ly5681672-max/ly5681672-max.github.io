@@ -216,5 +216,23 @@
     "pronunciation_ipa": null,
     "pronunciation_status": "UNVERIFIED",
     "openalex_author_id": "A5048880756"
+  },
+  {
+    "id": "lin_dong",
+    "name": "Dong Lin（林栋）",
+    "group": "epox",
+    "institution": "英国卡迪夫大学 · Cardiff Catalysis Institute / Max Planck–Cardiff Centre (FUNCAT)",
+    "intro": "2022年获中国石油大学（华东）博士学位，随后在英国卡迪夫大学Graham J. Hutchings研究团队开展博士后研究（该任职信息来自已发表论文，当前职务以机构最新资料为准）。研究聚焦钛硅分子筛与烯烃环氧化、原位过氧化氢耦合选择性氧化、催化剂结构与反应性能调控。",
+    "topics": [
+      "TS-1与钛硅分子筛",
+      "烯烃环氧化",
+      "原位H₂O₂合成",
+      "选择性氧化",
+      "催化剂构效关系"
+    ],
+    "official_url": "https://www.cardiff.ac.uk/research/explore/research-units/catalysis-and-interfacial-science",
+    "orcid": "0000-0001-5313-8204",
+    "pronunciation_ipa": null,
+    "pronunciation_status": "UNVERIFIED"
   }
 ]
