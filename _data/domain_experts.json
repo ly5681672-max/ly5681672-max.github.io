@@ -233,6 +233,10 @@
     "official_url": "https://www.cardiff.ac.uk/research/explore/research-units/catalysis-and-interfacial-science",
     "orcid": "0000-0001-5313-8204",
     "pronunciation_ipa": null,
-    "pronunciation_status": "UNVERIFIED"
+    "pronunciation_status": "UNVERIFIED",
+    "identity_evidence_dois": [
+      "10.1002/aic.18566",
+      "10.1002/anie.2551607"
+    ]
   }
 ]
