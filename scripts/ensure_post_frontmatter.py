@@ -16,8 +16,10 @@ BEIJING = ZoneInfo("Asia/Shanghai")
 
 def title_from_filename(filename: str) -> str:
     """Use the filename as title, optionally removing a leading YYYY-MM-DD-."""
-    stem = Path(filename).stem
-    match = DATED_POST_NAME.fullmatch(filename)
+    # Ignore accidental leading/trailing spaces in the filename when deriving the title.
+    clean_name = filename.strip()
+    stem = Path(clean_name).stem
+    match = DATED_POST_NAME.fullmatch(clean_name)
     return match.group(2) if match else stem
 
 
