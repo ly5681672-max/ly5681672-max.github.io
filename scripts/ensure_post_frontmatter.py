@@ -28,9 +28,34 @@ def yaml_double_quote(value: str) -> str:
     return '"' + value.replace("\\", "\\\\").replace('"', '\\"') + '"'
 
 
+def normalize_post_filename(path: Path) -> Path:
+    """Trim accidental leading/trailing whitespace from a post filename safely."""
+    if path.parent.name != "_posts":
+        return path
+
+    normalized_name = path.name.strip()
+    if normalized_name == path.name:
+        return path
+    if not normalized_name or Path(normalized_name).suffix.lower() != ".md":
+        raise ValueError(f"{path}: cannot safely normalize this Markdown filename")
+
+    target = path.with_name(normalized_name)
+    if target.exists():
+        raise FileExistsError(
+            f"{path}: normalized filename already exists ({target}); original file preserved"
+        )
+    path.rename(target)
+    print(f"Normalized post filename: {path.name!r} -> {target.name!r}")
+    return target
+
+
 def insert_frontmatter(path: Path, now: datetime | None = None) -> bool:
-    """Add front matter to a direct child Markdown file in _posts, preserving its body."""
-    if path.suffix.lower() != ".md" or not path.is_file() or path.parent.name != "_posts":
+    """Normalize a direct child post filename and add front matter, preserving its body."""
+    if path.parent.name != "_posts" or not path.is_file():
+        return False
+
+    path = normalize_post_filename(path)
+    if path.suffix.lower() != ".md":
         return False
 
     original = path.read_bytes()
