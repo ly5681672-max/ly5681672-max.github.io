@@ -94,6 +94,40 @@ def fold_name(value: str) -> str:
     return ''.join(c for c in unicodedata.normalize('NFKD', value.casefold()) if not unicodedata.combining(c))
 
 
+def identify_by_verified_dois(expert: dict, candidates: list) -> str | None:
+    """Require two publisher-confirmed DOIs to resolve duplicate ORCID author records.
+
+    Never choose by publication count or affiliation alone. If DOI authorships
+    disagree or cannot be retrieved, retain the existing fail-closed behavior.
+    """
+    dois = expert.get('identity_evidence_dois') or []
+    if len(set(dois)) < 2:
+        return None
+    allowed = {str(row.get('id', '')).rsplit('/', 1)[-1] for row in candidates}
+    intersection = None
+    for doi in dict.fromkeys(dois):
+        normalized = normalize_doi(doi)
+        if not normalized:
+            return None
+        work = fetch_json('works/https://doi.org/' + normalized,
+                          {'select': 'doi,authorships'})
+        if normalize_doi(work.get('doi')) != normalized:
+            return None
+        ids = set()
+        for author in work.get('authorships', []):
+            author_data = author.get('author') or {}
+            author_id = str(author_data.get('id', '')).rsplit('/', 1)[-1]
+            orcid = str(author_data.get('orcid') or '').rstrip('/')
+            if author_id in allowed and orcid.endswith(expert['orcid']):
+                ids.add(author_id)
+        if len(ids) != 1:
+            return None
+        intersection = ids if intersection is None else intersection & ids
+        if not intersection:
+            return None
+    return next(iter(intersection)) if intersection and len(intersection) == 1 else None
+
+
 def get_author_id(expert: dict) -> str | None:
     if not expert.get('orcid'):
         return None
@@ -103,6 +137,8 @@ def get_author_id(expert: dict) -> str | None:
                if any(str(o).rstrip('/').endswith(orcid)
                       for o in ([row.get('orcid')] + (row.get('observed_orcids') or [])) if o)]
     preferred = expert.get('openalex_author_id')
+    if not preferred and len(matches) > 1 and expert.get('identity_evidence_dois'):
+        preferred = identify_by_verified_dois(expert, matches)
     if preferred:
         # Explicitly curated after reviewing duplicate ORCID candidates.
         # Still require the ORCID to match; an arbitrary ID cannot bypass identity validation.

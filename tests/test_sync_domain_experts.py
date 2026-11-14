@@ -22,6 +22,31 @@ class SyncTests(unittest.TestCase):
         with patch.object(module, 'fetch_json', return_value=rows):
             self.assertEqual(module.get_author_id(expert), 'A5084047416')
 
+    def test_ambiguous_orcid_requires_two_matching_dois(self):
+        from unittest.mock import patch
+        expert = {'id': 'lin_dong', 'name': 'Dong Lin（林栋）',
+                  'orcid': '0000-0001-5313-8204',
+                  'identity_evidence_dois': ['10.1002/aic.18566', '10.1002/anie.2551607']}
+        authors = {'results': [
+            {'id': 'https://openalex.org/A1', 'display_name': 'Dong Lin',
+             'observed_orcids': ['https://orcid.org/0000-0001-5313-8204']},
+            {'id': 'https://openalex.org/A2', 'display_name': 'Dong Lin',
+             'observed_orcids': ['https://orcid.org/0000-0001-5313-8204']}
+        ]}
+        def fetch(path, params):
+            if path == 'authors':
+                return authors
+            doi = path.split('doi.org/')[-1]
+            return {'doi': 'https://doi.org/' + doi, 'authorships': [
+                {'author': {'id': 'https://openalex.org/A1',
+                            'orcid': 'https://orcid.org/0000-0001-5313-8204'}}]}
+        with patch.object(module, 'fetch_json', side_effect=fetch):
+            self.assertEqual(module.get_author_id(expert), 'A1')
+        expert['identity_evidence_dois'] = ['10.1002/aic.18566']
+        with patch.object(module, 'fetch_json', side_effect=fetch):
+            with self.assertRaises(ValueError):
+                module.get_author_id(expert)
+
     def test_priority_journal_shortlist(self):
         self.assertIn('nature catalysis', module.PRIORITY_JOURNALS)
         self.assertNotIn('arxiv', module.PRIORITY_JOURNALS)
