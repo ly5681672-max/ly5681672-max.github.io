@@ -224,5 +224,23 @@
     "verification_source": "Crossref publisher-deposited abstract",
     "verification_doi": "10.1002/anie.202011821",
     "verification_method": "automated_abstract_only"
+  },
+  {
+    "year": "2020",
+    "group": "epox",
+    "type": "研究成果·出版商摘要核验",
+    "title": "Reversing Titanium Oligomer Formation towards High‐Efficiency and Green Synthesis of Titanium‐Containing Molecular Sieves",
+    "authors": "Dong Lin, Quande Zhang, Zhengxing Qin, Qing Li, Xiang Feng, Zhaoning Song, Zhenping Cai, Yibin Liu, Xiaobo Chen, De Chen, Svetlana Mintova, Chaohe Yang",
+    "evidence": "出版商登记摘要中的研究贡献原文片段（不等于全文核验）：“We report a simple and generic additive‐free route for the synthesis of Ti‐containing molecular sieves (MFI, MEL, and…”；具体结论请核对原文。",
+    "url": "https://doi.org/10.1002/anie.202011821",
+    "publisher_source": "https://doi.org/10.1002/anie.202011821",
+    "expert_ids": [
+      "lin_dong"
+    ],
+    "review_status": "CONFIRMED_ABSTRACT",
+    "review_note": "自动核验Crossref出版商登记的DOI、题名、作者姓氏及摘要；只确认摘要原文存在，不代表全文审核或独立复现。",
+    "verification_source": "Crossref publisher-deposited abstract",
+    "verification_doi": "10.1002/anie.202011821",
+    "verification_method": "automated_abstract_only"
   }
 ]
