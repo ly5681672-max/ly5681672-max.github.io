@@ -26,7 +26,12 @@
       "status": "PROVISIONAL"
     },
     "intro_review_status": "PROVISIONAL",
-    "intro_source_url": "https://che.vt.edu/People/faculty/Xin.html"
+    "intro_source_url": "https://che.vt.edu/People/faculty/Xin.html",
+    "institution_zh": "弗吉尼亚理工大学",
+    "current_affiliation_status": "PROVISIONAL",
+    "research_summary": "主要研究计算催化与数据驱动的催化剂设计，关注如何结合电子结构计算、机器学习和化学知识表达，分析催化材料性质与反应行为之间的联系。其研究方向与催化知识图谱、描述符构建及机理驱动的模型开发密切相关；具体代表性贡献应以原始论文核验为准。",
+    "latest_research_note": "近期论文与研究进展见下方自动更新的论文记录；未完成逐篇核验前不推断最新研究结论。",
+    "career_history_note": "学术经历待官方履历核验后补充。"
   },
   {
     "id": "kitchin",
@@ -56,7 +61,12 @@
       "status": "PROVISIONAL"
     },
     "intro_review_status": "PROVISIONAL",
-    "intro_source_url": "https://kitchingroup.cheme.cmu.edu/"
+    "intro_source_url": "https://kitchingroup.cheme.cmu.edu/",
+    "institution_zh": "卡内基梅隆大学",
+    "current_affiliation_status": "PROVISIONAL",
+    "research_summary": "主要从事计算催化与化学工程中的科学计算方法研究，关注利用 Python、电子结构计算及机器学习提高催化研究的可重复性和分析效率。其研究方向覆盖计算工作流、数据分析和催化性质预测，为将计算结果转化为可复用的科研方法提供了重要参考；具体成果以原始论文为依据。",
+    "latest_research_note": "近期论文与研究进展见下方自动更新的论文记录；未完成逐篇核验前不推断最新研究结论。",
+    "career_history_note": "学术经历待官方履历核验后补充。"
   },
   {
     "id": "lopez",
@@ -85,7 +95,12 @@
       "status": "PROVISIONAL"
     },
     "intro_review_status": "PROVISIONAL",
-    "intro_source_url": "https://iciq.org/research-group/prof-nuria-lopez/overview/"
+    "intro_source_url": "https://iciq.org/research-group/prof-nuria-lopez/overview/",
+    "institution_zh": "加泰罗尼亚化学研究所",
+    "current_affiliation_status": "PROVISIONAL",
+    "research_summary": "主要研究异相催化反应的理论模拟与机理解析，结合密度泛函理论、微观动力学和多尺度计算，分析催化活性位、反应路径及条件对催化表现的影响。其研究方向还涉及数据驱动方法在催化体系中的应用，与反应网络建模、动力学控制因素识别及催化剂设计密切相关。",
+    "latest_research_note": "近期论文与研究进展见下方自动更新的论文记录；未完成逐篇核验前不推断最新研究结论。",
+    "career_history_note": "学术经历待官方履历核验后补充。"
   },
   {
     "id": "kulik",
@@ -114,7 +129,12 @@
       "status": "PROVISIONAL"
     },
     "intro_review_status": "PROVISIONAL",
-    "intro_source_url": "https://hjkgrp.mit.edu/"
+    "intro_source_url": "https://hjkgrp.mit.edu/",
+    "institution_zh": "麻省理工学院",
+    "current_affiliation_status": "PROVISIONAL",
+    "research_summary": "主要开展分子与材料的计算化学研究，关注电子结构计算与机器学习相结合的方法，探索复杂化学体系的结构、性质和预测模型。其研究方向强调计算数据与实验信息的协同利用，并关注模型适用性和化学解释，为催化相关材料筛选及数据驱动研究提供方法参考。",
+    "latest_research_note": "近期论文与研究进展见下方自动更新的论文记录；未完成逐篇核验前不推断最新研究结论。",
+    "career_history_note": "学术经历待官方履历核验后补充。"
   },
   {
     "id": "ulissi",
@@ -143,7 +163,12 @@
       "status": "PROVISIONAL"
     },
     "intro_review_status": "PROVISIONAL",
-    "intro_source_url": "https://zulissi.github.io/"
+    "intro_source_url": "https://zulissi.github.io/",
+    "institution_zh": "Meta基础人工智能研究团队／卡内基梅隆大学（历史关联，当前任职待核验）",
+    "current_affiliation_status": "PROVISIONAL",
+    "research_summary": "主要研究机器学习与原子尺度模拟在材料和催化研究中的应用，关注如何通过数据驱动模型和主动学习策略提高候选材料探索效率。其研究方向涵盖计算数据利用、催化性质预测及自动化筛选，与催化剂设计中的高通量计算和描述符建模具有方法上的关联。",
+    "latest_research_note": "近期论文与研究进展见下方自动更新的论文记录；未完成逐篇核验前不推断最新研究结论。",
+    "career_history_note": "学术经历待官方履历核验后补充。"
   },
   {
     "id": "corma",
@@ -172,7 +197,12 @@
       "status": "PROVISIONAL"
     },
     "intro_review_status": "PROVISIONAL",
-    "intro_source_url": "https://itq.upv-csic.es/en/empleado/corma-avelino"
+    "intro_source_url": "https://itq.upv-csic.es/en/empleado/corma-avelino",
+    "institution_zh": "化学技术研究所（西班牙国家研究委员会／瓦伦西亚理工大学）",
+    "current_affiliation_status": "PROVISIONAL",
+    "research_summary": "长期从事分子筛与非均相催化研究，重点关注多孔催化材料、活性位结构和催化反应选择性的关系。其研究涉及分子筛催化剂设计、选择性氧化及其他催化转化过程，强调材料结构调控与反应性能之间的联系；与钛硅分子筛及烯烃环氧化研究具有直接的学科关联。",
+    "latest_research_note": "近期论文与研究进展见下方自动更新的论文记录；未完成逐篇核验前不推断最新研究结论。",
+    "career_history_note": "学术经历待官方履历核验后补充。"
   },
   {
     "id": "coperet",
@@ -202,7 +232,12 @@
       "status": "PROVISIONAL"
     },
     "intro_review_status": "PROVISIONAL",
-    "intro_source_url": "https://coperetgroup.ethz.ch/the-group/people/prof-christophe-coperet.html"
+    "intro_source_url": "https://coperetgroup.ethz.ch/the-group/people/prof-christophe-coperet.html",
+    "institution_zh": "苏黎世联邦理工学院",
+    "current_affiliation_status": "PROVISIONAL",
+    "research_summary": "主要研究固体催化剂表面活性位的结构与反应行为，结合表面化学、谱学表征和机理分析理解结构—活性关系。其研究关注具有明确局域结构的催化位点，并涉及钛硅分子筛中钛位点与环氧化反应的相关问题，可为比较单核与多核活性位提供研究背景。",
+    "latest_research_note": "近期论文与研究进展见下方自动更新的论文记录；未完成逐篇核验前不推断最新研究结论。",
+    "career_history_note": "学术经历待官方履历核验后补充。"
   },
   {
     "id": "hutchings",
@@ -232,7 +267,12 @@
       "status": "PROVISIONAL"
     },
     "intro_review_status": "PROVISIONAL",
-    "intro_source_url": "https://profiles.cardiff.ac.uk/staff/hutch"
+    "intro_source_url": "https://profiles.cardiff.ac.uk/staff/hutch",
+    "institution_zh": "卡迪夫大学",
+    "current_affiliation_status": "PROVISIONAL",
+    "research_summary": "主要从事非均相催化研究，关注金基等金属催化剂在选择性氧化及相关转化反应中的应用，并结合催化剂制备、结构表征和性能评价分析活性来源。其研究方向与氧化反应中活性位结构、催化剂稳定性及反应选择性有关，也与原位过氧化氢相关催化体系具有学科联系。",
+    "latest_research_note": "近期论文与研究进展见下方自动更新的论文记录；未完成逐篇核验前不推断最新研究结论。",
+    "career_history_note": "学术经历待官方履历核验后补充。"
   },
   {
     "id": "weckhuysen",
@@ -261,7 +301,12 @@
       "status": "PROVISIONAL"
     },
     "intro_review_status": "PROVISIONAL",
-    "intro_source_url": "https://www.uu.nl/staff/BMWeckhuysen/Research"
+    "intro_source_url": "https://www.uu.nl/staff/BMWeckhuysen/Research",
+    "institution_zh": "乌得勒支大学",
+    "current_affiliation_status": "PROVISIONAL",
+    "research_summary": "主要研究多孔催化材料及其工作状态下的结构变化，重视原位和操作态光谱技术在催化机理研究中的作用。其研究关注反应条件下活性位的动态演变，以及材料结构、表面物种和催化表现之间的联系，可为理解分子筛等催化剂的真实工作状态提供方法参考。",
+    "latest_research_note": "近期论文与研究进展见下方自动更新的论文记录；未完成逐篇核验前不推断最新研究结论。",
+    "career_history_note": "学术经历待官方履历核验后补充。"
   },
   {
     "id": "davis",
@@ -289,7 +334,12 @@
       "status": "PROVISIONAL"
     },
     "intro_review_status": "PROVISIONAL",
-    "intro_source_url": "https://cce.caltech.edu/faculty/mark-e-davis"
+    "intro_source_url": "https://cce.caltech.edu/faculty/mark-e-davis",
+    "institution_zh": "加州理工学院（荣休）",
+    "current_affiliation_status": "PROVISIONAL",
+    "research_summary": "主要研究分子筛、微孔材料及其合成与催化应用，关注材料孔道结构、组成和制备方法对催化性质的影响。其研究方向涵盖多孔材料设计和催化材料构筑，与钛硅分子筛的结构设计、活性位引入及材料性质调控具有相关性；具体贡献需结合对应论文进行核验。",
+    "latest_research_note": "近期论文与研究进展见下方自动更新的论文记录；未完成逐篇核验前不推断最新研究结论。",
+    "career_history_note": "学术经历待官方履历核验后补充。"
   },
   {
     "id": "cao_yueqiang",
@@ -321,7 +371,12 @@
       "status": "PROVISIONAL"
     },
     "intro_review_status": "PROVISIONAL",
-    "intro_source_url": "https://cre.ecust.edu.cn/2024/1023/c15200a171646/page.htm"
+    "intro_source_url": "https://cre.ecust.edu.cn/2024/1023/c15200a171646/page.htm",
+    "institution_zh": "华东理工大学",
+    "current_affiliation_status": "PROVISIONAL",
+    "research_summary": "以催化反应工程与选择性加氢为研究对象，结合DFT、微观动力学、原位表征、机器学习及主动学习，开展反应机理与数据驱动的催化剂设计；与本网站的描述符构建、活性位调控和构效关系研究在方法上相关，研究反应体系并非烯烃环氧化。",
+    "latest_research_note": "近期论文与研究进展见下方自动更新的论文记录；未完成逐篇核验前不推断最新研究结论。",
+    "career_history_note": "学术经历待官方履历核验后补充。"
   },
   {
     "id": "takigawa_ichigaku",
@@ -352,7 +407,12 @@
       "status": "PROVISIONAL"
     },
     "intro_review_status": "PROVISIONAL",
-    "intro_source_url": "https://www.icredd.hokudai.ac.jp/takigawa-ichigaku"
+    "intro_source_url": "https://www.icredd.hokudai.ac.jp/takigawa-ichigaku",
+    "institution_zh": "北海道大学／东京大学",
+    "current_affiliation_status": "PROVISIONAL",
+    "research_summary": "研究机器学习、化学反应网络建模与数据驱动预测，重点发展适用于分子结构、反应及其他离散结构的学习方法，并用于催化材料性质预测与科学发现；其方法研究与催化描述符及AI for Science相关，不等同于专门研究烯烃环氧化。",
+    "latest_research_note": "近期论文与研究进展见下方自动更新的论文记录；未完成逐篇核验前不推断最新研究结论。",
+    "career_history_note": "学术经历待官方履历核验后补充。"
   },
   {
     "id": "feng_xiang",
@@ -384,7 +444,12 @@
       "status": "PROVISIONAL"
     },
     "intro_review_status": "PROVISIONAL",
-    "intro_source_url": "https://cce.upc.edu.cn/_s34/2022/0323/c19254a365304/page.psp"
+    "intro_source_url": "https://cce.upc.edu.cn/_s34/2022/0323/c19254a365304/page.psp",
+    "institution_zh": "中国石油大学（华东）",
+    "current_affiliation_status": "PROVISIONAL",
+    "research_summary": "从事工业催化剂多尺度结构调控与催化反应工程研究，重点关注钛硅分子筛活性位点调控、烯烃环氧化、选择性氧化及反应强化，结合实验表征、理论计算和动力学分析研究催化剂构效关系。",
+    "latest_research_note": "近期论文与研究进展见下方自动更新的论文记录；未完成逐篇核验前不推断最新研究结论。",
+    "career_history_note": "学术经历待官方履历核验后补充。"
   },
   {
     "id": "lin_dong",
@@ -419,6 +484,11 @@
       "status": "PROVISIONAL"
     },
     "intro_review_status": "PROVISIONAL",
-    "intro_source_url": "https://www.cardiff.ac.uk/research/explore/research-units/catalysis-and-interfacial-science"
+    "intro_source_url": "https://www.cardiff.ac.uk/research/explore/research-units/catalysis-and-interfacial-science",
+    "institution_zh": "卡迪夫大学",
+    "current_affiliation_status": "PROVISIONAL",
+    "research_summary": "2022年获中国石油大学（华东）博士学位，随后在英国卡迪夫大学Graham J. Hutchings研究团队开展博士后研究（该任职信息来自已发表论文，当前职务以机构最新资料为准）。研究聚焦钛硅分子筛与烯烃环氧化、原位过氧化氢耦合选择性氧化、催化剂结构与反应性能调控。",
+    "latest_research_note": "近期论文与研究进展见下方自动更新的论文记录；未完成逐篇核验前不推断最新研究结论。",
+    "career_history_note": "2022年获中国石油大学（华东）博士学位，后在卡迪夫大学开展博士后研究（来源为既有论文记录，现职待核验）。"
   }
 ]

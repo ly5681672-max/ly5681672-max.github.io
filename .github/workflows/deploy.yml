@@ -9,6 +9,8 @@ on:
       - "assets/**"
       - "scripts/check_domain_expert_pronunciation.py"
       - "scripts/check_domain_expert_introductions.py"
+      - "scripts/check_domain_expert_affiliations.py"
+      - "tests/test_check_domain_expert_affiliations.py"
       - "tests/test_check_domain_expert_introductions.py"
       - "scripts/check_live_domain_experts.py"
       - "tests/test_check_domain_expert_pronunciation.py"
@@ -48,6 +50,8 @@ on:
       - "assets/**"
       - "scripts/check_domain_expert_pronunciation.py"
       - "scripts/check_domain_expert_introductions.py"
+      - "scripts/check_domain_expert_affiliations.py"
+      - "tests/test_check_domain_expert_affiliations.py"
       - "tests/test_check_domain_expert_introductions.py"
       - "scripts/check_live_domain_experts.py"
       - "tests/test_check_domain_expert_pronunciation.py"
@@ -149,6 +153,10 @@ jobs:
         run: |
           npm install -g purgecss
           purgecss -c purgecss.config.js
+      - name: Validate bilingual affiliation and structured expert profile
+        run: |
+          python3 scripts/check_domain_expert_affiliations.py
+          python3 -m unittest discover -s tests -p "test_check_domain_expert_affiliations.py" -v
       - name: Validate expert introduction completeness
         run: |
           python3 scripts/check_domain_expert_introductions.py

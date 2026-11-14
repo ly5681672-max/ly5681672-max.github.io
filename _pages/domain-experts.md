@@ -53,8 +53,10 @@ nav_order: 5
   <article class="domain-expert-card" data-person-group="{{ person.group }}">
     <h3><button data-person-id="{{ person.id }}" class="domain-person-button">{{ person.name | escape }}</button> <button type="button" class="domain-pronounce-button" data-pronounce-id="{{ person.id }}" aria-label="播放 {{ person.name | escape }} 的姓名读音" title="播放姓名读音">🔊 <span>全名发音</span></button>{% if person.pronunciation_ipa %} <span class="domain-name-ipa" title="近似国际音标，尚未经本人核验">{{ person.pronunciation_ipa | escape }}</span>{% endif %}</h3>
     <p class="domain-help">推荐称呼：<strong>{{ person.preferred_address.label | escape }}</strong> · {{ person.preferred_address.status | escape }} <button type="button" class="domain-pronounce-button" data-pronounce-id="{{ person.id }}" data-pronounce-short="true" aria-label="播放推荐称呼简称">🔊 <span>简称发音</span></button></p>
-    <p><small>{{ person.institution | escape }}</small></p>
-    <p>{{ person.intro | escape }}</p>
+    <p class="domain-help">当前机构（待核验）：<strong>{{ person.institution | escape }}</strong><br><span lang="zh-CN">中文：{{ person.institution_zh | escape }}</span> · {{ person.current_affiliation_status | escape }}</p>
+    <p><strong>研究方向：</strong>{{ person.research_summary | escape }}</p>
+    <p><strong>近期研究：</strong>{{ person.latest_research_note | escape }}</p>
+    <p><strong>学术经历：</strong>{{ person.career_history_note | escape }}</p>
     <p class="domain-tags">{% for topic in person.topics %}<span>{{ topic | escape }}</span>{% endfor %}</p>
     <p><a href="{{ person.official_url }}" target="_blank" rel="noopener noreferrer">官方主页 ↗</a>{% if person.orcid %} · <a href="https://orcid.org/{{ person.orcid }}" target="_blank" rel="noopener noreferrer">ORCID ↗</a>{% endif %}</p>
   </article>
@@ -70,6 +72,7 @@ nav_order: 5
 <section class="domain-person-timeline" data-person-group="{{ person.group }}" id="timeline-{{ person.id }}">
   <h3>{{ person.name | escape }} · 关键科研里程碑 <button type="button" class="domain-pronounce-button" data-pronounce-id="{{ person.id }}" aria-label="播放 {{ person.name | escape }} 的姓名读音" title="播放姓名读音">🔊 <span>全名发音</span></button>{% if person.pronunciation_ipa %} <span class="domain-name-ipa" title="近似国际音标，尚未经本人核验">{{ person.pronunciation_ipa | escape }}</span>{% endif %}</h3>
   <p class="domain-help">推荐称呼：<strong>{{ person.preferred_address.label | escape }}</strong> · {{ person.preferred_address.status | escape }} <button type="button" class="domain-pronounce-button" data-pronounce-id="{{ person.id }}" data-pronounce-short="true" aria-label="播放推荐称呼简称">🔊 <span>简称发音</span></button></p>
+  <p class="domain-help">当前机构（待核验）：{{ person.institution | escape }}（{{ person.institution_zh | escape }}） · {{ person.current_affiliation_status | escape }}</p>
   <p class="domain-help">{{ person.institution | escape }} · <a href="{{ person.official_url }}" target="_blank" rel="noopener noreferrer">研究组官网</a></p>
   {% assign milestone_count = 0 %}
   {% for item in milestones %}
