@@ -41,8 +41,13 @@ def insert_frontmatter(path: Path, now: datetime | None = None) -> bool:
     current = (now or datetime.now(BEIJING)).astimezone(BEIJING)
     match = DATED_POST_NAME.fullmatch(path.name)
     if match:
-        post_date = date.fromisoformat(match.group(1))
-        time_part = current.strftime("%H:%M:%S") if current.date() == post_date else "10:00:00"
+        try:
+            post_date = date.fromisoformat(match.group(1))
+        except ValueError:
+            post_date = current.date()
+            time_part = current.strftime("%H:%M:%S")
+        else:
+            time_part = current.strftime("%H:%M:%S") if current.date() == post_date else "10:00:00"
     else:
         post_date = current.date()
         time_part = current.strftime("%H:%M:%S")
