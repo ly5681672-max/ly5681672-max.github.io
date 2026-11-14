@@ -12,13 +12,17 @@ ROOT=Path(__file__).resolve().parents[1]
 class TimelineHTML(HTMLParser):
     def __init__(self):
         super().__init__(convert_charrefs=True)
-        self.active=None; self.depth=0; self.text={}; self.links={}; self.page_text=[]; self.page_links=set()
+        self.active=None; self.depth=0; self.text={}; self.links={}; self.page_text=[]; self.page_links=set(); self.short_buttons={} ; self.full_buttons={}
     def handle_starttag(self,tag,attrs):
         a=dict(attrs)
         if tag=='section' and a.get('id','').startswith('timeline-'):
             self.active=a['id'][9:]; self.depth=1; self.text[self.active]=[]; self.links[self.active]=set()
         elif self.active is not None and tag=='section':
             self.depth+=1
+        if tag=='button' and a.get('data-pronounce-id'):
+            pid=a['data-pronounce-id']
+            bucket=self.short_buttons if a.get('data-pronounce-short')=='true' else self.full_buttons
+            bucket[pid]=bucket.get(pid,0)+1
         if tag=='a' and a.get('href'):
             url=html.unescape(a['href']); self.page_links.add(url)
             if self.active is not None: self.links[self.active].add(url)
@@ -38,6 +42,11 @@ def verify(page,experts,candidates,milestones):
         pid=person['id']; section=norm(' '.join(doc.text.get(pid,[])))
         if not section:
             errors.append(f'{pid}: missing or empty timeline'); continue
+        if person.get('preferred_address'):
+            label=person['preferred_address']['label']
+            if norm(label) not in section: errors.append(f'{pid}: missing recommended address on public timeline')
+            if not doc.short_buttons.get(pid): errors.append(f'{pid}: missing short pronunciation button')
+            if not doc.full_buttons.get(pid): errors.append(f'{pid}: missing full pronunciation button')
         if norm(person['name']) not in section:
             errors.append(f'{pid}: incorrect timeline name')
         confirmed=[m for m in milestones if pid in m.get('expert_ids',[])]
