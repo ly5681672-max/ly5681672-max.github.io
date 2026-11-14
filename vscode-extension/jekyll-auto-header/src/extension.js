@@ -3,7 +3,9 @@ const { createFrontMatter } = require("./frontmatter");
 
 function isPostMarkdown(uri) {
   const path = uri.path.replace(/\\/g, "/");
-  return /(^|\\/)\_posts\\/[^/]+\\.md$/i.test(path);
+  const parts = path.split("/");
+  const filename = parts.at(-1) || "";
+  return parts.at(-2) === "_posts" && /\.md$/i.test(filename);
 }
 
 async function insertHeader(uri) {
@@ -11,7 +13,7 @@ async function insertHeader(uri) {
 
   const document = await vscode.workspace.openTextDocument(uri);
   const text = document.getText();
-  if (text.startsWith("---") || text.startsWith("\\uFEFF---")) return false;
+  if (text.startsWith("---") || text.startsWith("\uFEFF---")) return false;
 
   const header = createFrontMatter(uri.path.split("/").pop());
   const edit = new vscode.WorkspaceEdit();
