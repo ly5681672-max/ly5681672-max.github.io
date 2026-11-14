@@ -7,6 +7,8 @@ on:
       - main
     paths:
       - "assets/**"
+      - "scripts/ensure_post_frontmatter.py"
+      - "test/test_post_frontmatter.py"
       - "scripts/check_domain_expert_pronunciation.py"
       - "scripts/check_domain_expert_introductions.py"
       - "scripts/check_domain_expert_affiliations.py"
