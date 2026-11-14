@@ -116,6 +116,12 @@ https://chatgpt.com/s/t_6af57233f43c8191aeaafdd31d582a5b
 
 还存在可能是区分Ha Hb导致的 
 
+hexene_epoxidation/2-creating_microkinetic_model/runs/run_20261112_221539_910/descriptor_Ha_O/transient_analysis/analysis_20261113_203609/transient_coverage_14catalysts.pdf
+现在有左上角小峰和下边不像峰的趋势线
+
+分析
+https://chatgpt.com/s/t_6af82c4a10508191bb60a6b9eb6a23fe
+
 9.反应级数求导和分析问题
 
 https://mp.weixin.qq.com/s/VePuCbIvaqaM3VTTdZaBvQ
