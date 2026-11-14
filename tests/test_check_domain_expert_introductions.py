@@ -3,7 +3,7 @@ import unittest
 from pathlib import Path
 spec=importlib.util.spec_from_file_location('intro_check',Path(__file__).resolve().parents[1]/'scripts/check_domain_expert_introductions.py')
 m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)
-def item(text='研究催化材料的结构与性能关系，结合计算化学与数据分析研究催化反应中的活性位及其变化规律，并分析反应条件对催化过程的影响。'):
+def item(text='研究催化材料的结构与性能关系，结合计算化学与数据分析研究催化反应中的活性位及其变化规律，并分析反应条件对催化过程的影响，重点关注催化剂活性、选择性及材料结构的变化规律。'):
     return {'id':'test','intro':text,'institution':'Research Institute','topics':['催化'],'intro_review_status':'PROVISIONAL','intro_source_url':'https://example.org/profile'}
 class IntroductionTests(unittest.TestCase):
     def test_valid(self): self.assertEqual(m.validate([item()]),[])
