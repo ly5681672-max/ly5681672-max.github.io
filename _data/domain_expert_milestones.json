@@ -242,5 +242,23 @@
     "verification_source": "Crossref publisher-deposited abstract",
     "verification_doi": "10.1002/anie.202011821",
     "verification_method": "automated_abstract_only"
+  },
+  {
+    "year": "2017",
+    "group": "ai",
+    "type": "研究成果·出版商摘要核验",
+    "title": "Quantum autoencoders for efficient compression of quantum data",
+    "authors": "Jonathan Romero, Jonathan P Olson, Alan Aspuru-Guzik",
+    "evidence": "出版商登记摘要中的研究贡献原文片段（不等于全文核验）：“We show an example of a simple programmable circuit that can be trained as an efficient autoencoder.…”；具体结论请核对原文。",
+    "url": "https://doi.org/10.1088/2058-9565/aa8072",
+    "publisher_source": "https://doi.org/10.1088/2058-9565/aa8072",
+    "expert_ids": [
+      "alan_aspuru_guzik"
+    ],
+    "review_status": "CONFIRMED_ABSTRACT",
+    "review_note": "自动核验Crossref出版商登记的DOI、题名、作者姓氏及摘要；只确认摘要原文存在，不代表全文审核或独立复现。",
+    "verification_source": "Crossref publisher-deposited abstract",
+    "verification_doi": "10.1088/2058-9565/aa8072",
+    "verification_method": "automated_abstract_only"
   }
 ]

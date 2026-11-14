@@ -1,7 +1,45 @@
 {
-  "generated_at": "2026-11-14T05:03:22+00:00",
+  "generated_at": "2026-11-14T05:50:34+00:00",
   "window_days": 180,
   "papers": [
+    {
+      "title": "El Agente Fármaco: A Scalable AI Scientist for Drug Discovery",
+      "doi": "10.48550/arxiv.2611.03832",
+      "doi_url": "https://doi.org/10.48550/arxiv.2611.03832",
+      "source_url": "https://openalex.org/W7225231441",
+      "publication_date": "2026-11-02",
+      "journal": "arXiv (Cornell University)",
+      "priority_journal": false,
+      "publication_type": "preprint",
+      "group": "ai",
+      "group_label": "AI 结合知识学习",
+      "relevance": "中",
+      "match_tags": [
+        "RAG/LLM"
+      ],
+      "author_names": [
+        "Alán Aspuru-Guzik"
+      ]
+    },
+    {
+      "title": "El Agente Quntur: Agentic Active-Space Selection for CASSCF",
+      "doi": "10.48550/arxiv.2610.38145",
+      "doi_url": "https://doi.org/10.48550/arxiv.2610.38145",
+      "source_url": "https://openalex.org/W7224795340",
+      "publication_date": "2026-10-28",
+      "journal": "arXiv (Cornell University)",
+      "priority_journal": false,
+      "publication_type": "preprint",
+      "group": "ai",
+      "group_label": "AI 结合知识学习",
+      "relevance": "中",
+      "match_tags": [
+        "RAG/LLM"
+      ],
+      "author_names": [
+        "Alán Aspuru-Guzik"
+      ]
+    },
     {
       "title": "From Atoms to Reactors: A Critical Review of a Decade of Machine Learning in Heterogeneous Catalysis (2017–2026)",
       "doi": "10.1002/anie.4288841",
@@ -122,6 +160,25 @@
       ]
     },
     {
+      "title": "Joint Neural Posterior Estimation and Model Selection for Chemical Reaction Networks",
+      "doi": "10.48550/arxiv.2610.18825",
+      "doi_url": "https://doi.org/10.48550/arxiv.2610.18825",
+      "source_url": "https://openalex.org/W7221810056",
+      "publication_date": "2026-10-13",
+      "journal": "arXiv (Cornell University)",
+      "priority_journal": false,
+      "publication_type": "preprint",
+      "group": "ai",
+      "group_label": "AI 结合知识学习",
+      "relevance": "中",
+      "match_tags": [
+        "机器学习"
+      ],
+      "author_names": [
+        "Alán Aspuru-Guzik"
+      ]
+    },
+    {
       "title": "Epitaxial-strain engineering of supported tensile noble metallene oxides for enhanced oxidation catalysis",
       "doi": "10.1038/s41467-026-78119-2",
       "doi_url": "https://doi.org/10.1038/s41467-026-78119-2",
@@ -218,6 +275,25 @@
       ]
     },
     {
+      "title": "Colour me shocked: Exact Molecular Hessians from local MLIPs in O(N) time using sparse differentiation!",
+      "doi": "10.48550/arxiv.2609.24720",
+      "doi_url": "https://doi.org/10.48550/arxiv.2609.24720",
+      "source_url": "https://openalex.org/W7214022353",
+      "publication_date": "2026-09-21",
+      "journal": "arXiv (Cornell University)",
+      "priority_journal": false,
+      "publication_type": "preprint",
+      "group": "ai",
+      "group_label": "AI 结合知识学习",
+      "relevance": "中",
+      "match_tags": [
+        "机器学习"
+      ],
+      "author_names": [
+        "Alán Aspuru-Guzik"
+      ]
+    },
+    {
       "title": "Enhancing Aromatics Production in Zeolite-Catalyzed Lignin Pyrolysis by Establishing Structure-Acidity-Performance Relationships",
       "doi": "10.26434/chemrxiv.15009058/v1",
       "doi_url": "https://doi.org/10.26434/chemrxiv.15009058/v1",
@@ -254,6 +330,63 @@
       ],
       "author_names": [
         "Christophe Copéret"
+      ]
+    },
+    {
+      "title": "El Agente Potente: High-Throughput Agentic Atomistic Simulations",
+      "doi": "10.48550/arxiv.2609.14840",
+      "doi_url": "https://doi.org/10.48550/arxiv.2609.14840",
+      "source_url": "https://openalex.org/W7213325938",
+      "publication_date": "2026-09-13",
+      "journal": "arXiv (Cornell University)",
+      "priority_journal": false,
+      "publication_type": "preprint",
+      "group": "ai",
+      "group_label": "AI 结合知识学习",
+      "relevance": "中",
+      "match_tags": [
+        "RAG/LLM"
+      ],
+      "author_names": [
+        "Alán Aspuru-Guzik"
+      ]
+    },
+    {
+      "title": "La Agente Óptima: Towards Agentic Self-Driving Laboratories",
+      "doi": "10.48550/arxiv.2609.04564",
+      "doi_url": "https://doi.org/10.48550/arxiv.2609.04564",
+      "source_url": "https://openalex.org/W7211914410",
+      "publication_date": "2026-09-03",
+      "journal": "arXiv (Cornell University)",
+      "priority_journal": false,
+      "publication_type": "preprint",
+      "group": "ai",
+      "group_label": "AI 结合知识学习",
+      "relevance": "中",
+      "match_tags": [
+        "RAG/LLM"
+      ],
+      "author_names": [
+        "Alán Aspuru-Guzik"
+      ]
+    },
+    {
+      "title": "AI-enhanced adaptive virtual screening of large libraries for ligand discovery",
+      "doi": "10.1038/s41587-026-03217-x",
+      "doi_url": "https://doi.org/10.1038/s41587-026-03217-x",
+      "source_url": "https://openalex.org/W7204893480",
+      "publication_date": "2026-09-01",
+      "journal": "Nature Biotechnology",
+      "priority_journal": false,
+      "publication_type": "article",
+      "group": "ai",
+      "group_label": "AI 结合知识学习",
+      "relevance": "中",
+      "match_tags": [
+        "机器学习"
+      ],
+      "author_names": [
+        "Alán Aspuru-Guzik"
       ]
     },
     {
@@ -331,6 +464,25 @@
       ],
       "author_names": [
         "Graham J. Hutchings"
+      ]
+    },
+    {
+      "title": "Reaction: Building trust infrastructure for agentic experimental science beyond fragile eloquence",
+      "doi": "10.1016/j.chempr.2026.103163",
+      "doi_url": "https://doi.org/10.1016/j.chempr.2026.103163",
+      "source_url": "https://openalex.org/W7171788080",
+      "publication_date": "2026-07-30",
+      "journal": "Chem",
+      "priority_journal": true,
+      "publication_type": "article",
+      "group": "ai",
+      "group_label": "AI 结合知识学习",
+      "relevance": "中",
+      "match_tags": [
+        "RAG/LLM"
+      ],
+      "author_names": [
+        "Alán Aspuru-Guzik"
       ]
     },
     {
@@ -429,6 +581,25 @@
       ]
     },
     {
+      "title": "Rapid Evaluation of Glassy Carbon Electrode Surface with Machine Vision",
+      "doi": "10.26434/chemrxiv.15004057/v2",
+      "doi_url": "https://doi.org/10.26434/chemrxiv.15004057/v2",
+      "source_url": "https://openalex.org/W7167576437",
+      "publication_date": "2026-07-07",
+      "journal": "ChemRxiv",
+      "priority_journal": false,
+      "publication_type": "preprint",
+      "group": "ai",
+      "group_label": "AI 结合知识学习",
+      "relevance": "中",
+      "match_tags": [
+        "机器学习"
+      ],
+      "author_names": [
+        "Alán Aspuru-Guzik"
+      ]
+    },
+    {
       "title": "Enerzyme: A Framework for Efficient Training of Reactive Neural Network Potentials for Enzyme Catalysis with Application to Methyltransferases",
       "doi": "10.48550/arxiv.2607.01362",
       "doi_url": "https://doi.org/10.48550/arxiv.2607.01362",
@@ -445,6 +616,25 @@
       ],
       "author_names": [
         "Heather J. Kulik"
+      ]
+    },
+    {
+      "title": "El agente cuántico: automating quantum simulations",
+      "doi": "10.1088/1361-6633/ae8933",
+      "doi_url": "https://doi.org/10.1088/1361-6633/ae8933",
+      "source_url": "https://openalex.org/W7167913397",
+      "publication_date": "2026-07-01",
+      "journal": "Reports on Progress in Physics",
+      "priority_journal": false,
+      "publication_type": "article",
+      "group": "ai",
+      "group_label": "AI 结合知识学习",
+      "relevance": "中",
+      "match_tags": [
+        "RAG/LLM"
+      ],
+      "author_names": [
+        "Alán Aspuru-Guzik"
       ]
     },
     {
@@ -549,6 +739,45 @@
       ]
     },
     {
+      "title": "Quantitative prediction of siRNA complexation by ionizable drugs enables their codelivery in nanoparticles",
+      "doi": "10.1126/sciadv.aed2731",
+      "doi_url": "https://doi.org/10.1126/sciadv.aed2731",
+      "source_url": "https://openalex.org/W7164485370",
+      "publication_date": "2026-06-12",
+      "journal": "Science Advances",
+      "priority_journal": true,
+      "publication_type": "article",
+      "group": "ai",
+      "group_label": "AI 结合知识学习",
+      "relevance": "中",
+      "match_tags": [
+        "机器学习"
+      ],
+      "author_names": [
+        "Alán Aspuru-Guzik"
+      ]
+    },
+    {
+      "title": "El Agente Seguro: An Agent for Chemical Safety",
+      "doi": "10.26434/chemrxiv.15004378/v2",
+      "doi_url": "https://doi.org/10.26434/chemrxiv.15004378/v2",
+      "source_url": "https://openalex.org/W7164131851",
+      "publication_date": "2026-06-10",
+      "journal": "ChemRxiv",
+      "priority_journal": false,
+      "publication_type": "preprint",
+      "group": "ai",
+      "group_label": "AI 结合知识学习",
+      "relevance": "中",
+      "match_tags": [
+        "RAG/LLM",
+        "机器学习"
+      ],
+      "author_names": [
+        "Alán Aspuru-Guzik"
+      ]
+    },
+    {
       "title": "High-Throughput Discovery of Conformation-Switching Mechanophores with Enhanced Reactivity and Stability",
       "doi": "10.1021/acs.inorgchem.6c01947",
       "doi_url": "https://doi.org/10.1021/acs.inorgchem.6c01947",
@@ -565,6 +794,26 @@
       ],
       "author_names": [
         "Heather J. Kulik"
+      ]
+    },
+    {
+      "title": "El Agente Seguro: An Agent for Chemical Safety",
+      "doi": "10.26434/chemrxiv.15004378/v1",
+      "doi_url": "https://doi.org/10.26434/chemrxiv.15004378/v1",
+      "source_url": "https://openalex.org/W7163657815",
+      "publication_date": "2026-06-05",
+      "journal": "ChemRxiv",
+      "priority_journal": false,
+      "publication_type": "preprint",
+      "group": "ai",
+      "group_label": "AI 结合知识学习",
+      "relevance": "中",
+      "match_tags": [
+        "RAG/LLM",
+        "机器学习"
+      ],
+      "author_names": [
+        "Alán Aspuru-Guzik"
       ]
     },
     {
@@ -603,6 +852,25 @@
       ],
       "author_names": [
         "Graham J. Hutchings"
+      ]
+    },
+    {
+      "title": "Rapid Evaluation of Glassy Carbon Electrode Surface with Machine Vision",
+      "doi": "10.26434/chemrxiv.15004057/v1",
+      "doi_url": "https://doi.org/10.26434/chemrxiv.15004057/v1",
+      "source_url": "https://openalex.org/W7162806986",
+      "publication_date": "2026-05-29",
+      "journal": "ChemRxiv",
+      "priority_journal": false,
+      "publication_type": "preprint",
+      "group": "ai",
+      "group_label": "AI 结合知识学习",
+      "relevance": "中",
+      "match_tags": [
+        "机器学习"
+      ],
+      "author_names": [
+        "Alán Aspuru-Guzik"
       ]
     },
     {

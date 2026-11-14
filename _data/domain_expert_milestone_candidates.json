@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T05:03:50+00:00",
+  "generated_at": "2026-11-14T05:50:58+00:00",
   "source": "OpenAlex",
   "selection": "历史高引用+主题规则初筛；非科学里程碑认证",
   "candidates": [
@@ -1791,6 +1791,142 @@
         "TS-1"
       ],
       "abstract_excerpt": "",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "alan_aspuru_guzik",
+      "expert_name": "Alán Aspuru-Guzik",
+      "year": 2022,
+      "title": "Noisy intermediate-scale quantum algorithms",
+      "doi": "10.1103/revmodphys.94.015004",
+      "doi_url": "https://doi.org/10.1103/revmodphys.94.015004",
+      "source_url": "https://openalex.org/W4213212652",
+      "journal": "Reviews of Modern Physics",
+      "cited_by_count": 2278,
+      "relevance_tags": [
+        "机器学习"
+      ],
+      "abstract_excerpt": "Noisy quantum computers can in principle perform reliable quantum computations, but truly scalable systems require noise levels lower than are presently achieved. Still, moderate-complexity computations can be performed. This review discusses what is possible in this ``noisy intermediate scale'' quantum (NISQ) era. Topic areas include the simulation of many-body physics and chemistry, combinatorial optimization, and machine learning. It is evident that the NISQ era has produced new paradigms for programming that will be built upon as quantum computers are further perfected.",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "alan_aspuru_guzik",
+      "expert_name": "Alán Aspuru-Guzik",
+      "year": 2021,
+      "title": "Machine learning the quantum-chemical properties of metal–organic frameworks for accelerated materials discovery",
+      "doi": "10.1016/j.matt.2021.02.015",
+      "doi_url": "https://doi.org/10.1016/j.matt.2021.02.015",
+      "source_url": "https://openalex.org/W3143460494",
+      "journal": "Matter",
+      "cited_by_count": 576,
+      "relevance_tags": [
+        "机器学习"
+      ],
+      "abstract_excerpt": "The modular nature of metal–organic frameworks (MOFs) enables synthetic control over their physical and chemical properties, but it can be difficult to know which MOFs would be optimal for a given application. High-throughput computational screening and machine learning are promising routes to efficiently navigate the vast chemical space of MOFs but have rarely been used for the prediction of properties that need to be calculated by quantum mechanical methods. Here, we introduce the Quantum MOF (QMOF) database, a publicly available database of computed quantum-chemical properties for more than 14,000 experimentally synthesized MOFs. Throughout this study, we demonstrate how machine learning models trained on the QMOF database can be used to rapidly discover MOFs with targeted electronic structure properties, using the prediction of theoretically computed band gaps as a representative exa",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "alan_aspuru_guzik",
+      "expert_name": "Alán Aspuru-Guzik",
+      "year": 2021,
+      "title": "Data-Driven Strategies for Accelerated Materials Design",
+      "doi": "10.1021/acs.accounts.0c00785",
+      "doi_url": "https://doi.org/10.1021/acs.accounts.0c00785",
+      "source_url": "https://openalex.org/W3128426563",
+      "journal": "Accounts of Chemical Research",
+      "cited_by_count": 496,
+      "relevance_tags": [
+        "机器学习"
+      ],
+      "abstract_excerpt": "The ongoing revolution of the natural sciences by the advent of machine learning and artificial intelligence sparked significant interest in the material science community in recent years. The intrinsically high dimensionality of the space of realizable materials makes traditional approaches ineffective for large-scale explorations. Modern data science and machine learning tools developed for increasingly complicated problems are an attractive alternative. An imminent climate catastrophe calls for a clean energy transformation by overhauling current technologies within only several years of possible action available. Tackling this crisis requires the development of new materials at an unprecedented pace and scale. For example, organic photovoltaics have the potential to replace existing silicon-based materials to a large extent and open up new fields of application. In recent years, orga",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "alan_aspuru_guzik",
+      "expert_name": "Alán Aspuru-Guzik",
+      "year": 2020,
+      "title": "Self-referencing embedded strings (SELFIES): A 100% robust molecular string representation",
+      "doi": "10.1088/2632-2153/aba947",
+      "doi_url": "https://doi.org/10.1088/2632-2153/aba947",
+      "source_url": "https://openalex.org/W3009321976",
+      "journal": "Machine Learning Science and Technology",
+      "cited_by_count": 1057,
+      "relevance_tags": [
+        "机器学习"
+      ],
+      "abstract_excerpt": "Abstract The discovery of novel materials and functional molecules can help to solve some of society’s most urgent challenges, ranging from efficient energy harvesting and storage to uncovering novel pharmaceutical drug candidates. Traditionally matter engineering–generally denoted as inverse design–was based massively on human intuition and high-throughput virtual screening. The last few years have seen the emergence of significant interest in computer-inspired designs based on evolutionary or deep learning methods. The major challenge here is that the standard strings molecular representation SMILES shows substantial weaknesses in that task because large fractions of strings do not correspond to valid molecules. Here, we solve this problem at a fundamental level and introduce S ELFIES (SELF-referencIng Embedded Strings), a string-based representation of molecules which is 100% robust. ",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "alan_aspuru_guzik",
+      "expert_name": "Alán Aspuru-Guzik",
+      "year": 2020,
+      "title": "QSAR without borders",
+      "doi": "10.1039/d0cs00098a",
+      "doi_url": "https://doi.org/10.1039/d0cs00098a",
+      "source_url": "https://openalex.org/W3023042104",
+      "journal": "Chemical Society Reviews",
+      "cited_by_count": 975,
+      "relevance_tags": [
+        "机器学习"
+      ],
+      "abstract_excerpt": "Prediction of chemical bioactivity and physical properties has been one of the most important applications of statistical and more recently, machine learning and artificial intelligence methods in chemical sciences. This field of research, broadly known as quantitative structure-activity relationships (QSAR) modeling, has developed many important algorithms and has found a broad range of applications in physical organic and medicinal chemistry in the past 55+ years. This Perspective summarizes recent technological advances in QSAR modeling but it also highlights the applicability of algorithms, modeling methods, and validation practices developed in QSAR to a wide range of research areas outside of traditional QSAR boundaries including synthesis planning, nanotechnology, materials science, biomaterials, and clinical informatics. As modern research methods generate rapidly increasing amou",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "alan_aspuru_guzik",
+      "expert_name": "Alán Aspuru-Guzik",
+      "year": 2018,
+      "title": "Automatic Chemical Design Using a Data-Driven Continuous Representation of Molecules",
+      "doi": "10.1021/acscentsci.7b00572",
+      "doi_url": "https://doi.org/10.1021/acscentsci.7b00572",
+      "source_url": "https://openalex.org/W2529996553",
+      "journal": "ACS Central Science",
+      "cited_by_count": 3762,
+      "relevance_tags": [
+        "机器学习"
+      ],
+      "abstract_excerpt": "We report a method to convert discrete representations of molecules to and from a multidimensional continuous representation. This model allows us to generate new molecules for efficient exploration and optimization through open-ended spaces of chemical compounds. A deep neural network was trained on hundreds of thousands of existing chemical structures to construct three coupled functions: an encoder, a decoder, and a predictor. The encoder converts the discrete representation of a molecule into a real-valued continuous vector, and the decoder converts these continuous vectors back to discrete molecular representations. The predictor estimates chemical properties from the latent continuous vector representation of the molecule. Continuous representations of molecules allow us to automatically generate novel chemical structures by performing simple operations in the latent space, such as",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "alan_aspuru_guzik",
+      "expert_name": "Alán Aspuru-Guzik",
+      "year": 2018,
+      "title": "Inverse molecular design using machine learning: Generative models for matter engineering",
+      "doi": "10.1126/science.aat2663",
+      "doi_url": "https://doi.org/10.1126/science.aat2663",
+      "source_url": "https://openalex.org/W2883583109",
+      "journal": "Science",
+      "cited_by_count": 2183,
+      "relevance_tags": [
+        "机器学习"
+      ],
+      "abstract_excerpt": "The discovery of new materials can bring enormous societal and technological progress. In this context, exploring completely the large space of potential materials is computationally intractable. Here, we review methods for achieving inverse design, which aims to discover tailored materials from the starting point of a particular desired functionality. Recent advances from the rapidly growing field of artificial intelligence, mostly from the subfield of machine learning, have resulted in a fertile exchange of ideas, where approaches to inverse molecular design are being proposed and employed at a rapid pace. Among these, deep generative models have been applied to numerous classes of materials: rational design of prospective drugs, synthetic routes to organic compounds, and optimization of photovoltaics and redox flow batteries, as well as a variety of other solid-state materials.",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "alan_aspuru_guzik",
+      "expert_name": "Alán Aspuru-Guzik",
+      "year": 2017,
+      "title": "Quantum autoencoders for efficient compression of quantum data",
+      "doi": "10.1088/2058-9565/aa8072",
+      "doi_url": "https://doi.org/10.1088/2058-9565/aa8072",
+      "source_url": "https://openalex.org/W2562234976",
+      "journal": "Quantum Science and Technology",
+      "cited_by_count": 606,
+      "relevance_tags": [
+        "机器学习"
+      ],
+      "abstract_excerpt": "Abstract Classical autoencoders are neural networks that can learn efficient low-dimensional representations of data in higher-dimensional space. The task of an autoencoder is, given an input x , to map x to a lower dimensional point y such that x can likely be recovered from y . The structure of the underlying autoencoder network can be chosen to represent the data on a smaller dimension, effectively compressing the input. Inspired by this idea, we introduce the model of a quantum autoencoder to perform similar tasks on quantum data. The quantum autoencoder is trained to compress a particular data set of quantum states, where a classical compression algorithm cannot be employed. The parameters of the quantum autoencoder are trained using classical optimization algorithms. We show an example of a simple programmable circuit that can be trained as an efficient autoencoder. We apply our mo",
       "review_status": "PROVISIONAL",
       "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
     }
