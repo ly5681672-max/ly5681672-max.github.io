@@ -113,7 +113,7 @@ class PostFrontmatterTests(unittest.TestCase):
     def test_non_markdown_file_is_ignored(self):
         path = self.new_post("not-a-post.txt", b"keep me\n")
         self.assertFalse(insert_frontmatter(path, self.now))
-        self.assertEqual(path.read_bytes(), b"keep me\\n")
+        self.assertEqual(path.read_bytes(), b"keep me\n")
 
 
 if __name__ == "__main__":
