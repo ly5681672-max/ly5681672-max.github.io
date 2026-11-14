@@ -9,6 +9,8 @@ import argparse
 import html
 import json
 import re
+import time
+from urllib.error import HTTPError
 from pathlib import Path
 from urllib.parse import quote
 from urllib.request import Request, urlopen
@@ -23,8 +25,15 @@ def clean(value):
 
 def crossref(doi):
     req = Request("https://api.crossref.org/works/" + quote(doi, safe="/"), headers={"User-Agent":"academic-expert-milestone-sync/1.0 (research verification)"})
-    with urlopen(req, timeout=20) as res:
-        return json.load(res)["message"]
+    for attempt in range(4):
+        try:
+            with urlopen(req, timeout=20) as res:
+                return json.load(res)["message"]
+        except HTTPError as exc:
+            if exc.code not in (429, 500, 502, 503, 504) or attempt == 3:
+                raise
+            time.sleep(min(12, 2 ** attempt + 1))
+    raise RuntimeError("unreachable")
 
 def normalize(value):
     return re.sub(r"[^a-z0-9]", "", (value or "").casefold())
@@ -79,7 +88,7 @@ def build(candidates, existing, experts, fetch=crossref):
                 additions.append(item)
                 known.add(key)
         except Exception as exc:
-            errors.append({"doi":c["doi"],"error":type(exc).__name__})
+            errors.append({"doi":c["doi"],"error":type(exc).__name__,"http_status":getattr(exc,"code",None)})
     return additions, errors
 
 def main():
