@@ -10,6 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Validate career, position and research evidence fields
+        run: |
+          python3 scripts/check_domain_expert_affiliations.py
+          python3 -m unittest discover -s tests -p "test_check_domain_expert_affiliations.py" -v
       - name: Unit-test public acceptance checks
         run: python3 -m unittest discover -s tests -p "test_check_live_domain_experts.py" -v
       - name: Verify actual public expert page against current repository metadata
