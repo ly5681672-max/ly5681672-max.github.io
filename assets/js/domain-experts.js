@@ -11,34 +11,33 @@
   let history=[];try{history=JSON.parse(document.getElementById('domain-expert-candidates-data').textContent).candidates||[];}catch(_){}
   // Browser TTS is an accessible pronunciation aid, not a verified recording.
   // Native voice availability depends on the user's operating system.
-  const pronunciationLocales = {
-    xin: 'en-US', kitchin: 'en-US', lopez: 'es-ES', kulik: 'en-US',
-    ulissi: 'en-US', corma: 'es-ES', coperet: 'fr-FR',
-    hutchings: 'en-GB', weckhuysen: 'nl-NL', davis: 'en-US'
-  };
   function speakPerson(p) {
+    const config = p.pronunciation;
+    if (!config || !config.text || !config.locale) {
+      window.alert('该专家尚无可核验的姓名发音配置。');
+      return;
+    }
     if (!('speechSynthesis' in window) || !('SpeechSynthesisUtterance' in window)) {
       window.alert('当前浏览器不支持语音播放。');
       return;
     }
     const speech = window.speechSynthesis;
     speech.cancel();
-    // Never pass bilingual display labels (e.g. "Xiang Feng（冯翔）") to English TTS.
-    // Prefer original Chinese characters for Chinese names with Mandarin TTS.
-    // Other names use only their Latin-script display name; pronunciation is approximate.
-    const chineseNames = { cao_yueqiang: '曹约强', feng_xiang: '冯翔', lin_dong: '林栋', xin: '辛洪良' };
-    const isChinese = Object.prototype.hasOwnProperty.call(chineseNames, p.id);
-    const spokenName = isChinese ? chineseNames[p.id] : p.name.split(/[（(]/, 1)[0].trim();
-    const utterance = new SpeechSynthesisUtterance(spokenName);
-    utterance.lang = isChinese ? 'zh-CN' : (pronunciationLocales[p.id] || 'en-US');
-    utterance.rate = 0.82;
+    const locale = config.locale.toLowerCase();
+    // Do not silently fall back to a different regional accent.
     const voices = speech.getVoices();
-    const matchingVoice = voices.find(v => v.lang.toLowerCase() === utterance.lang.toLowerCase())
-      || voices.find(v => v.lang.toLowerCase().split('-')[0] === utterance.lang.toLowerCase().split('-')[0]);
-    if (matchingVoice) utterance.voice = matchingVoice;
+    const voice = voices.find(v => v.lang.toLowerCase() === locale);
+    if (!voice) {
+      window.alert('设备尚未提供 ' + config.locale + ' 语音包，请安装对应地区语音后重试。');
+      return;
+    }
+    const utterance = new SpeechSynthesisUtterance(config.text);
+    utterance.lang = config.locale;
+    utterance.voice = voice;
+    utterance.rate = 0.88;
     utterance.onerror = event => {
       if (event.error !== 'canceled' && event.error !== 'interrupted')
-        console.warn('姓名语音播放失败:', p.id, event.error);
+        window.alert('姓名发音播放失败：' + event.error);
     };
     speech.speak(utterance);
   }

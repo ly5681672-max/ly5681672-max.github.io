@@ -13,7 +13,12 @@
     "official_url": "https://che.vt.edu/People/faculty/Xin.html",
     "orcid": "0000-0001-9344-1697",
     "pronunciation_ipa": "/hʊŋˈljɑːŋ ʃɪn/",
-    "pronunciation_status": "PROVISIONAL"
+    "pronunciation_status": "PROVISIONAL",
+    "pronunciation": {
+      "text": "辛洪良",
+      "locale": "zh-CN",
+      "status": "PROVISIONAL"
+    }
   },
   {
     "id": "kitchin",
@@ -30,7 +35,12 @@
     "orcid": "0000-0003-2625-9232",
     "openalex_author_id": "A5003442464",
     "pronunciation_ipa": "/dʒɒn ɑːr ˈkɪtʃɪn/",
-    "pronunciation_status": "PROVISIONAL"
+    "pronunciation_status": "PROVISIONAL",
+    "pronunciation": {
+      "text": "John R. Kitchin",
+      "locale": "en-US",
+      "status": "PROVISIONAL"
+    }
   },
   {
     "id": "lopez",
@@ -46,7 +56,12 @@
     "official_url": "https://iciq.org/research-group/prof-nuria-lopez/overview/",
     "orcid": "0000-0001-9150-5941",
     "pronunciation_ipa": "/ˈnuɾiə ˈlopəs/",
-    "pronunciation_status": "PROVISIONAL"
+    "pronunciation_status": "PROVISIONAL",
+    "pronunciation": {
+      "text": "Núria López",
+      "locale": "es-ES",
+      "status": "PROVISIONAL"
+    }
   },
   {
     "id": "kulik",
@@ -62,7 +77,12 @@
     "official_url": "https://hjkgrp.mit.edu/",
     "orcid": "0000-0001-9342-0191",
     "pronunciation_ipa": "/ˈhɛðər dʒeɪ ˈkuːlɪk/",
-    "pronunciation_status": "PROVISIONAL"
+    "pronunciation_status": "PROVISIONAL",
+    "pronunciation": {
+      "text": "Heather J. Kulik",
+      "locale": "en-US",
+      "status": "PROVISIONAL"
+    }
   },
   {
     "id": "ulissi",
@@ -78,7 +98,12 @@
     "official_url": "https://zulissi.github.io/",
     "orcid": null,
     "pronunciation_ipa": "/ˈzækəri ˈjuːlɪsi/",
-    "pronunciation_status": "PROVISIONAL"
+    "pronunciation_status": "PROVISIONAL",
+    "pronunciation": {
+      "text": "Zachary W. Ulissi",
+      "locale": "en-US",
+      "status": "PROVISIONAL"
+    }
   },
   {
     "id": "corma",
@@ -94,7 +119,12 @@
     "official_url": "https://itq.upv-csic.es/en/empleado/corma-avelino",
     "orcid": "0000-0002-2232-3527",
     "pronunciation_ipa": "/aβeˈlino ˈkoɾma/",
-    "pronunciation_status": "PROVISIONAL"
+    "pronunciation_status": "PROVISIONAL",
+    "pronunciation": {
+      "text": "Avelino Corma",
+      "locale": "es-ES",
+      "status": "PROVISIONAL"
+    }
   },
   {
     "id": "coperet",
@@ -111,7 +141,12 @@
     "official_url": "https://coperetgroup.ethz.ch/the-group/people/prof-christophe-coperet.html",
     "orcid": "0000-0001-9660-3890",
     "pronunciation_ipa": "/kʁistɔf kɔpeʁɛ/",
-    "pronunciation_status": "PROVISIONAL"
+    "pronunciation_status": "PROVISIONAL",
+    "pronunciation": {
+      "text": "Christophe Copéret",
+      "locale": "fr-FR",
+      "status": "PROVISIONAL"
+    }
   },
   {
     "id": "hutchings",
@@ -128,7 +163,12 @@
     "orcid": "0000-0001-8885-1560",
     "openalex_author_id": "A5020068159",
     "pronunciation_ipa": "/ˈɡreɪəm dʒeɪ ˈhʌtʃɪŋz/",
-    "pronunciation_status": "PROVISIONAL"
+    "pronunciation_status": "PROVISIONAL",
+    "pronunciation": {
+      "text": "Graham J. Hutchings",
+      "locale": "en-GB",
+      "status": "PROVISIONAL"
+    }
   },
   {
     "id": "weckhuysen",
@@ -144,7 +184,12 @@
     "official_url": "https://www.uu.nl/staff/BMWeckhuysen/Research",
     "orcid": "0000-0001-5245-1426",
     "pronunciation_ipa": "/bɛrt ˈʋɛkɦœyzə(n)/",
-    "pronunciation_status": "PROVISIONAL"
+    "pronunciation_status": "PROVISIONAL",
+    "pronunciation": {
+      "text": "Bert M. Weckhuysen",
+      "locale": "nl-NL",
+      "status": "PROVISIONAL"
+    }
   },
   {
     "id": "davis",
@@ -159,7 +204,12 @@
     "official_url": "https://cce.caltech.edu/faculty/mark-e-davis",
     "orcid": "0000-0001-8294-1477",
     "pronunciation_ipa": "/mɑːrk iː ˈdeɪvɪs/",
-    "pronunciation_status": "PROVISIONAL"
+    "pronunciation_status": "PROVISIONAL",
+    "pronunciation": {
+      "text": "Mark E. Davis",
+      "locale": "en-US",
+      "status": "PROVISIONAL"
+    }
   },
   {
     "id": "cao_yueqiang",
@@ -178,7 +228,12 @@
     "orcid": "0000-0002-1036-4049",
     "openalex_author_id": "A5084047416",
     "pronunciation_ipa": null,
-    "pronunciation_status": "UNVERIFIED"
+    "pronunciation_status": "UNVERIFIED",
+    "pronunciation": {
+      "text": "曹约强",
+      "locale": "zh-CN",
+      "status": "PROVISIONAL"
+    }
   },
   {
     "id": "takigawa_ichigaku",
@@ -196,7 +251,12 @@
     "official_url": "https://www.icredd.hokudai.ac.jp/takigawa-ichigaku",
     "orcid": "0000-0001-5633-995X",
     "pronunciation_ipa": null,
-    "pronunciation_status": "UNVERIFIED"
+    "pronunciation_status": "UNVERIFIED",
+    "pronunciation": {
+      "text": "Ichigaku Takigawa",
+      "locale": "ja-JP",
+      "status": "PROVISIONAL"
+    }
   },
   {
     "id": "feng_xiang",
@@ -215,7 +275,12 @@
     "orcid": "0000-0001-7299-5690",
     "pronunciation_ipa": null,
     "pronunciation_status": "UNVERIFIED",
-    "openalex_author_id": "A5048880756"
+    "openalex_author_id": "A5048880756",
+    "pronunciation": {
+      "text": "冯翔",
+      "locale": "zh-CN",
+      "status": "PROVISIONAL"
+    }
   },
   {
     "id": "lin_dong",
@@ -237,6 +302,11 @@
     "identity_evidence_dois": [
       "10.1002/aic.18566",
       "10.1002/anie.2551607"
-    ]
+    ],
+    "pronunciation": {
+      "text": "林栋",
+      "locale": "zh-CN",
+      "status": "PROVISIONAL"
+    }
   }
 ]

@@ -137,6 +137,10 @@ jobs:
         run: |
           npm install -g purgecss
           purgecss -c purgecss.config.js
+      - name: Validate native-language expert pronunciation settings
+        run: |
+          python3 scripts/check_domain_expert_pronunciation.py
+          python3 -m unittest discover -s tests -p "test_check_domain_expert_pronunciation.py" -v
       - name: Test public acceptance validator
         run: python3 -m unittest discover -s tests -p "test_check_live_domain_experts.py" -v
       - name: Deploy 🚀
