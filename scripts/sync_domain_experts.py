@@ -91,7 +91,7 @@ def normalize_doi(value) -> str | None:
 
 
 def fold_name(value: str) -> str:
-    return ''.join(c for c in unicodedata.normalize('NFKD', value.casefold()) if not unicodedata.combining(c))
+    return ''.join('-' if c in '‐‑‒–—−' else c for c in unicodedata.normalize('NFKD', value.casefold()) if not unicodedata.combining(c))
 
 
 def identify_by_verified_dois(expert: dict, candidates: list) -> str | None:
