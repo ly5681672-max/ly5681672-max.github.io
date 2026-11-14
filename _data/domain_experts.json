@@ -643,6 +643,10 @@
       "research_url": "https://acceleration.utoronto.ca/news/u-of-t-nus-partner-to-build-worlds-largest-open-materials-dataset",
       "review_status": "CONFIRMED_SOURCE",
       "reviewed_on": "2026-11-14"
-    }
+    },
+    "identity_evidence_dois": [
+      "10.1038/s41570-025-00747-x",
+      "10.1039/D3DD00223C"
+    ]
   }
 ]
