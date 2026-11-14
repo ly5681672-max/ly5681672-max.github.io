@@ -7,6 +7,10 @@ on:
       - main
     paths:
       - "assets/**"
+      - "scripts/check_domain_expert_pronunciation.py"
+      - "scripts/check_live_domain_experts.py"
+      - "tests/test_check_domain_expert_pronunciation.py"
+      - "tests/test_check_live_domain_experts.py"
       - "_data/domain_experts.json"
       - "_data/domain_expert_updates.json"
       - "_data/domain_expert_milestones.json"
@@ -40,6 +44,10 @@ on:
       - main
     paths:
       - "assets/**"
+      - "scripts/check_domain_expert_pronunciation.py"
+      - "scripts/check_live_domain_experts.py"
+      - "tests/test_check_domain_expert_pronunciation.py"
+      - "tests/test_check_live_domain_experts.py"
       - "_data/domain_experts.json"
       - "_data/domain_expert_updates.json"
       - "_data/domain_expert_milestones.json"
