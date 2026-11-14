@@ -23,8 +23,14 @@
     }
     const speech = window.speechSynthesis;
     speech.cancel();
-    const utterance = new SpeechSynthesisUtterance(p.name);
-    utterance.lang = pronunciationLocales[p.id] || 'en-US';
+    // Never pass bilingual display labels (e.g. "Xiang Feng（冯翔）") to English TTS.
+    // Prefer original Chinese characters for Chinese names with Mandarin TTS.
+    // Other names use only their Latin-script display name; pronunciation is approximate.
+    const chineseNames = { cao_yueqiang: '曹约强', feng_xiang: '冯翔', lin_dong: '林栋', xin: '辛洪良' };
+    const isChinese = Object.prototype.hasOwnProperty.call(chineseNames, p.id);
+    const spokenName = isChinese ? chineseNames[p.id] : p.name.split(/[（(]/, 1)[0].trim();
+    const utterance = new SpeechSynthesisUtterance(spokenName);
+    utterance.lang = isChinese ? 'zh-CN' : (pronunciationLocales[p.id] || 'en-US');
     utterance.rate = 0.82;
     const voices = speech.getVoices();
     const matchingVoice = voices.find(v => v.lang.toLowerCase() === utterance.lang.toLowerCase())
