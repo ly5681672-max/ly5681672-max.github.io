@@ -11,3 +11,7 @@ class AcceptanceTests(unittest.TestCase):
     def test_missing_timeline(self): self.assertTrue(m.verify('<p>empty</p>',E,C,[]))
     def test_missing_paper(self): self.assertTrue(m.verify('<section id="timeline-lin_dong">Dong Lin（林栋）</section>',E,C,[]))
     def test_wrong_identity(self): self.assertTrue(m.verify(P.replace('Dong Lin（林栋）','Other'),E,C,[]))
+
+    def test_missing_public_short_button(self):
+        experts=[{'id':'lin_dong','name':'Dong Lin（林栋）','preferred_address':{'label':'林教授'}}]
+        self.assertTrue(any('short pronunciation button' in x for x in m.verify(P,experts,C,[])))
