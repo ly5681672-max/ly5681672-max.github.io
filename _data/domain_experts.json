@@ -325,16 +325,16 @@
     "intro_review_status": "PROVISIONAL",
     "intro_source_url": "https://profiles.cardiff.ac.uk/staff/hutch",
     "institution_zh": "卡迪夫大学",
-    "current_affiliation_status": "PROVISIONAL",
+    "current_affiliation_status": "CONFIRMED",
     "research_summary": "主要从事非均相催化研究，关注金基等金属催化剂在选择性氧化及相关转化反应中的应用，并结合催化剂制备、结构表征和性能评价分析活性来源。其研究方向与氧化反应中活性位结构、催化剂稳定性及反应选择性有关，也与原位过氧化氢相关催化体系具有学科联系。",
-    "latest_research_note": "近期论文与研究进展见下方自动更新的论文记录；未完成逐篇核验前不推断最新研究结论。",
-    "career_history_note": "学术经历待官方履历核验后补充。",
-    "current_position": "当前具体职务待官方核验",
+    "latest_research_note": "2026年卡迪夫大学论文列表收录与林栋等合作的分子筛缺陷修复及丙烯串联环氧化研究（DOI：10.1021/jacs.6c17355），该记录确认论文归属，不代替全文机理核验。",
+    "career_history_note": "1972年伦敦大学学院化学学士、1975年博士；1975—1984年任职ICI等工业研究机构，1984—1987年任职南非金山大学，1987—1997年任职利物浦大学，1997年加入卡迪夫大学。",
+    "current_position": "卡迪夫大学化学Regius教授",
     "profile_evidence": {
       "affiliation_url": "https://profiles.cardiff.ac.uk/staff/hutch",
-      "career_url": "",
-      "research_url": "",
-      "review_status": "UNVERIFIED",
+      "career_url": "https://www.cardiff.ac.uk/__data/assets/pdf_file/0003/61482/Hutchings-CV-for-web-2019.pdf",
+      "research_url": "https://profiles.cardiff.ac.uk/staff/hutch",
+      "review_status": "CONFIRMED_SOURCE",
       "reviewed_on": "2026-11-14"
     }
   },
@@ -592,13 +592,13 @@
     "institution_zh": "卡迪夫大学",
     "current_affiliation_status": "PROVISIONAL",
     "research_summary": "2022年获中国石油大学（华东）博士学位，随后在英国卡迪夫大学Graham J. Hutchings研究团队开展博士后研究（该任职信息来自已发表论文，当前职务以机构最新资料为准）。研究聚焦钛硅分子筛与烯烃环氧化、原位过氧化氢耦合选择性氧化、催化剂结构与反应性能调控。",
-    "latest_research_note": "近期论文与研究进展见下方自动更新的论文记录；未完成逐篇核验前不推断最新研究结论。",
-    "career_history_note": "2022年获中国石油大学（华东）博士学位，后在卡迪夫大学开展博士后研究（来源为既有论文记录，现职待核验）。",
-    "current_position": "当前具体职务待官方核验",
+    "latest_research_note": "2026年卡迪夫大学官方论文列表收录其参与的分子筛缺陷修复与丙烯串联环氧化研究（DOI：10.1021/jacs.6c17355）；目前仅确认论文书目和作者关联。",
+    "career_history_note": "2022年获中国石油大学（华东）博士学位；2024年公开论文作者简介载明其在卡迪夫大学Graham Hutchings课题组开展博士后研究。",
+    "current_position": "最近可核实身份为卡迪夫大学博士后研究人员（2024年资料）；2026年当前职务尚待确认",
     "profile_evidence": {
       "affiliation_url": "https://www.cardiff.ac.uk/research/explore/research-units/catalysis-and-interfacial-science",
-      "career_url": "",
-      "research_url": "",
+      "career_url": "https://orca.cardiff.ac.uk/id/eprint/167945/1/1-s2.0-S2667325824001390-main.pdf",
+      "research_url": "https://profiles.cardiff.ac.uk/staff/hutch",
       "review_status": "UNVERIFIED",
       "reviewed_on": "2026-11-14"
     }
