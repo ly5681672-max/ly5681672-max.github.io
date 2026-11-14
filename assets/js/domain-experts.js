@@ -11,9 +11,9 @@
   let history=[];try{history=JSON.parse(document.getElementById('domain-expert-candidates-data').textContent).candidates||[];}catch(_){}
   // Browser TTS is an accessible pronunciation aid, not a verified recording.
   // Native voice availability depends on the user's operating system.
-  function speakPerson(p) {
-    const config = p.pronunciation;
-    if (!config || !config.text || !config.locale) {
+  function speakPerson(p, short = false) {
+    const config = short ? p.preferred_address : p.pronunciation;
+    if (!config || !(short ? config.spoken_short_name : config.text) || !config.locale) {
       window.alert('该专家尚无可核验的姓名发音配置。');
       return;
     }
@@ -31,7 +31,7 @@
       window.alert('设备尚未提供 ' + config.locale + ' 语音包，请安装对应地区语音后重试。');
       return;
     }
-    const utterance = new SpeechSynthesisUtterance(config.text);
+    const utterance = new SpeechSynthesisUtterance(short ? config.spoken_short_name : config.text);
     utterance.lang = config.locale;
     utterance.voice = voice;
     utterance.rate = 0.88;
@@ -41,14 +41,14 @@
     };
     speech.speak(utterance);
   }
-  function pronounceButton(p) {
+  function pronounceButton(p, short = false) {
     const button = document.createElement('button');
     button.type = 'button';
     button.className = 'domain-pronounce-button';
-    button.setAttribute('aria-label', '播放 ' + p.name + ' 的姓名读音');
+    button.setAttribute('aria-label', '播放 ' + (short ? p.preferred_address.label : p.name) + ' 的读音');
     button.title = '播放姓名读音（浏览器合成语音）';
-    button.textContent = '🔊 发音';
-    button.addEventListener('click', () => speakPerson(p));
+    button.textContent = short ? '🔊 简称发音' : '🔊 全名发音';
+    button.addEventListener('click', () => speakPerson(p, short));
     return button;
   }
   let filter='all';
@@ -67,7 +67,7 @@
   function s(tag,attrs={}){const n=document.createElementNS(NS,tag);Object.entries(attrs).forEach(([k,v])=>n.setAttribute(k,String(v)));return n;}
   function clear(el){while(el.firstChild)el.removeChild(el.firstChild);}
   function txt(node,text){node.appendChild(document.createTextNode(text));return node;}
-  function detailPerson(p){clear(detail);const h=document.createElement('h3');h.textContent=p.name;h.append(document.createTextNode(' '), pronounceButton(p));detail.append(h);const a=document.createElement('p');a.textContent=p.institution+'｜'+p.intro;detail.append(a);const t=document.createElement('p');t.textContent='研究主题（人工整理）：'+p.topics.join('、')+'；论文主题线索（自动）：'+[...(evidenceTopics[p.id]||[])].join('、');detail.append(t);const link=document.createElement('a');link.href=p.official_url;link.target='_blank';link.rel='noopener noreferrer';link.textContent='官方资料 ↗';detail.append(link);if(p.orcid){detail.append(document.createTextNode(' · '));const o=document.createElement('a');o.href='https://orcid.org/'+p.orcid;o.target='_blank';o.rel='noopener noreferrer';o.textContent='ORCID ↗';detail.append(o);}const subset=works.filter(w=>(w.author_names||[]).includes(p.name)).slice(0,5);if(subset.length){const h2=document.createElement('h4');h2.textContent='最近匹配论文';detail.append(h2);const ul=document.createElement('ul');subset.forEach(w=>{const li=document.createElement('li');const a=document.createElement('a');a.textContent=w.publication_date+' · '+w.title;a.href=w.doi_url;a.target='_blank';a.rel='noopener noreferrer';li.append(a);ul.append(li);});detail.append(ul);}detail.scrollIntoView({behavior:'smooth',block:'nearest'});}
+  function detailPerson(p){clear(detail);const h=document.createElement('h3');h.textContent=p.name;h.append(document.createTextNode(' '), pronounceButton(p));detail.append(h);const address=document.createElement('p');address.textContent='推荐称呼：'+p.preferred_address.label+'（'+p.preferred_address.status+'） ';address.append(pronounceButton(p,true));detail.append(address);const a=document.createElement('p');a.textContent=p.institution+'｜'+p.intro;detail.append(a);const t=document.createElement('p');t.textContent='研究主题（人工整理）：'+p.topics.join('、')+'；论文主题线索（自动）：'+[...(evidenceTopics[p.id]||[])].join('、');detail.append(t);const link=document.createElement('a');link.href=p.official_url;link.target='_blank';link.rel='noopener noreferrer';link.textContent='官方资料 ↗';detail.append(link);if(p.orcid){detail.append(document.createTextNode(' · '));const o=document.createElement('a');o.href='https://orcid.org/'+p.orcid;o.target='_blank';o.rel='noopener noreferrer';o.textContent='ORCID ↗';detail.append(o);}const subset=works.filter(w=>(w.author_names||[]).includes(p.name)).slice(0,5);if(subset.length){const h2=document.createElement('h4');h2.textContent='最近匹配论文';detail.append(h2);const ul=document.createElement('ul');subset.forEach(w=>{const li=document.createElement('li');const a=document.createElement('a');a.textContent=w.publication_date+' · '+w.title;a.href=w.doi_url;a.target='_blank';a.rel='noopener noreferrer';li.append(a);ul.append(li);});detail.append(ul);}detail.scrollIntoView({behavior:'smooth',block:'nearest'});}
   function detailTopic(topic){clear(detail);const h=document.createElement('h3');h.textContent=topic;detail.append(h);const p=document.createElement('p');p.textContent='关联专家（实线为人工整理的研究兴趣；虚线为论文关键词自动匹配）：'+people.filter(x=>(x.topics.includes(topic)||(evidenceTopics[x.id]||new Set()).has(topic))&&(filter==='all'||x.group===filter)).map(x=>x.name).join('、');detail.append(p);}
   function render(){clear(svg);
     const active=people.filter(p=>filter==='all'||p.group===filter);
@@ -114,7 +114,7 @@
   }));
   document.querySelectorAll('[data-pronounce-id]').forEach(btn=>btn.addEventListener('click',()=>{
     const p=people.find(person=>person.id===btn.dataset.pronounceId);
-    if(p)speakPerson(p);
+    if(p)speakPerson(p,btn.dataset.pronounceShort==='true');
   }));
   document.querySelectorAll('[data-person-id]').forEach(btn=>btn.addEventListener('click',()=>{const p=people.find(p=>p.id===btn.dataset.personId);if(p)detailPerson(p);}));
   render();

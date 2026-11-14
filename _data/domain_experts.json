@@ -18,6 +18,12 @@
       "text": "辛洪良",
       "locale": "zh-CN",
       "status": "PROVISIONAL"
+    },
+    "preferred_address": {
+      "label": "辛教授",
+      "spoken_short_name": "辛",
+      "locale": "zh-CN",
+      "status": "PROVISIONAL"
     }
   },
   {
@@ -38,6 +44,12 @@
     "pronunciation_status": "PROVISIONAL",
     "pronunciation": {
       "text": "John R. Kitchin",
+      "locale": "en-US",
+      "status": "PROVISIONAL"
+    },
+    "preferred_address": {
+      "label": "Kitchin教授",
+      "spoken_short_name": "Kitchin",
       "locale": "en-US",
       "status": "PROVISIONAL"
     }
@@ -61,6 +73,12 @@
       "text": "Núria López",
       "locale": "es-ES",
       "status": "PROVISIONAL"
+    },
+    "preferred_address": {
+      "label": "López教授",
+      "spoken_short_name": "López",
+      "locale": "es-ES",
+      "status": "PROVISIONAL"
     }
   },
   {
@@ -80,6 +98,12 @@
     "pronunciation_status": "PROVISIONAL",
     "pronunciation": {
       "text": "Heather J. Kulik",
+      "locale": "en-US",
+      "status": "PROVISIONAL"
+    },
+    "preferred_address": {
+      "label": "Kulik教授",
+      "spoken_short_name": "Kulik",
       "locale": "en-US",
       "status": "PROVISIONAL"
     }
@@ -103,6 +127,12 @@
       "text": "Zachary W. Ulissi",
       "locale": "en-US",
       "status": "PROVISIONAL"
+    },
+    "preferred_address": {
+      "label": "Ulissi教授",
+      "spoken_short_name": "Ulissi",
+      "locale": "en-US",
+      "status": "PROVISIONAL"
     }
   },
   {
@@ -122,6 +152,12 @@
     "pronunciation_status": "PROVISIONAL",
     "pronunciation": {
       "text": "Avelino Corma",
+      "locale": "es-ES",
+      "status": "PROVISIONAL"
+    },
+    "preferred_address": {
+      "label": "Corma教授",
+      "spoken_short_name": "Corma",
       "locale": "es-ES",
       "status": "PROVISIONAL"
     }
@@ -146,6 +182,12 @@
       "text": "Christophe Copéret",
       "locale": "fr-FR",
       "status": "PROVISIONAL"
+    },
+    "preferred_address": {
+      "label": "Copéret教授",
+      "spoken_short_name": "Copéret",
+      "locale": "fr-FR",
+      "status": "PROVISIONAL"
     }
   },
   {
@@ -166,6 +208,12 @@
     "pronunciation_status": "PROVISIONAL",
     "pronunciation": {
       "text": "Graham J. Hutchings",
+      "locale": "en-GB",
+      "status": "PROVISIONAL"
+    },
+    "preferred_address": {
+      "label": "Hutchings教授",
+      "spoken_short_name": "Hutchings",
       "locale": "en-GB",
       "status": "PROVISIONAL"
     }
@@ -189,6 +237,12 @@
       "text": "Bert M. Weckhuysen",
       "locale": "nl-NL",
       "status": "PROVISIONAL"
+    },
+    "preferred_address": {
+      "label": "Weckhuysen教授",
+      "spoken_short_name": "Weckhuysen",
+      "locale": "nl-NL",
+      "status": "PROVISIONAL"
     }
   },
   {
@@ -207,6 +261,12 @@
     "pronunciation_status": "PROVISIONAL",
     "pronunciation": {
       "text": "Mark E. Davis",
+      "locale": "en-US",
+      "status": "PROVISIONAL"
+    },
+    "preferred_address": {
+      "label": "Davis教授",
+      "spoken_short_name": "Davis",
       "locale": "en-US",
       "status": "PROVISIONAL"
     }
@@ -233,6 +293,12 @@
       "text": "曹约强",
       "locale": "zh-CN",
       "status": "PROVISIONAL"
+    },
+    "preferred_address": {
+      "label": "曹教授",
+      "spoken_short_name": "曹",
+      "locale": "zh-CN",
+      "status": "PROVISIONAL"
     }
   },
   {
@@ -254,6 +320,12 @@
     "pronunciation_status": "UNVERIFIED",
     "pronunciation": {
       "text": "Ichigaku Takigawa",
+      "locale": "ja-JP",
+      "status": "PROVISIONAL"
+    },
+    "preferred_address": {
+      "label": "Takigawa教授",
+      "spoken_short_name": "Takigawa",
       "locale": "ja-JP",
       "status": "PROVISIONAL"
     }
@@ -278,6 +350,12 @@
     "openalex_author_id": "A5048880756",
     "pronunciation": {
       "text": "冯翔",
+      "locale": "zh-CN",
+      "status": "PROVISIONAL"
+    },
+    "preferred_address": {
+      "label": "冯教授",
+      "spoken_short_name": "冯",
       "locale": "zh-CN",
       "status": "PROVISIONAL"
     }
@@ -305,6 +383,12 @@
     ],
     "pronunciation": {
       "text": "林栋",
+      "locale": "zh-CN",
+      "status": "PROVISIONAL"
+    },
+    "preferred_address": {
+      "label": "林教授",
+      "spoken_short_name": "林",
       "locale": "zh-CN",
       "status": "PROVISIONAL"
     }

@@ -9,6 +9,8 @@ nav_order: 5
 
 <link rel="stylesheet" href="{{ '/assets/css/domain-experts.css' | relative_url }}">
 
+<p>推荐称呼是中文学术交流的便捷写法，未经本人核实的读法标记 PROVISIONAL；简称按钮只朗读姓氏。</p>
+
 <p>将领域专家、研究方法、论文证据连接起来，重点关注 <strong>AI 结合知识学习</strong> 和 <strong>烯烃环氧化</strong>。图中专家—主题关联是依据官方简介<strong>人工整理</strong>的研究兴趣，不代表合作关系或已证明的因果关系。点选专家可查看简介、来源、对应主题与近期论文。</p>
 
 {% assign feng_updates = site.data.domain_expert_updates %}
@@ -49,7 +51,8 @@ nav_order: 5
 <div class="domain-experts-list">
 {% for person in site.data.domain_experts %}
   <article class="domain-expert-card" data-person-group="{{ person.group }}">
-    <h3><button data-person-id="{{ person.id }}" class="domain-person-button">{{ person.name | escape }}</button> <button type="button" class="domain-pronounce-button" data-pronounce-id="{{ person.id }}" aria-label="播放 {{ person.name | escape }} 的姓名读音" title="播放姓名读音">🔊 <span>发音</span></button>{% if person.pronunciation_ipa %} <span class="domain-name-ipa" title="近似国际音标，尚未经本人核验">{{ person.pronunciation_ipa | escape }}</span>{% endif %}</h3>
+    <h3><button data-person-id="{{ person.id }}" class="domain-person-button">{{ person.name | escape }}</button> <button type="button" class="domain-pronounce-button" data-pronounce-id="{{ person.id }}" aria-label="播放 {{ person.name | escape }} 的姓名读音" title="播放姓名读音">🔊 <span>全名发音</span></button>{% if person.pronunciation_ipa %} <span class="domain-name-ipa" title="近似国际音标，尚未经本人核验">{{ person.pronunciation_ipa | escape }}</span>{% endif %}</h3>
+    <p class="domain-help">推荐称呼：<strong>{{ person.preferred_address.label | escape }}</strong> · {{ person.preferred_address.status | escape }} <button type="button" class="domain-pronounce-button" data-pronounce-id="{{ person.id }}" data-pronounce-short="true" aria-label="播放推荐称呼简称">🔊 <span>简称发音</span></button></p>
     <p><small>{{ person.institution | escape }}</small></p>
     <p>{{ person.intro | escape }}</p>
     <p class="domain-tags">{% for topic in person.topics %}<span>{{ topic | escape }}</span>{% endfor %}</p>
@@ -65,7 +68,8 @@ nav_order: 5
 {% assign milestones = site.data.domain_expert_milestones %}
 {% for person in site.data.domain_experts %}
 <section class="domain-person-timeline" data-person-group="{{ person.group }}" id="timeline-{{ person.id }}">
-  <h3>{{ person.name | escape }} · 关键科研里程碑 <button type="button" class="domain-pronounce-button" data-pronounce-id="{{ person.id }}" aria-label="播放 {{ person.name | escape }} 的姓名读音" title="播放姓名读音">🔊 <span>发音</span></button>{% if person.pronunciation_ipa %} <span class="domain-name-ipa" title="近似国际音标，尚未经本人核验">{{ person.pronunciation_ipa | escape }}</span>{% endif %}</h3>
+  <h3>{{ person.name | escape }} · 关键科研里程碑 <button type="button" class="domain-pronounce-button" data-pronounce-id="{{ person.id }}" aria-label="播放 {{ person.name | escape }} 的姓名读音" title="播放姓名读音">🔊 <span>全名发音</span></button>{% if person.pronunciation_ipa %} <span class="domain-name-ipa" title="近似国际音标，尚未经本人核验">{{ person.pronunciation_ipa | escape }}</span>{% endif %}</h3>
+  <p class="domain-help">推荐称呼：<strong>{{ person.preferred_address.label | escape }}</strong> · {{ person.preferred_address.status | escape }} <button type="button" class="domain-pronounce-button" data-pronounce-id="{{ person.id }}" data-pronounce-short="true" aria-label="播放推荐称呼简称">🔊 <span>简称发音</span></button></p>
   <p class="domain-help">{{ person.institution | escape }} · <a href="{{ person.official_url }}" target="_blank" rel="noopener noreferrer">研究组官网</a></p>
   {% assign milestone_count = 0 %}
   {% for item in milestones %}
