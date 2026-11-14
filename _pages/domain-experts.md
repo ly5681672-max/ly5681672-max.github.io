@@ -54,9 +54,11 @@ nav_order: 5
     <h3><button data-person-id="{{ person.id }}" class="domain-person-button">{{ person.name | escape }}</button> <button type="button" class="domain-pronounce-button" data-pronounce-id="{{ person.id }}" aria-label="播放 {{ person.name | escape }} 的姓名读音" title="播放姓名读音">🔊 <span>全名发音</span></button>{% if person.pronunciation_ipa %} <span class="domain-name-ipa" title="近似国际音标，尚未经本人核验">{{ person.pronunciation_ipa | escape }}</span>{% endif %}</h3>
     <p class="domain-help">推荐称呼：<strong>{{ person.preferred_address.label | escape }}</strong> · {{ person.preferred_address.status | escape }} <button type="button" class="domain-pronounce-button" data-pronounce-id="{{ person.id }}" data-pronounce-short="true" aria-label="播放推荐称呼简称">🔊 <span>简称发音</span></button></p>
     <p class="domain-help">当前机构（待核验）：<strong>{{ person.institution | escape }}</strong><br><span lang="zh-CN">中文：{{ person.institution_zh | escape }}</span> · {{ person.current_affiliation_status | escape }}</p>
+    <p><strong>当前职务：</strong>{{ person.current_position | escape }}</p>
     <p><strong>研究方向：</strong>{{ person.research_summary | escape }}</p>
     <p><strong>近期研究：</strong>{{ person.latest_research_note | escape }}</p>
     <p><strong>学术经历：</strong>{{ person.career_history_note | escape }}</p>
+    <p class="domain-help">事实核验：{{ person.profile_evidence.review_status | escape }} · <a href="{{ person.profile_evidence.affiliation_url }}" target="_blank" rel="noopener noreferrer">任职来源 ↗</a>{% if person.profile_evidence.career_url != "" %} · <a href="{{ person.profile_evidence.career_url }}" target="_blank" rel="noopener noreferrer">履历来源 ↗</a>{% endif %}{% if person.profile_evidence.research_url != "" %} · <a href="{{ person.profile_evidence.research_url }}" target="_blank" rel="noopener noreferrer">近期研究来源 ↗</a>{% endif %}</p>
     <p class="domain-tags">{% for topic in person.topics %}<span>{{ topic | escape }}</span>{% endfor %}</p>
     <p><a href="{{ person.official_url }}" target="_blank" rel="noopener noreferrer">官方主页 ↗</a>{% if person.orcid %} · <a href="https://orcid.org/{{ person.orcid }}" target="_blank" rel="noopener noreferrer">ORCID ↗</a>{% endif %}</p>
   </article>
