@@ -3,7 +3,7 @@
 import json
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
-ALLOWED={'zh-CN','ja-JP','en-GB','en-US','es-ES','fr-FR','nl-NL','de-DE'}
+ALLOWED={'zh-CN','ja-JP','en-GB','en-US','es-ES','es-MX','fr-FR','nl-NL','de-DE'}
 def validate(people):
     problems=[]
     for p in people:

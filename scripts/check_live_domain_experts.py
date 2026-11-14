@@ -42,9 +42,13 @@ def verify(page,experts,candidates,milestones):
         pid=person['id']; section=norm(' '.join(doc.text.get(pid,[])))
         if not section:
             errors.append(f'{pid}: missing or empty timeline'); continue
-        for field in ('institution_zh','research_summary','latest_research_note','career_history_note'):
+        for field in ('institution_zh','research_summary','latest_research_note','career_history_note','current_position'):
             if norm(person.get(field,'')) not in all_text:
                 errors.append(f'{pid}: public page missing {field}')
+        if person.get('profile_evidence',{}).get('review_status')=='CONFIRMED_SOURCE':
+            for evidence_key in ('affiliation_url','career_url','research_url'):
+                if person['profile_evidence'][evidence_key] not in doc.page_links:
+                    errors.append(f'{pid}: public page missing {evidence_key}')
         if person.get('preferred_address'):
             label=person['preferred_address']['label']
             if norm(label) not in section: errors.append(f'{pid}: missing recommended address on public timeline')
