@@ -4,7 +4,7 @@
     "name": "Hongliang Xin",
     "group": "ai",
     "institution": "Virginia Tech",
-    "intro": "计算催化、机器学习与催化知识图谱；关注数据与机理驱动的催化研究。",
+    "intro": "主要研究计算催化与数据驱动的催化剂设计，关注如何结合电子结构计算、机器学习和化学知识表达，分析催化材料性质与反应行为之间的联系。其研究方向与催化知识图谱、描述符构建及机理驱动的模型开发密切相关；具体代表性贡献应以原始论文核验为准。",
     "topics": [
       "知识图谱",
       "机器学习",
@@ -24,14 +24,16 @@
       "spoken_short_name": "辛",
       "locale": "zh-CN",
       "status": "PROVISIONAL"
-    }
+    },
+    "intro_review_status": "PROVISIONAL",
+    "intro_source_url": "https://che.vt.edu/People/faculty/Xin.html"
   },
   {
     "id": "kitchin",
     "name": "John R. Kitchin",
     "group": "ai",
     "institution": "Carnegie Mellon University",
-    "intro": "利用 Python、机器学习和计算方法研究催化与化学工程。",
+    "intro": "主要从事计算催化与化学工程中的科学计算方法研究，关注利用 Python、电子结构计算及机器学习提高催化研究的可重复性和分析效率。其研究方向覆盖计算工作流、数据分析和催化性质预测，为将计算结果转化为可复用的科研方法提供了重要参考；具体成果以原始论文为依据。",
     "topics": [
       "科学计算与AI",
       "机器学习",
@@ -52,14 +54,16 @@
       "spoken_short_name": "Kitchin",
       "locale": "en-US",
       "status": "PROVISIONAL"
-    }
+    },
+    "intro_review_status": "PROVISIONAL",
+    "intro_source_url": "https://kitchingroup.cheme.cmu.edu/"
   },
   {
     "id": "lopez",
     "name": "Núria López",
     "group": "ai",
     "institution": "ICIQ",
-    "intro": "面向异相催化的 DFT、微观动力学、多尺度模拟与机器学习。",
+    "intro": "主要研究异相催化反应的理论模拟与机理解析，结合密度泛函理论、微观动力学和多尺度计算，分析催化活性位、反应路径及条件对催化表现的影响。其研究方向还涉及数据驱动方法在催化体系中的应用，与反应网络建模、动力学控制因素识别及催化剂设计密切相关。",
     "topics": [
       "DFT与动力学",
       "机器学习",
@@ -79,14 +83,16 @@
       "spoken_short_name": "López",
       "locale": "es-ES",
       "status": "PROVISIONAL"
-    }
+    },
+    "intro_review_status": "PROVISIONAL",
+    "intro_source_url": "https://iciq.org/research-group/prof-nuria-lopez/overview/"
   },
   {
     "id": "kulik",
     "name": "Heather J. Kulik",
     "group": "ai",
     "institution": "MIT",
-    "intro": "分子与材料计算、机器学习，以及实验数据与计算数据的结合。",
+    "intro": "主要开展分子与材料的计算化学研究，关注电子结构计算与机器学习相结合的方法，探索复杂化学体系的结构、性质和预测模型。其研究方向强调计算数据与实验信息的协同利用，并关注模型适用性和化学解释，为催化相关材料筛选及数据驱动研究提供方法参考。",
     "topics": [
       "机器学习",
       "文献数据",
@@ -106,14 +112,16 @@
       "spoken_short_name": "Kulik",
       "locale": "en-US",
       "status": "PROVISIONAL"
-    }
+    },
+    "intro_review_status": "PROVISIONAL",
+    "intro_source_url": "https://hjkgrp.mit.edu/"
   },
   {
     "id": "ulissi",
     "name": "Zachary W. Ulissi",
     "group": "ai",
     "institution": "Meta FAIR / Carnegie Mellon University",
-    "intro": "面向材料与催化的机器学习、原子模拟和主动学习。",
+    "intro": "主要研究机器学习与原子尺度模拟在材料和催化研究中的应用，关注如何通过数据驱动模型和主动学习策略提高候选材料探索效率。其研究方向涵盖计算数据利用、催化性质预测及自动化筛选，与催化剂设计中的高通量计算和描述符建模具有方法上的关联。",
     "topics": [
       "机器学习",
       "主动学习",
@@ -133,14 +141,16 @@
       "spoken_short_name": "Ulissi",
       "locale": "en-US",
       "status": "PROVISIONAL"
-    }
+    },
+    "intro_review_status": "PROVISIONAL",
+    "intro_source_url": "https://zulissi.github.io/"
   },
   {
     "id": "corma",
     "name": "Avelino Corma",
     "group": "epox",
     "institution": "ITQ (CSIC–UPV)",
-    "intro": "分子筛与非均相催化，氧化还原活性位、选择性氧化及环氧化。",
+    "intro": "长期从事分子筛与非均相催化研究，重点关注多孔催化材料、活性位结构和催化反应选择性的关系。其研究涉及分子筛催化剂设计、选择性氧化及其他催化转化过程，强调材料结构调控与反应性能之间的联系；与钛硅分子筛及烯烃环氧化研究具有直接的学科关联。",
     "topics": [
       "分子筛与TS-1",
       "选择性氧化",
@@ -160,14 +170,16 @@
       "spoken_short_name": "Corma",
       "locale": "es-ES",
       "status": "PROVISIONAL"
-    }
+    },
+    "intro_review_status": "PROVISIONAL",
+    "intro_source_url": "https://itq.upv-csic.es/en/empleado/corma-avelino"
   },
   {
     "id": "coperet",
     "name": "Christophe Copéret",
     "group": "epox",
     "institution": "ETH Zürich",
-    "intro": "表面单/双活性位结构、谱学与结构—活性关系；参与 TS-1 双核 Ti 位催化环氧化研究。",
+    "intro": "主要研究固体催化剂表面活性位的结构与反应行为，结合表面化学、谱学表征和机理分析理解结构—活性关系。其研究关注具有明确局域结构的催化位点，并涉及钛硅分子筛中钛位点与环氧化反应的相关问题，可为比较单核与多核活性位提供研究背景。",
     "topics": [
       "双核活性位",
       "分子筛与TS-1",
@@ -188,14 +200,16 @@
       "spoken_short_name": "Copéret",
       "locale": "fr-FR",
       "status": "PROVISIONAL"
-    }
+    },
+    "intro_review_status": "PROVISIONAL",
+    "intro_source_url": "https://coperetgroup.ethz.ch/the-group/people/prof-christophe-coperet.html"
   },
   {
     "id": "hutchings",
     "name": "Graham J. Hutchings",
     "group": "epox",
     "institution": "Cardiff University",
-    "intro": "金基等异相催化剂、选择性氧化与原位表征。",
+    "intro": "主要从事非均相催化研究，关注金基等金属催化剂在选择性氧化及相关转化反应中的应用，并结合催化剂制备、结构表征和性能评价分析活性来源。其研究方向与氧化反应中活性位结构、催化剂稳定性及反应选择性有关，也与原位过氧化氢相关催化体系具有学科联系。",
     "topics": [
       "选择性氧化",
       "原位表征",
@@ -216,14 +230,16 @@
       "spoken_short_name": "Hutchings",
       "locale": "en-GB",
       "status": "PROVISIONAL"
-    }
+    },
+    "intro_review_status": "PROVISIONAL",
+    "intro_source_url": "https://profiles.cardiff.ac.uk/staff/hutch"
   },
   {
     "id": "weckhuysen",
     "name": "Bert M. Weckhuysen",
     "group": "epox",
     "institution": "Utrecht University",
-    "intro": "多孔催化材料及原位/操作态光谱表征，用于研究活性位和结构演变。",
+    "intro": "主要研究多孔催化材料及其工作状态下的结构变化，重视原位和操作态光谱技术在催化机理研究中的作用。其研究关注反应条件下活性位的动态演变，以及材料结构、表面物种和催化表现之间的联系，可为理解分子筛等催化剂的真实工作状态提供方法参考。",
     "topics": [
       "分子筛与TS-1",
       "原位表征",
@@ -243,14 +259,16 @@
       "spoken_short_name": "Weckhuysen",
       "locale": "nl-NL",
       "status": "PROVISIONAL"
-    }
+    },
+    "intro_review_status": "PROVISIONAL",
+    "intro_source_url": "https://www.uu.nl/staff/BMWeckhuysen/Research"
   },
   {
     "id": "davis",
     "name": "Mark E. Davis",
     "group": "epox",
     "institution": "Caltech (Emeritus)",
-    "intro": "分子筛、微孔材料及催化材料合成。",
+    "intro": "主要研究分子筛、微孔材料及其合成与催化应用，关注材料孔道结构、组成和制备方法对催化性质的影响。其研究方向涵盖多孔材料设计和催化材料构筑，与钛硅分子筛的结构设计、活性位引入及材料性质调控具有相关性；具体贡献需结合对应论文进行核验。",
     "topics": [
       "分子筛与TS-1",
       "催化剂设计"
@@ -269,7 +287,9 @@
       "spoken_short_name": "Davis",
       "locale": "en-US",
       "status": "PROVISIONAL"
-    }
+    },
+    "intro_review_status": "PROVISIONAL",
+    "intro_source_url": "https://cce.caltech.edu/faculty/mark-e-davis"
   },
   {
     "id": "cao_yueqiang",
@@ -299,7 +319,9 @@
       "spoken_short_name": "曹",
       "locale": "zh-CN",
       "status": "PROVISIONAL"
-    }
+    },
+    "intro_review_status": "PROVISIONAL",
+    "intro_source_url": "https://cre.ecust.edu.cn/2024/1023/c15200a171646/page.htm"
   },
   {
     "id": "takigawa_ichigaku",
@@ -328,7 +350,9 @@
       "spoken_short_name": "Takigawa",
       "locale": "ja-JP",
       "status": "PROVISIONAL"
-    }
+    },
+    "intro_review_status": "PROVISIONAL",
+    "intro_source_url": "https://www.icredd.hokudai.ac.jp/takigawa-ichigaku"
   },
   {
     "id": "feng_xiang",
@@ -358,7 +382,9 @@
       "spoken_short_name": "冯",
       "locale": "zh-CN",
       "status": "PROVISIONAL"
-    }
+    },
+    "intro_review_status": "PROVISIONAL",
+    "intro_source_url": "https://cce.upc.edu.cn/_s34/2022/0323/c19254a365304/page.psp"
   },
   {
     "id": "lin_dong",
@@ -391,6 +417,8 @@
       "spoken_short_name": "林",
       "locale": "zh-CN",
       "status": "PROVISIONAL"
-    }
+    },
+    "intro_review_status": "PROVISIONAL",
+    "intro_source_url": "https://www.cardiff.ac.uk/research/explore/research-units/catalysis-and-interfacial-science"
   }
 ]

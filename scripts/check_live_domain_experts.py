@@ -47,6 +47,9 @@ def verify(page,experts,candidates,milestones):
             if norm(label) not in section: errors.append(f'{pid}: missing recommended address on public timeline')
             if not doc.short_buttons.get(pid): errors.append(f'{pid}: missing short pronunciation button')
             if not doc.full_buttons.get(pid): errors.append(f'{pid}: missing full pronunciation button')
+        # Introduction appears in the public expert card, not the timeline.
+        if norm(person.get('intro','')) not in all_text:
+            errors.append(f'{pid}: public page missing introduction text')
         if norm(person['name']) not in section:
             errors.append(f'{pid}: incorrect timeline name')
         confirmed=[m for m in milestones if pid in m.get('expert_ids',[])]
@@ -73,6 +76,9 @@ def main():
     candidates=json.loads((a.root/'_data/domain_expert_milestone_candidates.json').read_text(encoding='utf-8'))['candidates']
     milestones=json.loads((a.root/'_data/domain_expert_milestones.json').read_text(encoding='utf-8'))
     from check_domain_expert_pronunciation import validate
+    from check_domain_expert_introductions import validate as validate_intros
+    intro_errors=validate_intros(experts)
+    if intro_errors: raise SystemExit('FAIL expert introductions: '+'; '.join(intro_errors))
     speech_errors=validate(experts)
     if speech_errors: raise SystemExit('FAIL pronunciation configuration: '+'; '.join(speech_errors))
     for n in range(1,a.attempts+1):

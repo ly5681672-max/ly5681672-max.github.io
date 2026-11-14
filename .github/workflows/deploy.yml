@@ -8,6 +8,8 @@ on:
     paths:
       - "assets/**"
       - "scripts/check_domain_expert_pronunciation.py"
+      - "scripts/check_domain_expert_introductions.py"
+      - "tests/test_check_domain_expert_introductions.py"
       - "scripts/check_live_domain_experts.py"
       - "tests/test_check_domain_expert_pronunciation.py"
       - "tests/test_check_live_domain_experts.py"
@@ -45,6 +47,8 @@ on:
     paths:
       - "assets/**"
       - "scripts/check_domain_expert_pronunciation.py"
+      - "scripts/check_domain_expert_introductions.py"
+      - "tests/test_check_domain_expert_introductions.py"
       - "scripts/check_live_domain_experts.py"
       - "tests/test_check_domain_expert_pronunciation.py"
       - "tests/test_check_live_domain_experts.py"
@@ -145,6 +149,10 @@ jobs:
         run: |
           npm install -g purgecss
           purgecss -c purgecss.config.js
+      - name: Validate expert introduction completeness
+        run: |
+          python3 scripts/check_domain_expert_introductions.py
+          python3 -m unittest discover -s tests -p "test_check_domain_expert_introductions.py" -v
       - name: Validate native-language expert pronunciation settings
         run: |
           python3 scripts/check_domain_expert_pronunciation.py
