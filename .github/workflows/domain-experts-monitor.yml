@@ -40,7 +40,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Validate identity and relevance safeguards
-        run: python3 -m unittest discover -s tests -p "test_*domain_expert*.py" -v
+        run: |
+          python3 -m unittest discover -s tests -p "test_*domain_expert*.py" -v
+          python3 -m unittest discover -s tests -p "test_sync_domain_experts.py" -v
       - name: Enrich missing IPA only from ORCID-matched Wikidata evidence
         run: python3 scripts/sync_domain_expert_pronunciations.py --apply
       - name: Check private OpenAlex API key prerequisite
