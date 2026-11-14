@@ -1,0 +1,16 @@
+name: Public expert page acceptance
+on:
+  schedule:
+    - cron: "53 1 * * *"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  public-acceptance:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Unit-test public acceptance checks
+        run: python3 -m unittest discover -s tests -p "test_check_live_domain_experts.py" -v
+      - name: Verify actual public expert page against current repository metadata
+        run: python3 scripts/check_live_domain_experts.py --attempts 5 --interval 15

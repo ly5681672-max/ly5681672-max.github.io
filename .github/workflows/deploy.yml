@@ -137,8 +137,13 @@ jobs:
         run: |
           npm install -g purgecss
           purgecss -c purgecss.config.js
+      - name: Test public acceptance validator
+        run: python3 -m unittest discover -s tests -p "test_check_live_domain_experts.py" -v
       - name: Deploy 🚀
         if: github.event_name != 'pull_request'
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: _site
+      - name: Verify deployed public expert timelines and DOI candidates
+        if: github.event_name != 'pull_request'
+        run: python3 scripts/check_live_domain_experts.py --attempts 15 --interval 20
