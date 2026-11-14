@@ -80,10 +80,11 @@ class PostFrontmatterTests(unittest.TestCase):
             insert_frontmatter(path, self.now)
         self.assertEqual(source, path.read_bytes())
 
-    def test_unrelated_markdown_is_not_changed(self):
+    def test_any_markdown_directly_inside_posts_is_processed(self):
         path = self.new_post("README.md", b"Hello\n")
-        self.assertFalse(insert_frontmatter(path, self.now))
-        self.assertEqual(b"Hello\n", path.read_bytes())
+        self.assertTrue(insert_frontmatter(path, self.now))
+        self.assertTrue(path.read_text(encoding="utf-8").startswith("---\nlayout: post\n"))
+        self.assertTrue(path.read_bytes().endswith(b"Hello\n"))
 
 
     def test_undated_chinese_filename_receives_current_beijing_header(self):
@@ -91,8 +92,8 @@ class PostFrontmatterTests(unittest.TestCase):
         self.assertTrue(insert_frontmatter(path, self.now))
         self.assertEqual(
             path.read_text(encoding="utf-8"),
-            '---\\nlayout: post\\ntitle: "OOH吸附能分析"\\n'
-            "date: 2026-10-22 10:41:00 +0800\\n---\\n",
+            '---\nlayout: post\ntitle: "OOH吸附能分析"\n'
+            "date: 2026-10-22 10:41:00 +0800\n---\n",
         )
 
     def test_arbitrary_filename_preserves_existing_body(self):
@@ -104,13 +105,13 @@ class PostFrontmatterTests(unittest.TestCase):
         self.assertIn('title: "任意名称测试"', result.decode("utf-8"))
 
     def test_existing_frontmatter_on_undated_filename_is_preserved(self):
-        original = b'---\\nlayout: post\\ntitle: "Existing"\\n---\\nBody\\n'
+        original = b'---\nlayout: post\ntitle: "Existing"\n---\nBody\n'
         path = self.new_post("existing-note.md", original)
         self.assertFalse(insert_frontmatter(path, self.now))
         self.assertEqual(path.read_bytes(), original)
 
     def test_non_markdown_file_is_ignored(self):
-        path = self.new_post("not-a-post.txt", b"keep me\\n")
+        path = self.new_post("not-a-post.txt", b"keep me\n")
         self.assertFalse(insert_frontmatter(path, self.now))
         self.assertEqual(path.read_bytes(), b"keep me\\n")
 
