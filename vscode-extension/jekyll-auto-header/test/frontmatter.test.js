@@ -15,12 +15,12 @@ test("accepts arbitrary filename without date prefix", () => {
 });
 
 test("uses Asia/Shanghai time with +0800 offset", () => {
-  assert.match(beijingTimestamp(new Date("2026-11-14T08:42:03.000Z")), /^2026-11-14 16:42:03 \\+0800$/);
+  assert.match(beijingTimestamp(new Date("2026-11-14T08:42:03.000Z")), /^2026-11-14 16:42:03 \+0800$/);
 });
 
 test("generates complete front matter", () => {
   assert.equal(
     createFrontMatter("OOH吸附能分析.md", new Date("2026-11-14T08:42:03.000Z")),
-    '---\\nlayout: post\\ntitle: "OOH吸附能分析"\\ndate: 2026-11-14 16:42:03 +0800\\n---\\n\\n\\n'
+    '---\nlayout: post\ntitle: "OOH吸附能分析"\ndate: 2026-11-14 16:42:03 +0800\n---\n\n\n'
   );
 });
