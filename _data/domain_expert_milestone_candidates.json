@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T06:34:23+00:00",
+  "generated_at": "2026-11-15T06:41:22+00:00",
   "source": "OpenAlex",
   "selection": "历史高引用+主题规则初筛；非科学里程碑认证",
   "candidates": [
@@ -46,7 +46,7 @@
       "doi_url": "https://doi.org/10.1038/s41467-022-29926-w",
       "source_url": "https://openalex.org/W4225114738",
       "journal": "Nature Communications",
-      "cited_by_count": 465,
+      "cited_by_count": 466,
       "relevance_tags": [
         "机器学习"
       ],
@@ -165,7 +165,7 @@
       "doi_url": "https://doi.org/10.1038/s41929-018-0056-y",
       "source_url": "https://openalex.org/W2797402103",
       "journal": "Nature Catalysis",
-      "cited_by_count": 494,
+      "cited_by_count": 496,
       "relevance_tags": [
         "机器学习"
       ],
@@ -284,7 +284,7 @@
       "doi_url": "https://doi.org/10.1038/s41929-024-01132-5",
       "source_url": "https://openalex.org/W4393379673",
       "journal": "Nature Catalysis",
-      "cited_by_count": 157,
+      "cited_by_count": 158,
       "relevance_tags": [
         "机器学习"
       ],
@@ -354,7 +354,7 @@
       "doi_url": "https://doi.org/10.1021/jacs.1c12466",
       "source_url": "https://openalex.org/W4220727105",
       "journal": "Journal of the American Chemical Society",
-      "cited_by_count": 96,
+      "cited_by_count": 97,
       "relevance_tags": [
         "机器学习"
       ],
@@ -439,7 +439,7 @@
       "doi_url": "https://doi.org/10.1021/acs.chemrev.1c00347",
       "source_url": "https://openalex.org/W3181257149",
       "journal": "Chemical Reviews",
-      "cited_by_count": 374,
+      "cited_by_count": 375,
       "relevance_tags": [
         "机器学习"
       ],
@@ -456,7 +456,7 @@
       "doi_url": "https://doi.org/10.1021/jacs.1c07217",
       "source_url": "https://openalex.org/W3175436502",
       "journal": "Journal of the American Chemical Society",
-      "cited_by_count": 208,
+      "cited_by_count": 210,
       "relevance_tags": [
         "机器学习"
       ],
@@ -507,7 +507,7 @@
       "doi_url": "https://doi.org/10.1021/acs.jpclett.8b00170",
       "source_url": "https://openalex.org/W2786308452",
       "journal": "The Journal of Physical Chemistry Letters",
-      "cited_by_count": 204,
+      "cited_by_count": 205,
       "relevance_tags": [
         "机器学习"
       ],
@@ -524,7 +524,7 @@
       "doi_url": "https://doi.org/10.1021/acs.jpca.7b08750",
       "source_url": "https://openalex.org/W2749580687",
       "journal": "The Journal of Physical Chemistry A",
-      "cited_by_count": 295,
+      "cited_by_count": 297,
       "relevance_tags": [
         "机器学习"
       ],
@@ -558,7 +558,7 @@
       "doi_url": "https://doi.org/10.1021/acs.chemrev.7b00776",
       "source_url": "https://openalex.org/W2802791016",
       "journal": "Chemical Reviews",
-      "cited_by_count": 4886,
+      "cited_by_count": 4892,
       "relevance_tags": [
         "选择性氧化"
       ],
@@ -660,7 +660,7 @@
       "doi_url": "https://doi.org/10.1021/cr960406n",
       "source_url": "https://openalex.org/W2054111649",
       "journal": "Chemical Reviews",
-      "cited_by_count": 5865,
+      "cited_by_count": 5866,
       "relevance_tags": [
         "分子筛"
       ],
@@ -971,7 +971,7 @@
       "doi_url": "https://doi.org/10.1039/c5cs00376h",
       "source_url": "https://openalex.org/W2159775165",
       "journal": "Chemical Society Reviews",
-      "cited_by_count": 1105,
+      "cited_by_count": 1106,
       "relevance_tags": [
         "分子筛"
       ],
@@ -1090,7 +1090,7 @@
       "doi_url": "https://doi.org/10.1021/jp025642i",
       "source_url": "https://openalex.org/W2117331440",
       "journal": "The Journal of Physical Chemistry B",
-      "cited_by_count": 305,
+      "cited_by_count": 306,
       "relevance_tags": [
         "分子筛"
       ],
@@ -1107,7 +1107,7 @@
       "doi_url": "https://doi.org/10.1021/acs.chemrev.7b00738",
       "source_url": "https://openalex.org/W2802665194",
       "journal": "Chemical Reviews",
-      "cited_by_count": 858,
+      "cited_by_count": 859,
       "relevance_tags": [
         "分子筛"
       ],
@@ -1226,7 +1226,7 @@
       "doi_url": "https://doi.org/10.1021/cm00022a005",
       "source_url": "https://openalex.org/W1975299796",
       "journal": "Chemistry of Materials",
-      "cited_by_count": 1448,
+      "cited_by_count": 1449,
       "relevance_tags": [
         "分子筛"
       ],
@@ -1430,7 +1430,7 @@
       "doi_url": "https://doi.org/10.1021/acscatal.9b04186",
       "source_url": "https://openalex.org/W2996448308",
       "journal": "ACS Catalysis",
-      "cited_by_count": 629,
+      "cited_by_count": 630,
       "relevance_tags": [
         "机器学习"
       ],
@@ -1803,7 +1803,7 @@
       "doi_url": "https://doi.org/10.1103/revmodphys.94.015004",
       "source_url": "https://openalex.org/W4213212652",
       "journal": "Reviews of Modern Physics",
-      "cited_by_count": 2278,
+      "cited_by_count": 2280,
       "relevance_tags": [
         "机器学习"
       ],
@@ -1854,7 +1854,7 @@
       "doi_url": "https://doi.org/10.1088/2632-2153/aba947",
       "source_url": "https://openalex.org/W3009321976",
       "journal": "Machine Learning Science and Technology",
-      "cited_by_count": 1057,
+      "cited_by_count": 1058,
       "relevance_tags": [
         "机器学习"
       ],
@@ -1871,7 +1871,7 @@
       "doi_url": "https://doi.org/10.1039/d0cs00098a",
       "source_url": "https://openalex.org/W3023042104",
       "journal": "Chemical Society Reviews",
-      "cited_by_count": 975,
+      "cited_by_count": 977,
       "relevance_tags": [
         "机器学习"
       ],
@@ -1888,7 +1888,7 @@
       "doi_url": "https://doi.org/10.1021/acscentsci.7b00572",
       "source_url": "https://openalex.org/W2529996553",
       "journal": "ACS Central Science",
-      "cited_by_count": 3762,
+      "cited_by_count": 3763,
       "relevance_tags": [
         "机器学习"
       ],
