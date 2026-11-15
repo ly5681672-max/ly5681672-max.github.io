@@ -122,6 +122,8 @@ hexene_epoxidation/2-creating_microkinetic_model/runs/run_20261112_221539_910/de
 分析
 https://chatgpt.com/s/t_6af82c4a10508191bb60a6b9eb6a23fe
 
+归根到底 最知名的问题是能量数据当中 TS的求解本身就有问题 能量对应的mkm表达式有问题 导致catmap变换之后TS都成负的了 本质没懂输入数据构造的逻辑
+
 9.反应级数求导和分析问题
 
 https://mp.weixin.qq.com/s/VePuCbIvaqaM3VTTdZaBvQ
@@ -139,3 +141,6 @@ https://mp.weixin.qq.com/s/VePuCbIvaqaM3VTTdZaBvQ
 
 对比：高频振动（分子内部键伸缩）一般抖得幅度很小，弹簧假设通常够用。
 
+10.瞬时动力学和catmap 求解动力学的覆盖度关系
+
+https://chatgpt.com/s/t_6af97f3d23808191a13f48bbcda41194
