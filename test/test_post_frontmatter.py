@@ -128,7 +128,7 @@ class PostFrontmatterTests(unittest.TestCase):
         self.assertTrue(result.endswith("原始正文\\n"))
 
     def test_trailing_filename_spaces_are_removed(self):
-        path = self.new_post("OOH吸附能分析.md  ", b"正文\\n")
+        path = self.new_post("OOH吸附能分析.md  ", "正文\\n".encode("utf-8"))
         self.assertTrue(insert_frontmatter(path, self.now))
         normalized = self.post_dir / "OOH吸附能分析.md"
         self.assertTrue(normalized.exists())
@@ -136,12 +136,12 @@ class PostFrontmatterTests(unittest.TestCase):
         self.assertIn('title: "OOH吸附能分析"', normalized.read_text(encoding="utf-8"))
 
     def test_filename_normalization_collision_does_not_overwrite(self):
-        source = self.new_post(" OOH吸附能分析.md", b"原文件正文\\n")
-        target = self.new_post("OOH吸附能分析.md", b"目标文件正文\\n")
+        source = self.new_post(" OOH吸附能分析.md", "原文件正文\\n".encode("utf-8"))
+        target = self.new_post("OOH吸附能分析.md", "目标文件正文\\n".encode("utf-8"))
         with self.assertRaises(FileExistsError):
             insert_frontmatter(source, self.now)
-        self.assertEqual(source.read_bytes(), b"原文件正文\\n")
-        self.assertEqual(target.read_bytes(), b"目标文件正文\\n")
+        self.assertEqual(source.read_bytes(), "原文件正文\\n".encode("utf-8"))
+        self.assertEqual(target.read_bytes(), "目标文件正文\\n".encode("utf-8"))
 
 
 if __name__ == "__main__":
