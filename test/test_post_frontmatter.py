@@ -116,6 +116,7 @@ class PostFrontmatterTests(unittest.TestCase):
         self.assertEqual(path.read_bytes(), b"keep me\n")
 
 
+    # Encode Chinese test content explicitly; Python bytes literals are ASCII-only.
     def test_leading_space_in_filename_is_removed_and_title_is_clean(self):
         path = self.new_post(" 2016-11-14-林栋师兄讨论catmap.md", "原始正文\\n".encode("utf-8"))
         self.assertTrue(insert_frontmatter(path, self.now))
