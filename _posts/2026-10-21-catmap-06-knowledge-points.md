@@ -123,7 +123,15 @@ hexene_epoxidation/2-creating_microkinetic_model/runs/run_20261112_221539_910/de
 https://chatgpt.com/s/t_6af82c4a10508191bb60a6b9eb6a23fe
 
 归根到底 最知名的问题是能量数据当中 TS的求解本身就有问题 能量对应的mkm表达式有问题 导致catmap变换之后TS都成负的了 本质没懂输入数据构造的逻辑
-从DFT输入数据到catmap计算的过渡态数据
+从DFT输入数据到catmap计算的过渡态数据 
+$$
+\boxed{
+\text{原始 NEB 能垒}
+\ \longrightarrow\
+\text{CatMAP TS 形成能}
+}
+$$
+
 $$
 E_{\mathrm{TS,R3}}^{\mathrm{form}}
 =
@@ -134,6 +142,30 @@ E_{\mathrm{slab}}^{\mathrm{DFT}}
 E_{\mathrm{H_2O_2}}^{\mathrm{ref}}
 -
 E_{\mathrm{C_6H_{12}}}^{\mathrm{ref}}
+$$
+
+$$
+E_{\mathrm{IS}}
+=E_{\mathrm{OOH}}+E_{\mathrm{C_6H_{12}}}
+$$
+
+正向活化能
+$$
+\boxed{
+E_{a,f}=E_{\mathrm{TS}}-E_{\mathrm{IS}}
+}
+$$
+
+$$
+\boxed{
+E_{\mathrm{OOH-C_6H_{12}}}^{\mathrm{input}}
+=
+E_{\mathrm{OOH}}^{\mathrm{form}}
++
+E_{\mathrm{C_6H_{12}}}^{\mathrm{form}}
++
+E_{a,\mathrm{R3}}^{\mathrm{NEB}}
+}
 $$
 
 9.反应级数求导和分析问题
