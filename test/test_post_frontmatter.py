@@ -117,7 +117,7 @@ class PostFrontmatterTests(unittest.TestCase):
 
 
     def test_leading_space_in_filename_is_removed_and_title_is_clean(self):
-        path = self.new_post(" 2016-11-14-林栋师兄讨论catmap.md", b"原始正文\\n")
+        path = self.new_post(" 2016-11-14-林栋师兄讨论catmap.md", "原始正文\\n".encode("utf-8"))
         self.assertTrue(insert_frontmatter(path, self.now))
         normalized = self.post_dir / "2016-11-14-林栋师兄讨论catmap.md"
         self.assertTrue(normalized.exists())
