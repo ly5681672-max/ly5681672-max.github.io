@@ -176,7 +176,9 @@ https://chatgpt.com/s/t_6afaac41b5b881919c92f89c8ca3ff6d
 上述问题根本还是DFT求过渡态时候 **计算每一步过渡态时候 最好把无关原子去除** 可以避免共吸附问题 尤其是需要做**catmap动力学分析**的时候
 
 也可以不去掉 
-因为本质还是共吸附作用的增强 其他反应未见这种现象导致的 应该是位点太近 同时 空间距离太小导致的 还有己烯是大分子
+因为本质还是共吸附作用的增强 其他反应未见这种现象导致的 应该是*位点太近* 同时 *空间距离太小*导致的 还有*己烯是大分子* 或者还有种可能是*氧化反应*特殊性
+
+共吸附转换脚本H:\catmap\Official_catmap_epoxidation\hexene_epoxidation\1-generating_input_file\coadsorption_energy_conversion_R3.py
 
 9.反应级数求导和分析问题
 
