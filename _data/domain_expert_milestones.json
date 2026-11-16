@@ -20,9 +20,7 @@
     "evidence": "系统比较氯醇法、氢过氧化物法及新兴环氧丙烷催化路线，讨论H₂O₂组合工艺、银基、熔盐及Au–TiO₂等催化体系的技术挑战。属于领域发展综述，不是作者独立发现的新催化机理。",
     "url": "https://doi.org/10.1021/ie0513090",
     "publisher_source": "https://pubs.acs.org/doi/10.1021/ie0513090",
-    "expert_ids": [
-      "weckhuysen"
-    ],
+    "expert_ids": ["weckhuysen"],
     "review_status": "CONFIRMED_ABSTRACT",
     "review_note": "已核验ACS出版页作者、DOI、摘要及综述属性；未完成全文复核。"
   },
@@ -35,9 +33,7 @@
     "evidence": "研究表明，酸预处理Au–Pd合金催化剂的碳载体可抑制已生成H₂O₂的分解/加氢副反应；作者报告H₂O₂直接合成中的氢选择性超过95%。这一成果为通过抑制副反应提高H₂O₂选择性提供了催化剂设计思路。",
     "url": "https://doi.org/10.1126/science.1168980",
     "publisher_source": "https://orca.cardiff.ac.uk/id/eprint/5925/",
-    "expert_ids": [
-      "hutchings"
-    ],
+    "expert_ids": ["hutchings"],
     "review_status": "CONFIRMED_ABSTRACT",
     "review_note": "已核验Cardiff大学机构库、NIST及PubMed原始摘要和作者身份；并非全文独立复核。"
   },
@@ -50,9 +46,7 @@
     "evidence": "研究证明框架Sn位点的Sn-Beta分子筛能够在水相中高活性、高选择性地催化葡萄糖异构化为果糖，并可在酸性介质中工作；为分子筛Lewis酸位点催化生物质转化提供了实验依据。此成果不是烯烃环氧化研究。",
     "url": "https://doi.org/10.1073/pnas.1002358107",
     "publisher_source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2852018/",
-    "expert_ids": [
-      "davis"
-    ],
+    "expert_ids": ["davis"],
     "review_status": "CONFIRMED_FULLTEXT",
     "review_note": "已核验PNAS公开全文、作者贡献、摘要及关键实验结果；尚未完成独立实验复现。"
   },
@@ -64,9 +58,7 @@
     "authors": "Christopher P. Gordon, Christophe Copéret et al.",
     "evidence": "Nature原文摘要报告：17O固体核磁显示H2O2作用下与双核Ti桥联过氧物种一致的信号；DFT表明双Ti协同提供丙烯环氧化的低能路径。作者据此提出双核Ti位点可解释TS-1高环氧化效率；属于作者提出的机理解释，不代表所有TS-1位点均已被证明为双核。",
     "url": "https://doi.org/10.1038/s41586-020-2826-3",
-    "expert_ids": [
-      "coperet"
-    ],
+    "expert_ids": ["coperet"],
     "review_status": "CONFIRMED_ABSTRACT",
     "review_note": "已核对Nature出版页的作者、DOI和原始摘要；未完成全文及补充信息独立复核。",
     "publisher_source": "https://www.nature.com/articles/s41586-020-2826-3"
@@ -91,9 +83,7 @@
     "authors": "Raúl Díaz, Hongliang Xin",
     "evidence": "综述异相催化知识图谱的进展与应用机会，适合作为科研知识图谱的理论入口。",
     "url": "https://doi.org/10.1016/j.cjche.2025.06.008",
-    "expert_ids": [
-      "xin"
-    ],
+    "expert_ids": ["xin"],
     "review_status": "CONFIRMED_BIBLIOGRAPHY",
     "review_note": "已核对期刊官网作者、DOI及发表日期；综述性质，具体观点仍需全文核验。",
     "publisher_source": "https://cjche.cip.com.cn/EN/10.1016/j.cjche.2025.06.008"
@@ -106,13 +96,7 @@
     "authors": "Hongliang Xin, John R. Kitchin, Núria López et al.",
     "evidence": "Nature Catalysis观点文章提出AI-ready数据生态、多模态基础模型和自主实验室等未来研究方向，同时指出数据质量、泛化性、可解释性及计算与实验脱节等挑战；不属于新实验发现。",
     "url": "https://doi.org/10.1038/s41929-026-01479-x",
-    "expert_ids": [
-      "xin",
-      "kitchin",
-      "lopez",
-      "kulik",
-      "ulissi"
-    ],
+    "expert_ids": ["xin", "kitchin", "lopez", "kulik", "ulissi"],
     "review_status": "CONFIRMED_ABSTRACT",
     "review_note": "已核对Nature Catalysis出版页作者、DOI及原始摘要；这是多人共同撰写的前瞻性路线图，不可归为某一作者独立突破。",
     "publisher_source": "https://www.nature.com/articles/s41929-026-01479-x"
@@ -126,9 +110,7 @@
     "evidence": "出版商登记摘要中的研究贡献原文片段（不等于全文核验）：“Here we present GAME-Net, a graph neural network to quickly evaluate the adsorption energy.…”；具体结论请核对原文。",
     "url": "https://doi.org/10.1038/s43588-023-00437-y",
     "publisher_source": "https://doi.org/10.1038/s43588-023-00437-y",
-    "expert_ids": [
-      "lopez"
-    ],
+    "expert_ids": ["lopez"],
     "review_status": "CONFIRMED_ABSTRACT",
     "review_note": "自动核验Crossref出版商登记的DOI、题名、作者姓氏及摘要；只确认摘要原文存在，不代表全文审核或独立复现。",
     "verification_source": "Crossref publisher-deposited abstract",
@@ -144,9 +126,7 @@
     "evidence": "出版商登记摘要中的研究贡献原文片段（不等于全文核验）：“Here we present a multiscale study of the available reforming technologies based on a density functional theory open…”；具体结论请核对原文。",
     "url": "https://doi.org/10.1038/s41467-018-02884-y",
     "publisher_source": "https://doi.org/10.1038/s41467-018-02884-y",
-    "expert_ids": [
-      "lopez"
-    ],
+    "expert_ids": ["lopez"],
     "review_status": "CONFIRMED_ABSTRACT",
     "review_note": "自动核验Crossref出版商登记的DOI、题名、作者姓氏及摘要；只确认摘要原文存在，不代表全文审核或独立复现。",
     "verification_source": "Crossref publisher-deposited abstract",
@@ -162,9 +142,7 @@
     "evidence": "出版商登记摘要中的研究贡献原文片段（不等于全文核验）：“We demonstrate this approach for the simultaneous optimization of redox potential and solubility in candidate M­(II)/M­(III) redox couples…”；具体结论请核对原文。",
     "url": "https://doi.org/10.1021/acscentsci.0c00026",
     "publisher_source": "https://doi.org/10.1021/acscentsci.0c00026",
-    "expert_ids": [
-      "kulik"
-    ],
+    "expert_ids": ["kulik"],
     "review_status": "CONFIRMED_ABSTRACT",
     "review_note": "自动核验Crossref出版商登记的DOI、题名、作者姓氏及摘要；只确认摘要原文存在，不代表全文审核或独立复现。",
     "verification_source": "Crossref publisher-deposited abstract",
@@ -180,9 +158,7 @@
     "evidence": "出版商登记摘要中的研究贡献原文片段（不等于全文核验）：“Here, we show that hydrophobic zeolite beta with framework tin or titanium Lewis acid centers isomerizes sugars, e.g.,…”；具体结论请核对原文。",
     "url": "https://doi.org/10.1073/pnas.1206708109",
     "publisher_source": "https://doi.org/10.1073/pnas.1206708109",
-    "expert_ids": [
-      "davis"
-    ],
+    "expert_ids": ["davis"],
     "review_status": "CONFIRMED_ABSTRACT",
     "review_note": "自动核验Crossref出版商登记的DOI、题名、作者姓氏及摘要；只确认摘要原文存在，不代表全文审核或独立复现。",
     "verification_source": "Crossref publisher-deposited abstract",
@@ -198,9 +174,7 @@
     "evidence": "出版商登记摘要中的研究贡献原文片段（不等于全文核验）：“Herein, we demonstrate an extrapolative ML approach to develop new multi-elemental reverse water-gas shift catalysts.…”；具体结论请核对原文。",
     "url": "https://doi.org/10.1038/s41467-023-41341-3",
     "publisher_source": "https://doi.org/10.1038/s41467-023-41341-3",
-    "expert_ids": [
-      "takigawa_ichigaku"
-    ],
+    "expert_ids": ["takigawa_ichigaku"],
     "review_status": "CONFIRMED_ABSTRACT",
     "review_note": "自动核验Crossref出版商登记的DOI、题名、作者姓氏及摘要；只确认摘要原文存在，不代表全文审核或独立复现。",
     "verification_source": "Crossref publisher-deposited abstract",
@@ -216,9 +190,7 @@
     "evidence": "出版商登记摘要中的研究贡献原文片段（不等于全文核验）：“We report a simple and generic additive‐free route for the synthesis of Ti‐containing molecular sieves (MFI, MEL, and…”；具体结论请核对原文。",
     "url": "https://doi.org/10.1002/anie.202011821",
     "publisher_source": "https://doi.org/10.1002/anie.202011821",
-    "expert_ids": [
-      "feng_xiang"
-    ],
+    "expert_ids": ["feng_xiang"],
     "review_status": "CONFIRMED_ABSTRACT",
     "review_note": "自动核验Crossref出版商登记的DOI、题名、作者姓氏及摘要；只确认摘要原文存在，不代表全文审核或独立复现。",
     "verification_source": "Crossref publisher-deposited abstract",
@@ -234,9 +206,7 @@
     "evidence": "出版商登记摘要中的研究贡献原文片段（不等于全文核验）：“We report a simple and generic additive‐free route for the synthesis of Ti‐containing molecular sieves (MFI, MEL, and…”；具体结论请核对原文。",
     "url": "https://doi.org/10.1002/anie.202011821",
     "publisher_source": "https://doi.org/10.1002/anie.202011821",
-    "expert_ids": [
-      "lin_dong"
-    ],
+    "expert_ids": ["lin_dong"],
     "review_status": "CONFIRMED_ABSTRACT",
     "review_note": "自动核验Crossref出版商登记的DOI、题名、作者姓氏及摘要；只确认摘要原文存在，不代表全文审核或独立复现。",
     "verification_source": "Crossref publisher-deposited abstract",
@@ -252,9 +222,7 @@
     "evidence": "出版商登记摘要中的研究贡献原文片段（不等于全文核验）：“We show an example of a simple programmable circuit that can be trained as an efficient autoencoder.…”；具体结论请核对原文。",
     "url": "https://doi.org/10.1088/2058-9565/aa8072",
     "publisher_source": "https://doi.org/10.1088/2058-9565/aa8072",
-    "expert_ids": [
-      "alan_aspuru_guzik"
-    ],
+    "expert_ids": ["alan_aspuru_guzik"],
     "review_status": "CONFIRMED_ABSTRACT",
     "review_note": "自动核验Crossref出版商登记的DOI、题名、作者姓氏及摘要；只确认摘要原文存在，不代表全文审核或独立复现。",
     "verification_source": "Crossref publisher-deposited abstract",
