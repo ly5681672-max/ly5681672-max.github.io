@@ -40,14 +40,7 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add -- \\
-            _data/domain_expert_milestone_candidates.json \\
-            _data/domain_expert_milestones.json \\
-            _data/domain_expert_updates.json \\
-            _data/domain_experts.json \\
-            assets/css/domain-experts.css \\
-            assets/js/domain-experts.js \\
-            '网站使用说明.md'
+          git add -- _data/domain_expert_milestone_candidates.json _data/domain_expert_milestones.json _data/domain_expert_updates.json _data/domain_experts.json assets/css/domain-experts.css assets/js/domain-experts.js '网站使用说明.md'
           git diff --cached --check
           if ! git diff --cached --quiet; then
             git commit -m "Apply Prettier formatting"
