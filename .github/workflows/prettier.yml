@@ -1,5 +1,8 @@
 name: Prettier code formatter
 
+permissions:
+  contents: write
+
 on:
   pull_request:
     branches:
@@ -32,6 +35,24 @@ jobs:
           git diff -- . ':(exclude)package-lock.json' ':(exclude)package.json' > diff.txt
           npm install -g diff2html-cli
           diff2html -i file -s side -F diff.html -- diff.txt
+      - name: Commit Prettier fixes to pushed branch
+        if: ${{ github.event_name == 'push' && steps.prettier.conclusion == 'failure' }}
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- \\
+            _data/domain_expert_milestone_candidates.json \\
+            _data/domain_expert_milestones.json \\
+            _data/domain_expert_updates.json \\
+            _data/domain_experts.json \\
+            assets/css/domain-experts.css \\
+            assets/js/domain-experts.js \\
+            '网站使用说明.md'
+          git diff --cached --check
+          if ! git diff --cached --quiet; then
+            git commit -m "Apply Prettier formatting"
+            git push origin "HEAD:${GITHUB_REF_NAME}"
+          fi
       - name: Upload html diff ⬆️
         id: artifact-upload
         if: ${{ failure() && steps.prettier.conclusion == 'failure' }}
