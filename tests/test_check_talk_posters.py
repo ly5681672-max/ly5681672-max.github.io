@@ -47,14 +47,14 @@ class PosterIntegrityTests(unittest.TestCase):
         source = self.root / "_talks/poster.md"
         text = source.read_text(encoding="utf-8")
         text = text.replace(
-            "\\n---\\n",
-            "\\naward_title: \\"优秀墙报\\"\\n"
-            "award_recipient: \\"李亚倩\\"\\n"
-            "award_issuer: \\"重质油全国重点实验室\\"\\n"
-            "award_date: \\"2026年10月\\"\\n"
-            "award_certificate_image: \\"/assets/img/talks/awards/certificate.webp\\"\\n"
-            "award_certificate_pdf: \\"/assets/pdf/talks/awards/certificate.pdf\\"\\n"
-            "---\\n",
+            "\n---\n",
+            '\naward_title: "优秀墙报"\n'
+            'award_recipient: "李亚倩"\n'
+            'award_issuer: "重质油全国重点实验室"\n'
+            'award_date: "2026年10月"\n'
+            'award_certificate_image: "/assets/img/talks/awards/certificate.webp"\n'
+            'award_certificate_pdf: "/assets/pdf/talks/awards/certificate.pdf"\n'
+            '---\n',
             1,
         )
         source.write_text(text, encoding="utf-8")
