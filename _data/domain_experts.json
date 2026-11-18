@@ -574,5 +574,94 @@
       "reviewed_on": "2026-11-14"
     },
     "identity_evidence_dois": ["10.1038/s41570-025-00747-x", "10.1039/D3DD00223C"]
+  },
+  {
+    "id": "li_weixue",
+    "name": "Wei-Xue Li（李微雪）",
+    "group": "ai",
+    "institution": "University of Science and Technology of China",
+    "institution_zh": "中国科学技术大学",
+    "intro": "中国科学技术大学理论与计算催化学者，研究金属—载体相互作用、催化剂活性与稳定性及可解释人工智能。团队以物理化学原理结合数据驱动描述符，建立金属—载体相互作用的解析控制方程；与欧阳润海等合作推动SISSO类符号回归在催化机理和构效关系研究中的应用。",
+    "topics": [
+      "SISSO/符号回归",
+      "可解释机器学习",
+      "催化描述符",
+      "金属-载体相互作用",
+      "DFT与动力学"
+    ],
+    "official_url": "https://tcc.ustc.edu.cn/ProfwWeiwXueLi/list.htm",
+    "orcid": "0000-0002-5043-3088",
+    "pronunciation_ipa": null,
+    "pronunciation_status": "UNVERIFIED",
+    "pronunciation": {
+      "text": "李微雪",
+      "locale": "zh-CN",
+      "status": "PROVISIONAL"
+    },
+    "preferred_address": {
+      "label": "李教授",
+      "spoken_short_name": "李",
+      "locale": "zh-CN",
+      "status": "PROVISIONAL"
+    },
+    "intro_review_status": "PROVISIONAL",
+    "intro_source_url": "https://pichem.ustc.edu.cn/2025/0429/c39083a682423/page.htm",
+    "current_affiliation_status": "CONFIRMED",
+    "research_summary": "理论与计算催化、金属—载体界面稳定性、基于物理原理的可解释机器学习与催化描述符。其与欧阳润海合作的2024年Science论文展示了数据与理论结合的模型发现，不代表SISSO算法由李微雪独立提出。",
+    "latest_research_note": "2026年参与发表化学与材料机器学习中特征重要性稳定性的研究（J. Chem. Inf. Model., DOI: 10.1021/acs.jcim.6c00893）；此为解释可靠性研究，不是新的SISSO版本。",
+    "career_history_note": "1998年于中国科学院力学研究所获博士学位；曾赴德国和丹麦开展博士后研究；2004—2015年在中国科学院大连化学物理研究所工作，2015年起任职中国科学技术大学。",
+    "current_position": "中国科学技术大学化学物理系讲席教授、执行主任",
+    "profile_evidence": {
+      "affiliation_url": "https://pichem.ustc.edu.cn/2025/0429/c39083a682423/page.htm",
+      "career_url": "https://sklc.dicp.ac.cn/info/1034/6893.htm",
+      "research_url": "https://pubs.acs.org/doi/10.1021/acs.jcim.6c00893",
+      "review_status": "CONFIRMED_SOURCE",
+      "reviewed_on": "2026-11-18"
+    }
+  },
+  {
+    "id": "ouyang_runhai",
+    "name": "Runhai Ouyang（欧阳润海）",
+    "group": "ai",
+    "institution": "Tongji University",
+    "institution_zh": "同济大学",
+    "intro": "同济大学材料科学与工程学院长聘副教授，研究催化材料第一性原理计算、材料信息学与可解释机器学习。SISSO原始方法论文第一作者及开源代码维护者，参与发展多任务MT-SISSO、变量筛选辅助VS-SISSO，并将符号回归用于材料描述符、催化构效关系与金属—载体相互作用分析。",
+    "topics": [
+      "SISSO/符号回归",
+      "机器学习",
+      "材料信息学",
+      "催化描述符",
+      "金属-载体相互作用"
+    ],
+    "official_url": "https://smse.tongji.edu.cn/info/2176/7465.htm",
+    "orcid": "0000-0001-9020-0484",
+    "openalex_author_id": "A5062012847",
+    "pronunciation_ipa": null,
+    "pronunciation_status": "UNVERIFIED",
+    "pronunciation": {
+      "text": "欧阳润海",
+      "locale": "zh-CN",
+      "status": "PROVISIONAL"
+    },
+    "preferred_address": {
+      "label": "欧阳老师",
+      "spoken_short_name": "欧阳",
+      "locale": "zh-CN",
+      "status": "PROVISIONAL"
+    },
+    "intro_review_status": "PROVISIONAL",
+    "intro_source_url": "https://smse.tongji.edu.cn/info/2176/7465.htm",
+    "current_affiliation_status": "CONFIRMED",
+    "research_summary": "开发并维护SISSO符号回归与压缩感知方法，面向材料性质构建低维可解释描述符，并开展催化计算与金属—载体界面构效关系研究。与李微雪团队在2024年Science论文中合作将可解释建模用于催化金属—氧化物界面。",
+    "latest_research_note": "其维护的SISSO官方代码仓库README标注v3.5（2024年8月），列明MT-SISSO与VS-SISSO；2026年参与机器学习与分子动力学分析V₂O₅拉曼谱的研究（DOI：10.1021/acs.jpclett.6c00632），该研究不等于发布了SISSO新版本。",
+    "career_history_note": "同济大学官网记载2014年于中国科学院大连化学物理研究所获博士学位，随后分别在悉尼大学、加州大学河滨分校、德国马普学会Fritz Haber研究所开展博士后研究；此前曾任职上海大学，现任同济大学长聘副教授。",
+    "current_position": "同济大学材料科学与工程学院无机材料系长聘副教授、博士/硕士生导师",
+    "profile_evidence": {
+      "affiliation_url": "https://smse.tongji.edu.cn/info/2176/7465.htm",
+      "career_url": "https://smse.tongji.edu.cn/info/2176/7465.htm",
+      "research_url": "https://github.com/rouyang2017/SISSO",
+      "review_status": "CONFIRMED_SOURCE",
+      "reviewed_on": "2026-11-18"
+    }
   }
 ]
