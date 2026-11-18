@@ -42,6 +42,33 @@ class PosterIntegrityTests(unittest.TestCase):
         (self.root / "_talks/wrong.pdf").write_bytes(b"%PDF-example")
         self.assertTrue(any("not _talks/" in x for x in validate(self.root)))
 
+    def test_award_proof_linked_to_poster(self):
+        self.record()
+        source = self.root / "_talks/poster.md"
+        text = source.read_text(encoding="utf-8")
+        text = text.replace(
+            "\n---\n",
+            '\naward_title: "优秀墙报"\n'
+            'award_recipient: "李亚倩"\n'
+            'award_issuer: "重质油全国重点实验室"\n'
+            'award_date: "2026年10月"\n'
+            'award_certificate_image: "/assets/img/talks/awards/certificate.webp"\n'
+            'award_certificate_pdf: "/assets/pdf/talks/awards/certificate.pdf"\n'
+            '---\n',
+            1,
+        )
+        source.write_text(text, encoding="utf-8")
+        (self.root / "assets/pdf/talks/poster.pdf").write_bytes(b"%PDF-example")
+        self.assertTrue(any("award asset missing" in x for x in validate(self.root)))
+        image = self.root / "assets/img/talks/awards/certificate.webp"
+        image.parent.mkdir(parents=True)
+        image.write_bytes(b"RIFFxxxxxxxxWEBP")
+        proof = self.root / "assets/pdf/talks/awards/certificate.pdf"
+        proof.parent.mkdir(parents=True)
+        proof.write_bytes(b"%PDF-example")
+        self.assertEqual(validate(self.root), [])
+
+
 
 if __name__ == "__main__":
     unittest.main()
