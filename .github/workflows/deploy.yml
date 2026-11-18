@@ -21,6 +21,9 @@ on:
       - "_data/domain_expert_updates.json"
       - "_data/domain_expert_milestones.json"
       - "_data/domain_expert_milestone_candidates.json"
+      - "_talks/**"
+      - "scripts/check_talk_posters.py"
+      - "tests/test_check_talk_posters.py"
       - "_plugins/**"
       - "**.bib"
       - "**.html"
@@ -62,6 +65,9 @@ on:
       - "_data/domain_expert_updates.json"
       - "_data/domain_expert_milestones.json"
       - "_data/domain_expert_milestone_candidates.json"
+      - "_talks/**"
+      - "scripts/check_talk_posters.py"
+      - "tests/test_check_talk_posters.py"
       - "_plugins/**"
       - "**.bib"
       - "**.html"
@@ -130,6 +136,10 @@ jobs:
                 commit -m "Add missing Jekyll post front matter"
             git push origin "HEAD:${GITHUB_REF_NAME}"
           fi
+      - name: Verify talk poster metadata and PDFs
+        run: |
+          python3 scripts/check_talk_posters.py
+          python3 -m unittest discover -s tests -p "test_check_talk_posters.py" -v
       - name: Install JS deps 📦
         run: npm ci
       - name: Verify blog math normalization 🧮
@@ -147,6 +157,8 @@ jobs:
           pip3 install --upgrade nbconvert
           export JEKYLL_ENV=production
           bundle exec jekyll build
+      - name: Verify built talk posters
+        run: python3 scripts/check_talk_posters.py --site _site
       - name: Verify built expert timelines and candidate papers
         run: python3 scripts/check_domain_expert_site.py --site _site
       - name: Verify automatic blog links 🔗

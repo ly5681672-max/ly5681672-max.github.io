@@ -126,8 +126,13 @@ nav_order: 4
       {% for talk in poster_items %}
         <article class="talks-conference">
           <div class="talks-conf-date">
-            <span class="talks-conf-month">{{ talk.date | date: "%b" }}</span>
-            <span class="talks-conf-year">{{ talk.date | date: "%Y" }}</span>
+            {% if talk.date_basis == "upload" %}
+              <span class="talks-conf-month">收录</span>
+              <span class="talks-conf-year">{{ talk.date | date: "%Y.%m" }}</span>
+            {% else %}
+              <span class="talks-conf-month">{{ talk.date | date: "%b" }}</span>
+              <span class="talks-conf-year">{{ talk.date | date: "%Y" }}</span>
+            {% endif %}
           </div>
           <div class="talks-entry-body">
             <p class="talks-type">
@@ -141,7 +146,18 @@ nav_order: 4
               <h3>{{ talk.title | escape }}</h3>
             </div>
             <p class="talks-venue">{{ talk.venue | escape }}</p>
-            <p class="talks-place">{{ talk.location | escape }}</p>
+            {% if talk.authors %}
+              <p class="talks-place">作者：{{ talk.authors | escape }}</p>
+            {% endif %}
+            {% if talk.affiliation %}
+              <p class="talks-place">单位：{{ talk.affiliation | escape }}</p>
+            {% endif %}
+            {% if talk.location %}
+              <p class="talks-place">{{ talk.location | escape }}</p>
+            {% endif %}
+            {% if talk.date_basis == "upload" %}
+              <p class="talks-place">日期说明：仅为资料上传日期，并非会议举办日期。</p>
+            {% endif %}
             {% if talk.materials.size > 0 %}
               <div class="talks-materials">
                 {% for material in talk.materials %}
