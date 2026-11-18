@@ -180,6 +180,12 @@ https://chatgpt.com/s/t_6afaac41b5b881919c92f89c8ca3ff6d
 
 共吸附转换脚本H:\catmap\Official_catmap_epoxidation\hexene_epoxidation\1-generating_input_file\coadsorption_energy_conversion_R3.py
 
+上述都是不考虑共吸附的影响 求解动力学后发现ti tof最高不符合常理 很有可能双核导致的共吸附是影响活性的关键 所以不可忽略
+
+![2026-10-21-catmap-06-knowledge-points.md-2026-11-17_11-16-00-016ec33e](https://raw.githubusercontent.com/ly5681672-max/ly5681672-max.github.io/main/assets/img/learning-notes/2026-10-21-catmap-06-knowledge-points.md-2026-11-17_11-16-00-016ec33e.png)
+
+https://catmap.readthedocs.io/en/latest/topics/including_adsorbate_adsorbate_interactions.html?utm_source=chatgpt.com
+
 9.反应级数求导和分析问题
 
 https://mp.weixin.qq.com/s/VePuCbIvaqaM3VTTdZaBvQ
