@@ -126,7 +126,10 @@ nav_order: 4
       {% for talk in poster_items %}
         <article class="talks-conference">
           <div class="talks-conf-date">
-            {% if talk.date_basis == "upload" %}
+            {% if talk.date_basis == "award_month" %}
+              <span class="talks-conf-month">获奖</span>
+              <span class="talks-conf-year">{{ talk.date | date: "%Y.%m" }}</span>
+            {% elsif talk.date_basis == "upload" %}
               <span class="talks-conf-month">收录</span>
               <span class="talks-conf-year">{{ talk.date | date: "%Y.%m" }}</span>
             {% else %}
@@ -157,6 +160,33 @@ nav_order: 4
             {% endif %}
             {% if talk.date_basis == "upload" %}
               <p class="talks-place">日期说明：仅为资料上传日期，并非会议举办日期。</p>
+            {% endif %}
+            {% if talk.award_title %}
+              <div class="talks-award">
+                <div class="talks-award-details">
+                  <p class="talks-award-name">
+                    <i class="fa-solid fa-award" aria-hidden="true"></i>
+                    <strong>{{ talk.award_title | escape }}</strong>
+                    · {{ talk.award_issuer | escape }}
+                  </p>
+                  <p class="talks-award-meta">
+                    获奖人：{{ talk.award_recipient | escape }} · 证书日期：{{ talk.award_date | escape }}
+                  </p>
+                  {% if talk.award_certificate_pdf %}
+                    <div class="talks-materials">
+                      <a class="talks-material-link" href="{{ talk.award_certificate_pdf | relative_url | escape }}" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-solid fa-file-pdf" aria-hidden="true"></i>
+                        查看获奖证明（原始扫描 PDF） ↗
+                      </a>
+                    </div>
+                  {% endif %}
+                </div>
+                {% if talk.award_certificate_image %}
+                  <a class="talks-award-preview" href="{{ talk.award_certificate_pdf | relative_url | escape }}" target="_blank" rel="noopener noreferrer" aria-label="查看{{ talk.award_title | escape }}证书原始扫描件">
+                    <img src="{{ talk.award_certificate_image | relative_url | escape }}" alt="{{ talk.award_title | escape }}证书（{{ talk.award_recipient | escape }}）" width="440" height="620" loading="lazy" decoding="async">
+                  </a>
+                {% endif %}
+              </div>
             {% endif %}
             {% if talk.materials.size > 0 %}
               <div class="talks-materials">

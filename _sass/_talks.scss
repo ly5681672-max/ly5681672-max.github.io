@@ -223,3 +223,62 @@
     font-size: 0.9rem;
   }
 }
+
+/* Small inline award proof: authentic certificate preview, not a separate card. */
+.talks-award {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-top: 0.85rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--global-divider-color);
+}
+
+.talks-award-details {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.talks-award-name {
+  margin: 0;
+  color: var(--global-text-color);
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
+.talks-award-name i {
+  color: #a18432;
+  margin-right: 0.35rem;
+}
+
+.talks-award-meta {
+  margin: 0.25rem 0 0;
+  color: var(--global-text-color-light);
+  font-size: 0.81rem;
+  line-height: 1.55;
+}
+
+.talks-award-preview {
+  display: block;
+  flex: 0 0 145px;
+  width: 145px;
+  line-height: 0;
+}
+
+.talks-award-preview img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--global-divider-color);
+}
+
+@media (max-width: 640px) {
+  .talks-award {
+    gap: 0.6rem;
+  }
+
+  .talks-award-preview {
+    flex-basis: 87px;
+    width: 87px;
+  }
+}

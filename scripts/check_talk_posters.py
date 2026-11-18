@@ -25,6 +25,7 @@ def validate(root: Path, site: Path | None = None) -> list[str]:
     errors: list[str] = []
     referenced: set[Path] = set()
     posters: list[tuple[str, Path]] = []
+    awards: list[tuple[str, Path, Path]] = []
     if not talks.is_dir():
         return ["Missing _talks/ collection"]
 
@@ -63,6 +64,33 @@ def validate(root: Path, site: Path | None = None) -> list[str]:
         if not found_pdf:
             errors.append(f"{source.relative_to(root)}: poster has no PDF reference")
 
+        award_title = get_field(front, "award_title")
+        if award_title:
+            for field in ("award_recipient", "award_issuer", "award_date"):
+                if not get_field(front, field):
+                    errors.append(f"{source.relative_to(root)}: award field missing: {field}")
+            award_assets: dict[str, Path] = {}
+            for field, prefix, suffixes in (
+                ("award_certificate_image", "/assets/img/talks/awards/", {".webp", ".png", ".jpg", ".jpeg"}),
+                ("award_certificate_pdf", "/assets/pdf/talks/awards/", {".pdf"}),
+            ):
+                href = get_field(front, field)
+                if not href:
+                    errors.append(f"{source.relative_to(root)}: award certificate missing: {field}")
+                    continue
+                parsed = urlsplit(href)
+                relative = unquote(parsed.path)
+                if parsed.netloc or not relative.startswith(prefix) or ".." in Path(relative).parts or Path(relative).suffix.lower() not in suffixes:
+                    errors.append(f"{source.relative_to(root)}: invalid award asset: {href}")
+                    continue
+                asset_path = Path(relative.lstrip("/"))
+                target = root / asset_path
+                award_assets[field] = asset_path
+                if not target.is_file() or target.stat().st_size < 4:
+                    errors.append(f"{source.relative_to(root)}: award asset missing or empty: {href}")
+            if len(award_assets) == 2:
+                awards.append((award_title, award_assets["award_certificate_image"], award_assets["award_certificate_pdf"]))
+
     if assets.is_dir():
         for pdf in sorted(assets.iterdir()):
             if pdf.is_file() and pdf.suffix.lower() == ".pdf" and pdf not in referenced:
@@ -82,6 +110,17 @@ def validate(root: Path, site: Path | None = None) -> list[str]:
                     errors.append(f"Poster PDF missing in built site: {relative}")
                 elif (root / relative).stat().st_size != compiled_pdf.stat().st_size:
                     errors.append(f"Poster PDF size differs in built site: {relative}")
+            for award_title, image_rel, pdf_rel in awards:
+                if award_title not in html:
+                    errors.append(f"Award title missing in built talks page: {award_title}")
+                for relative in (image_rel, pdf_rel):
+                    if "/" + relative.as_posix() not in html:
+                        errors.append(f"Award link missing from built talks page: {relative}")
+                    built = site / relative
+                    if not built.is_file():
+                        errors.append(f"Award proof missing from built site: {relative}")
+                    elif (root / relative).stat().st_size != built.stat().st_size:
+                        errors.append(f"Award proof size differs in built site: {relative}")
     return errors
 
 
