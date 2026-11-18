@@ -254,9 +254,7 @@
     "evidence": "提出将Sure Independence Screening与稀疏算子结合的SISSO方法，从大规模候选特征中筛选低维材料性质描述符。该工作是SISSO方法论文，不应被混同为任何单一催化反应机制的证明。",
     "url": "https://doi.org/10.1103/PhysRevMaterials.2.083802",
     "publisher_source": "https://journals.aps.org/prmaterials/abstract/10.1103/PhysRevMaterials.2.083802",
-    "expert_ids": [
-      "ouyang_runhai"
-    ],
+    "expert_ids": ["ouyang_runhai"],
     "review_status": "CONFIRMED_ABSTRACT",
     "review_note": "已核对APS出版页作者、日期、DOI与摘要；不宣称完成全文复现。"
   },
@@ -269,9 +267,7 @@
     "evidence": "将SISSO扩展为多任务学习，针对不同材料性质使用共同的低维描述符，并允许各任务存在部分未观测数据；展示对象为材料稳定性与金属/非金属分类。",
     "url": "https://doi.org/10.1088/2515-7639/ab077b",
     "publisher_source": "https://pure.mpg.de/rest/items/item_3027540_3/component/file_3035409/content",
-    "expert_ids": [
-      "ouyang_runhai"
-    ],
+    "expert_ids": ["ouyang_runhai"],
     "review_status": "CONFIRMED_ABSTRACT",
     "review_note": "已核对原论文署名、DOI和摘要内容；未独立复现方法或结果。"
   },
@@ -284,9 +280,7 @@
     "evidence": "结合迭代变量筛选与SISSO符号回归，缓解原始高维输入特征带来的计算资源限制；原文展示了材料带隙和单原子合金催化剂稳定性等应用。",
     "url": "https://doi.org/10.1021/acs.jctc.2c00281",
     "publisher_source": "https://pubs.acs.org/doi/10.1021/acs.jctc.2c00281",
-    "expert_ids": [
-      "ouyang_runhai"
-    ],
+    "expert_ids": ["ouyang_runhai"],
     "review_status": "CONFIRMED_ABSTRACT",
     "review_note": "已核对ACS出版页与PubMed摘要、作者及DOI；未复现定量性能。"
   },
@@ -299,10 +293,7 @@
     "evidence": "基于实验数据、可解释机器学习、理论推导与第一性原理分析，作者提出金属—氧化物载体相互作用的解析模型；属于李微雪与欧阳润海等人的合作成果，而不是SISSO算法新版本。",
     "url": "https://doi.org/10.1126/science.adp6034",
     "publisher_source": "https://www.science.org/doi/10.1126/science.adp6034",
-    "expert_ids": [
-      "li_weixue",
-      "ouyang_runhai"
-    ],
+    "expert_ids": ["li_weixue", "ouyang_runhai"],
     "review_status": "CONFIRMED_ABSTRACT",
     "review_note": "已核对机构官方报道、出版书目与摘要所述贡献；尚未对模型数值及适用边界完成独立复核。"
   }

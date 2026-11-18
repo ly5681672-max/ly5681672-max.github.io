@@ -582,13 +582,7 @@
     "institution": "University of Science and Technology of China",
     "institution_zh": "中国科学技术大学",
     "intro": "中国科学技术大学理论与计算催化学者，研究金属—载体相互作用、催化剂活性与稳定性及可解释人工智能。团队以物理化学原理结合数据驱动描述符，建立金属—载体相互作用的解析控制方程；与欧阳润海等合作推动SISSO类符号回归在催化机理和构效关系研究中的应用。",
-    "topics": [
-      "SISSO/符号回归",
-      "可解释机器学习",
-      "催化描述符",
-      "金属-载体相互作用",
-      "DFT与动力学"
-    ],
+    "topics": ["SISSO/符号回归", "可解释机器学习", "催化描述符", "金属-载体相互作用", "DFT与动力学"],
     "official_url": "https://tcc.ustc.edu.cn/ProfwWeiwXueLi/list.htm",
     "orcid": "0000-0002-5043-3088",
     "pronunciation_ipa": null,
@@ -626,13 +620,7 @@
     "institution": "Tongji University",
     "institution_zh": "同济大学",
     "intro": "同济大学材料科学与工程学院长聘副教授，研究催化材料第一性原理计算、材料信息学与可解释机器学习。SISSO原始方法论文第一作者及开源代码维护者，参与发展多任务MT-SISSO、变量筛选辅助VS-SISSO，并将符号回归用于材料描述符、催化构效关系与金属—载体相互作用分析。",
-    "topics": [
-      "SISSO/符号回归",
-      "机器学习",
-      "材料信息学",
-      "催化描述符",
-      "金属-载体相互作用"
-    ],
+    "topics": ["SISSO/符号回归", "机器学习", "材料信息学", "催化描述符", "金属-载体相互作用"],
     "official_url": "https://smse.tongji.edu.cn/info/2176/7465.htm",
     "orcid": "0000-0001-9020-0484",
     "openalex_author_id": "A5062012847",
