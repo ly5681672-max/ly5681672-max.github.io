@@ -14,12 +14,8 @@
       "group": "epox",
       "group_label": "烯烃环氧化",
       "relevance": "中",
-      "match_tags": [
-        "选择性氧化"
-      ],
-      "author_names": [
-        "Graham J. Hutchings"
-      ]
+      "match_tags": ["选择性氧化"],
+      "author_names": ["Graham J. Hutchings"]
     },
     {
       "title": "Exploring transition metal complexes with large language models",
@@ -33,12 +29,8 @@
       "group": "ai",
       "group_label": "AI 结合知识学习",
       "relevance": "中",
-      "match_tags": [
-        "RAG/LLM"
-      ],
-      "author_names": [
-        "Heather J. Kulik"
-      ]
+      "match_tags": ["RAG/LLM"],
+      "author_names": ["Heather J. Kulik"]
     },
     {
       "title": "El Agente Fármaco: A Scalable AI Scientist for Drug Discovery",
@@ -52,12 +44,8 @@
       "group": "ai",
       "group_label": "AI 结合知识学习",
       "relevance": "中",
-      "match_tags": [
-        "RAG/LLM"
-      ],
-      "author_names": [
-        "Alán Aspuru-Guzik"
-      ]
+      "match_tags": ["RAG/LLM"],
+      "author_names": ["Alán Aspuru-Guzik"]
     },
     {
       "title": "El Agente Quntur: Agentic Active-Space Selection for CASSCF",
@@ -71,12 +59,8 @@
       "group": "ai",
       "group_label": "AI 结合知识学习",
       "relevance": "中",
-      "match_tags": [
-        "RAG/LLM"
-      ],
-      "author_names": [
-        "Alán Aspuru-Guzik"
-      ]
+      "match_tags": ["RAG/LLM"],
+      "author_names": ["Alán Aspuru-Guzik"]
     },
     {
       "title": "From Atoms to Reactors: A Critical Review of a Decade of Machine Learning in Heterogeneous Catalysis (2017–2026)",
@@ -90,12 +74,8 @@
       "group": "epox",
       "group_label": "烯烃环氧化",
       "relevance": "中",
-      "match_tags": [
-        "分子筛"
-      ],
-      "author_names": [
-        "Avelino Corma"
-      ]
+      "match_tags": ["分子筛"],
+      "author_names": ["Avelino Corma"]
     },
     {
       "title": "From Atoms to Reactors: A Critical Review of a Decade of Machine Learning in Heterogeneous Catalysis (2017–2026)",
@@ -109,12 +89,8 @@
       "group": "epox",
       "group_label": "烯烃环氧化",
       "relevance": "中",
-      "match_tags": [
-        "分子筛"
-      ],
-      "author_names": [
-        "Avelino Corma"
-      ]
+      "match_tags": ["分子筛"],
+      "author_names": ["Avelino Corma"]
     },
     {
       "title": "Multiobjective Optimization of Synthetically Accessible Homogeneous Catalysts Reveals Tradeoffs for Methane-to-Methanol Conversion",
@@ -128,12 +104,8 @@
       "group": "ai",
       "group_label": "AI 结合知识学习",
       "relevance": "高",
-      "match_tags": [
-        "机器学习"
-      ],
-      "author_names": [
-        "Heather J. Kulik"
-      ]
+      "match_tags": ["机器学习"],
+      "author_names": ["Heather J. Kulik"]
     },
     {
       "title": "AI‐EXAFS: Physics‐Informed Prediction of EXAFS from Atomic Structure",
@@ -147,12 +119,8 @@
       "group": "ai",
       "group_label": "AI 结合知识学习",
       "relevance": "中",
-      "match_tags": [
-        "机器学习"
-      ],
-      "author_names": [
-        "Núria López"
-      ]
+      "match_tags": ["机器学习"],
+      "author_names": ["Núria López"]
     },
     {
       "title": "Accelerated Zeolite Defect Healing Suppresses Oxygen-Containing Species Trapping for Tandem Propene Epoxidation",
@@ -166,17 +134,8 @@
       "group": "epox",
       "group_label": "烯烃环氧化",
       "relevance": "高",
-      "match_tags": [
-        "烯烃环氧化",
-        "TS-1",
-        "H₂O₂/OOH",
-        "分子筛",
-        "选择性氧化"
-      ],
-      "author_names": [
-        "Graham J. Hutchings",
-        "Xiang Feng（冯翔）"
-      ]
+      "match_tags": ["烯烃环氧化", "TS-1", "H₂O₂/OOH", "分子筛", "选择性氧化"],
+      "author_names": ["Graham J. Hutchings", "Xiang Feng（冯翔）"]
     },
     {
       "title": "Rh3+ stabilized in KRh@MFI catalyses regioselective hydroformylation",
@@ -190,12 +149,8 @@
       "group": "epox",
       "group_label": "烯烃环氧化",
       "relevance": "中",
-      "match_tags": [
-        "分子筛"
-      ],
-      "author_names": [
-        "Avelino Corma"
-      ]
+      "match_tags": ["分子筛"],
+      "author_names": ["Avelino Corma"]
     },
     {
       "title": "Joint Neural Posterior Estimation and Model Selection for Chemical Reaction Networks",
@@ -209,12 +164,8 @@
       "group": "ai",
       "group_label": "AI 结合知识学习",
       "relevance": "中",
-      "match_tags": [
-        "机器学习"
-      ],
-      "author_names": [
-        "Alán Aspuru-Guzik"
-      ]
+      "match_tags": ["机器学习"],
+      "author_names": ["Alán Aspuru-Guzik"]
     },
     {
       "title": "Epitaxial-strain engineering of supported tensile noble metallene oxides for enhanced oxidation catalysis",
@@ -228,13 +179,8 @@
       "group": "epox",
       "group_label": "烯烃环氧化",
       "relevance": "中",
-      "match_tags": [
-        "选择性氧化"
-      ],
-      "author_names": [
-        "Xiang Feng（冯翔）",
-        "Dong Lin（林栋）"
-      ]
+      "match_tags": ["选择性氧化"],
+      "author_names": ["Xiang Feng（冯翔）", "Dong Lin（林栋）"]
     },
     {
       "title": "Enerzyme: An Efficient Reactive Neural Network Potential Training Framework for Enzyme Cluster Models with Application to Methyltransferases",
@@ -248,12 +194,8 @@
       "group": "ai",
       "group_label": "AI 结合知识学习",
       "relevance": "中",
-      "match_tags": [
-        "机器学习"
-      ],
-      "author_names": [
-        "Heather J. Kulik"
-      ]
+      "match_tags": ["机器学习"],
+      "author_names": ["Heather J. Kulik"]
     },
     {
       "title": "Tuning Pore Confinement and Chemistry of Fluorine-Free Membranes",
@@ -267,12 +209,8 @@
       "group": "ai",
       "group_label": "AI 结合知识学习",
       "relevance": "中",
-      "match_tags": [
-        "机器学习"
-      ],
-      "author_names": [
-        "Núria López"
-      ]
+      "match_tags": ["机器学习"],
+      "author_names": ["Núria López"]
     },
     {
       "title": "ElemeNet: Multiscale Molecular Machine Learning with Uncertainty Quantification across the Periodic Table",
@@ -286,12 +224,8 @@
       "group": "ai",
       "group_label": "AI 结合知识学习",
       "relevance": "中",
-      "match_tags": [
-        "机器学习"
-      ],
-      "author_names": [
-        "Heather J. Kulik"
-      ]
+      "match_tags": ["机器学习"],
+      "author_names": ["Heather J. Kulik"]
     },
     {
       "title": "Understanding the Regulatory Mechanism of Different Pt/Fe Ratio Binary Finite‐Segregation Alloys on the CO Preferential Oxidation Reaction Through DFT and Microkinetic Simulations: Geometric and Electronic Effects",
@@ -305,12 +239,8 @@
       "group": "epox",
       "group_label": "烯烃环氧化",
       "relevance": "中",
-      "match_tags": [
-        "选择性氧化"
-      ],
-      "author_names": [
-        "Xiang Feng（冯翔）"
-      ]
+      "match_tags": ["选择性氧化"],
+      "author_names": ["Xiang Feng（冯翔）"]
     },
     {
       "title": "Colour me shocked: Exact Molecular Hessians from local MLIPs in O(N) time using sparse differentiation!",
@@ -324,12 +254,8 @@
       "group": "ai",
       "group_label": "AI 结合知识学习",
       "relevance": "中",
-      "match_tags": [
-        "机器学习"
-      ],
-      "author_names": [
-        "Alán Aspuru-Guzik"
-      ]
+      "match_tags": ["机器学习"],
+      "author_names": ["Alán Aspuru-Guzik"]
     },
     {
       "title": "Enhancing Aromatics Production in Zeolite-Catalyzed Lignin Pyrolysis by Establishing Structure-Acidity-Performance Relationships",
@@ -343,12 +269,8 @@
       "group": "epox",
       "group_label": "烯烃环氧化",
       "relevance": "中",
-      "match_tags": [
-        "分子筛"
-      ],
-      "author_names": [
-        "Bert M. Weckhuysen"
-      ]
+      "match_tags": ["分子筛"],
+      "author_names": ["Bert M. Weckhuysen"]
     },
     {
       "title": "Kinetically Balanced Relay Catalysis for Efficient Oxidation of Methane to Methanol with O2",
@@ -362,13 +284,8 @@
       "group": "epox",
       "group_label": "烯烃环氧化",
       "relevance": "高",
-      "match_tags": [
-        "H₂O₂/OOH",
-        "选择性氧化"
-      ],
-      "author_names": [
-        "Christophe Copéret"
-      ]
+      "match_tags": ["H₂O₂/OOH", "选择性氧化"],
+      "author_names": ["Christophe Copéret"]
     },
     {
       "title": "El Agente Potente: High-Throughput Agentic Atomistic Simulations",
@@ -382,12 +299,8 @@
       "group": "ai",
       "group_label": "AI 结合知识学习",
       "relevance": "中",
-      "match_tags": [
-        "RAG/LLM"
-      ],
-      "author_names": [
-        "Alán Aspuru-Guzik"
-      ]
+      "match_tags": ["RAG/LLM"],
+      "author_names": ["Alán Aspuru-Guzik"]
     },
     {
       "title": "La Agente Óptima: Towards Agentic Self-Driving Laboratories",
@@ -401,12 +314,8 @@
       "group": "ai",
       "group_label": "AI 结合知识学习",
       "relevance": "中",
-      "match_tags": [
-        "RAG/LLM"
-      ],
-      "author_names": [
-        "Alán Aspuru-Guzik"
-      ]
+      "match_tags": ["RAG/LLM"],
+      "author_names": ["Alán Aspuru-Guzik"]
     },
     {
       "title": "AI-enhanced adaptive virtual screening of large libraries for ligand discovery",
@@ -420,12 +329,8 @@
       "group": "ai",
       "group_label": "AI 结合知识学习",
       "relevance": "中",
-      "match_tags": [
-        "机器学习"
-      ],
-      "author_names": [
-        "Alán Aspuru-Guzik"
-      ]
+      "match_tags": ["机器学习"],
+      "author_names": ["Alán Aspuru-Guzik"]
     },
     {
       "title": "Post‐Synthetic Zinc Modifications to Correct Speciation in Ti‐MWW Zeolites for Catalytic Oxidation",
@@ -439,13 +344,8 @@
       "group": "epox",
       "group_label": "烯烃环氧化",
       "relevance": "中",
-      "match_tags": [
-        "分子筛",
-        "选择性氧化"
-      ],
-      "author_names": [
-        "Christophe Copéret"
-      ]
+      "match_tags": ["分子筛", "选择性氧化"],
+      "author_names": ["Christophe Copéret"]
     },
     {
       "title": "BOS-TMC Data Set: DFT Properties of 159k Experimentally Characterized Transition Metal Complexes Spanning Multiple Charge and Spin States",
@@ -459,12 +359,8 @@
       "group": "ai",
       "group_label": "AI 结合知识学习",
       "relevance": "中",
-      "match_tags": [
-        "机器学习"
-      ],
-      "author_names": [
-        "Heather J. Kulik"
-      ]
+      "match_tags": ["机器学习"],
+      "author_names": ["Heather J. Kulik"]
     },
     {
       "title": "Structural regulation of intergrown twin ZSM-5 zeolites for shape-selective toluene-methanol co-conversion to produce p-xylene and light olefins",
@@ -478,12 +374,8 @@
       "group": "epox",
       "group_label": "烯烃环氧化",
       "relevance": "中",
-      "match_tags": [
-        "分子筛"
-      ],
-      "author_names": [
-        "Xiang Feng（冯翔）"
-      ]
+      "match_tags": ["分子筛"],
+      "author_names": ["Xiang Feng（冯翔）"]
     },
     {
       "title": "Plastron-mediated direct H2O2 synthesis",
@@ -497,12 +389,8 @@
       "group": "epox",
       "group_label": "烯烃环氧化",
       "relevance": "高",
-      "match_tags": [
-        "H₂O₂/OOH"
-      ],
-      "author_names": [
-        "Graham J. Hutchings"
-      ]
+      "match_tags": ["H₂O₂/OOH"],
+      "author_names": ["Graham J. Hutchings"]
     },
     {
       "title": "Reaction: Building trust infrastructure for agentic experimental science beyond fragile eloquence",
@@ -516,12 +404,8 @@
       "group": "ai",
       "group_label": "AI 结合知识学习",
       "relevance": "中",
-      "match_tags": [
-        "RAG/LLM"
-      ],
-      "author_names": [
-        "Alán Aspuru-Guzik"
-      ]
+      "match_tags": ["RAG/LLM"],
+      "author_names": ["Alán Aspuru-Guzik"]
     },
     {
       "title": "Data-driven catalyst design for direct catalytic N2O decomposition",
@@ -535,12 +419,8 @@
       "group": "ai",
       "group_label": "AI 结合知识学习",
       "relevance": "高",
-      "match_tags": [
-        "机器学习"
-      ],
-      "author_names": [
-        "Ichigaku Takigawa（瀧川一学）"
-      ]
+      "match_tags": ["机器学习"],
+      "author_names": ["Ichigaku Takigawa（瀧川一学）"]
     },
     {
       "title": "Work‐Function‐Modulated Ag Single‐Atom Catalysts for Amino Alcohol Oxidation",
@@ -554,12 +434,8 @@
       "group": "epox",
       "group_label": "烯烃环氧化",
       "relevance": "中",
-      "match_tags": [
-        "选择性氧化"
-      ],
-      "author_names": [
-        "Xiang Feng（冯翔）"
-      ]
+      "match_tags": ["选择性氧化"],
+      "author_names": ["Xiang Feng（冯翔）"]
     },
     {
       "title": "Work‐Function‐Modulated Ag Single‐Atom Catalysts for Amino Alcohol Oxidation",
@@ -573,12 +449,8 @@
       "group": "epox",
       "group_label": "烯烃环氧化",
       "relevance": "中",
-      "match_tags": [
-        "选择性氧化"
-      ],
-      "author_names": [
-        "Xiang Feng（冯翔）"
-      ]
+      "match_tags": ["选择性氧化"],
+      "author_names": ["Xiang Feng（冯翔）"]
     },
     {
       "title": "Machine Learning-Assisted Development of High-Performance Ethanol Synthesis Catalysts via CO2 Hydrogenation",
@@ -592,12 +464,8 @@
       "group": "ai",
       "group_label": "AI 结合知识学习",
       "relevance": "高",
-      "match_tags": [
-        "机器学习"
-      ],
-      "author_names": [
-        "Ichigaku Takigawa（瀧川一学）"
-      ]
+      "match_tags": ["机器学习"],
+      "author_names": ["Ichigaku Takigawa（瀧川一学）"]
     },
     {
       "title": "Fine-tuning universal machine learning potentials for transition state search in surface catalysis",
@@ -611,12 +479,8 @@
       "group": "ai",
       "group_label": "AI 结合知识学习",
       "relevance": "高",
-      "match_tags": [
-        "机器学习"
-      ],
-      "author_names": [
-        "John R. Kitchin"
-      ]
+      "match_tags": ["机器学习"],
+      "author_names": ["John R. Kitchin"]
     },
     {
       "title": "Rapid Evaluation of Glassy Carbon Electrode Surface with Machine Vision",
@@ -630,12 +494,8 @@
       "group": "ai",
       "group_label": "AI 结合知识学习",
       "relevance": "中",
-      "match_tags": [
-        "机器学习"
-      ],
-      "author_names": [
-        "Alán Aspuru-Guzik"
-      ]
+      "match_tags": ["机器学习"],
+      "author_names": ["Alán Aspuru-Guzik"]
     },
     {
       "title": "Enerzyme: A Framework for Efficient Training of Reactive Neural Network Potentials for Enzyme Catalysis with Application to Methyltransferases",
@@ -649,12 +509,8 @@
       "group": "ai",
       "group_label": "AI 结合知识学习",
       "relevance": "高",
-      "match_tags": [
-        "机器学习"
-      ],
-      "author_names": [
-        "Heather J. Kulik"
-      ]
+      "match_tags": ["机器学习"],
+      "author_names": ["Heather J. Kulik"]
     },
     {
       "title": "El agente cuántico: automating quantum simulations",
@@ -668,12 +524,8 @@
       "group": "ai",
       "group_label": "AI 结合知识学习",
       "relevance": "中",
-      "match_tags": [
-        "RAG/LLM"
-      ],
-      "author_names": [
-        "Alán Aspuru-Guzik"
-      ]
+      "match_tags": ["RAG/LLM"],
+      "author_names": ["Alán Aspuru-Guzik"]
     },
     {
       "title": "Hydrophobic Promoter‐Enhanced Tandem Catalysis for Alkene Epoxidation With H 2 and O 2",
@@ -687,13 +539,8 @@
       "group": "epox",
       "group_label": "烯烃环氧化",
       "relevance": "高",
-      "match_tags": [
-        "烯烃环氧化"
-      ],
-      "author_names": [
-        "Xiang Feng（冯翔）",
-        "Dong Lin（林栋）"
-      ]
+      "match_tags": ["烯烃环氧化"],
+      "author_names": ["Xiang Feng（冯翔）", "Dong Lin（林栋）"]
     },
     {
       "title": "Hydrophobic Promoter‐Enhanced Tandem Catalysis for Alkene Epoxidation With H 2 and O 2",
@@ -707,13 +554,8 @@
       "group": "epox",
       "group_label": "烯烃环氧化",
       "relevance": "高",
-      "match_tags": [
-        "烯烃环氧化"
-      ],
-      "author_names": [
-        "Xiang Feng（冯翔）",
-        "Dong Lin（林栋）"
-      ]
+      "match_tags": ["烯烃环氧化"],
+      "author_names": ["Xiang Feng（冯翔）", "Dong Lin（林栋）"]
     },
     {
       "title": "ElemeNet: Multiscale Molecular Machine Learning with Uncertainty Quantification Across the Periodic Table",
@@ -727,12 +569,8 @@
       "group": "ai",
       "group_label": "AI 结合知识学习",
       "relevance": "中",
-      "match_tags": [
-        "机器学习"
-      ],
-      "author_names": [
-        "Heather J. Kulik"
-      ]
+      "match_tags": ["机器学习"],
+      "author_names": ["Heather J. Kulik"]
     },
     {
       "title": "Gate-Tailoring with Protons and Metal Cations in a Flexible Zeolite for High-Efficiency Ethylene/Ethane Separation",
@@ -746,12 +584,8 @@
       "group": "epox",
       "group_label": "烯烃环氧化",
       "relevance": "中",
-      "match_tags": [
-        "分子筛"
-      ],
-      "author_names": [
-        "Avelino Corma"
-      ]
+      "match_tags": ["分子筛"],
+      "author_names": ["Avelino Corma"]
     },
     {
       "title": "Transparent reporting for agentic catalysis enabled by artificial intelligence: Community guidelines and a publication checklist",
@@ -765,16 +599,8 @@
       "group": "ai",
       "group_label": "AI 结合知识学习",
       "relevance": "高",
-      "match_tags": [
-        "RAG/LLM",
-        "机器学习"
-      ],
-      "author_names": [
-        "Hongliang Xin",
-        "John R. Kitchin",
-        "Núria López",
-        "Heather J. Kulik"
-      ]
+      "match_tags": ["RAG/LLM", "机器学习"],
+      "author_names": ["Hongliang Xin", "John R. Kitchin", "Núria López", "Heather J. Kulik"]
     },
     {
       "title": "Quantitative prediction of siRNA complexation by ionizable drugs enables their codelivery in nanoparticles",
@@ -788,12 +614,8 @@
       "group": "ai",
       "group_label": "AI 结合知识学习",
       "relevance": "中",
-      "match_tags": [
-        "机器学习"
-      ],
-      "author_names": [
-        "Alán Aspuru-Guzik"
-      ]
+      "match_tags": ["机器学习"],
+      "author_names": ["Alán Aspuru-Guzik"]
     },
     {
       "title": "El Agente Seguro: An Agent for Chemical Safety",
@@ -807,13 +629,8 @@
       "group": "ai",
       "group_label": "AI 结合知识学习",
       "relevance": "中",
-      "match_tags": [
-        "RAG/LLM",
-        "机器学习"
-      ],
-      "author_names": [
-        "Alán Aspuru-Guzik"
-      ]
+      "match_tags": ["RAG/LLM", "机器学习"],
+      "author_names": ["Alán Aspuru-Guzik"]
     },
     {
       "title": "From Alchemy to AIchemy: On Matter, Minds & Tools",
@@ -827,12 +644,8 @@
       "group": "ai",
       "group_label": "AI 结合知识学习",
       "relevance": "中",
-      "match_tags": [
-        "机器学习"
-      ],
-      "author_names": [
-        "Alán Aspuru-Guzik"
-      ]
+      "match_tags": ["机器学习"],
+      "author_names": ["Alán Aspuru-Guzik"]
     },
     {
       "title": "High-Throughput Discovery of Conformation-Switching Mechanophores with Enhanced Reactivity and Stability",
@@ -846,12 +659,8 @@
       "group": "ai",
       "group_label": "AI 结合知识学习",
       "relevance": "中",
-      "match_tags": [
-        "机器学习"
-      ],
-      "author_names": [
-        "Heather J. Kulik"
-      ]
+      "match_tags": ["机器学习"],
+      "author_names": ["Heather J. Kulik"]
     },
     {
       "title": "El Agente Seguro: An Agent for Chemical Safety",
@@ -865,13 +674,8 @@
       "group": "ai",
       "group_label": "AI 结合知识学习",
       "relevance": "中",
-      "match_tags": [
-        "RAG/LLM",
-        "机器学习"
-      ],
-      "author_names": [
-        "Alán Aspuru-Guzik"
-      ]
+      "match_tags": ["RAG/LLM", "机器学习"],
+      "author_names": ["Alán Aspuru-Guzik"]
     },
     {
       "title": "Balancing Diversity and Efficiency in Training Datasets for Robust Machine Learning Interatomic Potentials",
@@ -885,12 +689,8 @@
       "group": "ai",
       "group_label": "AI 结合知识学习",
       "relevance": "中",
-      "match_tags": [
-        "机器学习"
-      ],
-      "author_names": [
-        "Núria López"
-      ]
+      "match_tags": ["机器学习"],
+      "author_names": ["Núria López"]
     },
     {
       "title": "Trace Sulfur‐Doping Boosts NiCo Heterostructured Catalyst for Selective Glycerol‐to‐Formic Acid Electroreforming",
@@ -904,12 +704,8 @@
       "group": "epox",
       "group_label": "烯烃环氧化",
       "relevance": "中",
-      "match_tags": [
-        "选择性氧化"
-      ],
-      "author_names": [
-        "Graham J. Hutchings"
-      ]
+      "match_tags": ["选择性氧化"],
+      "author_names": ["Graham J. Hutchings"]
     },
     {
       "title": "Rapid Evaluation of Glassy Carbon Electrode Surface with Machine Vision",
@@ -923,12 +719,8 @@
       "group": "ai",
       "group_label": "AI 结合知识学习",
       "relevance": "中",
-      "match_tags": [
-        "机器学习"
-      ],
-      "author_names": [
-        "Alán Aspuru-Guzik"
-      ]
+      "match_tags": ["机器学习"],
+      "author_names": ["Alán Aspuru-Guzik"]
     },
     {
       "title": "Balancing Diversity and Efficiency in Training Datasets for Robust Machine Learning Potentials",
@@ -942,13 +734,8 @@
       "group": "ai",
       "group_label": "AI 结合知识学习",
       "relevance": "中",
-      "match_tags": [
-        "RAG/LLM",
-        "机器学习"
-      ],
-      "author_names": [
-        "Núria López"
-      ]
+      "match_tags": ["RAG/LLM", "机器学习"],
+      "author_names": ["Núria López"]
     },
     {
       "title": "Synthesis of Tetrahydrofuran Derivatives from 5-Hydroxymethylfurfural: Selective Ring Hydrogenation of HMF and Cascade Transformations over Pd Supported on Amino-Modified ITQ-2 Zeolite",
@@ -962,12 +749,8 @@
       "group": "epox",
       "group_label": "烯烃环氧化",
       "relevance": "中",
-      "match_tags": [
-        "分子筛"
-      ],
-      "author_names": [
-        "Avelino Corma"
-      ]
+      "match_tags": ["分子筛"],
+      "author_names": ["Avelino Corma"]
     }
   ],
   "journal_policy": "优先期刊为人工维护的期刊名单，非SCI/JCR自动认证",
