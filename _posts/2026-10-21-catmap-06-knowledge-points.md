@@ -186,6 +186,8 @@ https://chatgpt.com/s/t_6afaac41b5b881919c92f89c8ca3ff6d
 
 https://catmap.readthedocs.io/en/latest/topics/including_adsorbate_adsorbate_interactions.html?utm_source=chatgpt.com
 
+![2026-10-21-catmap-06-knowledge-points.md-2026-11-18_10-36-11-57eb8871](https://raw.githubusercontent.com/ly5681672-max/ly5681672-max.github.io/main/assets/img/learning-notes/2026-10-21-catmap-06-knowledge-points.md-2026-11-18_10-36-11-57eb8871.png)
+
 9.反应级数求导和分析问题
 
 https://mp.weixin.qq.com/s/VePuCbIvaqaM3VTTdZaBvQ
