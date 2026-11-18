@@ -69,6 +69,17 @@ class SyncTests(unittest.TestCase):
         )['relevance'], '高')
         self.assertIsNone(module.match_relevance('Lithium ion battery cathodes', '', 'epox'))
 
+    def test_sisso_symbolic_regression_relevance(self):
+        self.assertEqual(module.match_relevance(
+            'SISSO: a compressed-sensing method for materials descriptors', '', 'ai'
+        )['relevance'], '高')
+        self.assertEqual(module.match_relevance(
+            'Symbolic regression for catalytic materials', '', 'ai'
+        )['tags'], ['SISSO/符号回归'])
+        self.assertIsNone(module.match_relevance(
+            'Compressed sensing for medical imaging', '', 'ai'
+        ))
+
     def test_abstract_reconstruction(self):
         self.assertEqual(module.reconstruct_abstract(
             {'science': [1], 'Open': [0]}

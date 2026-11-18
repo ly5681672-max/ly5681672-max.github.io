@@ -27,6 +27,7 @@ AI_TERMS = {
     '文献数据': ('literature mining', 'data extraction', 'scientific literature', 'text mining'),
     'RAG/LLM': ('large language model', 'language models', 'retrieval augmented', 'llm', 'foundation model', 'agentic'),
     '机器学习': ('machine learning', 'deep learning', 'artificial intelligence', 'neural network', 'active learning', 'graph neural'),
+    'SISSO/符号回归': ('sisso', 'symbolic regression', 'compressed-sensing', 'compressed sensing', 'sparsifying operator'),
     '微观动力学': ('microkinetic', 'reaction kinetics', 'kinetic modeling'),
     '催化描述符': ('catalytic descriptor', 'catalysis descriptor', 'adsorption energy', 'bep relation'),
 }
@@ -179,6 +180,7 @@ def match_relevance(title: str, abstract: str, group: str):
         if not chemistry:
             return None
         high = ('知识图谱' in tags or '文献数据' in tags or '微观动力学' in tags
+                or ('SISSO/符号回归' in tags and any(w in low_title for w in ('sisso', 'symbolic regression')))
                 or any(w in low_title for w in ('cataly', 'microkinetic', 'knowledge graph')))
     else:
         high = any(x in tags for x in ('烯烃环氧化', 'TS-1', 'H₂O₂/OOH'))
