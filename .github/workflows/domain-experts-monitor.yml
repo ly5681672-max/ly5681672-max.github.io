@@ -16,6 +16,7 @@ on:
     paths:
       - "scripts/sync_domain_expert_pronunciations.py"
       - "scripts/sync_domain_experts.py"
+      - "tests/test_domain_expert_pronunciations.py"
       - "scripts/discover_domain_expert_milestones.py"
       - "scripts/verify_domain_expert_milestones.py"
       - "tests/test_domain_expert_milestones.py"
