@@ -7,6 +7,7 @@ import json
 import re
 from pathlib import Path
 from urllib.parse import urlencode
+from urllib.error import HTTPError
 from urllib.request import Request, urlopen
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -55,7 +56,14 @@ def main():
     for p in experts:
         if p.get("pronunciation_ipa") or not p.get("orcid"):
             continue
-        result=matched_ipa(p["orcid"])
+        try:
+            result=matched_ipa(p["orcid"])
+        except HTTPError as exc:
+            if exc.code != 429:
+                raise
+            print("WARNING: Wikidata HTTP 429 rate limit; optional IPA enrichment deferred. "
+                  "No unverified pronunciation will be written.")
+            break
         if not result:
             print(p["id"]+": no identity-verified unique IPA; leave blank")
             continue
