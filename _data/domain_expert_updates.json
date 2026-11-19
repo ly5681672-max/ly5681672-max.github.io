@@ -1,7 +1,26 @@
 {
-  "generated_at": "2026-11-18T07:37:11+00:00",
+  "generated_at": "2026-11-19T07:31:51+00:00",
   "window_days": 180,
   "papers": [
+    {
+      "title": "Nahual: A Sequence Model for Language and Atoms",
+      "doi": "10.48550/arxiv.2611.19072",
+      "doi_url": "https://doi.org/10.48550/arxiv.2611.19072",
+      "source_url": "https://openalex.org/W7235119147",
+      "publication_date": "2026-11-14",
+      "journal": "arXiv (Cornell University)",
+      "priority_journal": false,
+      "publication_type": "preprint",
+      "group": "ai",
+      "group_label": "AI 结合知识学习",
+      "relevance": "中",
+      "match_tags": [
+        "RAG/LLM"
+      ],
+      "author_names": [
+        "Alán Aspuru-Guzik"
+      ]
+    },
     {
       "title": "Recognizing the Versatility of Heterogeneous Catalysts Can Provide New Opportunities",
       "doi": "10.1021/acsappcat.6c00087",
