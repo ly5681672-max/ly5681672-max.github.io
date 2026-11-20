@@ -188,6 +188,9 @@ https://catmap.readthedocs.io/en/latest/topics/including_adsorbate_adsorbate_int
 
 ![2026-10-21-catmap-06-knowledge-points.md-2026-11-18_10-36-11-57eb8871](https://raw.githubusercontent.com/ly5681672-max/ly5681672-max.github.io/main/assets/img/learning-notes/2026-10-21-catmap-06-knowledge-points.md-2026-11-18_10-36-11-57eb8871.png)
 
+增大margin>0.5才能出现完整的火山峰 但是注意的是这个数值过大 虽然会出现火山峰 但是此时已经利用了数学关系 不是根据实际的催化剂点来的
+
+
 9.反应级数求导和分析问题
 
 https://mp.weixin.qq.com/s/VePuCbIvaqaM3VTTdZaBvQ
@@ -208,3 +211,14 @@ https://mp.weixin.qq.com/s/VePuCbIvaqaM3VTTdZaBvQ
 10.瞬时动力学和catmap 求解动力学的覆盖度关系
 
 https://chatgpt.com/s/t_6af97f3d23808191a13f48bbcda41194
+
+11.绘图过程中出现了白色菱形状块
+没明白？
+这三行都来自 绘图阶段（catmap/analyze/analysis_base.py 的 plot_single），不影响求解结果，TOF_and_coverage.csv 等导出数据是干净的。但第二条不只是噪音——它会让图上出现零星白色空洞。
+ 
+1. The following kwargs were not used by contour: 'title'
+原因：plot_separate 把每个子图的标签塞进 kwargs（L450 kwargs['title'] = self.map_plot_labels[i]），plot_single 又把所有 plot_args 原样丢给 ax.contourf(...)（L330）。title/title_size 是 CatMAP 自己用的键，matplotlib 的 QuadContourSet 不认识 → 从 mpl 3.x 起报 UserWarning。标题实际是在 L370-376 用 plot_args['title'] 手动 ax.set_title() 画的，所以图是对的，纯属噪音。出现两次是因为两个子图标题不同，warnings 按 (消息, 行号) 去重。
+
+网络上菱形空白格分析 https://chatgpt.com/s/t_6afec2e9169c8191b677959bd838c10b
+
+
