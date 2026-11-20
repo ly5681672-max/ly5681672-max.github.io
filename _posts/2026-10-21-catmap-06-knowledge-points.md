@@ -227,4 +227,3 @@ https://chatgpt.com/s/t_6af97f3d23808191a13f48bbcda41194
 
 彻底版：vm.plot() 之前 model.descriptor_dict = None（getattr 返回 None → 整段跳过）
 
-
