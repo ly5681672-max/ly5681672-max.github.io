@@ -221,4 +221,10 @@ https://chatgpt.com/s/t_6af97f3d23808191a13f48bbcda41194
 
 网络上菱形空白格分析 https://chatgpt.com/s/t_6afec2e9169c8191b677959bd838c10b
 
+**一句话**：把每个真实催化剂在描述符平面 `(x, y)` 上的坐标，用一个小标记画到当前子图里（就是那些"白菱形"）。
+白色菱形是 CatMAP 内部默认行为被触发出来的
+![2026-10-21-catmap-06-knowledge-points.md-2026-11-20_15-21-58-344b2866](https://raw.githubusercontent.com/ly5681672-max/ly5681672-max.github.io/main/assets/img/learning-notes/2026-10-21-catmap-06-knowledge-points.md-2026-11-20_15-21-58-344b2866.png)
+
+彻底版：vm.plot() 之前 model.descriptor_dict = None（getattr 返回 None → 整段跳过）
+
 
