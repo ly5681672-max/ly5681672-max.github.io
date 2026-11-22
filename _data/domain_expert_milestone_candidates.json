@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T07:17:59+00:00",
+  "generated_at": "2026-11-22T06:58:15+00:00",
   "source": "OpenAlex",
   "selection": "历史高引用+主题规则初筛；非科学里程碑认证",
   "candidates": [
@@ -12,7 +12,7 @@
       "doi_url": "https://doi.org/10.1038/s41929-023-00911-w",
       "source_url": "https://openalex.org/W4322492989",
       "journal": "Nature Catalysis",
-      "cited_by_count": 341,
+      "cited_by_count": 345,
       "relevance_tags": [
         "机器学习"
       ],
@@ -46,7 +46,7 @@
       "doi_url": "https://doi.org/10.1038/s41467-022-29926-w",
       "source_url": "https://openalex.org/W4225114738",
       "journal": "Nature Communications",
-      "cited_by_count": 475,
+      "cited_by_count": 478,
       "relevance_tags": [
         "机器学习"
       ],
@@ -80,7 +80,7 @@
       "doi_url": "https://doi.org/10.1021/jacs.6b10435",
       "source_url": "https://openalex.org/W2578967457",
       "journal": "Journal of the American Chemical Society",
-      "cited_by_count": 580,
+      "cited_by_count": 582,
       "relevance_tags": [
         "催化描述符"
       ],
@@ -97,7 +97,7 @@
       "doi_url": "https://doi.org/10.1039/c7ta01812f",
       "source_url": "https://openalex.org/W2760744264",
       "journal": "Journal of Materials Chemistry A",
-      "cited_by_count": 381,
+      "cited_by_count": 382,
       "relevance_tags": [
         "机器学习"
       ],
@@ -114,7 +114,7 @@
       "doi_url": "https://doi.org/10.1021/acs.jpclett.5b01660",
       "source_url": "https://openalex.org/W2462003543",
       "journal": "The Journal of Physical Chemistry Letters",
-      "cited_by_count": 453,
+      "cited_by_count": 456,
       "relevance_tags": [
         "机器学习"
       ],
@@ -131,7 +131,7 @@
       "doi_url": "https://doi.org/10.1021/cs200462f",
       "source_url": "https://openalex.org/W2333192667",
       "journal": "ACS Catalysis",
-      "cited_by_count": 161,
+      "cited_by_count": 162,
       "relevance_tags": [
         "催化描述符"
       ],
@@ -148,7 +148,7 @@
       "doi_url": "https://doi.org/10.1021/acscatal.4c04272",
       "source_url": "https://openalex.org/W4408448357",
       "journal": "ACS Catalysis",
-      "cited_by_count": 92,
+      "cited_by_count": 95,
       "relevance_tags": [
         "机器学习"
       ],
@@ -182,11 +182,28 @@
       "doi_url": "https://doi.org/10.1038/s41929-018-0056-y",
       "source_url": "https://openalex.org/W2797402103",
       "journal": "Nature Catalysis",
-      "cited_by_count": 526,
+      "cited_by_count": 527,
       "relevance_tags": [
         "机器学习"
       ],
       "abstract_excerpt": "",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "kitchin",
+      "expert_name": "John R. Kitchin",
+      "year": 2016,
+      "title": "Neural network and ReaxFF comparison for Au properties",
+      "doi": "10.1002/qua.25115",
+      "doi_url": "https://doi.org/10.1002/qua.25115",
+      "source_url": "https://openalex.org/W2291925970",
+      "journal": "International Journal of Quantum Chemistry",
+      "cited_by_count": 91,
+      "relevance_tags": [
+        "机器学习"
+      ],
+      "abstract_excerpt": "We have studied how ReaxFF and Behler–Parrinello neural network (BPNN) atomistic potentials should be trained to be accurate and tractable across multiple structural regimes of Au as a representative example of a single-component material. We trained these potentials using subsets of 9,972 Kohn-Sham density functional theory calculations and then validated their predictions against the untrained data. Our best ReaxFF potential was trained from 848 data points and could reliably predict surface and bulk data; however, it was substantially less accurate for molecular clusters of 126 atoms or fewer. Training the ReaxFF potential to more data also resulted in overfitting and lower accuracy. In contrast, BPNN could be fit to 9,734 calculations, and this potential performed comparably or better than ReaxFF across all regimes. However, the BPNN potential in this implementation brings significan",
       "review_status": "PROVISIONAL",
       "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
     },
@@ -204,23 +221,6 @@
         "催化描述符"
       ],
       "abstract_excerpt": "The oxygen reduction reaction (ORR) is an important electrochemical reaction and a major bottleneck for fuel cells. Due to the existence of a scaling relation between the adsorption energies of two key intermediates involved in ORR, OOH*, and OH*, the electrocatalytic activity for the ORR, to a first approximation, is determined by a single descriptor. This descriptor-based approach has been used to screen for electrocatalyst materials that have an optimal binding energy of oxygen intermediates. However, given that this descriptor-based search relies on several approximations, it is crucial to determine the overall predictability of the descriptor-based model to determine the activity of a catalyst. In this work, we develop a formalism for estimating uncertainty for the activity of a catalyst in an electrocatalytic reaction scheme and apply this framework to determine errors involved in ",
-      "review_status": "PROVISIONAL",
-      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
-    },
-    {
-      "expert_id": "kitchin",
-      "expert_name": "John R. Kitchin",
-      "year": 2016,
-      "title": "Neural network and ReaxFF comparison for Au properties",
-      "doi": "10.1002/qua.25115",
-      "doi_url": "https://doi.org/10.1002/qua.25115",
-      "source_url": "https://openalex.org/W2291925970",
-      "journal": "International Journal of Quantum Chemistry",
-      "cited_by_count": 90,
-      "relevance_tags": [
-        "机器学习"
-      ],
-      "abstract_excerpt": "We have studied how ReaxFF and Behler–Parrinello neural network (BPNN) atomistic potentials should be trained to be accurate and tractable across multiple structural regimes of Au as a representative example of a single-component material. We trained these potentials using subsets of 9,972 Kohn-Sham density functional theory calculations and then validated their predictions against the untrained data. Our best ReaxFF potential was trained from 848 data points and could reliably predict surface and bulk data; however, it was substantially less accurate for molecular clusters of 126 atoms or fewer. Training the ReaxFF potential to more data also resulted in overfitting and lower accuracy. In contrast, BPNN could be fit to 9,734 calculations, and this potential performed comparably or better than ReaxFF across all regimes. However, the BPNN potential in this implementation brings significan",
       "review_status": "PROVISIONAL",
       "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
     },
@@ -250,7 +250,7 @@
       "doi_url": "https://doi.org/10.1103/physrevb.79.205412",
       "source_url": "https://openalex.org/W2050461974",
       "journal": "Physical Review B",
-      "cited_by_count": 109,
+      "cited_by_count": 110,
       "relevance_tags": [
         "催化描述符"
       ],
@@ -267,7 +267,7 @@
       "doi_url": "https://doi.org/10.1063/1.1737365",
       "source_url": "https://openalex.org/W2069988560",
       "journal": "The Journal of Chemical Physics",
-      "cited_by_count": 1483,
+      "cited_by_count": 1493,
       "relevance_tags": [
         "催化描述符"
       ],
@@ -284,7 +284,7 @@
       "doi_url": "https://doi.org/10.1038/s41929-024-01132-5",
       "source_url": "https://openalex.org/W4393379673",
       "journal": "Nature Catalysis",
-      "cited_by_count": 167,
+      "cited_by_count": 168,
       "relevance_tags": [
         "机器学习"
       ],
@@ -301,7 +301,7 @@
       "doi_url": "https://doi.org/10.1038/s43588-023-00437-y",
       "source_url": "https://openalex.org/W4367626474",
       "journal": "Nature Computational Science",
-      "cited_by_count": 142,
+      "cited_by_count": 144,
       "relevance_tags": [
         "机器学习",
         "催化描述符"
@@ -319,7 +319,7 @@
       "doi_url": "https://doi.org/10.1002/aenm.202204122",
       "source_url": "https://openalex.org/W4321099455",
       "journal": "Advanced Energy Materials",
-      "cited_by_count": 82,
+      "cited_by_count": 83,
       "relevance_tags": [
         "微观动力学"
       ],
@@ -388,7 +388,7 @@
       "doi_url": "https://doi.org/10.1002/cctc.201300569",
       "source_url": "https://openalex.org/W2101092460",
       "journal": "ChemCatChem",
-      "cited_by_count": 112,
+      "cited_by_count": 113,
       "relevance_tags": [
         "微观动力学"
       ],
@@ -422,7 +422,7 @@
       "doi_url": "https://doi.org/10.1088/2516-1075/ac572f",
       "source_url": "https://openalex.org/W4213283694",
       "journal": "Electronic Structure",
-      "cited_by_count": 222,
+      "cited_by_count": 224,
       "relevance_tags": [
         "机器学习"
       ],
@@ -439,7 +439,7 @@
       "doi_url": "https://doi.org/10.1021/acs.chemrev.1c00347",
       "source_url": "https://openalex.org/W3181257149",
       "journal": "Chemical Reviews",
-      "cited_by_count": 404,
+      "cited_by_count": 407,
       "relevance_tags": [
         "机器学习"
       ],
@@ -473,7 +473,7 @@
       "doi_url": "https://doi.org/10.1021/acscentsci.0c00026",
       "source_url": "https://openalex.org/W3012320417",
       "journal": "ACS Central Science",
-      "cited_by_count": 222,
+      "cited_by_count": 223,
       "relevance_tags": [
         "机器学习"
       ],
@@ -490,7 +490,7 @@
       "doi_url": "https://doi.org/10.1039/c9sc02298h",
       "source_url": "https://openalex.org/W2959623824",
       "journal": "Chemical Science",
-      "cited_by_count": 288,
+      "cited_by_count": 292,
       "relevance_tags": [
         "机器学习"
       ],
@@ -507,7 +507,7 @@
       "doi_url": "https://doi.org/10.1021/acs.jpclett.8b00170",
       "source_url": "https://openalex.org/W2786308452",
       "journal": "The Journal of Physical Chemistry Letters",
-      "cited_by_count": 215,
+      "cited_by_count": 218,
       "relevance_tags": [
         "机器学习"
       ],
@@ -524,7 +524,7 @@
       "doi_url": "https://doi.org/10.1021/acs.jpca.7b08750",
       "source_url": "https://openalex.org/W2749580687",
       "journal": "The Journal of Physical Chemistry A",
-      "cited_by_count": 322,
+      "cited_by_count": 326,
       "relevance_tags": [
         "机器学习"
       ],
@@ -541,7 +541,7 @@
       "doi_url": "https://doi.org/10.1039/c7sc01247k",
       "source_url": "https://openalex.org/W2598115655",
       "journal": "Chemical Science",
-      "cited_by_count": 245,
+      "cited_by_count": 247,
       "relevance_tags": [
         "机器学习"
       ],
@@ -558,7 +558,7 @@
       "doi_url": "https://doi.org/10.1021/acs.chemrev.7b00776",
       "source_url": "https://openalex.org/W2802791016",
       "journal": "Chemical Reviews",
-      "cited_by_count": 5075,
+      "cited_by_count": 5096,
       "relevance_tags": [
         "选择性氧化"
       ],
@@ -575,7 +575,7 @@
       "doi_url": "https://doi.org/10.1002/anie.200500382",
       "source_url": "https://openalex.org/W2158814908",
       "journal": "Angewandte Chemie International Edition",
-      "cited_by_count": 1184,
+      "cited_by_count": 1197,
       "relevance_tags": [
         "选择性氧化"
       ],
@@ -592,7 +592,7 @@
       "doi_url": "https://doi.org/10.1002/anie.200353570",
       "source_url": "https://openalex.org/W2158482571",
       "journal": "Angewandte Chemie International Edition",
-      "cited_by_count": 919,
+      "cited_by_count": 929,
       "relevance_tags": [
         "选择性氧化"
       ],
@@ -609,7 +609,7 @@
       "doi_url": "https://doi.org/10.1016/s0021-9517(02)00132-x",
       "source_url": "https://openalex.org/W2128405848",
       "journal": "Journal of Catalysis",
-      "cited_by_count": 1412,
+      "cited_by_count": 1429,
       "relevance_tags": [
         "分子筛"
       ],
@@ -626,7 +626,7 @@
       "doi_url": "https://doi.org/10.1038/35086546",
       "source_url": "https://openalex.org/W1986092589",
       "journal": "Nature",
-      "cited_by_count": 1107,
+      "cited_by_count": 1114,
       "relevance_tags": [
         "分子筛"
       ],
@@ -643,7 +643,7 @@
       "doi_url": "https://doi.org/10.1038/24592",
       "source_url": "https://openalex.org/W1501468991",
       "journal": "Nature",
-      "cited_by_count": 992,
+      "cited_by_count": 997,
       "relevance_tags": [
         "分子筛"
       ],
@@ -660,7 +660,7 @@
       "doi_url": "https://doi.org/10.1021/cr960406n",
       "source_url": "https://openalex.org/W2054111649",
       "journal": "Chemical Reviews",
-      "cited_by_count": 6283,
+      "cited_by_count": 6324,
       "relevance_tags": [
         "分子筛"
       ],
@@ -677,7 +677,7 @@
       "doi_url": "https://doi.org/10.1039/c39940000147",
       "source_url": "https://openalex.org/W2108753031",
       "journal": "Journal of the Chemical Society Chemical Communications",
-      "cited_by_count": 776,
+      "cited_by_count": 778,
       "relevance_tags": [
         "选择性氧化"
       ],
@@ -746,7 +746,7 @@
       "doi_url": "https://doi.org/10.1021/acscatal.6b00114",
       "source_url": "https://openalex.org/W2393949105",
       "journal": "ACS Catalysis",
-      "cited_by_count": 133,
+      "cited_by_count": 134,
       "relevance_tags": [
         "分子筛"
       ],
@@ -780,7 +780,7 @@
       "doi_url": "https://doi.org/10.1002/anie.201403905",
       "source_url": "https://openalex.org/W2159417697",
       "journal": "Angewandte Chemie International Edition",
-      "cited_by_count": 185,
+      "cited_by_count": 188,
       "relevance_tags": [
         "分子筛"
       ],
@@ -797,7 +797,7 @@
       "doi_url": "https://doi.org/10.1021/ja903730q",
       "source_url": "https://openalex.org/W2078221181",
       "journal": "Journal of the American Chemical Society",
-      "cited_by_count": 136,
+      "cited_by_count": 137,
       "relevance_tags": [
         "烯烃环氧化",
         "选择性氧化"
@@ -833,7 +833,7 @@
       "doi_url": "https://doi.org/10.1126/science.aan6515",
       "source_url": "https://openalex.org/W2753076645",
       "journal": "Science",
-      "cited_by_count": 737,
+      "cited_by_count": 738,
       "relevance_tags": [
         "H₂O₂/OOH"
       ],
@@ -850,7 +850,7 @@
       "doi_url": "https://doi.org/10.1126/science.aad5705",
       "source_url": "https://openalex.org/W2302671968",
       "journal": "Science",
-      "cited_by_count": 700,
+      "cited_by_count": 701,
       "relevance_tags": [
         "H₂O₂/OOH"
       ],
@@ -867,7 +867,7 @@
       "doi_url": "https://doi.org/10.1039/c2cs35296f",
       "source_url": "https://openalex.org/W1980701169",
       "journal": "Chemical Society Reviews",
-      "cited_by_count": 1272,
+      "cited_by_count": 1284,
       "relevance_tags": [
         "选择性氧化"
       ],
@@ -884,7 +884,7 @@
       "doi_url": "https://doi.org/10.1002/anie.201108706",
       "source_url": "https://openalex.org/W2147654039",
       "journal": "Angewandte Chemie International Edition",
-      "cited_by_count": 693,
+      "cited_by_count": 695,
       "relevance_tags": [
         "H₂O₂/OOH",
         "分子筛",
@@ -903,7 +903,7 @@
       "doi_url": "https://doi.org/10.1126/science.1198458",
       "source_url": "https://openalex.org/W2065744294",
       "journal": "Science",
-      "cited_by_count": 873,
+      "cited_by_count": 877,
       "relevance_tags": [
         "选择性氧化"
       ],
@@ -920,7 +920,7 @@
       "doi_url": "https://doi.org/10.1126/science.1168980",
       "source_url": "https://openalex.org/W1972243282",
       "journal": "Science",
-      "cited_by_count": 1010,
+      "cited_by_count": 1015,
       "relevance_tags": [
         "H₂O₂/OOH"
       ],
@@ -937,7 +937,7 @@
       "doi_url": "https://doi.org/10.1016/j.jcat.2005.09.015",
       "source_url": "https://openalex.org/W2988019223",
       "journal": "Journal of Catalysis",
-      "cited_by_count": 601,
+      "cited_by_count": 605,
       "relevance_tags": [
         "H₂O₂/OOH"
       ],
@@ -954,7 +954,7 @@
       "doi_url": "https://doi.org/10.1039/b201112n",
       "source_url": "https://openalex.org/W2024355474",
       "journal": "Chemical Communications",
-      "cited_by_count": 590,
+      "cited_by_count": 596,
       "relevance_tags": [
         "选择性氧化"
       ],
@@ -971,7 +971,7 @@
       "doi_url": "https://doi.org/10.1039/c5cs00376h",
       "source_url": "https://openalex.org/W2159775165",
       "journal": "Chemical Society Reviews",
-      "cited_by_count": 1184,
+      "cited_by_count": 1196,
       "relevance_tags": [
         "分子筛"
       ],
@@ -988,7 +988,7 @@
       "doi_url": "https://doi.org/10.1021/cs300794s",
       "source_url": "https://openalex.org/W2084076310",
       "journal": "ACS Catalysis",
-      "cited_by_count": 371,
+      "cited_by_count": 373,
       "relevance_tags": [
         "分子筛"
       ],
@@ -1005,7 +1005,7 @@
       "doi_url": "https://doi.org/10.1021/jp212450d",
       "source_url": "https://openalex.org/W2010869192",
       "journal": "The Journal of Physical Chemistry C",
-      "cited_by_count": 365,
+      "cited_by_count": 367,
       "relevance_tags": [
         "分子筛"
       ],
@@ -1022,11 +1022,28 @@
       "doi_url": "https://doi.org/10.1002/chem.201002624",
       "source_url": "https://openalex.org/W2101801262",
       "journal": "Chemistry - A European Journal",
-      "cited_by_count": 309,
+      "cited_by_count": 314,
       "relevance_tags": [
         "分子筛"
       ],
       "abstract_excerpt": "Coke formation during the methanol-to-olefin (MTO) conversion has been studied at the single-particle level with in situ UV/Vis and confocal fluorescence microscopy. For this purpose, large H-ZSM-5 crystals differing in their Si/Al molar ratio have been investigated. During MTO, performed at 623 and 773 K, three major UV/Vis bands assigned to different carbonaceous deposits and their precursors are observed. The absorption at 420 nm, assigned to methyl-substituted aromatic compounds, initiates the buildup of the optically active coke species. With time-on-stream, these carbonaceous compounds expand in size, resulting in the gradual development of a second absorption band at around 500 nm. An additional broad absorption band in the 600 nm region indicates the enhanced formation of extended carbonaceous compounds that form as the reaction temperature is raised. Overall, the rate of coke fo",
+      "review_status": "PROVISIONAL",
+      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
+    },
+    {
+      "expert_id": "weckhuysen",
+      "expert_name": "Bert M. Weckhuysen",
+      "year": 2009,
+      "title": "Morphology-dependent zeolite intergrowth structures leading to distinct internal and outer-surface molecular diffusion barriers",
+      "doi": "10.1038/nmat2530",
+      "doi_url": "https://doi.org/10.1038/nmat2530",
+      "source_url": "https://openalex.org/W2075045251",
+      "journal": "Nature Materials",
+      "cited_by_count": 310,
+      "relevance_tags": [
+        "分子筛"
+      ],
+      "abstract_excerpt": "",
       "review_status": "PROVISIONAL",
       "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
     },
@@ -1039,7 +1056,7 @@
       "doi_url": "https://doi.org/10.1002/chem.200801293",
       "source_url": "https://openalex.org/W2017193073",
       "journal": "Chemistry - A European Journal",
-      "cited_by_count": 372,
+      "cited_by_count": 374,
       "relevance_tags": [
         "分子筛"
       ],
@@ -1056,7 +1073,7 @@
       "doi_url": "https://doi.org/10.1021/ie0513090",
       "source_url": "https://openalex.org/W1983230556",
       "journal": "Industrial & Engineering Chemistry Research",
-      "cited_by_count": 605,
+      "cited_by_count": 614,
       "relevance_tags": [
         "H₂O₂/OOH"
       ],
@@ -1073,28 +1090,11 @@
       "doi_url": "https://doi.org/10.1021/jp025642i",
       "source_url": "https://openalex.org/W2117331440",
       "journal": "The Journal of Physical Chemistry B",
-      "cited_by_count": 325,
+      "cited_by_count": 328,
       "relevance_tags": [
         "分子筛"
       ],
       "abstract_excerpt": "The increasing awareness of the need to create green and sustainable production processes in all fields of chemistry has stimulated materials scientists to search for innovative catalysts supports. These new catalytic supports should allow the heterogenization of most catalytic processes, increasing the efficiency and selectivity of the synthesis and reducing waste and byproducts. Following the development of several micellar templated structures, such as M41S 1, FSM-16, 2,3 HMS, 4,5 MSU-x, 6 and SBA-x, 7,8 it is a crucial next step to create support materials, consisting of a composite matrix with combined micro- and mesoporosities and a sufficient stability to withstand most industrial treatments. We describe in this paper the very first development of a hexagonal material with large pore diameters and thick walls (4 nm), containing internal microporous silica nanocapsules. These plugg",
-      "review_status": "PROVISIONAL",
-      "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
-    },
-    {
-      "expert_id": "weckhuysen",
-      "expert_name": "Bert M. Weckhuysen",
-      "year": 1998,
-      "title": "Conversion of Methane to Benzene over Transition Metal Ion ZSM-5 Zeolites",
-      "doi": "10.1006/jcat.1998.2010",
-      "doi_url": "https://doi.org/10.1006/jcat.1998.2010",
-      "source_url": "https://openalex.org/W2142242175",
-      "journal": "Journal of Catalysis",
-      "cited_by_count": 310,
-      "relevance_tags": [
-        "分子筛"
-      ],
-      "abstract_excerpt": "",
       "review_status": "PROVISIONAL",
       "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
     },
@@ -1107,7 +1107,7 @@
       "doi_url": "https://doi.org/10.1021/acs.chemrev.7b00738",
       "source_url": "https://openalex.org/W2802665194",
       "journal": "Chemical Reviews",
-      "cited_by_count": 901,
+      "cited_by_count": 903,
       "relevance_tags": [
         "分子筛"
       ],
@@ -1124,7 +1124,7 @@
       "doi_url": "https://doi.org/10.1021/cs2000544",
       "source_url": "https://openalex.org/W2048704620",
       "journal": "ACS Catalysis",
-      "cited_by_count": 733,
+      "cited_by_count": 740,
       "relevance_tags": [
         "分子筛"
       ],
@@ -1141,7 +1141,7 @@
       "doi_url": "https://doi.org/10.1073/pnas.1002358107",
       "source_url": "https://openalex.org/W2068654934",
       "journal": "Proceedings of the National Academy of Sciences",
-      "cited_by_count": 1101,
+      "cited_by_count": 1110,
       "relevance_tags": [
         "分子筛"
       ],
@@ -1158,7 +1158,7 @@
       "doi_url": "https://doi.org/10.1002/anie.201004689",
       "source_url": "https://openalex.org/W2096605011",
       "journal": "Angewandte Chemie International Edition",
-      "cited_by_count": 787,
+      "cited_by_count": 794,
       "relevance_tags": [
         "分子筛"
       ],
@@ -1175,7 +1175,7 @@
       "doi_url": "https://doi.org/10.1038/35002032",
       "source_url": "https://openalex.org/W1602275601",
       "journal": "Nature",
-      "cited_by_count": 554,
+      "cited_by_count": 556,
       "relevance_tags": [
         "分子筛"
       ],
@@ -1192,7 +1192,7 @@
       "doi_url": "https://doi.org/10.1021/j100068a027",
       "source_url": "https://openalex.org/W2018603525",
       "journal": "The Journal of Physical Chemistry",
-      "cited_by_count": 460,
+      "cited_by_count": 467,
       "relevance_tags": [
         "分子筛"
       ],
@@ -1209,7 +1209,7 @@
       "doi_url": "https://doi.org/10.1021/ar00027a006",
       "source_url": "https://openalex.org/W2042302296",
       "journal": "Accounts of Chemical Research",
-      "cited_by_count": 451,
+      "cited_by_count": 454,
       "relevance_tags": [
         "分子筛"
       ],
@@ -1226,7 +1226,7 @@
       "doi_url": "https://doi.org/10.1021/cm00022a005",
       "source_url": "https://openalex.org/W1975299796",
       "journal": "Chemistry of Materials",
-      "cited_by_count": 1631,
+      "cited_by_count": 1653,
       "relevance_tags": [
         "分子筛"
       ],
@@ -1243,7 +1243,7 @@
       "doi_url": "https://doi.org/10.1021/jacs.3c14495",
       "source_url": "https://openalex.org/W4391684514",
       "journal": "Journal of the American Chemical Society",
-      "cited_by_count": 77,
+      "cited_by_count": 78,
       "relevance_tags": [
         "机器学习"
       ],
@@ -1379,7 +1379,7 @@
       "doi_url": "https://doi.org/10.1038/s41586-025-09269-4",
       "source_url": "https://openalex.org/W4413020503",
       "journal": "Nature",
-      "cited_by_count": 226,
+      "cited_by_count": 229,
       "relevance_tags": [
         "机器学习"
       ],
@@ -1396,7 +1396,7 @@
       "doi_url": "https://doi.org/10.1038/s41467-023-41341-3",
       "source_url": "https://openalex.org/W4386932396",
       "journal": "Nature Communications",
-      "cited_by_count": 83,
+      "cited_by_count": 84,
       "relevance_tags": [
         "机器学习"
       ],
@@ -1430,7 +1430,7 @@
       "doi_url": "https://doi.org/10.1021/acscatal.9b04186",
       "source_url": "https://openalex.org/W2996448308",
       "journal": "ACS Catalysis",
-      "cited_by_count": 678,
+      "cited_by_count": 681,
       "relevance_tags": [
         "机器学习"
       ],
@@ -1481,7 +1481,7 @@
       "doi_url": "https://doi.org/10.1021/acs.jpcc.7b12670",
       "source_url": "https://openalex.org/W2789575256",
       "journal": "The Journal of Physical Chemistry C",
-      "cited_by_count": 195,
+      "cited_by_count": 196,
       "relevance_tags": [
         "机器学习"
       ],
@@ -1498,7 +1498,7 @@
       "doi_url": "https://doi.org/10.1080/14686996.2017.1378060",
       "source_url": "https://openalex.org/W2766518642",
       "journal": "Science and Technology of Advanced Materials",
-      "cited_by_count": 146,
+      "cited_by_count": 148,
       "relevance_tags": [
         "机器学习"
       ],
@@ -1747,7 +1747,7 @@
       "doi_url": "https://doi.org/10.1016/j.gee.2020.11.017",
       "source_url": "https://openalex.org/W3106823926",
       "journal": "Green Energy & Environment",
-      "cited_by_count": 49,
+      "cited_by_count": 50,
       "relevance_tags": [
         "烯烃环氧化",
         "TS-1",
@@ -1802,7 +1802,7 @@
       "doi_url": "https://doi.org/10.1103/revmodphys.94.015004",
       "source_url": "https://openalex.org/W4213212652",
       "journal": "Reviews of Modern Physics",
-      "cited_by_count": 2774,
+      "cited_by_count": 2796,
       "relevance_tags": [
         "机器学习"
       ],
@@ -1819,7 +1819,7 @@
       "doi_url": "https://doi.org/10.1016/j.matt.2021.02.015",
       "source_url": "https://openalex.org/W3143460494",
       "journal": "Matter",
-      "cited_by_count": 643,
+      "cited_by_count": 648,
       "relevance_tags": [
         "机器学习"
       ],
@@ -1836,7 +1836,7 @@
       "doi_url": "https://doi.org/10.1021/acs.accounts.0c00785",
       "source_url": "https://openalex.org/W3128426563",
       "journal": "Accounts of Chemical Research",
-      "cited_by_count": 527,
+      "cited_by_count": 531,
       "relevance_tags": [
         "机器学习"
       ],
@@ -1853,7 +1853,7 @@
       "doi_url": "https://doi.org/10.1088/2632-2153/aba947",
       "source_url": "https://openalex.org/W3009321976",
       "journal": "Machine Learning Science and Technology",
-      "cited_by_count": 1484,
+      "cited_by_count": 1498,
       "relevance_tags": [
         "机器学习"
       ],
@@ -1870,7 +1870,7 @@
       "doi_url": "https://doi.org/10.1039/d0cs00098a",
       "source_url": "https://openalex.org/W3023042104",
       "journal": "Chemical Society Reviews",
-      "cited_by_count": 1054,
+      "cited_by_count": 1059,
       "relevance_tags": [
         "机器学习"
       ],
@@ -1887,7 +1887,7 @@
       "doi_url": "https://doi.org/10.1021/acscentsci.7b00572",
       "source_url": "https://openalex.org/W2529996553",
       "journal": "ACS Central Science",
-      "cited_by_count": 4575,
+      "cited_by_count": 4602,
       "relevance_tags": [
         "机器学习"
       ],
@@ -1904,7 +1904,7 @@
       "doi_url": "https://doi.org/10.1126/science.aat2663",
       "source_url": "https://openalex.org/W2883583109",
       "journal": "Science",
-      "cited_by_count": 2446,
+      "cited_by_count": 2462,
       "relevance_tags": [
         "机器学习"
       ],
@@ -1921,7 +1921,7 @@
       "doi_url": "https://doi.org/10.1088/2058-9565/aa8072",
       "source_url": "https://openalex.org/W2562234976",
       "journal": "Quantum Science and Technology",
-      "cited_by_count": 757,
+      "cited_by_count": 763,
       "relevance_tags": [
         "机器学习"
       ],
@@ -1955,7 +1955,7 @@
       "doi_url": "https://doi.org/10.1126/science.adp6034",
       "source_url": "https://openalex.org/W4404577752",
       "journal": "Science",
-      "cited_by_count": 472,
+      "cited_by_count": 475,
       "relevance_tags": [
         "机器学习"
       ],
@@ -1990,7 +1990,7 @@
       "doi_url": "https://doi.org/10.1002/anie.202202330",
       "source_url": "https://openalex.org/W4221057372",
       "journal": "Angewandte Chemie International Edition",
-      "cited_by_count": 142,
+      "cited_by_count": 143,
       "relevance_tags": [
         "微观动力学"
       ],
@@ -2007,7 +2007,7 @@
       "doi_url": "https://doi.org/10.1126/science.abi9828",
       "source_url": "https://openalex.org/W3210780992",
       "journal": "Science",
-      "cited_by_count": 856,
+      "cited_by_count": 857,
       "relevance_tags": [
         "机器学习"
       ],
@@ -2024,7 +2024,7 @@
       "doi_url": "https://doi.org/10.31635/ccschem.020.202000555",
       "source_url": "https://openalex.org/W3103984428",
       "journal": "CCS Chemistry",
-      "cited_by_count": 114,
+      "cited_by_count": 115,
       "relevance_tags": [
         "微观动力学"
       ],
@@ -2041,7 +2041,7 @@
       "doi_url": "https://doi.org/10.1021/jp0686184",
       "source_url": "https://openalex.org/W2021478468",
       "journal": "The Journal of Physical Chemistry C",
-      "cited_by_count": 60,
+      "cited_by_count": 61,
       "relevance_tags": [
         "催化描述符"
       ],
@@ -2058,7 +2058,7 @@
       "doi_url": "https://doi.org/10.1103/physrevb.65.075407",
       "source_url": "https://openalex.org/W2065430451",
       "journal": "Physical review. B, Condensed matter",
-      "cited_by_count": 333,
+      "cited_by_count": 337,
       "relevance_tags": [
         "催化描述符"
       ],
@@ -2075,7 +2075,7 @@
       "doi_url": "https://doi.org/10.1126/science.adp6034",
       "source_url": "https://openalex.org/W4404577752",
       "journal": "Science",
-      "cited_by_count": 472,
+      "cited_by_count": 475,
       "relevance_tags": [
         "机器学习"
       ],
@@ -2127,7 +2127,7 @@
       "doi_url": "https://doi.org/10.1021/acs.jctc.2c00281",
       "source_url": "https://openalex.org/W4285386134",
       "journal": "Journal of Chemical Theory and Computation",
-      "cited_by_count": 70,
+      "cited_by_count": 71,
       "relevance_tags": [
         "SISSO/符号回归"
       ],
@@ -2197,7 +2197,7 @@
       "doi_url": "https://doi.org/10.1088/2515-7639/ab077b",
       "source_url": "https://openalex.org/W2907897763",
       "journal": "Journal of Physics Materials",
-      "cited_by_count": 206,
+      "cited_by_count": 208,
       "relevance_tags": [
         "SISSO/符号回归"
       ],
