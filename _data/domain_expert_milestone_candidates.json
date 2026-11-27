@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-26T08:29:19+00:00",
+  "generated_at": "2026-11-27T08:43:09+00:00",
   "source": "OpenAlex",
   "selection": "历史高引用+主题规则初筛；非科学里程碑认证",
   "candidates": [
@@ -12,7 +12,7 @@
       "doi_url": "https://doi.org/10.1038/s41929-023-00911-w",
       "source_url": "https://openalex.org/W4322492989",
       "journal": "Nature Catalysis",
-      "cited_by_count": 341,
+      "cited_by_count": 342,
       "relevance_tags": [
         "机器学习"
       ],
@@ -46,7 +46,7 @@
       "doi_url": "https://doi.org/10.1038/s41467-022-29926-w",
       "source_url": "https://openalex.org/W4225114738",
       "journal": "Nature Communications",
-      "cited_by_count": 480,
+      "cited_by_count": 481,
       "relevance_tags": [
         "机器学习"
       ],
@@ -182,7 +182,7 @@
       "doi_url": "https://doi.org/10.1038/s41929-018-0056-y",
       "source_url": "https://openalex.org/W2797402103",
       "journal": "Nature Catalysis",
-      "cited_by_count": 527,
+      "cited_by_count": 529,
       "relevance_tags": [
         "机器学习"
       ],
@@ -267,7 +267,7 @@
       "doi_url": "https://doi.org/10.1063/1.1737365",
       "source_url": "https://openalex.org/W2069988560",
       "journal": "The Journal of Chemical Physics",
-      "cited_by_count": 1495,
+      "cited_by_count": 1496,
       "relevance_tags": [
         "催化描述符"
       ],
@@ -306,7 +306,7 @@
         "机器学习",
         "催化描述符"
       ],
-      "abstract_excerpt": "Modeling in heterogeneous catalysis requires the extensive evaluation of the energy of molecules adsorbed on surfaces. This is done via density functional theory but for large organic molecules it requires enormous computational time, compromising the viability of the approach. Here we present GAME-Net, a graph neural network to quickly evaluate the adsorption energy. GAME-Net is trained on a well-balanced chemically diverse dataset with C 1–4 molecules with functional groups including N, O, S and C 6–10 aromatic rings. The model yields a mean absolute error of 0.18 eV on the test set and is 6 orders of magnitude faster than density functional theory. Applied to biomass and plastics (up to 30 heteroatoms), adsorption energies are predicted with a mean absolute error of 0.016 eV per atom. The framework represents a tool for the fast screening of catalytic materials, particularly for syste",
+      "abstract_excerpt": "Modeling in heterogeneous catalysis requires the extensive evaluation of the energy of molecules adsorbed on surfaces. This is done via density functional theory but for large organic molecules it requires enormous computational time, compromising the viability of the approach. Here we present GAME-Net, a graph neural network to quickly evaluate the adsorption energy. GAME-Net is trained on a well-balanced chemically diverse dataset with C1-4 molecules with functional groups including N, O, S and C6-10 aromatic rings. The model yields a mean absolute error of 0.18 eV on the test set and is 6 orders of magnitude faster than density functional theory. Applied to biomass and plastics (up to 30 heteroatoms), adsorption energies are predicted with a mean absolute error of 0.016 eV per atom. The framework represents a tool for the fast screening of catalytic materials, particularly for systems",
       "review_status": "PROVISIONAL",
       "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
     },
@@ -336,7 +336,7 @@
       "doi_url": "https://doi.org/10.1021/acs.chemrev.1c00690",
       "source_url": "https://openalex.org/W4225108171",
       "journal": "Chemical Reviews",
-      "cited_by_count": 169,
+      "cited_by_count": 170,
       "relevance_tags": [
         "机器学习",
         "微观动力学"
@@ -422,7 +422,7 @@
       "doi_url": "https://doi.org/10.1088/2516-1075/ac572f",
       "source_url": "https://openalex.org/W4213283694",
       "journal": "Electronic Structure",
-      "cited_by_count": 222,
+      "cited_by_count": 223,
       "relevance_tags": [
         "机器学习"
       ],
@@ -439,7 +439,7 @@
       "doi_url": "https://doi.org/10.1021/acs.chemrev.1c00347",
       "source_url": "https://openalex.org/W3181257149",
       "journal": "Chemical Reviews",
-      "cited_by_count": 408,
+      "cited_by_count": 409,
       "relevance_tags": [
         "机器学习"
       ],
@@ -507,7 +507,7 @@
       "doi_url": "https://doi.org/10.1021/acs.jpclett.8b00170",
       "source_url": "https://openalex.org/W2786308452",
       "journal": "The Journal of Physical Chemistry Letters",
-      "cited_by_count": 217,
+      "cited_by_count": 218,
       "relevance_tags": [
         "机器学习"
       ],
@@ -524,7 +524,7 @@
       "doi_url": "https://doi.org/10.1021/acs.jpca.7b08750",
       "source_url": "https://openalex.org/W2749580687",
       "journal": "The Journal of Physical Chemistry A",
-      "cited_by_count": 328,
+      "cited_by_count": 331,
       "relevance_tags": [
         "机器学习"
       ],
@@ -558,7 +558,7 @@
       "doi_url": "https://doi.org/10.1021/acs.chemrev.7b00776",
       "source_url": "https://openalex.org/W2802791016",
       "journal": "Chemical Reviews",
-      "cited_by_count": 5100,
+      "cited_by_count": 5105,
       "relevance_tags": [
         "选择性氧化"
       ],
@@ -575,7 +575,7 @@
       "doi_url": "https://doi.org/10.1002/anie.200500382",
       "source_url": "https://openalex.org/W2158814908",
       "journal": "Angewandte Chemie International Edition",
-      "cited_by_count": 1197,
+      "cited_by_count": 1198,
       "relevance_tags": [
         "选择性氧化"
       ],
@@ -592,7 +592,7 @@
       "doi_url": "https://doi.org/10.1002/anie.200353570",
       "source_url": "https://openalex.org/W2158482571",
       "journal": "Angewandte Chemie International Edition",
-      "cited_by_count": 921,
+      "cited_by_count": 922,
       "relevance_tags": [
         "选择性氧化"
       ],
@@ -609,7 +609,7 @@
       "doi_url": "https://doi.org/10.1016/s0021-9517(02)00132-x",
       "source_url": "https://openalex.org/W2128405848",
       "journal": "Journal of Catalysis",
-      "cited_by_count": 1440,
+      "cited_by_count": 1446,
       "relevance_tags": [
         "分子筛"
       ],
@@ -626,7 +626,7 @@
       "doi_url": "https://doi.org/10.1038/35086546",
       "source_url": "https://openalex.org/W1986092589",
       "journal": "Nature",
-      "cited_by_count": 1113,
+      "cited_by_count": 1116,
       "relevance_tags": [
         "分子筛"
       ],
@@ -660,7 +660,7 @@
       "doi_url": "https://doi.org/10.1021/cr960406n",
       "source_url": "https://openalex.org/W2054111649",
       "journal": "Chemical Reviews",
-      "cited_by_count": 6365,
+      "cited_by_count": 6371,
       "relevance_tags": [
         "分子筛"
       ],
@@ -833,7 +833,7 @@
       "doi_url": "https://doi.org/10.1126/science.aan6515",
       "source_url": "https://openalex.org/W2753076645",
       "journal": "Science",
-      "cited_by_count": 737,
+      "cited_by_count": 739,
       "relevance_tags": [
         "H₂O₂/OOH",
         "选择性氧化"
@@ -851,7 +851,7 @@
       "doi_url": "https://doi.org/10.1126/science.aad5705",
       "source_url": "https://openalex.org/W2302671968",
       "journal": "Science",
-      "cited_by_count": 704,
+      "cited_by_count": 705,
       "relevance_tags": [
         "H₂O₂/OOH"
       ],
@@ -868,7 +868,7 @@
       "doi_url": "https://doi.org/10.1039/c2cs35296f",
       "source_url": "https://openalex.org/W1980701169",
       "journal": "Chemical Society Reviews",
-      "cited_by_count": 1293,
+      "cited_by_count": 1296,
       "relevance_tags": [
         "选择性氧化"
       ],
@@ -885,7 +885,7 @@
       "doi_url": "https://doi.org/10.1002/anie.201108706",
       "source_url": "https://openalex.org/W2147654039",
       "journal": "Angewandte Chemie International Edition",
-      "cited_by_count": 689,
+      "cited_by_count": 690,
       "relevance_tags": [
         "H₂O₂/OOH",
         "分子筛",
@@ -904,7 +904,7 @@
       "doi_url": "https://doi.org/10.1126/science.1198458",
       "source_url": "https://openalex.org/W2065744294",
       "journal": "Science",
-      "cited_by_count": 877,
+      "cited_by_count": 879,
       "relevance_tags": [
         "选择性氧化"
       ],
@@ -921,7 +921,7 @@
       "doi_url": "https://doi.org/10.1126/science.1168980",
       "source_url": "https://openalex.org/W1972243282",
       "journal": "Science",
-      "cited_by_count": 1015,
+      "cited_by_count": 1016,
       "relevance_tags": [
         "H₂O₂/OOH"
       ],
@@ -938,7 +938,7 @@
       "doi_url": "https://doi.org/10.1016/j.jcat.2005.09.015",
       "source_url": "https://openalex.org/W2988019223",
       "journal": "Journal of Catalysis",
-      "cited_by_count": 613,
+      "cited_by_count": 615,
       "relevance_tags": [
         "H₂O₂/OOH"
       ],
@@ -955,7 +955,7 @@
       "doi_url": "https://doi.org/10.1039/b201112n",
       "source_url": "https://openalex.org/W2024355474",
       "journal": "Chemical Communications",
-      "cited_by_count": 592,
+      "cited_by_count": 593,
       "relevance_tags": [
         "选择性氧化"
       ],
@@ -972,7 +972,7 @@
       "doi_url": "https://doi.org/10.1039/c5cs00376h",
       "source_url": "https://openalex.org/W2159775165",
       "journal": "Chemical Society Reviews",
-      "cited_by_count": 1210,
+      "cited_by_count": 1211,
       "relevance_tags": [
         "分子筛"
       ],
@@ -1023,7 +1023,7 @@
       "doi_url": "https://doi.org/10.1002/chem.201002624",
       "source_url": "https://openalex.org/W2101801262",
       "journal": "Chemistry - A European Journal",
-      "cited_by_count": 315,
+      "cited_by_count": 316,
       "relevance_tags": [
         "分子筛"
       ],
@@ -1040,7 +1040,7 @@
       "doi_url": "https://doi.org/10.1038/nmat2530",
       "source_url": "https://openalex.org/W2075045251",
       "journal": "Nature Materials",
-      "cited_by_count": 311,
+      "cited_by_count": 312,
       "relevance_tags": [
         "分子筛"
       ],
@@ -1057,7 +1057,7 @@
       "doi_url": "https://doi.org/10.1002/chem.200801293",
       "source_url": "https://openalex.org/W2017193073",
       "journal": "Chemistry - A European Journal",
-      "cited_by_count": 374,
+      "cited_by_count": 375,
       "relevance_tags": [
         "分子筛"
       ],
@@ -1159,7 +1159,7 @@
       "doi_url": "https://doi.org/10.1002/anie.201004689",
       "source_url": "https://openalex.org/W2096605011",
       "journal": "Angewandte Chemie International Edition",
-      "cited_by_count": 790,
+      "cited_by_count": 791,
       "relevance_tags": [
         "分子筛"
       ],
@@ -1193,7 +1193,7 @@
       "doi_url": "https://doi.org/10.1021/j100068a027",
       "source_url": "https://openalex.org/W2018603525",
       "journal": "The Journal of Physical Chemistry",
-      "cited_by_count": 472,
+      "cited_by_count": 473,
       "relevance_tags": [
         "分子筛"
       ],
@@ -1210,11 +1210,11 @@
       "doi_url": "https://doi.org/10.1021/ar00027a006",
       "source_url": "https://openalex.org/W2042302296",
       "journal": "Accounts of Chemical Research",
-      "cited_by_count": 454,
+      "cited_by_count": 456,
       "relevance_tags": [
         "分子筛"
       ],
-      "abstract_excerpt": "Zeolites and zeolite-like molecular sieves are able to \\nrecognize, discriminate, and organize molecules with \\nprecisions that can be less than 1 Å. Because these structures (Figure 1) contain uniformly sized pores in the range of 4-13 Å, they have been exploited by the petrochemical industries to perform many large-scale, \\nshape-selective hydrocarbon reactions. Further information \\non the materials listed in Figure 1 is provided in Table I. The pore sizes listed are the crystallographic free diameters from each structure. Additionally, the dimensionality of the pore systems is provided. (A simple way to think about the dimensionality of the pore system is to place an organic molecule into the void space and observe in how many different directions it can move. For example, an n-hexane molecule can move in one direction in the channels of VPI-5 whereas it can travel in all three direc",
+      "abstract_excerpt": "Zeolites and zeolite-like molecular sieves are able to recognize, discriminate, and organize molecules with precisions that can be less than 1 Å. Because these structures (Figure 1) contain uniformly sized pores in the range of 4-13 Å, they have been exploited by the petrochemical industries to perform many large-scale, shape-selective hydrocarbon reactions. Further information on the materials listed in Figure 1 is provided in Table I. The pore sizes listed are the crystallographic free diameters from each structure. Additionally, the dimensionality of the pore systems is provided. (A simple way to think about the dimensionality of the pore system is to place an organic molecule into the void space and observe in how many different directions it can move. For example, an n-hexane molecule can move in one direction in the channels of VPI-5 whereas it can travel in all three directions in",
       "review_status": "PROVISIONAL",
       "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
     },
@@ -1227,11 +1227,11 @@
       "doi_url": "https://doi.org/10.1021/cm00022a005",
       "source_url": "https://openalex.org/W1975299796",
       "journal": "Chemistry of Materials",
-      "cited_by_count": 1667,
+      "cited_by_count": 1669,
       "relevance_tags": [
         "分子筛"
       ],
-      "abstract_excerpt": "Zeolite and molecular sieve syntheses are reviewed. The synthesis of aluminum-rich zeolites, high-silica \\nzeolites, and phosphate-based molecular sieves are evaluated. Unresolved mechanistic issues are outlined \\nand areas for exploration suggested. The ability to plan zeolite and molecular sieve syntheses is discussed \\nand a strategy for synthesizing a chiral zeolite is used to demonstrate the current limitations in \"designing\" \\nnew molecular sieves.",
+      "abstract_excerpt": "Zeolite and molecular sieve syntheses are reviewed. The synthesis of aluminum-rich zeolites, high-silica zeolites, and phosphate-based molecular sieves are evaluated. Unresolved mechanistic issues are outlined and areas for exploration suggested. The ability to plan zeolite and molecular sieve syntheses is discussed and a strategy for synthesizing a chiral zeolite is used to demonstrate the current limitations in \"designing\" new molecular sieves.",
       "review_status": "PROVISIONAL",
       "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
     },
@@ -1244,7 +1244,7 @@
       "doi_url": "https://doi.org/10.1021/jacs.3c14495",
       "source_url": "https://openalex.org/W4391684514",
       "journal": "Journal of the American Chemical Society",
-      "cited_by_count": 79,
+      "cited_by_count": 80,
       "relevance_tags": [
         "机器学习"
       ],
@@ -1537,7 +1537,7 @@
       "relevance_tags": [
         "选择性氧化"
       ],
-      "abstract_excerpt": "Achieving efficient catalytic conversion over a heterogeneous catalyst with excellent resistance against leaching is still a grand challenge for sustainable chemical synthesis in aqueous solution. Herein, we devised a single‐atom Pt1/hydroxyapatite (HAP) catalyst via a simple hydrothermal strategy. Gratifyingly, this robust Pt1/HAP catalyst exhibits remarkable catalytic selectivity and catalyst stability for the selective oxidation of C2–C4 polyols to corresponding primary hydroxy acids. It is found that the Pt−(O−P) linkages with strong electron‐withdrawing function of PO43− (Pt1−OPO43− pair active site) not only realize the activation of the C−H bond, but also destabilize the transition state from adsorbed hydroxy acids toward the C−C cleavage, resulting in the sharply increased selectivity of hydroxy acids. Moreover, the strong PO43−‐coordination effect provides electrostatic stabiliz",
+      "abstract_excerpt": "Achieving efficient catalytic conversion over a heterogeneous catalyst with excellent resistance against leaching is still a grand challenge for sustainable chemical synthesis in aqueous solution. Herein, we devised a single-atom Pt1 /hydroxyapatite (HAP) catalyst via a simple hydrothermal strategy. Gratifyingly, this robust Pt1 /HAP catalyst exhibits remarkable catalytic selectivity and catalyst stability for the selective oxidation of C2 -C4 polyols to corresponding primary hydroxy acids. It is found that the Pt-(O-P) linkages with strong electron-withdrawing function of PO4 3- (Pt1 -OPO4 3- pair active site) not only realize the activation of the C-H bond, but also destabilize the transition state from adsorbed hydroxy acids toward the C-C cleavage, resulting in the sharply increased selectivity of hydroxy acids. Moreover, the strong PO4 3- -coordination effect provides electrostatic ",
       "review_status": "PROVISIONAL",
       "review_note": "书目与摘要候选；引用数不是科学贡献证明，关键发现及作者贡献须原文核验。"
     },
@@ -1803,7 +1803,7 @@
       "doi_url": "https://doi.org/10.1103/revmodphys.94.015004",
       "source_url": "https://openalex.org/W4213212652",
       "journal": "Reviews of Modern Physics",
-      "cited_by_count": 2809,
+      "cited_by_count": 2814,
       "relevance_tags": [
         "机器学习"
       ],
@@ -1820,7 +1820,7 @@
       "doi_url": "https://doi.org/10.1016/j.matt.2021.02.015",
       "source_url": "https://openalex.org/W3143460494",
       "journal": "Matter",
-      "cited_by_count": 653,
+      "cited_by_count": 656,
       "relevance_tags": [
         "机器学习"
       ],
@@ -1837,7 +1837,7 @@
       "doi_url": "https://doi.org/10.1021/acs.accounts.0c00785",
       "source_url": "https://openalex.org/W3128426563",
       "journal": "Accounts of Chemical Research",
-      "cited_by_count": 531,
+      "cited_by_count": 532,
       "relevance_tags": [
         "机器学习"
       ],
@@ -1854,7 +1854,7 @@
       "doi_url": "https://doi.org/10.1088/2632-2153/aba947",
       "source_url": "https://openalex.org/W3009321976",
       "journal": "Machine Learning Science and Technology",
-      "cited_by_count": 1476,
+      "cited_by_count": 1478,
       "relevance_tags": [
         "机器学习"
       ],
@@ -1871,7 +1871,7 @@
       "doi_url": "https://doi.org/10.1039/d0cs00098a",
       "source_url": "https://openalex.org/W3023042104",
       "journal": "Chemical Society Reviews",
-      "cited_by_count": 1060,
+      "cited_by_count": 1062,
       "relevance_tags": [
         "机器学习"
       ],
@@ -1888,7 +1888,7 @@
       "doi_url": "https://doi.org/10.1021/acscentsci.7b00572",
       "source_url": "https://openalex.org/W2529996553",
       "journal": "ACS Central Science",
-      "cited_by_count": 4567,
+      "cited_by_count": 4576,
       "relevance_tags": [
         "机器学习"
       ],
@@ -1905,7 +1905,7 @@
       "doi_url": "https://doi.org/10.1126/science.aat2663",
       "source_url": "https://openalex.org/W2883583109",
       "journal": "Science",
-      "cited_by_count": 2455,
+      "cited_by_count": 2460,
       "relevance_tags": [
         "机器学习"
       ],
@@ -1922,7 +1922,7 @@
       "doi_url": "https://doi.org/10.1088/2058-9565/aa8072",
       "source_url": "https://openalex.org/W2562234976",
       "journal": "Quantum Science and Technology",
-      "cited_by_count": 772,
+      "cited_by_count": 773,
       "relevance_tags": [
         "机器学习"
       ],
@@ -1956,7 +1956,7 @@
       "doi_url": "https://doi.org/10.1126/science.adp6034",
       "source_url": "https://openalex.org/W4404577752",
       "journal": "Science",
-      "cited_by_count": 474,
+      "cited_by_count": 476,
       "relevance_tags": [
         "机器学习"
       ],
@@ -2076,7 +2076,7 @@
       "doi_url": "https://doi.org/10.1126/science.adp6034",
       "source_url": "https://openalex.org/W4404577752",
       "journal": "Science",
-      "cited_by_count": 474,
+      "cited_by_count": 476,
       "relevance_tags": [
         "机器学习"
       ],
@@ -2180,7 +2180,7 @@
       "doi_url": "https://doi.org/10.1126/sciadv.aav0693",
       "source_url": "https://openalex.org/W2785060548",
       "journal": "Science Advances",
-      "cited_by_count": 2086,
+      "cited_by_count": 2089,
       "relevance_tags": [
         "SISSO/符号回归"
       ],
@@ -2197,7 +2197,7 @@
       "doi_url": "https://doi.org/10.1088/2515-7639/ab077b",
       "source_url": "https://openalex.org/W2907897763",
       "journal": "Journal of Physics Materials",
-      "cited_by_count": 207,
+      "cited_by_count": 208,
       "relevance_tags": [
         "SISSO/符号回归"
       ],
